@@ -23,7 +23,8 @@ lint.xml
 local.properties
 obj
 proguard-project.txt
-project.properties
+# Apparently project.properties is meant to be checked to VCS as it's used by every ant build
+#project.properties
 res/.DS_Store
 res/raw/lpconfig.xsd
 res/raw/rootca.pem
