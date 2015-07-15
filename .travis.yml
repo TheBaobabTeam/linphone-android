@@ -1,0 +1,46 @@
+language: android
+
+android:
+ components:
+    # Uncomment the lines below if you want to
+    # use the latest revision of Android SDK Tools
+    # - platform-tools-24.3.3
+    # - tools
+
+    # The BuildTools version used by your project
+    - build-tools-22.0.1
+
+    # The SDK version used to compile your project
+    - android-22
+
+    # Additional components
+    - extra-google-google_play_services
+    - extra-google-m2repository
+    - extra-android-m2repository
+    - addon-google_apis-google-19
+
+before_install: 
+  # newest Android NDK
+  - wget http://dl.google.com/android/ndk/android-ndk-r10e-linux-x86_64.bin
+  - chmod a+x android-ndk-r10e-linux-x86_64.bin
+  - ./android-ndk-r10e-linux-x86_64.bin >> dev/nul
+  - export ANDROID_HOME= `pwd`/android-sdk-linux/tools
+  - export ANDROID_NDK_HOME=`pwd`/android-ndk-r10e
+  - export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_NDK_HOME}
+  - sudo apt-get update
+  - $ sudo apt-get install yasm
+  - $ sudo apt-get install nasm
+  - $ sudo apt-get install curl
+  - $ sudo apt-get install ant
+  - $ sudo apt-get install rsync
+  - $ sudo apt-get install autoconf
+  - $ sudo apt-get install automake
+  - $ sudo apt-get install aclocal
+  - $ sudo apt-get install libtool
+  - $ sudo apt-get install pkgconf
+  - $ sudo dpkg --add-architecture i386
+  - $ sudo apt-get install aptitude
+  - $ sudo aptitude update
+  - $ sudo aptitude install libstdc++6:i386 libgcc1:i386 zlib1g:i386 libncurses5:i386
+
+script: make
