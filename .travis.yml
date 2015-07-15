@@ -23,7 +23,7 @@ before_install:
   # newest Android NDK
   - wget http://dl.google.com/android/ndk/android-ndk-r10e-linux-x86_64.bin
   - chmod a+x android-ndk-r10e-linux-x86_64.bin
-  - ./android-ndk-r10e-linux-x86_64.bin >> dev/nul
+  - ./android-ndk-r10e-linux-x86_64.bin >> android-ndk-r10e-self-extract-output.txt
   - export ANDROID_HOME= `pwd`/android-sdk-linux/tools
   - export ANDROID_NDK_HOME=`pwd`/android-ndk-r10e
   - export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_NDK_HOME}
