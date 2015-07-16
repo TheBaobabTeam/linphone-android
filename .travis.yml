@@ -35,7 +35,6 @@ before_install:
   - sudo apt-get -qq -y install rsync
   - sudo apt-get -qq -y install autoconf
   - sudo apt-get -qq -y install automake
-  - sudo apt-get -qq -y install aclocal
   - sudo apt-get -qq -y install libtool
   - sudo apt-get -qq -y install pkgconf
   - sudo dpkg --add-architecture i386
