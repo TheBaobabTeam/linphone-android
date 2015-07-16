@@ -36,7 +36,7 @@ before_install:
   - sudo apt-get -qq -y install autoconf
   - sudo apt-get -qq -y install automake
   - sudo apt-get -qq -y install libtool
-  - sudo apt-get -qq -y install pkgconf
+  - sudo apt-get -qq -y install pkg-config
   - sudo dpkg --add-architecture i386
   - sudo apt-get -qq -y install aptitude
   - sudo aptitude -qq -y update
