@@ -24,23 +24,23 @@ before_install:
   - wget http://dl.google.com/android/ndk/android-ndk-r10e-linux-x86_64.bin
   - chmod a+x android-ndk-r10e-linux-x86_64.bin
   - ./android-ndk-r10e-linux-x86_64.bin -y | grep -v Extracting
-  - export ANDROID_HOME= `pwd`/android-sdk-linux/tools
+  - export ANDROID_HOME=/usr/local/android-sdk
   - export ANDROID_NDK_HOME=`pwd`/android-ndk-r10e
   - export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_NDK_HOME}
-  - sudo apt-get update
-  - $ sudo apt-get install yasm
-  - $ sudo apt-get install nasm
-  - $ sudo apt-get install curl
-  - $ sudo apt-get install ant
-  - $ sudo apt-get install rsync
-  - $ sudo apt-get install autoconf
-  - $ sudo apt-get install automake
-  - $ sudo apt-get install aclocal
-  - $ sudo apt-get install libtool
-  - $ sudo apt-get install pkgconf
+  - sudo apt-get -qq update
+  - $ sudo apt-get -qq -y install yasm
+  - $ sudo apt-get -qq -y install nasm
+  - $ sudo apt-get -qq -y install curl
+  - $ sudo apt-get -qq -y install ant
+  - $ sudo apt-get -qq -y install rsync
+  - $ sudo apt-get -qq -y install autoconf
+  - $ sudo apt-get -qq -y install automake
+  - $ sudo apt-get -qq -y install aclocal
+  - $ sudo apt-get -qq -y install libtool
+  - $ sudo apt-get -qq -y install pkgconf
   - $ sudo dpkg --add-architecture i386
-  - $ sudo apt-get install aptitude
-  - $ sudo aptitude update
-  - $ sudo aptitude install libstdc++6:i386 libgcc1:i386 zlib1g:i386 libncurses5:i386
+  - $ sudo apt-get -qq -y install aptitude
+  - $ sudo aptitude -qq -y update
+  - $ sudo aptitude -qq -y install libstdc++6:i386 libgcc1:i386 zlib1g:i386 libncurses5:i386
 
 script: make
