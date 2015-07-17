@@ -61,7 +61,7 @@
 	url = git://git.gnome.org/libxml2
 [submodule "submodules/externals/libupnp"]
 	path = submodules/externals/libupnp
-	url = git://git.code.sf.net/p/pupnp/code
+	url = https://github.com/mrjimenez/pupnp.git
 [submodule "submodules/externals/cunit"]
 	path = submodules/externals/cunit
 	url = git://git.linphone.org/cunit.git
