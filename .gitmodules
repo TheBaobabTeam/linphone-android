@@ -26,7 +26,7 @@
 	url = git://git.linphone.org/msx264.git
 [submodule "submodules/externals/opencore-amr"]
 	path = submodules/externals/opencore-amr
-	url = git://git.code.sf.net/p/opencore-amr/code
+	url = https://github.com/VFR-maniac/opencore-amr.git
 	ignore = dirty
 [submodule "submodules/msamr"]
 	path = submodules/msamr
@@ -46,7 +46,7 @@
 	url = git://git.linphone.org/mssilk.git
 [submodule "submodules/externals/vo-amrwbenc"]
 	path = submodules/externals/vo-amrwbenc
-	url = git://git.code.sf.net/p/opencore-amr/vo-amrwbenc
+	url = https://github.com/mstorsjo/vo-amrwbenc.git
 [submodule "submodules/bcg729"]
 	path = submodules/bcg729
 	url = git://git.linphone.org/bcg729.git
