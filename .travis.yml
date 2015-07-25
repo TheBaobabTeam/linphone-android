@@ -42,7 +42,8 @@ before_install:
   - sudo apt-get -qq -y install automake
   - sudo apt-get -qq -y install libtool
   - sudo apt-get -qq -y install pkg-config
-  - sudo dpkg --add-architecture i386
+  #- sudo dpkg --add-architecture i386
+  - sudo dpkg --foreign-architecture i386
   - sudo apt-get -qq -y install aptitude
   - sudo aptitude -qq -y update
   - sudo aptitude -qq -y install libstdc++6:i386 libgcc1:i386 zlib1g:i386 libncurses5:i386
