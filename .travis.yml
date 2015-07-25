@@ -49,7 +49,7 @@ before_install:
   - sudo dpkg --print-foreign-architectures
   - sudo sh -c "echo 'foreign-architecture i386' > /etc/dpkg/dpkg.cfg.d/multiarch"
   - sudo apt-get -qq -y install aptitude
-  - sudo aptitude -qq -y update
-  - sudo aptitude -qq -y install libstdc++6:i386 libgcc1:i386 zlib1g:i386 libncurses5:i386
+  - sudo aptitude -y update
+  - sudo aptitude -y install libstdc++6:i386 libgcc1:i386 zlib1g:i386 libncurses5:i386
 
 script: make
