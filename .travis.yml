@@ -32,7 +32,7 @@ before_install:
   - export ANDROID_HOME=/usr/local/android-sdk
   - export ANDROID_NDK_HOME=`pwd`/android-ndk-r10e
   - export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_NDK_HOME}
-  #- sudo apt-get -qq -y update
+  - sudo apt-get -qq -y update
   - sudo apt-get -qq -y install yasm
   - sudo apt-get -qq -y install nasm
   - sudo apt-get -qq -y install curl
