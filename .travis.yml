@@ -32,7 +32,7 @@ before_install:
   - export ANDROID_HOME=/usr/local/android-sdk
   - export ANDROID_NDK_HOME=`pwd`/android-ndk-r10e
   - export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_NDK_HOME}
-  - sudo apt-get -qq -y update
+  #- sudo apt-get -qq -y update
   - sudo apt-get -qq -y install yasm
   - sudo apt-get -qq -y install nasm
   - sudo apt-get -qq -y install curl
@@ -52,11 +52,12 @@ before_install:
   - sudo aptitude -y update
   - sudo aptitude -y install libstdc++6:i386 libgcc1:i386 zlib1g:i386 libncurses5:i386
   - sudo apt-get -qq -y install bc
-  - wget http://www.cpan.org/modules/by-module/LWP/libwww-perl-5.837.tar.gz
-  - tar xvzf libwww-perl5.837.tar.gz
-  - cd libwww-perl-5.837
-  - perl Makefile.PL
-  - make 
-  - make install
+  #- wget http://www.cpan.org/modules/by-module/LWP/libwww-perl-5.837.tar.gz
+  #- tar xvzf libwww-perl5.837.tar.gz
+  #- cd libwww-perl-5.837
+  #- perl Makefile.PL
+  #- make 
+  #- make install
+  - sudo apt-get -qq -y install libwww-perl
 
 script: make
