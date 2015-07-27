@@ -30,7 +30,7 @@
             android:contentDescription="@string/content_description_next"
             android:id="@+id/next"
             android:background="@drawable/chat_ok"
-            android:text="@string/button_next"
+            android:text="@string/button_create_group"
             android:gravity="center"
             android:enabled="true"
             android:paddingTop="20dp"
@@ -60,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/new_group_heading"
+            android:text="@string/add_members_heading"
 	    	android:textColor="@color/text_contrast" />
        
    </LinearLayout>
@@ -75,13 +75,6 @@
 	    android:orientation="horizontal"
        android:layout_below="@+id/header"
 	    android:layout_centerHorizontal="true">
-       
-       <EditText
-        android:layout_weight="1"
-        android:id="@+id/group_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/group_name" />
 	        
     </LinearLayout>
     

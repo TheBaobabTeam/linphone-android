@@ -43,6 +43,7 @@ import org.linphone.core.LinphoneCoreException;
 import org.linphone.core.LinphoneCoreFactory;
 import org.linphone.core.LinphoneCoreListenerBase;
 import org.linphone.core.LinphoneProxyConfig;
+import org.linphone.groupchat.AddMembersActivity;
 import org.linphone.groupchat.NewGroupActivity;
 import org.linphone.mediastream.Log;
 import org.linphone.setup.RemoteProvisioningLoginActivity;
@@ -683,6 +684,13 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 	 */
 	public void newGroup() {
 		Intent intent = new Intent(this, NewGroupActivity.class);
+		
+		startOrientationSensor();
+		startActivityForResult(intent, CHAT_ACTIVITY);
+	}
+	public void addMembers(String groupName) {
+		Intent intent = new Intent(this, AddMembersActivity.class);
+		intent.putExtra("GroupName", groupName);
 		
 		startOrientationSensor();
 		startActivityForResult(intent, CHAT_ACTIVITY);

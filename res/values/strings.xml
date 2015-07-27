@@ -315,6 +315,11 @@
   
   <!-- added by me -->
   <string name="button_new_group">New Group</string>
+  <string name="group_name">Type group name here</string>
+  <string name="new_group_heading">Please provide group name</string>
+  <string name="button_next">Next</string>
+  <string name="button_create_group">Create</string>
+  <string name="add_members_heading">Add Group Members</string>
   
   <string name="button_edit">Edit</string>
   <string name="button_cancel">Cancel</string>
