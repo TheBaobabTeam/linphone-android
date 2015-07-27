@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="org.linphone"
       android:versionCode="2400" android:installLocation="auto">
-    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="22"/>
+    <uses-sdk android:minSdkVersion="12" android:targetSdkVersion="22"/>
     
     <!-- Permissions for Push Notification -->
     <permission android:name="org.linphone.permission.C2D_MESSAGE" android:protectionLevel="signature" /> <!-- Change package ! -->
@@ -238,6 +238,20 @@
         </activity>
         
 		<activity android:name="org.linphone.tutorials.TutorialRegistrationActivity"
+		    android:theme="@style/NoTitle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        
+		<!-- added by me -->
+		<activity android:name="org.linphone.groupchat.NewGroupActivity"
+		    android:theme="@style/NoTitle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name="org.linphone.groupchat.NewGroupFragment"
 		    android:theme="@style/NoTitle">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

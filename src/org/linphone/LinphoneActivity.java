@@ -43,6 +43,7 @@ import org.linphone.core.LinphoneCoreException;
 import org.linphone.core.LinphoneCoreFactory;
 import org.linphone.core.LinphoneCoreListenerBase;
 import org.linphone.core.LinphoneProxyConfig;
+import org.linphone.groupchat.NewGroupActivity;
 import org.linphone.mediastream.Log;
 import org.linphone.setup.RemoteProvisioningLoginActivity;
 import org.linphone.setup.SetupActivity;
@@ -675,6 +676,16 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 		LinphoneService.instance().resetMessageNotifCount();
 		LinphoneService.instance().removeMessageNotification();
 		displayMissedChats(getChatStorage().getUnreadMessageCount());
+	}
+	
+	/*
+	 * added by me
+	 */
+	public void newGroup() {
+		Intent intent = new Intent(this, NewGroupActivity.class);
+		
+		startOrientationSensor();
+		startActivityForResult(intent, CHAT_ACTIVITY);
 	}
 
 	@Override
