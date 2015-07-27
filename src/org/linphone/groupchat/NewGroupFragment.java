@@ -35,7 +35,7 @@ public class NewGroupFragment extends Fragment implements OnClickListener {
 		// Retain the fragment across configuration changes
 		setRetainInstance(true);
 		
-		group_name = (EditText) view.findViewById(R.id.group_name);
+		group_name = (EditText)view.findViewById(R.id.groupName);
 
 		back = (TextView) view.findViewById(R.id.back);
 		if (back != null) {
