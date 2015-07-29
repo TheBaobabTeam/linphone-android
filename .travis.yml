@@ -41,7 +41,6 @@ before_install:
   - sudo apt-get -qq -y install autoconf
   - wget ftp://ftp.gnu.org/gnu/m4/m4-1.4.1.tar.gz
   - tar -xvzf m4-1.4.1.tar.gz
-  - cd m4-1.4.1
   - sudo apt-get -qq -y install perl 
   - sudo apt-get -qq -y install automake
   - sudo apt-get -qq -y install libtool
