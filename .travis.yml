@@ -23,8 +23,8 @@ git:
   submodules: false
 
 before_install:
-  - git submodule sync
-  - git submodule update --init --recursive
+  #- git submodule sync
+  #- git submodule update --init --recursive
   # newest Android NDK
   - wget http://dl.google.com/android/ndk/android-ndk-r10e-linux-x86_64.bin
   - chmod a+x android-ndk-r10e-linux-x86_64.bin
