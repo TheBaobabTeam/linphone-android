@@ -200,6 +200,53 @@ Now that you are registered, follow these steps to access the group chat:
 %Potego Edit Here
 
 \subsection{System Configuration}
-%Tsepo Edit Here
+Troubleshooting, FAQ & Problems
+
+Connection problems
+I try to phone to my friend <sip:toto@example.com>, but nothing happens, no ring, nothing
+at all.
+You must verify that linphone uses the network interface that connects you to the
+internet (or to the network where calls should go). Use the property box, section
+Network, to select the correct network interface.
+In other case, the person you are contacting may be not reachable at the moment...
+
+Audio problems
+Linphone seems to connect to the remote sip url, it rings, but when the callee answers,
+nothing happens and we can’t hear each other.
+
+• Most people get problems because they don’t choose the correct network interface
+in the property box, section network. 
+
+In other cases, it will fail.
+• First rise up playback and recording level.
+• If the voice is sometines cutted, you can modify parameter RTP->jitter
+compensation in the property box to greater values to avoid this. But it increases the
+delay transmission.
+
+FAQ
+How do I use Linphone Calling?
+Linphone Calling lets you call your friends and family using Linphone for free, even if they’re in another country. Currently, Linphone Calling is available on Android.
+Linphone Calling uses your phone’s Internet connection rather than your cellular plan’s voice minutes. Data charges may apply.
+Please note: you can’t access 10111 and other emergency service numbers through Linphone. You must make alternative communication arrangements to make emergency calls.
+
+Place a Linphone call
+To make a WhatsApp call, simply open the chat with the person you want to call and tap on the phone button on top.
+Recieving a Linphone call
+When someone calls you, you will see an incoming WhatsApp call screen. You can tap and slide the green button to answer the call, or slide the red button to decline the call. Alternatively, you can tap on the message icon on the call screen to decline the call with a quick message.
+
+What is a Group Chat?
+The Group Chat feature lets you chat with up to 50 people at once. It is a great way to stay in touch with your family, friends and colleagues. In addition to the maximum number of people you can add to a group, there are a few more things to keep in mind about Group Chat:
+There is no limit to the number of groups you can create.
+Every group has one or more admins. Only admins can add or remove participants.
+Only admins can make other participants admins.
+If the last admin leaves the group, a new admin will be randomly assigned.
+You can always control your own participation in a Group Chat, by staying in or leaving the group when you wish. Remember that only group admins have the ability to add participants. If you have any questions about being added to a group, or prefer not to be added, please speak to a group admin.
+If you have blocked a contact, you will still receive messages this contact sends into any group you have in common. Likewise, they will still receive messages you send to those groups.
+
+
+
+9. Bugs reporting and suggestions
+First go to linphone’s home page at http://www.linphone.org to check if you have the
+latest version of linphone.
 
 \end{document}
