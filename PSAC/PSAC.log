@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.27)  3 AUG 2015 17:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.27)  3 AUG 2015 17:47
 entering extended mode
-**UserManual.tex
-("C:\Users\Eppy\Documents\GitHub\linphone-android\User Manual\UserManual.tex"
+**PSAC.tex
+(C:\Users\Eppy\Documents\GitHub\linphone-android\PSAC\PSAC.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -248,84 +248,48 @@ File: babel.def 2008/07/08 v3.8m Babel common definitions
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\dcolumn.sty"
-Package: dcolumn 2001/05/28 v1.06 decimal alignment package (DPC)
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
-Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen125
-\extrarowheight=\dimen126
-\NC@list=\toks18
-\extratabsurround=\skip44
-\backup@length=\skip45
-))
-("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
-Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
-)
-Package xcolor Info: Driver file: pdftex.def on input line 225.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
-Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
-\everycr=\toks19
-\minrowclearance=\skip46
-)
-\rownum=\count105
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
-Package xcolor Info: Model `RGB' extended on input line 1353.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
-)
-("C:\Users\Eppy\Documents\GitHub\linphone-android\User Manual\UserManual.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-
+No file PSAC.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count106
-\scratchdimen=\dimen127
+\scratchcounter=\count105
+\scratchdimen=\dimen125
 \scratchbox=\box28
-\nofMPsegments=\count107
-\nofMParguments=\count108
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count109
-\MPscratchDim=\dimen128
-\MPnumerator=\count110
-\makeMPintoPDFobject=\count111
-\everyMPtoPDFconversion=\toks21
+\nofMPsegments=\count106
+\nofMParguments=\count107
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count108
+\MPscratchDim=\dimen126
+\MPnumerator=\count109
+\makeMPintoPDFobject=\count110
+\everyMPtoPDFconversion=\toks19
 )
 \AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring OFF on input line 18.
+Package hyperref Info: Link coloring OFF on input line 17.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count112
+\c@section@level=\count111
 )
-LaTeX Info: Redefining \ref on input line 18.
-LaTeX Info: Redefining \pageref on input line 18.
-LaTeX Info: Redefining \nameref on input line 18.
+LaTeX Info: Redefining \ref on input line 17.
+LaTeX Info: Redefining \pageref on input line 17.
+LaTeX Info: Redefining \nameref on input line 17.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -363,7 +327,7 @@ LaTeX Info: Redefining \nameref on input line 18.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-("C:\Users\Eppy\Documents\GitHub\linphone-android\User Manual\titlePage.tex"
+(C:\Users\Eppy\Documents\GitHub\linphone-android\PSAC\TitlePage.tex
 <pictures/logo.jpg, id=3, 877.02657pt x 325.215pt>
 File: pictures/logo.jpg Graphic file (type jpg)
  <use pictures/logo.jpg>
@@ -385,55 +349,322 @@ Package pdftex.def Info: pictures/Team.jpg used on input line 18.
 [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Eppy/Documents/G
-itHub/linphone-android/User Manual/pictures/logo.jpg> <C:/Users/Eppy/Documents/
-GitHub/linphone-android/User Manual/pictures/Team.jpg>])
+itHub/linphone-android/PSAC/pictures/logo.jpg> <C:/Users/Eppy/Documents/GitHub/
+linphone-android/PSAC/pictures/Team.jpg>])
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 35.
+(Font)              <7> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 35.
-
-Underfull \hbox (badness 10000) in paragraph at lines 42--42
-[]|\OT1/cmr/m/n/10 Client rep-re-sen-ta-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 44--44
-[]|\OT1/cmr/m/n/10 Ephiphania Mu-
- []
-
-
-Underfull \hbox (badness 5548) in paragraph at lines 44--44
-\OT1/cmr/m/n/10 nava and Potego
- []
-
+(Font)              <5> on input line 25.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.50 \newpage
-              [1] [2] [3] [4] [5] [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 70.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 70.
+l.40 \newpage
+              [1]
+\tf@toc=\write3
+\tf@lof=\write4
+ [2]
+<./pictures/linphone.jpeg, id=24, 501.37312pt x 355.3275pt>
+File: ./pictures/linphone.jpeg Graphic file (type jpg)
 
-("C:\Users\Eppy\Documents\GitHub\linphone-android\User Manual\UserManual.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 70.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 70.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 70.
+<use ./pictures/linphone.jpeg>
+Package pdftex.def Info: ./pictures/linphone.jpeg used on input line 49.
+(pdftex.def)             Requested size: 424.06033pt x 300.54962pt.
+ [3 <C:/Users/Eppy/Documents/GitHub/linphone-android/PSAC/pictures/linphone.jpe
+g>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 64.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 64.
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
+
+ []
+
+<./pictures/image1.jpg, id=39, 396.7322pt x 464.4853pt>
+File: ./pictures/image1.jpg Graphic file (type jpg)
+
+<use ./pictures/image1.jpg>
+Package pdftex.def Info: ./pictures/image1.jpg used on input line 99.
+(pdftex.def)             Requested size: 296.84093pt x 347.54099pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
+
+ []
+
+[5 <C:/Users/Eppy/Documents/GitHub/linphone-android/PSAC/pictures/image1.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 118--121
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--137
+
+ []
+
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ¨ in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ¨ in font cmr10!
+Missing character: There is no Å in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--156
+
+ []
+
+[6] <./pictures/Registrar.JPG, id=54, 453.94594pt x 243.15843pt>
+File: ./pictures/Registrar.JPG Graphic file (type jpg)
+
+<use ./pictures/Registrar.JPG>
+Package pdftex.def Info: ./pictures/Registrar.JPG used on input line 159.
+(pdftex.def)             Requested size: 424.06033pt x 227.15163pt.
+
+<./pictures/proxy1.JPG, id=55, 189.70876pt x 158.09062pt>
+File: ./pictures/proxy1.JPG Graphic file (type jpg)
+
+<use ./pictures/proxy1.JPG>
+Package pdftex.def Info: ./pictures/proxy1.JPG used on input line 170.
+(pdftex.def)             Requested size: 296.84093pt x 247.39229pt.
+ [7 <C:/Users/Eppy/Documents/GitHub/linphone-android/PSAC/pictures/Registrar.JP
+G>]
+<./pictures/proxy2.JPG, id=61, 469.755pt x 234.8775pt>
+File: ./pictures/proxy2.JPG Graphic file (type jpg)
+
+<use ./pictures/proxy2.JPG>
+Package pdftex.def Info: ./pictures/proxy2.JPG used on input line 177.
+(pdftex.def)             Requested size: 424.06033pt x 212.02931pt.
+ [8 <C:/Users/Eppy/Documents/GitHub/linphone-android/PSAC/pictures/proxy1.JPG> 
+<C:/Users/Eppy/Documents/GitHub/linphone-android/PSAC/pictures/proxy2.JPG>]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--198
+
+ []
+
+<./pictures/ClientServer.JPG, id=69, 289.83281pt x 137.7647pt>
+File: ./pictures/ClientServer.JPG Graphic file (type jpg)
+
+<use ./pictures/ClientServer.JPG>
+Package pdftex.def Info: ./pictures/ClientServer.JPG used on input line 201.
+(pdftex.def)             Requested size: 424.06033pt x 201.57831pt.
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ô in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--210
+
+ []
+
+<./pictures/peer.JPG, id=70, 243.15843pt x 143.03438pt>
+File: ./pictures/peer.JPG Graphic file (type jpg)
+
+<use ./pictures/peer.JPG>
+Package pdftex.def Info: ./pictures/peer.JPG used on input line 213.
+(pdftex.def)             Requested size: 424.06033pt x 249.44742pt.
+ [9 <C:/Users/Eppy/Documents/GitHub/linphone-android/PSAC/pictures/ClientServer
+.JPG>]
+Underfull \hbox (badness 10000) in paragraph at lines 219--226
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--226
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--226
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--226
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--234
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--234
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--234
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--234
+
+ []
+
+[10 <C:/Users/Eppy/Documents/GitHub/linphone-android/PSAC/pictures/peer.JPG>]
+Underfull \hbox (badness 10000) in paragraph at lines 235--240
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--240
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--240
+
+ []
+
+[11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 256--258
+
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
+
+ []
+
+<./pictures/agile.jpg, id=98, 164.86594pt x 255.20343pt>
+File: ./pictures/agile.jpg Graphic file (type jpg)
+
+<use ./pictures/agile.jpg>
+Package pdftex.def Info: ./pictures/agile.jpg used on input line 265.
+(pdftex.def)             Requested size: 212.03017pt x 328.2208pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
+
+ []
+
+<./pictures/scrum.jpg, id=99, 387.69844pt x 289.08pt>
+File: ./pictures/scrum.jpg Graphic file (type jpg)
+
+<use ./pictures/scrum.jpg>
+Package pdftex.def Info: ./pictures/scrum.jpg used on input line 277.
+(pdftex.def)             Requested size: 296.84093pt x 221.33514pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 277--278
+
+ []
+
+[14 <C:/Users/Eppy/Documents/GitHub/linphone-android/PSAC/pictures/agile.jpg>]
+<./pictures/CI-CD.jpg, id=107, 374.14781pt x 279.29344pt>
+File: ./pictures/CI-CD.jpg Graphic file (type jpg)
+
+<use ./pictures/CI-CD.jpg>
+Package pdftex.def Info: ./pictures/CI-CD.jpg used on input line 294.
+(pdftex.def)             Requested size: 296.84093pt x 221.59827pt.
+ [15 <C:/Users/Eppy/Documents/GitHub/linphone-android/PSAC/pictures/scrum.jpg>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 304--307
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 304--307
+
+ []
+
+[16 <C:/Users/Eppy/Documents/GitHub/linphone-android/PSAC/pictures/CI-CD.jpg>]
+[17] <./pictures/task.jpg, id=126, 413.29407pt x 448.67625pt>
+File: ./pictures/task.jpg Graphic file (type jpg)
+
+<use ./pictures/task.jpg>
+Package pdftex.def Info: ./pictures/task.jpg used on input line 362.
+(pdftex.def)             Requested size: 424.06033pt x 460.37537pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 362--363
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./pictures/burnDown.jpg, id=127, 471.26062pt x 308.65312pt>
+File: ./pictures/burnDown.jpg Graphic file (type jpg)
+
+<use ./pictures/burnDown.jpg>
+Package pdftex.def Info: ./pictures/burnDown.jpg used on input line 385.
+(pdftex.def)             Requested size: 424.06033pt x 277.74284pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--386
+
+ []
+
+[18 <C:/Users/Eppy/Documents/GitHub/linphone-android/PSAC/pictures/task.jpg>]
+[19 <C:/Users/Eppy/Documents/GitHub/linphone-android/PSAC/pictures/burnDown.jpg
+>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 393.
+ [20]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 393.
+ (C:\Users\Eppy\Documents\GitHub\linphone-android\PSAC\PSAC.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 393.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 393.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 393.
  ) 
 Here is how much of TeX's memory you used:
- 7544 strings out of 493921
- 113095 string characters out of 3147285
- 207150 words of memory out of 3000000
- 10768 multiletter control sequences out of 15000+200000
- 7894 words of font info for 28 fonts, out of 3000000 for 9000
+ 7163 strings out of 493921
+ 109172 string characters out of 3147285
+ 197353 words of memory out of 3000000
+ 10339 multiletter control sequences out of 15000+200000
+ 8370 words of font info for 30 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 41i,9n,38p,259b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on UserManual.pdf (7 pages, 228365 bytes).
+ 36i,7n,38p,649b,391s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmtt10.pfb>
+Output written on PSAC.pdf (21 pages, 918227 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 15 named destinations out of 1000 (max. 500000)
- 75 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 253 PDF objects out of 1000 (max. 8388607)
+ 59 named destinations out of 1000 (max. 500000)
+ 255 words of extra memory for PDF output out of 10000 (max. 10000000)
 
