@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.27)  31 JUL 2015 15:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.27)  3 AUG 2015 12:17
 entering extended mode
 **SprintFour.tex
 (C:\Users\Eppy\Documents\GitHub\linphone-android\SprintFour.tex
@@ -284,20 +284,20 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
 (C:\Users\Eppy\Documents\GitHub\linphone-android\SprintFour.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -314,7 +314,7 @@ LaTeX Font Info:    ... okay on input line 19.
 \everyMPtoPDFconversion=\toks21
 )
 \AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring OFF on input line 19.
+Package hyperref Info: Link coloring OFF on input line 18.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -323,9 +323,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count112
 )
-LaTeX Info: Redefining \ref on input line 19.
-LaTeX Info: Redefining \pageref on input line 19.
-LaTeX Info: Redefining \nameref on input line 19.
+LaTeX Info: Redefining \ref on input line 18.
+LaTeX Info: Redefining \pageref on input line 18.
+LaTeX Info: Redefining \nameref on input line 18.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -379,7 +379,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <pictures/Team.jpg, id=4, 975.645pt x 549.05125pt>
 File: pictures/Team.jpg Graphic file (type jpg)
  <use pictures/Team.jpg>
-Package pdftex.def Info: pictures/Team.jpg used on input line 17.
+Package pdftex.def Info: pictures/Team.jpg used on input line 18.
 (pdftex.def)             Requested size: 351.31378pt x 197.70018pt.
 
 [1
@@ -391,10 +391,10 @@ one-android/pictures/Team.jpg>])
 File: ./pictures/backlog.jpg Graphic file (type jpg)
 
 <use ./pictures/backlog.jpg>
-Package pdftex.def Info: ./pictures/backlog.jpg used on input line 28.
+Package pdftex.def Info: ./pictures/backlog.jpg used on input line 27.
 (pdftex.def)             Requested size: 424.06033pt x 212.53065pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
@@ -402,121 +402,145 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.33 \newpage
+l.32 \newpage
               [1 <C:/Users/Eppy/Documents/GitHub/linphone-android/pictures/back
 log.jpg>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 42.
+(Font)              <7> on input line 41.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 42.
+(Font)              <5> on input line 41.
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--49
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
 []|\OT1/cmr/m/n/10 Client rep-re-sen-ta-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--51
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
 []|\OT1/cmr/m/n/10 Ephiphania Mu-
  []
 
 
-Underfull \hbox (badness 5548) in paragraph at lines 51--51
+Underfull \hbox (badness 5548) in paragraph at lines 50--50
 \OT1/cmr/m/n/10 nava and Potego
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--67
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
 []|\OT1/cmr/m/n/10 Environment
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--71
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
 []|\OT1/cmr/m/n/10 User In-ter-face
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--71
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
 \OT1/cmr/m/n/10 and Cre-ate
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--78
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--90
+Underfull \hbox (badness 10000) in paragraph at lines 89--89
 []|\OT1/cmr/m/n/10 Implemented
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--90
+Underfull \hbox (badness 10000) in paragraph at lines 89--89
 \OT1/cmr/m/n/10 in pro-duc-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--92
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
 []|\OT1/cmr/m/n/10 Product Back-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--92
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
 []|[]\OT1/cmr/m/n/10 Click-able link
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--92
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
 \OT1/cmr/m/n/10 to Prod-uct
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--92
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
 \OT1/cmr/m/n/10 Back-log on
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--93
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
 []|\OT1/cmr/m/n/10 Environment
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 []|[]\OT1/cmr/m/n/10 Click-able link
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--95
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
 []|\OT1/cmr/m/n/10 User In-ter-face
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
 []|[]\OT1/cmr/m/n/10 Click-able link
  []
 
 
-Overfull \hbox (75.13481pt too wide) in paragraph at lines 86--98
+Overfull \hbox (75.13481pt too wide) in paragraph at lines 85--98
 [][] 
  []
 
 [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 121.
- [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 121.
+Underfull \hbox (badness 10000) in paragraph at lines 122--122
+\OT1/cmr/m/n/10 Ephiphania(Back-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--124
+[]|\OT1/cmr/m/n/10 Lerato(GUI) and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--124
+\OT1/cmr/m/n/10 Ephiphania(Back-
+ []
+
+
+Underfull \hbox (badness 1533) in paragraph at lines 133--133
+[]|\OT1/cmr/m/n/10 Get Travis CI to
+ []
+
+
+Overfull \hbox (35.48582pt too wide) in paragraph at lines 112--137
+[][] 
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 138.
+[3] [4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 138.
  (C:\Users\Eppy\Documents\GitHub\linphone-android\SprintFour.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 121.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 121.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 121.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 138.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 138.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 138.
  ) 
 Here is how much of TeX's memory you used:
- 7561 strings out of 493921
- 113265 string characters out of 3147285
- 213202 words of memory out of 3000000
+ 7563 strings out of 493921
+ 113277 string characters out of 3147285
+ 214203 words of memory out of 3000000
  10780 multiletter control sequences out of 15000+200000
  8202 words of font info for 29 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -525,9 +549,9 @@ Here is how much of TeX's memory you used:
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on SprintFour.pdf (4 pages, 299603 bytes).
+Output written on SprintFour.pdf (5 pages, 301018 bytes).
 PDF statistics:
- 93 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
+ 99 PDF objects out of 1000 (max. 8388607)
+ 19 named destinations out of 1000 (max. 500000)
  80 words of extra memory for PDF output out of 10000 (max. 10000000)
 
