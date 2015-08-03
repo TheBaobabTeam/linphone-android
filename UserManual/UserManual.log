@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.27)  3 AUG 2015 20:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.27)  3 AUG 2015 21:08
 entering extended mode
 **UserManual.tex
 (C:\Users\Eppy\Documents\GitHub\linphone-android\UserManual\UserManual.tex
@@ -287,6 +287,9 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 
 LaTeX Warning: Label `fig:Agile' multiply defined.
 
+
+LaTeX Warning: Label `fig:Agile' multiply defined.
+
 )
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
@@ -415,7 +418,12 @@ Underfull \hbox (badness 5548) in paragraph at lines 47--47
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--58
+Underfull \hbox (badness 10000) in paragraph at lines 55--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
@@ -423,7 +431,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--58
 File: ./pictures/android.jpg Graphic file (type jpg)
 
 <use ./pictures/android.jpg>
-Package pdftex.def Info: ./pictures/android.jpg used on input line 69.
+Package pdftex.def Info: ./pictures/android.jpg used on input line 70.
 (pdftex.def)             Requested size: 296.84093pt x 148.42554pt.
 
 
@@ -433,19 +441,48 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.76 
-      [1] <./pictures/sip.jpg, id=24, 512.66531pt x 331.2375pt>
-File: ./pictures/sip.jpg Graphic file (type jpg)
+l.73 \end{center}
+                  [1]
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
-<use ./pictures/sip.jpg>
-Package pdftex.def Info: ./pictures/sip.jpg used on input line 80.
+ []
+
+<./pictures/sip.jpg, id=24, 512.66531pt x 331.2375pt>
+File: ./pictures/sip.jpg Graphic file (type jpg)
+ <use ./pictures/sip.jpg>
+Package pdftex.def Info: ./pictures/sip.jpg used on input line 82.
 (pdftex.def)             Requested size: 296.84093pt x 191.7944pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 88.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.87 \\L
+        inphone.org hosts a free SIP service which allows users to make audi...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[2 <C:/Users/Eppy/Documents/GitHub/linphone-android/UserManual/pictures/android
+.jpg> <C:/Users/Eppy/Documents/GitHub/linphone-android/UserManual/pictures/sip.
+jpg>] <./pictures/LinphoneSip.jpg, id=32, 200.75pt x 301.125pt>
+File: ./pictures/LinphoneSip.jpg Graphic file (type jpg)
+
+<use ./pictures/LinphoneSip.jpg>
+Package pdftex.def Info: ./pictures/LinphoneSip.jpg used on input line 95.
+(pdftex.def)             Requested size: 169.62154pt x 254.45035pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 103.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 88.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
@@ -488,37 +525,36 @@ Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
- [2 <C:/Users/Eppy/Documents/GitHub/linphone-android/UserManual/pictures/androi
-d.jpg> <C:/Users/Eppy/Documents/GitHub/linphone-android/UserManual/pictures/sip
-.jpg>] [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 120.
+ [3 <C:/Users/Eppy/Documents/GitHub/linphone-android/UserManual/pictures/Linpho
+neSip.jpg>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 120.
 
 (C:\Users\Eppy\Documents\GitHub\linphone-android\UserManual\UserManual.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 105.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 105.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 120.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 120.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 105.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 120.
  ) 
 Here is how much of TeX's memory you used:
- 7585 strings out of 493921
- 113786 string characters out of 3147285
- 210233 words of memory out of 3000000
- 10800 multiletter control sequences out of 15000+200000
+ 7591 strings out of 493921
+ 113940 string characters out of 3147285
+ 210246 words of memory out of 3000000
+ 10804 multiletter control sequences out of 15000+200000
  8202 words of font info for 29 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 41i,9n,38p,595b,370s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,9n,38p,313b,387s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on UserManual.pdf (4 pages, 441200 bytes).
+Output written on UserManual.pdf (4 pages, 464338 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 100 PDF objects out of 1000 (max. 8388607)
+ 18 named destinations out of 1000 (max. 500000)
+ 114 words of extra memory for PDF output out of 10000 (max. 10000000)
 
