@@ -39,10 +39,10 @@ before_install:
   - sudo apt-get -qq -y install ant
   - sudo apt-get -qq -y install rsync
   - sudo apt-get -qq -y install autoconf
-  - wget ftp://ftp.gnu.org/gnu/m4/m4-1.4.1.tar.gz
-  - tar -xvzf m4-1.4.1.tar.gz
+  #- wget ftp://ftp.gnu.org/gnu/m4/m4-1.4.1.tar.gz
+  #- tar -xvzf m4-1.4.1.tar.gz
   - sudo apt-get -qq -y install perl 
-  - sudo apt-get -qq -y install automake
+  #- sudo apt-get -qq -y install automake
   - sudo apt-get -qq -y install libtool
   - sudo apt-get -qq -y install pkg-config
   #- sudo dpkg --add-architecture i386
@@ -60,6 +60,11 @@ before_install:
   #- sudo apt-get install automake
 
 before_script:
-  - make clean
+  - aclocal --version
+  - wget http://ftp.gnu.org/gnu/automake/automake-1.14.tar.gz
+  - tar -xvzf automake-1.14.tar.gz
+  - cd automake-1.14 && ./configure && make && sudo make install && cd ..
+  - aclocal --version
+  #- make clean
 
 script: make
