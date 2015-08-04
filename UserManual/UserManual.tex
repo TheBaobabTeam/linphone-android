@@ -22,22 +22,21 @@
 \newpage
 
 \section{Introduction}
-This user manual provides instructional support and guidance to help the users who use Linphone-android. The manual focuses on system configuration, installation, using the system, troubleshooting, etc.
+This User Manual contains all information that is essential to give the user guidance and support on how to use the Linphone-Android application. It includes a description on system configuration, installation, using the system, troubleshooting, etc. 
 
 \section{General Information}
 
-
 \subsection{Project Details}
 
-%Lerato edit here - System name and the names and/or affiliation of all stakeholders.
+\begin{table}[h]
 \setlength{\arrayrulewidth}{0.5mm}
-\setlength{\tabcolsep}{12pt}
+\setlength{\tabcolsep}{14pt}
 \renewcommand{\arraystretch}{2} 
-\begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|  }
+\begin{tabular}{ |p{6cm}|p{6cm}|p{6cm}|  }
 \hline
-\rowcolor{lightgray}\multicolumn{2}{|c|}{System name affiliation of all stakeholders} \\
+\rowcolor{lightgray}\multicolumn{2}{|c|}{\textbf{System name and the names and/or affiliation of all stakeholders}} \\
 \hline
-System name & Linphone Group Chat \\
+System name & Linphone-Android Group Chat \\
 \hline
 Stakeholder & Kobus Coetzee \\
 \hline
@@ -49,14 +48,15 @@ Crypto developer  & Tsepo Ntsaba \\ \hline
 CI / CD support  & Patience Mtsweni \\ 
 \hline
 \end{tabular}
+\caption {}
+\end{table}
 
 \subsection{System Overview}
-
-The system we are working on is called Linphone. We are are adding additional functionality to an already existing project. The main aim of the functionality we are developing in the Linphone project is to allow a group of users to be able to communicate or exchange messages with each other. \\
-This functionality is achieved by creating a group chat were there will be an interface that allows those messages to be exchanged and viewed. A  participant can send messages and pictures to a group, send voice recordings,update the group picture and change the  group name. \\
-A participant can become an administrator in the group -  usually this is the person who creates the group ,who is 
-responsible for adding and  removing other participants.\\
-
+The system we are working on is called Linphone.\\
+Linphone is an open source internet SIP phone or Voice Over IP phone(VoIP), compatible with the SIP protocol.  \\
+It allows for users to chat instantly or to make calls over the internetThe system we are working on is called Linphone by using the SIP protocol to one another. \\
+Linphone has been developed for different platforms but this manual only focuses on Linphone for Android devices.\\
+A new feature has been added to this application - the group chat functionality. This allows for 2 or more people to participate in what we call a group chat. Their communication will take place in the group chatroom.
 
 \subsection{System Configuration}
 
@@ -83,170 +83,192 @@ The linphone application requires registration to a SIP provider before you can 
 \caption{\label{fig:Agile}SIP Protocol.}
 \end{figure}
 \end{center}
-
 Linphone.org hosts a free SIP service which allows users to make audio or video calls using SIP addresses under the domain sip.linphone.org. \\
 When creating your sip address like sip:baobab@sip.linphone.org you simple use the form provided on http://www.linphone.org/free-sip-service.html and your friends can communicate with you by simply making use of the sip address.
-
-
-\newpage
-\begin{center}
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.4\linewidth]{./pictures/LinphoneSip.jpg}
-\caption{\label{fig:Agile}Linphone SIP Registration.}
-\end{figure}
-\end{center}
 
 
 \subsection{Installation}
 \begin{itemize}
 \item Turn on your Android Smartphone and click on the Google Play icon to launch Google Play.
-\item Tap the “Search” button in the upper right corner and type “Linphone”
-\item From the result list tap the result with the title “Linphone Video” to expand it
-\item Tap the “Install” button, Linphone for Android will be downloaded and the installation procedure will begin
-\item Confirm that you accept the Linphone application rights on the screen that will be appear on your Smartphone by tapping “Accept”. When the file installation is done tap “Open”.
-\item Press “Agree” when the License Agreement appears on your screen to finalize the install and start Linphone for Android.
+\item Tap the "Search" button in the upper right corner and type "Linphone"
+\item From the result list tap the result with the title "Linphone Video" to expand it
+\item Tap the "Install" button, Linphone for Android will be downloaded and the installation procedure will begin
+\item Confirm that you accept the Linphone application rights on the screen that will be appear on your Smartphone by tapping "Accept". When the file installation is done tap "Open".
+\item Press "Agree" when the License Agreement appears on your screen to finalize the install and start Linphone for Android.
 \end{itemize}
+
+\newpage
 
 \subsection{Getting started}
 %Patience Edit Here
-Our system is a group chat which is part of an existing Instant Messaging Application called Linphone. Therefore, for a you to access our system you need to have downloaded the application onto your android mobile device. To do this,  refer to section 2.4 (Installation) and follow the instructions as specified there. After installing Linphone onto your phone, you need to register in order to be able to use the application.
-You can register by following these steps:
+\subsubsection{Registering on the network}
+To get started with the system, you need to install Linphone Application onto your android phone. To do this refer to section(2.4), and follow the results as shown there.
+Once you have Linphone installed, you should setup your sip account, which you will need to be able to use the system. For more details on what a SIP address is, refer to section (2.3.2).
 \begin{itemize}
-\item Click on the "Settings" button on the bottom right corner. After clicking it, the following screen will appear:
+\item Click on the \textbf{settings} button on the bottom of the screen. Next click on  \textbf{Account Setup Assistant}.
 \end{itemize}
 
-%\begin{center}
 \begin{figure}[h]
-\centering
-\includegraphics[scale=0.30, width=40mm]{./pictures/settings.png}
-\caption{\label{fig:Agile}Settings}
+  \centering
+  \begin{minipage}[h]{0.4\textwidth}
+    \includegraphics[width=40mm, scale=0.5]{pictures/home.png}
+    \caption{Home Screen}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[h]{0.4\textwidth}
+    \includegraphics[width=40mm, scale=0.5]{pictures/settings.png}
+    \caption{Settings Screen}
+  \end{minipage}
 \end{figure}
-%\end{center}
 
 \begin{itemize}
-\item Click/press "Account Setup Assistant".  After clicking it, you will see the screen as shown by figure 4, in this screen click "Let's go" to go to the next screen.
+\item Click on \textbf{Let's go}. Next, click on \textbf{Create account on linphone.org} then click \textbf{Create} . \\
+\item Otherwise, if you already have a SIP or linphone.org account, click on their options and click \textbf{Apply} .
 \end{itemize}
 
-%\begin{center}
 \begin{figure}[h]
-\centering
-\includegraphics[scale=0.30, width=40mm]{./pictures/welcome.png}
-\caption{\label{fig:Agile}Account Setup Assistant}
+  \centering
+  \begin{minipage}[h]{0.4\textwidth}
+    \includegraphics[width=40mm, scale=0.5]{pictures/welcome.png}
+    \caption{Account Setup Screen}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[h]{0.4\textwidth}
+    \includegraphics[width=40mm, scale=0.5]{pictures/options.png}
+    \caption{Options Screen}
+  \end{minipage}
 \end{figure}
-%\end{center}
-
-\begin{itemize}
-\item Next, click on any  one of the following that are applicable to you, for example, if you do not have a linphone.org account, you should click/press "Create an account on linphone.org". The following screen will appear, when it does, fill your details and click "create".
-\end{itemize}
-
-%\begin{center}
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.30, width=40mm]{./pictures/options.png}
-\caption{\label{fig:Agile}Create Account}
-\end{figure}
-%\end{center}
-
-After following these steps, you will be registered and ready to use the application. (Note, that after registering you will need to verify your account by clicking on the link that will be in the e-mail sent by linphone.org to your email address).
-
-Now that you are registered, follow these steps to access the group chat:
-
-\begin{itemize}
-\item Click/press "chat".
-\end{itemize}
-
-%\begin{center}
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.30, width=40mm]{./pictures/s1.jpg}
-\caption{\label{fig:Agile}Chat Screen}
-\end{figure}
-%\end{center}
-
-\begin{itemize}
-\item Click/press "New Group". As shown at the top of figure 6. After clicking it, the following screen will appear:
-\end{itemize}
-
-%\begin{center}
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.30, width=40mm]{./pictures/s2.jpg}
-\caption{\label{fig:Agile}New Group Screen}
-\end{figure}
-%\end{center}
-
-\begin{itemize}
-\item Enter your group name in the space provided and choose an icon/profile picture(optional), as shown in figure 7, to proceed to next screen. 
-\end{itemize}
-
-\begin{itemize}
-\item Click "next" on figure 7 to go to the following screen:
-\end{itemize}
-
-%\begin{center}
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.30, width=40mm]{./pictures/s3.jpg}
-\caption{\label{fig:Agile}Chatroom screen}
-\end{figure}
-%\end{center}
-
-
 
 
 \newpage
+
 \subsection{Using the system}
 %Potego Edit Here
 
+After successful installation and setup (sip account) of the linphone application, you should then see the following screen:
+
+\begin{center}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{pictures/home.png}
+\caption{\label{fig:Screen1}Main Screen.}
+\end{figure}
+\end{center}
+
+To make call via VoIP (Voice over Internet Protocol), type in (where it's written "Number or address") the sip address or the phone number of the person you would like to contact and press the dial button like screen two:
+
+\begin{center}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-04-05-38-27.png}
+\caption{\label{fig:Screen2}Screen two.}
+\end{figure}
+\end{center}
+
+To start chatting just click on the chat button in the menu at bottom of the screen. It will take you to the following screen:
+
+\begin{center}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{pictures/s1.jpg}
+\caption{\label{fig:Screen3}Screen three.}
+\end{figure}
+\end{center}
+
+Now click on the "new conversation" button at the top left position which will then lead you to the your contact list where you have to select the contact you would like to chat with like in the following:
+
+\begin{center}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-04-05-37-18.png}
+\caption{\label{fig:Screen4}Contact List.}
+\end{figure}
+\end{center}
+
+Selecting a contact to chat with should now take you to the chatroom which is the place where messages are exchanged. Look at the following:
+
+\begin{center}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-04-05-37-53.png}
+\caption{\label{fig:Screen5}Chatroom.}
+\end{figure}
+\end{center}
+
+There is a small text box at the bottom of the chatroom that can be used to compose your messages and then when ready, you can click on the send button next to it to send the message to your peer. Like this:
+
+\begin{center}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-04-05-38-27.png}
+\caption{\label{fig:Screen6}Chatroom 2.}
+\end{figure}
+\end{center}
+
+To add new contacts via linphone just go back to the main screen and click on the contacts button. This will take you to the Contact list screen. At the to right position of that screen click on the new contact button and you will be led to the following screen:
+
+\begin{center}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-04-05-39-24.png}
+\caption{\label{fig:Screen7}Create New Contact.}
+\end{figure}
+\end{center}
+
+Now you can fill in the details required in the form and then click on Okay to save the new contact. Like so:
+
+\begin{center}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-04-05-40-26.png}
+\caption{\label{fig:Screen8}Create New Contact with details.}
+\end{figure}
+\end{center}
+
+Your call logs can be found by going back to the main screen and then clicking on the History button at the bottom left screen menu. The log for outgoing and incoming calls are shown here:
+
+\begin{center}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-04-05-42-53.png}
+\caption{\label{fig:Screen9}Call Log History.}
+\end{figure}
+\end{center}
+
+\newpage
 \subsection{System Configuration}
-Troubleshooting, FAQ & Problems
+\textbf{Troubleshooting, FAQ and Problems} \\
 
-Connection problems
+\textbf{Connection problems} \\
 I try to phone to my friend <sip:toto@example.com>, but nothing happens, no ring, nothing
-at all.
+at all. \\
 You must verify that linphone uses the network interface that connects you to the
-internet (or to the network where calls should go). Use the property box, section
-Network, to select the correct network interface.
-In other case, the person you are contacting may be not reachable at the moment...
+internet (or to the network where calls should go). \\
+Use the property box, section Network, to select the correct network interface.
+In other case, the person you are contacting may be not reachable at the moment... \\
 
-Audio problems
+\textbf{Audio problems} \\
 Linphone seems to connect to the remote sip url, it rings, but when the callee answers,
-nothing happens and we can’t hear each other.
+nothing happens and we can't hear each other. \\
 
-• Most people get problems because they don’t choose the correct network interface
-in the property box, section network. 
+Most people get problems because they don't choose the correct network interface
+in the property box, section network. \\
 
-In other cases, it will fail.
-• First rise up playback and recording level.
-• If the voice is sometines cutted, you can modify parameter RTP->jitter
+In other cases, it will fail. \\
+First rise up playback and recording level. \\
+If the voice is sometines cutted, you can modify parameter RTP\->jitter \\
 compensation in the property box to greater values to avoid this. But it increases the
-delay transmission.
+delay transmission. \\
 
-FAQ
-How do I use Linphone Calling?
-Linphone Calling lets you call your friends and family using Linphone for free, even if they’re in another country. Currently, Linphone Calling is available on Android.
-Linphone Calling uses your phone’s Internet connection rather than your cellular plan’s voice minutes. Data charges may apply.
-Please note: you can’t access 10111 and other emergency service numbers through Linphone. You must make alternative communication arrangements to make emergency calls.
+\textbf{FAQ}
+How do I use Linphone Calling? \\
+Linphone Calling lets you call your friends and family using Linphone for free, even if they're in another country. Currently, Linphone Calling is available on Android. \\
+Linphone Calling uses your phone's Internet connection rather than your cellular plan's voice minutes. Data charges may apply.
+Please note: you can't access 10111 and other emergency service numbers through Linphone. You must make alternative communication arrangements to make emergency calls. \\
 
-Place a Linphone call
-To make a WhatsApp call, simply open the chat with the person you want to call and tap on the phone button on top.
-Recieving a Linphone call
-When someone calls you, you will see an incoming WhatsApp call screen. You can tap and slide the green button to answer the call, or slide the red button to decline the call. Alternatively, you can tap on the message icon on the call screen to decline the call with a quick message.
-
-What is a Group Chat?
-The Group Chat feature lets you chat with up to 50 people at once. It is a great way to stay in touch with your family, friends and colleagues. In addition to the maximum number of people you can add to a group, there are a few more things to keep in mind about Group Chat:
-There is no limit to the number of groups you can create.
-Every group has one or more admins. Only admins can add or remove participants.
-Only admins can make other participants admins.
-If the last admin leaves the group, a new admin will be randomly assigned.
-You can always control your own participation in a Group Chat, by staying in or leaving the group when you wish. Remember that only group admins have the ability to add participants. If you have any questions about being added to a group, or prefer not to be added, please speak to a group admin.
-If you have blocked a contact, you will still receive messages this contact sends into any group you have in common. Likewise, they will still receive messages you send to those groups.
-
-
-
-9. Bugs reporting and suggestions
-First go to linphone’s home page at http://www.linphone.org to check if you have the
-latest version of linphone.
+\textbf{Bugs reporting and suggestions} \\
+First go to linphone's home page at http://www.linphone.org to check if you have the
+latest version of linphone. \\
 
 \end{document}
+

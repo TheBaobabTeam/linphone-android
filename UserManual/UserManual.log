@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.7.1)  3 AUG 2015 22:25
-=======
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.27)  3 AUG 2015 21:08
->>>>>>> 3c7aa5fc469703617d4489ed80746b05be607944
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.7.1)  4 AUG 2015 06:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -279,24 +275,6 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 
 LaTeX Warning: Label `fig:Agile' multiply defined.
 
-
-LaTeX Warning: Label `fig:Agile' multiply defined.
-
-
-LaTeX Warning: Label `fig:Agile' multiply defined.
-
-
-LaTeX Warning: Label `fig:Agile' multiply defined.
-
-
-LaTeX Warning: Label `fig:Agile' multiply defined.
-
-
-LaTeX Warning: Label `fig:Agile' multiply defined.
-
-
-LaTeX Warning: Label `fig:Agile' multiply defined.
-
 )
 \openout1 = `UserManual.aux'.
 
@@ -416,34 +394,9 @@ Package pdftex.def Info: pictures/Team.jpg used on input line 18.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./pictures/logo.jpg> <./pi
 ctures/Team.jpg>])
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 36.
+(Font)              <7> on input line 35.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 36.
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
-[]|\OT1/cmr/m/n/10 Linphone Group
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--45
-[]|\OT1/cmr/m/n/10 Client rep-re-sen-ta-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--47
-[]|\OT1/cmr/m/n/10 Ephiphania Mu-
- []
-
-
-Underfull \hbox (badness 5548) in paragraph at lines 47--47
-\OT1/cmr/m/n/10 nava and Potego
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--59
-
- []
-
+(Font)              <5> on input line 35.
 
 Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
@@ -459,213 +412,194 @@ Package pdftex.def Info: ./pictures/android.jpg used on input line 70.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
+
+ []
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-<<<<<<< HEAD
-l.76 
-      [1] <./pictures/sip.jpg, id=25, 512.66531pt x 331.2375pt>
+l.77 
+      [1] <./pictures/sip.jpg, id=26, 512.66531pt x 331.2375pt>
 File: ./pictures/sip.jpg Graphic file (type jpg)
-=======
-l.73 \end{center}
-                  [1]
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
- []
->>>>>>> 3c7aa5fc469703617d4489ed80746b05be607944
-
-<./pictures/sip.jpg, id=24, 512.66531pt x 331.2375pt>
-File: ./pictures/sip.jpg Graphic file (type jpg)
- <use ./pictures/sip.jpg>
+<use ./pictures/sip.jpg>
 Package pdftex.def Info: ./pictures/sip.jpg used on input line 82.
 (pdftex.def)             Requested size: 296.84093pt x 191.7944pt.
-<<<<<<< HEAD
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 88.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 92.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-=======
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.87 \\L
-        inphone.org hosts a free SIP service which allows users to make audi...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[2 <C:/Users/Eppy/Documents/GitHub/linphone-android/UserManual/pictures/android
-.jpg> <C:/Users/Eppy/Documents/GitHub/linphone-android/UserManual/pictures/sip.
-jpg>] <./pictures/LinphoneSip.jpg, id=32, 200.75pt x 301.125pt>
-File: ./pictures/LinphoneSip.jpg Graphic file (type jpg)
-
-<use ./pictures/LinphoneSip.jpg>
-Package pdftex.def Info: ./pictures/LinphoneSip.jpg used on input line 95.
-(pdftex.def)             Requested size: 169.62154pt x 254.45035pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 103.
-
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
->>>>>>> 3c7aa5fc469703617d4489ed80746b05be607944
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-<<<<<<< HEAD
- [2 <./pictures/android.jpg> <./pictures/sip.jpg>]
-<./pictures/settings.png, id=35, 542.025pt x 963.6pt>
-File: ./pictures/settings.png Graphic file (type png)
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 92.
+ [2 <./pictures/android.jpg> <./pictures/sip.jpg>] [3]
+<pictures/home.png, id=40, 542.025pt x 963.6pt>
+File: pictures/home.png Graphic file (type png)
+ <use pictures/home.png>
+Package pdftex.def Info: pictures/home.png used on input line 114.
+(pdftex.def)             Requested size: 271.01183pt x 481.79883pt.
 
-<use ./pictures/settings.png>
-Package pdftex.def Info: ./pictures/settings.png used on input line 107.
-(pdftex.def)             Requested size: 162.60875pt x 289.08223pt.
+<pictures/settings.png, id=41, 542.025pt x 963.6pt>
+File: pictures/settings.png Graphic file (type png)
 
-<./pictures/welcome.png, id=36, 542.025pt x 963.6pt>
-File: ./pictures/welcome.png Graphic file (type png)
+<use pictures/settings.png>
+Package pdftex.def Info: pictures/settings.png used on input line 119.
+(pdftex.def)             Requested size: 271.01183pt x 481.79883pt.
 
-<use ./pictures/welcome.png>
-Package pdftex.def Info: ./pictures/welcome.png used on input line 119.
-(pdftex.def)             Requested size: 162.60875pt x 289.08223pt.
- [3 <./pictures/settings.png> <./pictures/welcome.png>] <./pictures/options.png
-, id=44, 542.025pt x 963.6pt>
-File: ./pictures/options.png Graphic file (type png)
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
-<use ./pictures/options.png>
-Package pdftex.def Info: ./pictures/options.png used on input line 131.
-(pdftex.def)             Requested size: 162.60875pt x 289.08223pt.
- <./pictures/s1.jpg, id=45, 722.7pt x 1284.8pt>
-File: ./pictures/s1.jpg Graphic file (type jpg)
+ []
 
-<use ./pictures/s1.jpg>
-Package pdftex.def Info: ./pictures/s1.jpg used on input line 147.
-(pdftex.def)             Requested size: 216.81166pt x 385.44298pt.
- <./pictures/s2.jpg, id=46, 722.7pt x 1284.8pt>
-File: ./pictures/s2.jpg Graphic file (type jpg)
+<pictures/welcome.png, id=42, 542.025pt x 963.6pt>
+File: pictures/welcome.png Graphic file (type png)
+ <use pictures/welcome.png>
+Package pdftex.def Info: pictures/welcome.png used on input line 132.
+(pdftex.def)             Requested size: 271.01183pt x 481.79883pt.
 
-<use ./pictures/s2.jpg>
-Package pdftex.def Info: ./pictures/s2.jpg used on input line 159.
-(pdftex.def)             Requested size: 216.81166pt x 385.44298pt.
+<pictures/options.png, id=43, 542.025pt x 963.6pt>
+File: pictures/options.png Graphic file (type png)
+ <use pictures/options.png>
+Package pdftex.def Info: pictures/options.png used on input line 137.
+(pdftex.def)             Requested size: 271.01183pt x 481.79883pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4 <./pictures/options.png> <./pictures/s1.jpg>]
-<./pictures/s3.jpg, id=53, 722.7pt x 1284.8pt>
-File: ./pictures/s3.jpg Graphic file (type jpg)
- <use ./pictures/s3.jpg>
-Package pdftex.def Info: ./pictures/s3.jpg used on input line 175.
-(pdftex.def)             Requested size: 216.81166pt x 385.44298pt.
- [5 <./pictures/s2.jpg> <./pictures/s3.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 190.
- [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 190.
- (./UserManual.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 190.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 190.
-=======
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 120.
- [3 <C:/Users/Eppy/Documents/GitHub/linphone-android/UserManual/pictures/Linpho
-neSip.jpg>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 120.
+[4 <./pictures/home.png> <./pictures/settings.png>]
+File: pictures/home.png Graphic file (type png)
+ <use pictures/home.png>
+Package pdftex.def Info: pictures/home.png used on input line 153.
+(pdftex.def)             Requested size: 296.84093pt x 527.73204pt.
 
-(C:\Users\Eppy\Documents\GitHub\linphone-android\UserManual\UserManual.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 120.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 120.
->>>>>>> 3c7aa5fc469703617d4489ed80746b05be607944
+[5 <./pictures/welcome.png> <./pictures/options.png>]
+<pictures/Screenshot_2015-08-04-05-38-27.png, id=57, 542.025pt x 963.6pt>
+File: pictures/Screenshot_2015-08-04-05-38-27.png Graphic file (type png)
+
+<use pictures/Screenshot_2015-08-04-05-38-27.png>
+Package pdftex.def Info: pictures/Screenshot_2015-08-04-05-38-27.png used on in
+put line 163.
+(pdftex.def)             Requested size: 296.84093pt x 527.73204pt.
+ [6]
+<pictures/s1.jpg, id=64, 722.7pt x 1284.8pt>
+File: pictures/s1.jpg Graphic file (type jpg)
+ <use pictures/s1.jpg>
+Package pdftex.def Info: pictures/s1.jpg used on input line 173.
+(pdftex.def)             Requested size: 296.84093pt x 527.71243pt.
+ [7 <./pictures/Screenshot_2015-08-04-05-38-27.png>]
+<pictures/Screenshot_2015-08-04-05-37-18.png, id=70, 542.025pt x 963.6pt>
+File: pictures/Screenshot_2015-08-04-05-37-18.png Graphic file (type png)
+
+<use pictures/Screenshot_2015-08-04-05-37-18.png>
+Package pdftex.def Info: pictures/Screenshot_2015-08-04-05-37-18.png used on in
+put line 183.
+(pdftex.def)             Requested size: 296.84093pt x 527.73204pt.
+ [8 <./pictures/s1.jpg>]
+<pictures/Screenshot_2015-08-04-05-37-53.png, id=76, 542.025pt x 963.6pt>
+File: pictures/Screenshot_2015-08-04-05-37-53.png Graphic file (type png)
+
+<use pictures/Screenshot_2015-08-04-05-37-53.png>
+Package pdftex.def Info: pictures/Screenshot_2015-08-04-05-37-53.png used on in
+put line 193.
+(pdftex.def)             Requested size: 296.84093pt x 527.73204pt.
+ [9 <./pictures/Screenshot_2015-08-04-05-37-18.png>]
+File: pictures/Screenshot_2015-08-04-05-38-27.png Graphic file (type png)
+ <use pictures/Screenshot_2015-08-04-05-38-27.png>
+Package pdftex.def Info: pictures/Screenshot_2015-08-04-05-38-27.png used on in
+put line 203.
+(pdftex.def)             Requested size: 296.84093pt x 527.73204pt.
+
+[10 <./pictures/Screenshot_2015-08-04-05-37-53.png>]
+<pictures/Screenshot_2015-08-04-05-39-24.png, id=87, 542.025pt x 963.6pt>
+File: pictures/Screenshot_2015-08-04-05-39-24.png Graphic file (type png)
+
+<use pictures/Screenshot_2015-08-04-05-39-24.png>
+Package pdftex.def Info: pictures/Screenshot_2015-08-04-05-39-24.png used on in
+put line 213.
+(pdftex.def)             Requested size: 296.84093pt x 527.73204pt.
+ [11]
+<pictures/Screenshot_2015-08-04-05-40-26.png, id=93, 542.025pt x 963.6pt>
+File: pictures/Screenshot_2015-08-04-05-40-26.png Graphic file (type png)
+
+<use pictures/Screenshot_2015-08-04-05-40-26.png>
+Package pdftex.def Info: pictures/Screenshot_2015-08-04-05-40-26.png used on in
+put line 223.
+(pdftex.def)             Requested size: 296.84093pt x 527.73204pt.
+ [12 <./pictures/Screenshot_2015-08-04-05-39-24.png>]
+<pictures/Screenshot_2015-08-04-05-42-53.png, id=100, 542.025pt x 963.6pt>
+File: pictures/Screenshot_2015-08-04-05-42-53.png Graphic file (type png)
+
+<use pictures/Screenshot_2015-08-04-05-42-53.png>
+Package pdftex.def Info: pictures/Screenshot_2015-08-04-05-42-53.png used on in
+put line 233.
+(pdftex.def)             Requested size: 296.84093pt x 527.73204pt.
+ [13 <./pictures/Screenshot_2015-08-04-05-40-26.png>] [14 <./pictures/Screensho
+t_2015-08-04-05-42-53.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--249
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 250--253
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 254--256
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 257--262
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--268
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--272
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 273.
+[15]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 273.
+ (./UserManual.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 273.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 273.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-<<<<<<< HEAD
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 190.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 273.
  ) 
 Here is how much of TeX's memory you used:
- 7814 strings out of 495028
- 117408 string characters out of 6181498
- 215480 words of memory out of 5000000
- 10922 multiletter control sequences out of 15000+600000
+ 7867 strings out of 495028
+ 118964 string characters out of 6181498
+ 215909 words of memory out of 5000000
+ 10954 multiletter control sequences out of 15000+600000
  8202 words of font info for 29 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 41i,9n,38p,594b,392s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,38p,279b,398s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on UserManual.pdf (7 pages, 1164331 bytes).
+Output written on UserManual.pdf (16 pages, 1411581 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
- 101 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
- 139 words of extra memory for PDF output out of 10000 (max. 10000000)
-=======
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 120.
- ) 
-Here is how much of TeX's memory you used:
- 7591 strings out of 493921
- 113940 string characters out of 3147285
- 210246 words of memory out of 3000000
- 10804 multiletter control sequences out of 15000+200000
- 8202 words of font info for 29 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 41i,9n,38p,313b,387s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on UserManual.pdf (4 pages, 464338 bytes).
-PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 500000)
- 114 words of extra memory for PDF output out of 10000 (max. 10000000)
->>>>>>> 3c7aa5fc469703617d4489ed80746b05be607944
+ 183 PDF objects out of 1000 (max. 8388607)
+ 143 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 172 words of extra memory for PDF output out of 10000 (max. 10000000)
 
