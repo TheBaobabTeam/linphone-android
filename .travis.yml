@@ -56,8 +56,10 @@ before_install:
   - sudo aptitude -y install libstdc++6:i386 libgcc1:i386 zlib1g:i386 libncurses5:i386
   - sudo apt-get -qq -y install bc
   - sudo apt-get -qq -y install libwww-perl
-  - sudo apt-get autoremove automake
-  - sudo apt-get install automake
+  #- sudo apt-get autoremove automake
+  #- sudo apt-get install automake
 
+before_script:
+  - make clean
 
 script: make
