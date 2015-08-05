@@ -1,14 +1,21 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.7.1)  4 AUG 2015 06:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.27)  4 AUG 2015 07:24
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
 **UserManual.tex
-(./UserManual.tex
+(C:\Users\Eppy\Documents\GitHub\linphone-android\UserManual\UserManual.tex
 LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 2 languages loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -23,31 +30,31 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count87
@@ -55,16 +62,16 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
-Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
 
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
-Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
@@ -95,7 +102,7 @@ Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
 Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
 Package: xcolor-patch 2011/01/30 xcolor patch
 Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
@@ -103,25 +110,25 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen105
 \Hy@linkcounter=\count88
 \Hy@pagecounter=\count89
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count90
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Option `bookmarks' set `true' on input line 4319.
@@ -134,7 +141,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count91
 
-(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -159,26 +166,26 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count96
 \c@bookmark@seq@number=\count97
 
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
 \Hy@SectionHShift=\skip43
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/bookmark.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\bookmark.sty"
 Package: bookmark 2011/12/02 v1.24 PDF bookmarks (HO)
 
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/bkm-pdftex.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\bkm-pdftex.def"
 File: bkm-pdftex.def 2011/12/02 v1.24 bookmark driver for pdfTeX (HO)
 \BKM@id=\count98
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@cnth=\count99
 \Gm@cntv=\count100
@@ -192,8 +199,9 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@layouthoffset=\dimen115
 \Gm@layoutvoffset=\dimen116
 \Gm@dimlist=\toks15
-)
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count102
 \float@exts=\toks16
@@ -201,10 +209,10 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks17
 \@floatcapt=\box27
 )
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen117
@@ -219,27 +227,31 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2013/12/03 3.9h The Babel package
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
-Language: english 2012/08/20 v3.3p English support from the babel system
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\english.ldf"
+Language: english 2005/03/30 v3.3o English support from the babel system
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2013/12/03 3.9h Babel common definitions
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count104
 \U@D=\dimen124
 )
-\l@british = a dialect from \language\l@english 
-\l@UKenglish = a dialect from \language\l@english 
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/tools/dcolumn.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\dcolumn.sty"
 Package: dcolumn 2001/05/28 v1.06 decimal alignment package (DPC)
 
-(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen125
 \extrarowheight=\dimen126
@@ -247,15 +259,15 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \extratabsurround=\skip44
 \backup@length=\skip45
 ))
-(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 \everycr=\toks19
 \minrowclearance=\skip46
@@ -271,13 +283,14 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-(./UserManual.aux
+(C:\Users\Eppy\Documents\GitHub\linphone-android\UserManual\UserManual.aux
+
+LaTeX Warning: Label `fig:Agile' multiply defined.
+
 
 LaTeX Warning: Label `fig:Agile' multiply defined.
 
 )
-\openout1 = `UserManual.aux'.
-
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
@@ -292,7 +305,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
- (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count106
 \scratchdimen=\dimen127
@@ -305,28 +318,13 @@ LaTeX Font Info:    ... okay on input line 18.
 \MPnumerator=\count110
 \makeMPintoPDFobject=\count111
 \everyMPtoPDFconversion=\toks21
-) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 )
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
 \AtBeginShipoutBox=\box29
 Package hyperref Info: Link coloring OFF on input line 18.
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count112
@@ -371,10 +369,10 @@ LaTeX Info: Redefining \nameref on input line 18.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-(./titlePage.tex <pictures/logo.jpg, id=4, 877.02657pt x 325.215pt>
+(C:\Users\Eppy\Documents\GitHub\linphone-android\UserManual\titlePage.tex
+<pictures/logo.jpg, id=3, 877.02657pt x 325.215pt>
 File: pictures/logo.jpg Graphic file (type jpg)
-
-<use pictures/logo.jpg>
+ <use pictures/logo.jpg>
 Package pdftex.def Info: pictures/logo.jpg used on input line 5.
 (pdftex.def)             Requested size: 401.50146pt x 148.88612pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -383,26 +381,53 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 8.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 8.
- <pictures/Team.jpg, id=5, 975.645pt x 549.05125pt>
-File: pictures/Team.jpg Graphic file (type jpg)
 
-<use pictures/Team.jpg>
+<pictures/Team.jpg, id=4, 975.645pt x 549.05125pt>
+File: pictures/Team.jpg Graphic file (type jpg)
+ <use pictures/Team.jpg>
 Package pdftex.def Info: pictures/Team.jpg used on input line 18.
 (pdftex.def)             Requested size: 351.31378pt x 197.70018pt.
- [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./pictures/logo.jpg> <./pi
-ctures/Team.jpg>])
+[1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Eppy/Documents/G
+itHub/linphone-android/UserManual/pictures/logo.jpg> <C:/Users/Eppy/Documents/G
+itHub/linphone-android/UserManual/pictures/Team.jpg>])
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 35.
+(Font)              <7> on input line 36.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 35.
+(Font)              <5> on input line 36.
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
+[]|\OT1/cmr/m/n/10 Linphone Group
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--45
+[]|\OT1/cmr/m/n/10 Client rep-re-sen-ta-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+[]|\OT1/cmr/m/n/10 Ephiphania Mu-
+ []
+
+
+Underfull \hbox (badness 5548) in paragraph at lines 47--47
+\OT1/cmr/m/n/10 nava and Potego
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--59
+
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
-<./pictures/android.jpg, id=14, 602.25pt x 301.125pt>
+<./pictures/android.jpg, id=13, 602.25pt x 301.125pt>
 File: ./pictures/android.jpg Graphic file (type jpg)
 
 <use ./pictures/android.jpg>
@@ -412,194 +437,257 @@ Package pdftex.def Info: ./pictures/android.jpg used on input line 70.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
-
- []
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.77 
-      [1] <./pictures/sip.jpg, id=26, 512.66531pt x 331.2375pt>
-File: ./pictures/sip.jpg Graphic file (type jpg)
-
-<use ./pictures/sip.jpg>
-Package pdftex.def Info: ./pictures/sip.jpg used on input line 82.
-(pdftex.def)             Requested size: 296.84093pt x 191.7944pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 92.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 92.
- [2 <./pictures/android.jpg> <./pictures/sip.jpg>] [3]
-<pictures/home.png, id=40, 542.025pt x 963.6pt>
-File: pictures/home.png Graphic file (type png)
- <use pictures/home.png>
-Package pdftex.def Info: pictures/home.png used on input line 114.
-(pdftex.def)             Requested size: 271.01183pt x 481.79883pt.
-
-<pictures/settings.png, id=41, 542.025pt x 963.6pt>
-File: pictures/settings.png Graphic file (type png)
-
-<use pictures/settings.png>
-Package pdftex.def Info: pictures/settings.png used on input line 119.
-(pdftex.def)             Requested size: 271.01183pt x 481.79883pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
+l.73 \end{center}
+                  [1]
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
-<pictures/welcome.png, id=42, 542.025pt x 963.6pt>
-File: pictures/welcome.png Graphic file (type png)
- <use pictures/welcome.png>
-Package pdftex.def Info: pictures/welcome.png used on input line 132.
+<./pictures/sip.jpg, id=24, 512.66531pt x 331.2375pt>
+File: ./pictures/sip.jpg Graphic file (type jpg)
+ <use ./pictures/sip.jpg>
+Package pdftex.def Info: ./pictures/sip.jpg used on input line 82.
+(pdftex.def)             Requested size: 296.84093pt x 191.7944pt.
+
+[2 <C:/Users/Eppy/Documents/GitHub/linphone-android/UserManual/pictures/android
+.jpg> <C:/Users/Eppy/Documents/GitHub/linphone-android/UserManual/pictures/sip.
+jpg>] <./pictures/LinphoneSip.jpg, id=32, 200.75pt x 301.125pt>
+File: ./pictures/LinphoneSip.jpg Graphic file (type jpg)
+
+<use ./pictures/LinphoneSip.jpg>
+Package pdftex.def Info: ./pictures/LinphoneSip.jpg used on input line 95.
+(pdftex.def)             Requested size: 169.62154pt x 254.45035pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 103.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+
+<pictures/home.png, id=34, 542.025pt x 963.6pt>
+File: pictures/home.png Graphic file (type png)
+ <use pictures/home.png>
+Package pdftex.def Info: pictures/home.png used on input line 123.
 (pdftex.def)             Requested size: 271.01183pt x 481.79883pt.
 
-<pictures/options.png, id=43, 542.025pt x 963.6pt>
-File: pictures/options.png Graphic file (type png)
- <use pictures/options.png>
-Package pdftex.def Info: pictures/options.png used on input line 137.
+<pictures/settings.png, id=35, 542.025pt x 963.6pt>
+File: pictures/settings.png Graphic file (type png)
+
+<use pictures/settings.png>
+Package pdftex.def Info: pictures/settings.png used on input line 128.
 (pdftex.def)             Requested size: 271.01183pt x 481.79883pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4 <./pictures/home.png> <./pictures/settings.png>]
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+
+ []
+
+<pictures/welcome.png, id=36, 542.025pt x 963.6pt>
+File: pictures/welcome.png Graphic file (type png)
+ <use pictures/welcome.png>
+Package pdftex.def Info: pictures/welcome.png used on input line 141.
+(pdftex.def)             Requested size: 271.01183pt x 481.79883pt.
+
+<pictures/options.png, id=37, 542.025pt x 963.6pt>
+File: pictures/options.png Graphic file (type png)
+ <use pictures/options.png>
+Package pdftex.def Info: pictures/options.png used on input line 146.
+(pdftex.def)             Requested size: 271.01183pt x 481.79883pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3 <C:/Users/Eppy/Documents/GitHub/linphone-android/UserManual/pictures/Linphon
+eSip.jpg>]
 File: pictures/home.png Graphic file (type png)
  <use pictures/home.png>
-Package pdftex.def Info: pictures/home.png used on input line 153.
-(pdftex.def)             Requested size: 296.84093pt x 527.73204pt.
-
-[5 <./pictures/welcome.png> <./pictures/options.png>]
-<pictures/Screenshot_2015-08-04-05-38-27.png, id=57, 542.025pt x 963.6pt>
+Package pdftex.def Info: pictures/home.png used on input line 162.
+(pdftex.def)             Requested size: 169.62154pt x 301.55066pt.
+ [4 <C:/Users/Eppy/Documents/GitHub/linphone-android/UserManual/pictures/home.p
+ng> <C:/Users/Eppy/Documents/GitHub/linphone-android/UserManual/pictures/settin
+gs.png> <C:/Users/Eppy/Documents/GitHub/linphone-android/UserManual/pictures/we
+lcome.png> <C:/Users/Eppy/Documents/GitHub/linphone-android/UserManual/pictures
+/options.png>]
+<pictures/Screenshot_2015-08-04-05-38-27.png, id=55, 542.025pt x 963.6pt>
 File: pictures/Screenshot_2015-08-04-05-38-27.png Graphic file (type png)
 
 <use pictures/Screenshot_2015-08-04-05-38-27.png>
 Package pdftex.def Info: pictures/Screenshot_2015-08-04-05-38-27.png used on in
-put line 163.
-(pdftex.def)             Requested size: 296.84093pt x 527.73204pt.
- [6]
-<pictures/s1.jpg, id=64, 722.7pt x 1284.8pt>
+put line 172.
+(pdftex.def)             Requested size: 169.62154pt x 301.55066pt.
+ [5]
+<pictures/s1.jpg, id=61, 722.7pt x 1284.8pt>
 File: pictures/s1.jpg Graphic file (type jpg)
  <use pictures/s1.jpg>
-Package pdftex.def Info: pictures/s1.jpg used on input line 173.
-(pdftex.def)             Requested size: 296.84093pt x 527.71243pt.
- [7 <./pictures/Screenshot_2015-08-04-05-38-27.png>]
-<pictures/Screenshot_2015-08-04-05-37-18.png, id=70, 542.025pt x 963.6pt>
+Package pdftex.def Info: pictures/s1.jpg used on input line 182.
+(pdftex.def)             Requested size: 169.62154pt x 301.53595pt.
+ [6 <C:/Users/Eppy/Documents/GitHub/linphone-android/UserManual/pictures/Screen
+shot_2015-08-04-05-38-27.png>]
+<pictures/Screenshot_2015-08-04-05-37-18.png, id=68, 542.025pt x 963.6pt>
 File: pictures/Screenshot_2015-08-04-05-37-18.png Graphic file (type png)
 
 <use pictures/Screenshot_2015-08-04-05-37-18.png>
 Package pdftex.def Info: pictures/Screenshot_2015-08-04-05-37-18.png used on in
-put line 183.
-(pdftex.def)             Requested size: 296.84093pt x 527.73204pt.
- [8 <./pictures/s1.jpg>]
-<pictures/Screenshot_2015-08-04-05-37-53.png, id=76, 542.025pt x 963.6pt>
+put line 192.
+(pdftex.def)             Requested size: 169.62154pt x 301.55066pt.
+ [7 <C:/Users/Eppy/Documents/GitHub/linphone-android/UserManual/pictures/s1.jpg
+>]
+<pictures/Screenshot_2015-08-04-05-37-53.png, id=74, 542.025pt x 963.6pt>
 File: pictures/Screenshot_2015-08-04-05-37-53.png Graphic file (type png)
 
 <use pictures/Screenshot_2015-08-04-05-37-53.png>
 Package pdftex.def Info: pictures/Screenshot_2015-08-04-05-37-53.png used on in
-put line 193.
-(pdftex.def)             Requested size: 296.84093pt x 527.73204pt.
- [9 <./pictures/Screenshot_2015-08-04-05-37-18.png>]
+put line 202.
+(pdftex.def)             Requested size: 169.62154pt x 301.55066pt.
+ [8 <C:/Users/Eppy/Documents/GitHub/linphone-android/UserManual/pictures/Screen
+shot_2015-08-04-05-37-18.png>]
 File: pictures/Screenshot_2015-08-04-05-38-27.png Graphic file (type png)
- <use pictures/Screenshot_2015-08-04-05-38-27.png>
+<use pictures/Screenshot_2015-08-04-05-38-27.png>
 Package pdftex.def Info: pictures/Screenshot_2015-08-04-05-38-27.png used on in
-put line 203.
-(pdftex.def)             Requested size: 296.84093pt x 527.73204pt.
-
-[10 <./pictures/Screenshot_2015-08-04-05-37-53.png>]
-<pictures/Screenshot_2015-08-04-05-39-24.png, id=87, 542.025pt x 963.6pt>
+put line 212.
+(pdftex.def)             Requested size: 169.62154pt x 301.55066pt.
+ [9 <C:/Users/Eppy/Documents/GitHub/linphone-android/UserManual/pictures/Screen
+shot_2015-08-04-05-37-53.png>] <pictures/Screenshot_2015-08-04-05-39-24.png, id
+=85, 542.025pt x 963.6pt>
 File: pictures/Screenshot_2015-08-04-05-39-24.png Graphic file (type png)
 
 <use pictures/Screenshot_2015-08-04-05-39-24.png>
 Package pdftex.def Info: pictures/Screenshot_2015-08-04-05-39-24.png used on in
-put line 213.
-(pdftex.def)             Requested size: 296.84093pt x 527.73204pt.
- [11]
-<pictures/Screenshot_2015-08-04-05-40-26.png, id=93, 542.025pt x 963.6pt>
+put line 222.
+(pdftex.def)             Requested size: 169.62154pt x 301.55066pt.
+ [10]
+<pictures/Screenshot_2015-08-04-05-40-26.png, id=91, 542.025pt x 963.6pt>
 File: pictures/Screenshot_2015-08-04-05-40-26.png Graphic file (type png)
 
 <use pictures/Screenshot_2015-08-04-05-40-26.png>
 Package pdftex.def Info: pictures/Screenshot_2015-08-04-05-40-26.png used on in
-put line 223.
-(pdftex.def)             Requested size: 296.84093pt x 527.73204pt.
- [12 <./pictures/Screenshot_2015-08-04-05-39-24.png>]
-<pictures/Screenshot_2015-08-04-05-42-53.png, id=100, 542.025pt x 963.6pt>
+put line 232.
+(pdftex.def)             Requested size: 169.62154pt x 301.55066pt.
+ [11 <C:/Users/Eppy/Documents/GitHub/linphone-android/UserManual/pictures/Scree
+nshot_2015-08-04-05-39-24.png>] <pictures/Screenshot_2015-08-04-05-42-53.png, i
+d=97, 542.025pt x 963.6pt>
 File: pictures/Screenshot_2015-08-04-05-42-53.png Graphic file (type png)
 
 <use pictures/Screenshot_2015-08-04-05-42-53.png>
 Package pdftex.def Info: pictures/Screenshot_2015-08-04-05-42-53.png used on in
-put line 233.
-(pdftex.def)             Requested size: 296.84093pt x 527.73204pt.
- [13 <./pictures/Screenshot_2015-08-04-05-40-26.png>] [14 <./pictures/Screensho
-t_2015-08-04-05-42-53.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 240--241
+put line 242.
+(pdftex.def)             Requested size: 169.62154pt x 301.55066pt.
+ [12 <C:/Users/Eppy/Documents/GitHub/linphone-android/UserManual/pictures/Scree
+nshot_2015-08-04-05-40-26.png>] [13 <C:/Users/Eppy/Documents/GitHub/linphone-an
+droid/UserManual/pictures/Screenshot_2015-08-04-05-42-53.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 249--250
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 242--249
+Underfull \hbox (badness 10000) in paragraph at lines 251--258
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 250--253
+Underfull \hbox (badness 10000) in paragraph at lines 259--262
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--256
+Underfull \hbox (badness 10000) in paragraph at lines 263--265
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 257--262
+Underfull \hbox (badness 10000) in paragraph at lines 266--271
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--268
+Underfull \hbox (badness 10000) in paragraph at lines 272--277
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--272
+Underfull \hbox (badness 10000) in paragraph at lines 278--281
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 273.
-[15]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 273.
- (./UserManual.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 273.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 273.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 282.
+[14]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 282.
+ (C:\Users\Eppy\Documents\GitHub\linphone-android\UserManual\UserManual.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 282.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 282.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 273.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 282.
  ) 
 Here is how much of TeX's memory you used:
- 7867 strings out of 495028
- 118964 string characters out of 6181498
- 215909 words of memory out of 5000000
- 10954 multiletter control sequences out of 15000+600000
- 8202 words of font info for 29 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 41i,11n,38p,279b,398s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on UserManual.pdf (16 pages, 1411581 bytes).
+ 7681 strings out of 493921
+ 116213 string characters out of 3147285
+ 210678 words of memory out of 3000000
+ 10859 multiletter control sequences out of 15000+200000
+ 8202 words of font info for 29 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 41i,9n,38p,313b,391s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on UserManual.pdf (15 pages, 1178600 bytes).
 PDF statistics:
- 183 PDF objects out of 1000 (max. 8388607)
- 143 compressed objects within 2 object streams
- 42 named destinations out of 1000 (max. 500000)
- 172 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 179 PDF objects out of 1000 (max. 8388607)
+ 41 named destinations out of 1000 (max. 500000)
+ 177 words of extra memory for PDF output out of 10000 (max. 10000000)
 

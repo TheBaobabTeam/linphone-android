@@ -22,21 +22,22 @@
 \newpage
 
 \section{Introduction}
-This User Manual contains all information that is essential to give the user guidance and support on how to use the Linphone-Android application. It includes a description on system configuration, installation, using the system, troubleshooting, etc. 
+This user manual provides instructional support and guidance to help the users who use Linphone-android. The manual focuses on system configuration, installation, using the system, troubleshooting, etc.
 
 \section{General Information}
 
+
 \subsection{Project Details}
 
-\begin{table}[h]
+%Lerato edit here - System name and the names and/or affiliation of all stakeholders.
 \setlength{\arrayrulewidth}{0.5mm}
-\setlength{\tabcolsep}{14pt}
+\setlength{\tabcolsep}{12pt}
 \renewcommand{\arraystretch}{2} 
-\begin{tabular}{ |p{6cm}|p{6cm}|p{6cm}|  }
+\begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|  }
 \hline
-\rowcolor{lightgray}\multicolumn{2}{|c|}{\textbf{System name and the names and/or affiliation of all stakeholders}} \\
+\rowcolor{lightgray}\multicolumn{2}{|c|}{System name affiliation of all stakeholders} \\
 \hline
-System name & Linphone-Android Group Chat \\
+System name & Linphone Group Chat \\
 \hline
 Stakeholder & Kobus Coetzee \\
 \hline
@@ -48,15 +49,14 @@ Crypto developer  & Tsepo Ntsaba \\ \hline
 CI / CD support  & Patience Mtsweni \\ 
 \hline
 \end{tabular}
-\caption {}
-\end{table}
 
 \subsection{System Overview}
-The system we are working on is called Linphone.\\
-Linphone is an open source internet SIP phone or Voice Over IP phone(VoIP), compatible with the SIP protocol.  \\
-It allows for users to chat instantly or to make calls over the internetThe system we are working on is called Linphone by using the SIP protocol to one another. \\
-Linphone has been developed for different platforms but this manual only focuses on Linphone for Android devices.\\
-A new feature has been added to this application - the group chat functionality. This allows for 2 or more people to participate in what we call a group chat. Their communication will take place in the group chatroom.
+
+The system we are working on is called Linphone. We are are adding additional functionality to an already existing project. The main aim of the functionality we are developing in the Linphone project is to allow a group of users to be able to communicate or exchange messages with each other. \\
+This functionality is achieved by creating a group chat were there will be an interface that allows those messages to be exchanged and viewed. A  participant can send messages and pictures to a group, send voice recordings,update the group picture and change the  group name. \\
+A participant can become an administrator in the group -  usually this is the person who creates the group ,who is 
+responsible for adding and  removing other participants.\\
+
 
 \subsection{System Configuration}
 
@@ -83,21 +83,30 @@ The linphone application requires registration to a SIP provider before you can 
 \caption{\label{fig:Agile}SIP Protocol.}
 \end{figure}
 \end{center}
+
 Linphone.org hosts a free SIP service which allows users to make audio or video calls using SIP addresses under the domain sip.linphone.org. \\
 When creating your sip address like sip:baobab@sip.linphone.org you simple use the form provided on http://www.linphone.org/free-sip-service.html and your friends can communicate with you by simply making use of the sip address.
+
+
+\newpage
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.4\linewidth]{./pictures/LinphoneSip.jpg}
+\caption{\label{fig:Agile}Linphone SIP Registration.}
+\end{figure}
+\end{center}
 
 
 \subsection{Installation}
 \begin{itemize}
 \item Turn on your Android Smartphone and click on the Google Play icon to launch Google Play.
-\item Tap the "Search" button in the upper right corner and type "Linphone"
-\item From the result list tap the result with the title "Linphone Video" to expand it
-\item Tap the "Install" button, Linphone for Android will be downloaded and the installation procedure will begin
-\item Confirm that you accept the Linphone application rights on the screen that will be appear on your Smartphone by tapping "Accept". When the file installation is done tap "Open".
-\item Press "Agree" when the License Agreement appears on your screen to finalize the install and start Linphone for Android.
+\item Tap the “Search” button in the upper right corner and type “Linphone”
+\item From the result list tap the result with the title “Linphone Video” to expand it
+\item Tap the “Install” button, Linphone for Android will be downloaded and the installation procedure will begin
+\item Confirm that you accept the Linphone application rights on the screen that will be appear on your Smartphone by tapping “Accept”. When the file installation is done tap “Open”.
+\item Press “Agree” when the License Agreement appears on your screen to finalize the install and start Linphone for Android.
 \end{itemize}
-
-\newpage
 
 \subsection{Getting started}
 %Patience Edit Here
@@ -150,7 +159,7 @@ After successful installation and setup (sip account) of the linphone applicatio
 \begin{center}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\linewidth]{pictures/home.png}
+\includegraphics[width=0.4\linewidth]{pictures/home.png}
 \caption{\label{fig:Screen1}Main Screen.}
 \end{figure}
 \end{center}
@@ -160,7 +169,7 @@ To make call via VoIP (Voice over Internet Protocol), type in (where it's writte
 \begin{center}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-04-05-38-27.png}
+\includegraphics[width=0.4\linewidth]{pictures/Screenshot_2015-08-04-05-38-27.png}
 \caption{\label{fig:Screen2}Screen two.}
 \end{figure}
 \end{center}
@@ -170,7 +179,7 @@ To start chatting just click on the chat button in the menu at bottom of the scr
 \begin{center}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\linewidth]{pictures/s1.jpg}
+\includegraphics[width=0.4\linewidth]{pictures/s1.jpg}
 \caption{\label{fig:Screen3}Screen three.}
 \end{figure}
 \end{center}
@@ -180,7 +189,7 @@ Now click on the "new conversation" button at the top left position which will t
 \begin{center}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-04-05-37-18.png}
+\includegraphics[width=0.4\linewidth]{pictures/Screenshot_2015-08-04-05-37-18.png}
 \caption{\label{fig:Screen4}Contact List.}
 \end{figure}
 \end{center}
@@ -190,7 +199,7 @@ Selecting a contact to chat with should now take you to the chatroom which is th
 \begin{center}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-04-05-37-53.png}
+\includegraphics[width=0.4\linewidth]{pictures/Screenshot_2015-08-04-05-37-53.png}
 \caption{\label{fig:Screen5}Chatroom.}
 \end{figure}
 \end{center}
@@ -200,7 +209,7 @@ There is a small text box at the bottom of the chatroom that can be used to comp
 \begin{center}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-04-05-38-27.png}
+\includegraphics[width=0.4\linewidth]{pictures/Screenshot_2015-08-04-05-38-27.png}
 \caption{\label{fig:Screen6}Chatroom 2.}
 \end{figure}
 \end{center}
@@ -210,7 +219,7 @@ To add new contacts via linphone just go back to the main screen and click on th
 \begin{center}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-04-05-39-24.png}
+\includegraphics[width=0.4\linewidth]{pictures/Screenshot_2015-08-04-05-39-24.png}
 \caption{\label{fig:Screen7}Create New Contact.}
 \end{figure}
 \end{center}
@@ -220,7 +229,7 @@ Now you can fill in the details required in the form and then click on Okay to s
 \begin{center}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-04-05-40-26.png}
+\includegraphics[width=0.4\linewidth]{pictures/Screenshot_2015-08-04-05-40-26.png}
 \caption{\label{fig:Screen8}Create New Contact with details.}
 \end{figure}
 \end{center}
@@ -230,13 +239,13 @@ Your call logs can be found by going back to the main screen and then clicking o
 \begin{center}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-04-05-42-53.png}
+\includegraphics[width=0.4\linewidth]{pictures/Screenshot_2015-08-04-05-42-53.png}
 \caption{\label{fig:Screen9}Call Log History.}
 \end{figure}
 \end{center}
 
 \newpage
-\subsection{System Configuration}
+\subsection{Troubleshooting}
 \textbf{Troubleshooting, FAQ and Problems} \\
 
 \textbf{Connection problems} \\
