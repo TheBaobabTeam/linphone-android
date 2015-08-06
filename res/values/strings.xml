@@ -255,6 +255,10 @@
   <string name="content_description_delete">Delete button</string>
   <string name="content_description_add">Add button</string>
   <string name="content_description_new_discussion">New discussion</string>
+  
+  <!-- added by me -->
+  <string name="content_description_new_group">Create New Group</string>
+  
   <string name="content_description_edit">Edit button</string>
   <string name="content_description_validate">Validate button</string>
   <string name="content_description_search">Search</string>
@@ -308,6 +312,15 @@
   <string name="button_setup_back">Back</string>
   <string name="button_setup_next">Let\'s go</string>
   <string name="button_new_chat">New conversation</string>
+  
+  <!-- added by me -->
+  <string name="button_new_group">New Group</string>
+  <string name="group_name">Type group name here</string>
+  <string name="new_group_heading">Please provide group name</string>
+  <string name="button_next">Next</string>
+  <string name="button_create_group">Create</string>
+  <string name="add_members_heading">Add Group Members</string>
+  
   <string name="button_edit">Edit</string>
   <string name="button_cancel">Cancel</string>
   <string name="button_ok">Okay</string>
@@ -406,4 +419,8 @@
   <string name="remote_provisioning_failure">Failed to download or apply remote provisioning profile...</string>
   <string name="remote_provisioning_again_title">Remote provisioning</string>
   <string name="remote_provisioning_again_message">Do you want to change the provisioning URI ?</string>
-  <string name="processing_image">Processing image, can take up to a few seconds depending on the size of the file</string></resources>
+  <string name="processing_image">Processing image, can take up to a few seconds depending on the size of the file</string>
+  <string name="groupchat_icon"></string>
+  <string name="groupchat_name">Please enter group chat name</string>
+  <string name="description">Please provide group name and group icon</string>
+  </resources>
