@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:linphone="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/top_layout"
+  	android:background="@drawable/background" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/topbar">
+
+        <TextView
+            android:contentDescription="@string/content_description_back"
+            android:id="@+id/back"
+            android:background="@drawable/chat_back"
+            android:text="@string/button_back"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:textColor="@drawable/text_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:contentDescription="@string/content_description_next"
+            android:id="@+id/next"
+            android:background="@drawable/chat_ok"
+            android:text="@string/button_create_group"
+            android:gravity="center"
+            android:enabled="true"
+            android:paddingTop="20dp"
+            android:textColor="@drawable/text_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+    
+   <LinearLayout 
+       android:id="@+id/header"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingTop="10dp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+	    android:gravity="center"
+	    android:orientation="horizontal"
+       android:layout_below="@+id/topbar"
+	    android:layout_centerHorizontal="true">
+        
+       <TextView
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/add_members_heading"
+	    	android:textColor="@color/text_contrast" />
+       
+   </LinearLayout>
+   
+   <LinearLayout 
+       	android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingTop="10dp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+	    android:gravity="center"
+	    android:orientation="horizontal"
+       android:layout_below="@+id/header"
+	    android:layout_centerHorizontal="true">
+	        
+    </LinearLayout>
+    
+</RelativeLayout>

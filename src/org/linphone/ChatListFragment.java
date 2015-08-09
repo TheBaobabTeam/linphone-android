@@ -68,6 +68,11 @@ public class ChatListFragment extends Fragment implements OnClickListener, OnIte
 	private boolean isEditMode = false;
 	private boolean useLinphoneStorage;
 	
+	/*
+	 * Added by me
+	 */
+	private TextView newGroup;
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -85,6 +90,12 @@ public class ChatListFragment extends Fragment implements OnClickListener, OnIte
 		
 		newDiscussion = (TextView) view.findViewById(R.id.newDiscussion);
 		newDiscussion.setOnClickListener(this);
+		
+		/*
+		 * Added by me
+		 */
+		newGroup = (TextView) view.findViewById(R.id.newGroup);
+		newGroup.setOnClickListener(this);
 		
 		ok = (TextView) view.findViewById(R.id.ok);
 		ok.setOnClickListener(this);
@@ -235,6 +246,12 @@ public class ChatListFragment extends Fragment implements OnClickListener, OnIte
 				}
 				LinphoneActivity.instance().displayChat(sipUri);
 			}
+		}
+		/*
+		 * added by me
+		 */
+		else if (id == R.id.newGroup) {
+			LinphoneActivity.instance().newGroup();
 		}
 	}
 
