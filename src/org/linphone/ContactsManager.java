@@ -41,14 +41,15 @@ import java.util.List;
 
 public class ContactsManager {
 	private static ContactsManager instance;
-	private List<Contact> contactList, sipContactList;
+	private List<Contact> contactList;
+	private static List<Contact> sipContactList;
 	private Cursor contactCursor, sipContactCursor;
 	private Account mAccount;
 	private boolean preferLinphoneContacts = false, isContactPresenceDisabled = true;
 	private ContentResolver contentResolver;
 	private Context context;
 
-	private ContactsManager() {}
+	public ContactsManager() {}
 
 	public static final synchronized ContactsManager getInstance() {
 		if (instance == null) instance = new ContactsManager();
@@ -59,7 +60,7 @@ public class ContactsManager {
 		return contactList;
 	}
 
-	public List<Contact> getSIPContacts() {
+	public static List<Contact> getSIPContacts() {
 		return sipContactList;
 	}
 
