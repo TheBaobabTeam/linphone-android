@@ -39,27 +39,10 @@ public class AddMembersActivity extends FragmentActivity{
 	private TextView back, next;
 
 	
-	//private static final String ADD_MEMBERS_FRAGMENT = "addMembersFragment";
-
-	//private AddMembersFragment addMembersFragment;
-	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.add_members_activity);
-		
-		/*AddMembersFragment fragment = new AddMembersFragment();
-		getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainer, fragment, "AddMembersFragment").commit();
-		
-		FragmentManager fm = getSupportFragmentManager();
-		addMembersFragment = (AddMembersFragment) fm.findFragmentByTag(ADD_MEMBERS_FRAGMENT);
-
-	    // If the Fragment is non-null, then it is currently being
-	    // retained across a configuration change.
-		if (addMembersFragment == null) {
-			addMembersFragment = new AddMembersFragment();
-			fm.beginTransaction().add(R.id.fragmentContainer, addMembersFragment, ADD_MEMBERS_FRAGMENT).commit();
-	    }*/
 		
 		back = (TextView)findViewById(R.id.back);
 		if (back != null) {
@@ -86,7 +69,6 @@ public class AddMembersActivity extends FragmentActivity{
 	private void displayListView(){
 		List<Contact> contactsList = new ArrayList<Contact>();
 		contactsList = ContactsManager.getSIPContacts();
-		//add contactsmanager.getSipcontact()
 		dataAdapter = new MyAdapter(this,R.layout.add_members,contactsList);
 		ListView listview = (ListView)findViewById(R.id.contactList);
 		listview.setAdapter(dataAdapter);
@@ -111,7 +93,6 @@ public class AddMembersActivity extends FragmentActivity{
 		}
 		
 		private class ViewHolder{
-			//TextView code;
 			CheckBox name;
 		}
 		
@@ -124,7 +105,6 @@ public class AddMembersActivity extends FragmentActivity{
 				v = vi.inflate(R.layout.add_members, null);
 				
 				holder = new ViewHolder();
-				//holder.code = (TextView)v.findViewById(R.id.code);
 				holder.name = (CheckBox)v.findViewById(R.id.checkBox1);
 				holder.name.setTextColor(Color.BLACK);
 				v.setTag(holder);
@@ -144,7 +124,6 @@ public class AddMembersActivity extends FragmentActivity{
 			}
 			
 			Contact contact = contactsList.get(position);
-			//holder.code.setText(" (" + contact.getID() + ")");
 			holder.name.setText(contact.getName());
 			holder.name.setChecked(contact.isSelected());
 			holder.name.setTag(contact);
@@ -153,8 +132,6 @@ public class AddMembersActivity extends FragmentActivity{
 		}
 	}
 	
-	
-	//not working 
 	private void checkButtonClick(){
 		Button myBtn = (Button)findViewById(R.id.findSelected);
 		myBtn.setOnClickListener(new OnClickListener(){
