@@ -10,6 +10,7 @@ import org.linphone.R;
 import android.app.ListActivity;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.provider.Contacts;
 import android.support.v4.app.FragmentActivity;
@@ -36,28 +37,12 @@ import android.widget.Toast;
 public class AddMembersActivity extends FragmentActivity{
 	MyAdapter dataAdapter = null;
 	private TextView back, next;
-	
-	//private static final String ADD_MEMBERS_FRAGMENT = "addMembersFragment";
 
-	//private AddMembersFragment addMembersFragment;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.add_members_activity);
-		
-		/*AddMembersFragment fragment = new AddMembersFragment();
-		getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainer, fragment, "AddMembersFragment").commit();
-		
-		FragmentManager fm = getSupportFragmentManager();
-		addMembersFragment = (AddMembersFragment) fm.findFragmentByTag(ADD_MEMBERS_FRAGMENT);
-
-	    // If the Fragment is non-null, then it is currently being
-	    // retained across a configuration change.
-		if (addMembersFragment == null) {
-			addMembersFragment = new AddMembersFragment();
-			fm.beginTransaction().add(R.id.fragmentContainer, addMembersFragment, ADD_MEMBERS_FRAGMENT).commit();
-	    }*/
 		
 		back = (TextView)findViewById(R.id.back);
 		if (back != null) {
@@ -82,10 +67,9 @@ public class AddMembersActivity extends FragmentActivity{
 	}
 	
 	private void displayListView(){
-		List<Contact> contactList = new ArrayList<Contact>();
-		contactList = ContactsManager.getSIPContacts();
-		//add contactsmanager.getSipcontact()
-		dataAdapter = new MyAdapter(this,R.layout.add_members,contactList);
+		List<Contact> contactsList = new ArrayList<Contact>();
+		contactsList = ContactsManager.getSIPContacts();
+		dataAdapter = new MyAdapter(this,R.layout.add_members,contactsList);
 		ListView listview = (ListView)findViewById(R.id.contactList);
 		listview.setAdapter(dataAdapter);
 		
@@ -100,16 +84,15 @@ public class AddMembersActivity extends FragmentActivity{
 	
 	
 	private class MyAdapter extends ArrayAdapter<Contact>{
-		private List<Contact> contactList2;
+		private List<Contact> contactsList;
 		
-		public MyAdapter(Context context, int textViewResourceId, List<Contact> contactList2){
-			super(context, textViewResourceId,contactList2);
-			this.contactList2 = new ArrayList<Contact>();
-			this.contactList2.addAll(contactList2);
+		public MyAdapter(Context context, int textViewResourceId, List<Contact> contactsList){
+			super(context, textViewResourceId,contactsList);
+			this.contactsList = new ArrayList<Contact>();
+			this.contactsList.addAll(contactsList);
 		}
 		
 		private class ViewHolder{
-			TextView code;
 			CheckBox name;
 		}
 		
@@ -122,30 +105,28 @@ public class AddMembersActivity extends FragmentActivity{
 				v = vi.inflate(R.layout.add_members, null);
 				
 				holder = new ViewHolder();
-				holder.code = (TextView)v.findViewById(R.id.code);
-				holder.name = (CheckBox)v.findViewById(R.id.contactList);
+				holder.name = (CheckBox)v.findViewById(R.id.checkBox1);
+				holder.name.setTextColor(Color.BLACK);
 				v.setTag(holder);
 				
-				/*holder.name.setOnClickListener(new View.OnClickListener() {
-					
+				holder.name.setOnClickListener(new View.OnClickListener() {
 					@Override
 					public void onClick(View v) {
-						CheckBox c = (CheckBox)v;
+						CheckBox c = (CheckBox) v;
 						Contact con = (Contact)c.getTag();
-						Toast.makeText(getApplicationContext(), "Clicked on: " +c.getTag(), Toast.LENGTH_LONG).show();
-						Contact.setSelected(c.isSelected());
+						Toast.makeText(getApplicationContext(), "Clicked on: " +c.getText(), Toast.LENGTH_LONG).show();
+						con.setSelected(c.isChecked());
 					}
-				});*/
+				});
 			}
 			else{
 				holder = (ViewHolder)v.getTag();
 			}
 			
-			/*Contact contact = contactList2.get(position);
-			holder.code.setText(" (" + contact.getID() + ")");
-			//holder.name.setText(contact.getName());
+			Contact contact = contactsList.get(position);
+			holder.name.setText(contact.getName());
 			holder.name.setChecked(contact.isSelected());
-			holder.name.setTag(contact);*/
+			holder.name.setTag(contact);
 			
 			return v;
 		}
@@ -157,20 +138,18 @@ public class AddMembersActivity extends FragmentActivity{
 
 			@Override
 			public void onClick(View v) {
-				StringBuffer rep = new StringBuffer();
-				rep.append("The followong were selected....");
+				StringBuffer repsonseText = new StringBuffer();
+				repsonseText.append("The following were selected....\n");
 				
-				List<Contact> con = dataAdapter.contactList2;
-				for(int i = 0; i < con.size(); i++){
-					Contact c = con.get(i);
-					
-					if(c.isSelected()){
-						rep.append("\n" + c.getName());
+				List<Contact> contactsList = dataAdapter.contactsList;
+				for(int i = 0; i < contactsList.size(); i++){
+					Contact contact = contactsList.get(i);
+					if(contact.isSelected()){
+						repsonseText.append("\n" + contact.getName());
 					}
 				}
-				Toast.makeText(getApplicationContext(), rep, Toast.LENGTH_LONG).show();
+				Toast.makeText(getApplicationContext(), repsonseText, Toast.LENGTH_LONG).show();
 			}
-			
 		});
 	}
 	
