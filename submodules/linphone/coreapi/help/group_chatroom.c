@@ -58,14 +58,6 @@ int main(int argc, char *argv[]){
 	char* group_member=NULL;	// there must be atleast one participant
 	LinphoneChatRoom* chat_room;
 
-	time_t rawtime;
-	struct tm * timeinfo;
-	
-	char* nako = NULL;
-	char* ke = NULL;
-	
-	char* nako_ke = NULL;
-	
 	/* takes   sip uri  identity from the command line arguments */
 	if (argc>1){
 		group_name=argv[1];
@@ -98,29 +90,15 @@ int main(int argc, char *argv[]){
 	chat_room = linphone_core_create_group_chat_room(lc,group_name, group_member);
 	
 	//linphone_chat_room_add_participant(chat_room, group_member);
-	
-	time(&rawtime);
-	timeinfo = localtime(&rawtime);
-	
-	nako = asctime(timeinfo);
-	ke = "The time is: ";
-	
-	nako_ke = malloc(strlen(ke) + strlen(nako) + 1);
-	
-	strcpy(nako_ke, ke);
-	strcat(nako_ke, nako);
-	
-	linphone_group_chat_room_send_message(chat_room,nako_ke); /*sending message*/
+
+	linphone_chat_room_send_message(chat_room,"Hello world"); /*sending message*/
 
 	/* main loop for receiving incoming messages and doing background linphone core work: */
 	while(running){
 		linphone_core_iterate(lc);
 		ms_usleep(50000);
 	}
-	
-	/*free(nako);
-	free(nako_ke);*/
-	
+
 	printf("Shutting down...\n");
 	linphone_chat_room_destroy(chat_room);
 	linphone_core_destroy(lc);
