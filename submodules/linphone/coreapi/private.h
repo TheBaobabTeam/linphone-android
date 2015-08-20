@@ -553,6 +553,13 @@ struct _LinphoneChatRoom{
 	void *user_data;
 	struct _LinphoneCore *lc;
 	char  *peer;
+	
+	char  *peers[20];	// changed this from LinphoneChatRoom
+	LinphoneAddress *peers_url[20];	// and this
+	int CAPACITY;	// added this
+	int num_of_peers;	// and this
+	int type;	// 0 = default private chatroom, 1 = group chat
+	
 	LinphoneAddress *peer_url;
 	MSList *messages_hist;
 	MSList *transient_messages;
@@ -564,7 +571,6 @@ struct _LinphoneChatRoom{
 };
 
 BELLE_SIP_DECLARE_VPTR(LinphoneChatRoom);
-
 
 struct _LinphoneFriend{
 	belle_sip_object_t base;

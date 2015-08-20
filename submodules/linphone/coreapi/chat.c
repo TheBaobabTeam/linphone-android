@@ -397,6 +397,7 @@ BELLE_SIP_INSTANCIATE_VPTR(LinphoneChatRoom, belle_sip_object_t,
 
 static LinphoneChatRoom * _linphone_core_create_chat_room(LinphoneCore *lc, LinphoneAddress *addr) {
 	LinphoneChatRoom *cr = belle_sip_object_new(LinphoneChatRoom);
+	cr->type = 0;
 	cr->lc = lc;
 	cr->peer = linphone_address_as_string(addr);
 	cr->peer_url = addr;
@@ -404,10 +405,37 @@ static LinphoneChatRoom * _linphone_core_create_chat_room(LinphoneCore *lc, Linp
 	return cr;
 }
 
-static LinphoneChatRoom * _linphone_core_create_chat_room_from_url(LinphoneCore *lc, const char *to) {
-	LinphoneAddress *parsed_url = NULL;
+static LinphoneChatRoom * _linphone_core_create_group_chat_room(LinphoneCore *lc, LinphoneAddress *addr, LinphoneAddress *addr2) {
+	LinphoneChatRoom *cr = belle_sip_object_new(LinphoneChatRoom);
+	
+	printf("_linphone_core_create_group_chat_room(): running ...\n");
+	
+	cr->lc = lc;
+	cr->type = 1;
+	cr->CAPACITY = 20;
+	cr->num_of_peers = 2;
+	cr->peer = linphone_address_as_string(addr);
+	cr->peer_url = addr;
+	
+	cr->peers[1] = linphone_address_as_string(addr2);
+	cr->peers_url[1] = addr2;
+	
+	lc->chatrooms = ms_list_append(lc->chatrooms, (void *)cr);
+	
+	return cr;
+}
+
+static LinphoneChatRoom * _linphone_core_create_chat_room_from_url(LinphoneCore *lc, const char *to, const char* participant) {
+	LinphoneAddress *parsed_url = NULL, *participant_addr = NULL;
+	
+	printf("_linphone_core_create_chat_room_from_url(): running...\n");
+	
 	if ((parsed_url = linphone_core_interpret_url(lc, to)) != NULL) {
-		return _linphone_core_create_chat_room(lc, parsed_url);
+		if (participant == NULL) {
+			return _linphone_core_create_chat_room(lc, parsed_url);
+		} else if ((participant_addr = linphone_core_interpret_url(lc, to)) != NULL) {
+			return _linphone_core_create_group_chat_room(lc, parsed_url, participant_addr);
+		}
 	}
 	return NULL;
 }
@@ -425,9 +453,11 @@ LinphoneChatRoom * _linphone_core_get_chat_room(LinphoneCore *lc, const Linphone
 	return cr;
 }
 
-static LinphoneChatRoom * _linphone_core_get_or_create_chat_room(LinphoneCore* lc, const char* to) {
+static LinphoneChatRoom * _linphone_core_get_or_create_group_chat_room(LinphoneCore* lc, const char* to, const char* participant) {
 	LinphoneAddress *to_addr=linphone_core_interpret_url(lc,to);
 	LinphoneChatRoom *ret;
+	
+	printf("_linphone_core_get_or_create_group_chat_room(): running...\n");
 
 	if (to_addr==NULL){
 		ms_error("linphone_core_get_or_create_chat_room(): Cannot make a valid address with %s",to);
@@ -436,17 +466,28 @@ static LinphoneChatRoom * _linphone_core_get_or_create_chat_room(LinphoneCore* l
 	ret=_linphone_core_get_chat_room(lc,to_addr);
 	linphone_address_destroy(to_addr);
 	if (!ret){
-		ret=_linphone_core_create_chat_room_from_url(lc,to);
+		ret=_linphone_core_create_chat_room_from_url(lc,to,participant);
 	}
+	
 	return ret;
+}
+
+static LinphoneChatRoom * _linphone_core_get_or_create_chat_room(LinphoneCore* lc, const char* to) {
+	return _linphone_core_get_or_create_group_chat_room(lc, to, NULL);
 }
 
 LinphoneChatRoom* linphone_core_get_or_create_chat_room(LinphoneCore* lc, const char* to) {
 	return _linphone_core_get_or_create_chat_room(lc, to);
 }
 
+
 LinphoneChatRoom * linphone_core_create_chat_room(LinphoneCore *lc, const char *to) {
 	return _linphone_core_get_or_create_chat_room(lc, to);
+}
+
+LinphoneChatRoom* linphone_core_create_group_chat_room(LinphoneCore* lc, const char* group_name, const char* participant) {
+	printf("linphone_core_create_group_chat_room(): running...\n");
+	return _linphone_core_get_or_create_group_chat_room(lc, group_name, participant);
 }
 
 LinphoneChatRoom *linphone_core_get_chat_room(LinphoneCore *lc, const LinphoneAddress *addr){
@@ -460,6 +501,16 @@ LinphoneChatRoom *linphone_core_get_chat_room(LinphoneCore *lc, const LinphoneAd
 LinphoneChatRoom * linphone_core_get_chat_room_from_uri(LinphoneCore *lc, const char *to) {
 	return _linphone_core_get_or_create_chat_room(lc, to);
 }
+
+/*static void linphone_chat_room_add_participant(LinphoneChatRoom *cr, const char* participant) {
+	LinphoneAddress *member_addr=linphone_core_interpret_url(cr->lc, participant);
+
+	if (member_addr==NULL){
+		ms_error("linphone_core_get_or_create_chat_room(): Cannot make a valid address with %s",participant);
+	} else {
+		cr->
+	}
+}*/
 
 static void linphone_chat_room_delete_composing_idle_timer(LinphoneChatRoom *cr) {
 	if (cr->composing_idle_timer) {
@@ -1445,4 +1496,118 @@ LinphoneChatMessage* linphone_chat_room_create_file_transfer_message(LinphoneCha
 	msg->content_type=NULL; /* this will be set to application/vnd.gsma.rcs-ft-http+xml when we will transfer the xml reply from server to the peers */
 	msg->http_request=NULL; /* this will store the http request during file upload to the server */
 	return msg;
+}
+
+/*******************************************************************************************
+ *				This shall be my playground, so behold folks					*
+ *******************************************************************************************/
+
+static void _linphone_group_chat_room_send_message(LinphoneChatRoom *cr, LinphoneChatMessage* msg);
+
+/**
+ * Send a message to peer member of this chat room.
+ * @deprecated linphone_chat_room_send_message2() gives more control on the message expedition.
+ * @param cr #LinphoneChatRoom object
+ * @param msg message to be sent
+ */
+void linphone_group_chat_room_send_message(LinphoneChatRoom *cr, const char *msg) {
+	_linphone_group_chat_room_send_message(cr,linphone_chat_room_create_message(cr,msg));
+}
+
+static void _linphone_group_chat_room_send_message(LinphoneChatRoom *cr, LinphoneChatMessage* msg){
+	SalOp *op=NULL;
+	LinphoneCall *call;
+	char* content_type;
+	const char *identity=NULL;
+	time_t t=time(NULL);
+	linphone_chat_message_ref(msg);
+
+	if (lp_config_get_int(cr->lc->config,"sip","chat_use_call_dialogs",0)){
+		printf("There is lp_config_get_int(chatroom->linphonecore->config, sip, chat_use_call_dialogs, 0)...\n");
+		
+		if((call = linphone_core_get_call_by_remote_address(cr->lc,cr->peer))!=NULL){
+			printf("No linphone_core_get_call_by_remote_address(chatroom->linphonecore, chatroom->peer)...\n");
+			
+			if (call->state==LinphoneCallConnected ||
+			call->state==LinphoneCallStreamsRunning ||
+			call->state==LinphoneCallPaused ||
+			call->state==LinphoneCallPausing ||
+			call->state==LinphoneCallPausedByRemote){
+				ms_message("send SIP message through the existing call.");
+				op = call->op;
+				identity=linphone_core_find_best_identity(cr->lc,linphone_call_get_remote_address(call));
+			}
+		}
+	}
+	msg->time=t;
+	if (op==NULL){
+		LinphoneProxyConfig *proxy=linphone_core_lookup_known_proxy(cr->lc,cr->peer_url);
+		
+		printf("No op...\n");
+		
+		if (proxy){
+			printf("There is proxy...\n");
+			
+			identity=linphone_proxy_config_get_identity(proxy);
+		}else identity=linphone_core_get_primary_contact(cr->lc);
+		/*sending out of calls*/
+		msg->op = op = sal_op_new(cr->lc->sal);
+		linphone_configure_op(cr->lc,op,cr->peer_url,msg->custom_headers,lp_config_get_int(cr->lc->config,"sip","chat_msg_with_contact",0));
+		sal_op_set_user_pointer(op, msg); /*if out of call, directly store msg*/
+	}
+
+
+	if (msg->external_body_url) {
+		printf("There is external_body_url...\n");
+		
+		content_type=ms_strdup_printf("message/external-body; access-type=URL; URL=\"%s\"",msg->external_body_url);
+		sal_message_send(op,identity,cr->peer,content_type, NULL, NULL);
+		ms_free(content_type);
+	} else {
+		char *peer_uri = linphone_address_as_string_uri_only(linphone_chat_room_get_peer_address(cr));
+		const char * content_type;
+		
+		printf("No external_body_url...\n");
+		
+		if (linphone_core_lime_enabled(cr->lc)) {
+			printf("There is linphone_core_lime_enabled(chatroom->linphonecore)...\n");
+			
+			linphone_chat_message_ref(msg);  /* ref the message or it may be destroyed by callback if the encryption failed */
+			if (msg->content_type && strcmp(msg->content_type, "application/vnd.gsma.rcs-ft-http+xml") == 0) {
+				content_type = "application/cipher.vnd.gsma.rcs-ft-http+xml"; /* it's a file transfer, content type shall be set to application/cipher.vnd.gsma.rcs-ft-http+xml*/
+			} else {
+				content_type = "xml/cipher";
+			}
+		} else {
+			printf("No linphone_core_lime_enabled(chatroom->linphonecore)...\n");
+			
+			content_type = msg->content_type;
+		}
+
+		if (content_type == NULL) {
+			printf("No content_type...%s\n", identity);
+			printf("Peer: %s\n", cr->peer);
+			
+			sal_text_send(op, "sip:baobab@192.168.43.86:5060", cr->peer,msg->message);
+		} else {
+			printf("There is content_type...\n");
+			
+			sal_message_send(op, identity, cr->peer, content_type, msg->message, peer_uri);
+		}
+		ms_free(peer_uri);
+	}
+
+	msg->dir=LinphoneChatMessageOutgoing;
+	msg->from=linphone_address_new(identity);
+	msg->storage_id=linphone_chat_message_store(msg);
+
+	// add to transient list
+	cr->transient_messages = ms_list_append(cr->transient_messages, linphone_chat_message_ref(msg));
+
+	if (cr->is_composing == LinphoneIsComposingActive) {
+		cr->is_composing = LinphoneIsComposingIdle;
+	}
+	linphone_chat_room_delete_composing_idle_timer(cr);
+	linphone_chat_room_delete_composing_refresh_timer(cr);
+	linphone_chat_message_unref(msg);
 }
