@@ -405,37 +405,57 @@ static LinphoneChatRoom * _linphone_core_create_chat_room(LinphoneCore *lc, Linp
 	return cr;
 }
 
-static LinphoneChatRoom * _linphone_core_create_group_chat_room(LinphoneCore *lc, LinphoneAddress *addr, LinphoneAddress *addr2) {
+static LinphoneChatRoom * _linphone_core_create_group_chat_room(LinphoneCore *lc, LinphoneAddress *addr, LinphoneAddress *addresses[], int group_size) {
 	LinphoneChatRoom *cr = belle_sip_object_new(LinphoneChatRoom);
+	int i;
 	
 	printf("_linphone_core_create_group_chat_room(): running ...\n");
 	
 	cr->lc = lc;
 	cr->type = 1;
 	cr->CAPACITY = 20;
-	cr->num_of_peers = 2;
+	cr->num_of_members = group_size;
 	cr->peer = linphone_address_as_string(addr);
 	cr->peer_url = addr;
-	
-	cr->peers[1] = linphone_address_as_string(addr2);
-	cr->peers_url[1] = addr2;
+	cr->group_admin_index = 0;
+	for (i = 0; i < group_size && i < cr->CAPACITY; i++) {
+		cr->members[i] = linphone_address_as_string(addresses[i]);
+		cr->members_urls[i] = addresses[i];
+	}
 	
 	lc->chatrooms = ms_list_append(lc->chatrooms, (void *)cr);
 	
 	return cr;
 }
 
-static LinphoneChatRoom * _linphone_core_create_chat_room_from_url(LinphoneCore *lc, const char *to, const char* participant) {
-	LinphoneAddress *parsed_url = NULL, *participant_addr = NULL;
-	
-	printf("_linphone_core_create_chat_room_from_url(): running...\n");
-	
+static LinphoneChatRoom * _linphone_core_create_chat_room_from_url(LinphoneCore *lc, const char *to) {
+	LinphoneAddress *parsed_url = NULL;
 	if ((parsed_url = linphone_core_interpret_url(lc, to)) != NULL) {
-		if (participant == NULL) {
-			return _linphone_core_create_chat_room(lc, parsed_url);
-		} else if ((participant_addr = linphone_core_interpret_url(lc, to)) != NULL) {
-			return _linphone_core_create_group_chat_room(lc, parsed_url, participant_addr);
+		return _linphone_core_create_chat_room(lc, parsed_url);
+	}
+	return NULL;
+}
+
+static LinphoneChatRoom * _linphone_core_create_group_chat_room_from_url(LinphoneCore *lc, const char* group_name, const char* group_members[], int group_size) {
+	LinphoneAddress *parsed_url = NULL, *parsed_members_urls[group_size+1];
+	int i, j;
+	
+	printf("_linphone_core_create_group_chat_room_from_url(): running...\n");
+	
+	if ((parsed_url = linphone_core_interpret_url(lc, group_name)) != NULL) {
+		if ((parsed_members_urls[0] = linphone_core_interpret_url(lc, linphone_core_get_primary_contact(lc))) == NULL) {
+			ms_error("Something wrong with group_admin [%s]\n", linphone_core_get_primary_contact(lc));
+			return NULL;
 		}
+		for (i = 1, j = 0; j < group_size && (i < (group_size+1) && i < 20); i++, j++) {
+			if ((parsed_members_urls[i] = linphone_core_interpret_url(lc, group_members[j])) == NULL) {
+				ms_error("Something wrong with group_members[%d] [%s]\n", j, group_members[j]);
+				return NULL;
+			}
+		}
+		return _linphone_core_create_group_chat_room(lc, parsed_url, parsed_members_urls, group_size+1);
+	} else {
+		ms_error("Something wrong with group_name [%s]\n", group_name);
 	}
 	return NULL;
 }
@@ -443,6 +463,9 @@ static LinphoneChatRoom * _linphone_core_create_chat_room_from_url(LinphoneCore 
 LinphoneChatRoom * _linphone_core_get_chat_room(LinphoneCore *lc, const LinphoneAddress *addr){
 	LinphoneChatRoom *cr=NULL;
 	MSList *elem;
+	
+	printf("_linphone_core_get_chat_room(): running...\n");
+	
 	for(elem=lc->chatrooms;elem!=NULL;elem=ms_list_next(elem)){
 		cr=(LinphoneChatRoom*)elem->data;
 		if (linphone_chat_room_matches(cr,addr)){
@@ -453,11 +476,28 @@ LinphoneChatRoom * _linphone_core_get_chat_room(LinphoneCore *lc, const Linphone
 	return cr;
 }
 
-static LinphoneChatRoom * _linphone_core_get_or_create_group_chat_room(LinphoneCore* lc, const char* to, const char* participant) {
-	LinphoneAddress *to_addr=linphone_core_interpret_url(lc,to);
+static LinphoneChatRoom * _linphone_core_get_or_create_group_chat_room(LinphoneCore* lc, const char* group_name, const char* group_members[], int group_size) {
+	LinphoneAddress *to_addr = linphone_core_interpret_url(lc, group_name);
 	LinphoneChatRoom *ret;
 	
 	printf("_linphone_core_get_or_create_group_chat_room(): running...\n");
+
+	if (to_addr == NULL){
+		ms_error("linphone_core_get_or_create_chat_room(): Cannot make a valid address with %s", group_name);
+		return NULL;
+	}
+	ret = _linphone_core_get_chat_room(lc, to_addr);
+	linphone_address_destroy(to_addr);
+	if (!ret){
+		ret = _linphone_core_create_group_chat_room_from_url(lc, group_name, group_members, group_size);
+	}
+	
+	return ret;
+}
+
+static LinphoneChatRoom * _linphone_core_get_or_create_chat_room(LinphoneCore* lc, const char* to) {
+	LinphoneAddress *to_addr=linphone_core_interpret_url(lc,to);
+	LinphoneChatRoom *ret;
 
 	if (to_addr==NULL){
 		ms_error("linphone_core_get_or_create_chat_room(): Cannot make a valid address with %s",to);
@@ -466,14 +506,9 @@ static LinphoneChatRoom * _linphone_core_get_or_create_group_chat_room(LinphoneC
 	ret=_linphone_core_get_chat_room(lc,to_addr);
 	linphone_address_destroy(to_addr);
 	if (!ret){
-		ret=_linphone_core_create_chat_room_from_url(lc,to,participant);
+		ret=_linphone_core_create_chat_room_from_url(lc,to);
 	}
-	
 	return ret;
-}
-
-static LinphoneChatRoom * _linphone_core_get_or_create_chat_room(LinphoneCore* lc, const char* to) {
-	return _linphone_core_get_or_create_group_chat_room(lc, to, NULL);
 }
 
 LinphoneChatRoom* linphone_core_get_or_create_chat_room(LinphoneCore* lc, const char* to) {
@@ -485,9 +520,9 @@ LinphoneChatRoom * linphone_core_create_chat_room(LinphoneCore *lc, const char *
 	return _linphone_core_get_or_create_chat_room(lc, to);
 }
 
-LinphoneChatRoom* linphone_core_create_group_chat_room(LinphoneCore* lc, const char* group_name, const char* participant) {
+LinphoneChatRoom* linphone_core_create_group_chat_room(LinphoneCore* lc, const char* group_name, const char* group_members[], int group_size) {
 	printf("linphone_core_create_group_chat_room(): running...\n");
-	return _linphone_core_get_or_create_group_chat_room(lc, group_name, participant);
+	return _linphone_core_get_or_create_group_chat_room(lc, group_name, group_members, group_size);
 }
 
 LinphoneChatRoom *linphone_core_get_chat_room(LinphoneCore *lc, const LinphoneAddress *addr){
@@ -1511,7 +1546,23 @@ static void _linphone_group_chat_room_send_message(LinphoneChatRoom *cr, Linphon
  * @param msg message to be sent
  */
 void linphone_group_chat_room_send_message(LinphoneChatRoom *cr, const char *msg) {
-	_linphone_group_chat_room_send_message(cr,linphone_chat_room_create_message(cr,msg));
+	printf("linphone_group_chat_room_send_message()\n");
+	_linphone_group_chat_room_send_message(cr, linphone_group_chat_room_create_message(cr, msg));
+}
+
+LinphoneChatMessage* linphone_group_chat_room_create_message(LinphoneChatRoom *cr, const char* message) {
+	LinphoneChatMessage* msg = belle_sip_object_new(LinphoneChatMessage);
+	
+	printf("linphone_group_chat_room_create_message()\n");
+	
+	msg->callbacks=linphone_chat_message_cbs_new();
+	msg->chat_room=(LinphoneChatRoom*)cr;
+	msg->message=message?ms_strdup(message):NULL;
+	msg->is_read=TRUE;
+	msg->content_type = NULL; /* this property is used only when transfering file */
+	msg->file_transfer_information = NULL; /* this property is used only when transfering file */
+	msg->http_request = NULL;
+	return msg;
 }
 
 static void _linphone_group_chat_room_send_message(LinphoneChatRoom *cr, LinphoneChatMessage* msg){
@@ -1521,11 +1572,13 @@ static void _linphone_group_chat_room_send_message(LinphoneChatRoom *cr, Linphon
 	const char *identity=NULL;
 	time_t t=time(NULL);
 	linphone_chat_message_ref(msg);
-
+	
+	printf("_linphone_group_chat_room_send_message()\n");
+	
 	if (lp_config_get_int(cr->lc->config,"sip","chat_use_call_dialogs",0)){
 		printf("There is lp_config_get_int(chatroom->linphonecore->config, sip, chat_use_call_dialogs, 0)...\n");
 		
-		if((call = linphone_core_get_call_by_remote_address(cr->lc,cr->peer))!=NULL){
+		if((call = linphone_core_get_call_by_remote_address(cr->lc, cr->peer)) != NULL){
 			printf("No linphone_core_get_call_by_remote_address(chatroom->linphonecore, chatroom->peer)...\n");
 			
 			if (call->state==LinphoneCallConnected ||
@@ -1539,9 +1592,11 @@ static void _linphone_group_chat_room_send_message(LinphoneChatRoom *cr, Linphon
 			}
 		}
 	}
+	
 	msg->time=t;
+	
 	if (op==NULL){
-		LinphoneProxyConfig *proxy=linphone_core_lookup_known_proxy(cr->lc,cr->peer_url);
+		LinphoneProxyConfig *proxy=linphone_core_lookup_known_proxy(cr->lc, cr->members_urls[0]);
 		
 		printf("No op...\n");
 		
@@ -1551,7 +1606,9 @@ static void _linphone_group_chat_room_send_message(LinphoneChatRoom *cr, Linphon
 			identity=linphone_proxy_config_get_identity(proxy);
 		}else identity=linphone_core_get_primary_contact(cr->lc);
 		/*sending out of calls*/
+		
 		msg->op = op = sal_op_new(cr->lc->sal);
+		
 		linphone_configure_op(cr->lc,op,cr->peer_url,msg->custom_headers,lp_config_get_int(cr->lc->config,"sip","chat_msg_with_contact",0));
 		sal_op_set_user_pointer(op, msg); /*if out of call, directly store msg*/
 	}
@@ -1585,10 +1642,17 @@ static void _linphone_group_chat_room_send_message(LinphoneChatRoom *cr, Linphon
 		}
 
 		if (content_type == NULL) {
+			int i;
 			printf("No content_type...%s\n", identity);
 			printf("Peer: %s\n", cr->peer);
+			printf("Group Admin: [%s]\n", cr->members[0]);
 			
-			sal_text_send(op, "sip:baobab@192.168.43.86:5060", cr->peer,msg->message);
+			for (i = 0; i < cr->num_of_members; i++) {
+				if (strcmp(cr->members[i], identity) != 0) {
+					printf("Sending [%s] from [%s] to [%s]\n", msg->message, cr->peer, cr->members[i]);
+					sal_text_send(op, cr->peer, cr->members[i], msg->message);
+				}
+			}
 		} else {
 			printf("There is content_type...\n");
 			
@@ -1610,4 +1674,23 @@ static void _linphone_group_chat_room_send_message(LinphoneChatRoom *cr, Linphon
 	linphone_chat_room_delete_composing_idle_timer(cr);
 	linphone_chat_room_delete_composing_refresh_timer(cr);
 	linphone_chat_message_unref(msg);
+}
+
+void linphone_chat_room_print(LinphoneCore *lc, LinphoneChatRoom* room, LinphoneChatMessage *msg) {
+	LinphoneChatRoom *cr;
+	MSList *elem;
+	int i;
+	
+	printf(" Message [%s] received from [%s] to [%s] \n", msg->message, linphone_address_as_string (msg->from), linphone_address_as_string (msg->to));
+	
+	for (i = 0, elem = lc->chatrooms; elem != NULL; i++, elem = ms_list_next(elem)) {
+		cr = (LinphoneChatRoom*)elem->data;
+		if (linphone_chat_room_matches(cr, room->peer_url)) {
+			printf("Chatroom [%d] [%s] <--- **\n", i, cr->peer);
+		} else {
+			printf("Chatroom [%d] [%s]\n", i, cr->peer);
+		}
+		
+		printf("SIZE: [%d]\n", ms_list_size(linphone_chat_room_get_history(cr, 5)));
+	}
 }

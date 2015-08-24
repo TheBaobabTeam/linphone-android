@@ -552,13 +552,14 @@ struct _LinphoneChatRoom{
 	belle_sip_object_t base;
 	void *user_data;
 	struct _LinphoneCore *lc;
-	char  *peer;
+	char  *peer;	// this will be the name of the group
 	
-	char  *peers[20];	// changed this from LinphoneChatRoom
-	LinphoneAddress *peers_url[20];	// and this
-	int CAPACITY;	// added this
-	int num_of_peers;	// and this
+	char  *members[20];	// these are the participants
+	LinphoneAddress *members_urls[20];	// not sure at this stage but just keep it there
+	int CAPACITY;	// maximum number of members in a group
+	int num_of_members;	// current number of members of the group
 	int type;	// 0 = default private chatroom, 1 = group chat
+	int group_admin_index; // as the name suggests, this is the admin
 	
 	LinphoneAddress *peer_url;
 	MSList *messages_hist;
