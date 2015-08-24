@@ -45,8 +45,14 @@ static bool_t running=TRUE;
 static void stop(int signum){
 	running=FALSE;
 }
-void text_received(LinphoneCore *lc, LinphoneChatRoom *room, const LinphoneAddress *from, const char *message) {
+/*void text_received(LinphoneCore *lc, LinphoneChatRoom *room, const LinphoneAddress *from, const char *message) {
 	printf(" Message [%s] received from [%s] \n",message,linphone_address_as_string (from));
+	linphone_chat_room_print(lc, room, NULL);
+}*/
+
+void message_received(LinphoneCore *lc, LinphoneChatRoom *room, LinphoneChatMessage *message) {
+	//printf(" Message [%s] received from [%s] \n",message,linphone_address_as_string (from));
+	linphone_chat_room_print(lc, room, message);
 }
 
 
@@ -55,8 +61,10 @@ int main(int argc, char *argv[]){
 	LinphoneCoreVTable vtable={0};
 
 	char* group_name=NULL;
-	char* group_member=NULL;	// there must be atleast one participant
+	const char* group_members[argc-2];	// there must be atleast one participant
+	int group_size = 0;
 	LinphoneChatRoom* chat_room;
+	int i;
 
 	time_t rawtime;
 	struct tm * timeinfo;
@@ -68,12 +76,16 @@ int main(int argc, char *argv[]){
 	
 	/* takes   sip uri  identity from the command line arguments */
 	if (argc>1){
-		group_name=argv[1];
+		group_name = argv[1];
 	}
 	
 	/* takes   sip uri  identity from the command line arguments */
 	if (argc>2){
-		group_member=argv[2];
+		int j;
+		for (i = 2, j = 0; i < argc; i++, j++) {
+			group_members[j] = argv[i];
+			group_size++;
+		}
 	}
 
 	signal(SIGINT,stop);
@@ -86,43 +98,52 @@ int main(int argc, char *argv[]){
 	 All are optional. Here we only use the text_received callback
 	 in order to get notifications about incoming message.
 	 */
-	vtable.text_received=text_received;
+	//vtable.text_received = text_received;
+	vtable.message_received = message_received;
 
 	/*
 	 Instantiate a LinphoneCore object given the LinphoneCoreVTable
 	*/
 	lc=linphone_core_new(&vtable,NULL,NULL,NULL);
 
-
+	printf("Group Name: [%s]\n", group_name);
+	for (i = 0; i < group_size; i++) {
+		printf("Member [%d]: [%s]\n", i, group_members[i]);
+	}
 	/*Next step is to create a chat root*/
-	chat_room = linphone_core_create_group_chat_room(lc,group_name, group_member);
+	chat_room = linphone_core_create_group_chat_room(lc, group_name, group_members, group_size);
 	
 	//linphone_chat_room_add_participant(chat_room, group_member);
 	
-	time(&rawtime);
-	timeinfo = localtime(&rawtime);
-	
-	nako = asctime(timeinfo);
-	ke = "The time is: ";
-	
-	nako_ke = malloc(strlen(ke) + strlen(nako) + 1);
-	
-	strcpy(nako_ke, ke);
-	strcat(nako_ke, nako);
-	
-	linphone_group_chat_room_send_message(chat_room,nako_ke); /*sending message*/
+	if (chat_room != NULL) {
+		time(&rawtime);
+		timeinfo = localtime(&rawtime);
+		
+		nako = asctime(timeinfo);
+		ke = "The time is: ";
+		
+		nako_ke = malloc(strlen(ke) + strlen(nako) + 1);
+		
+		strcpy(nako_ke, ke);
+		strcat(nako_ke, nako);
+		
+		linphone_group_chat_room_send_message(chat_room, nako_ke); /*sending message*/
 
-	/* main loop for receiving incoming messages and doing background linphone core work: */
-	while(running){
-		linphone_core_iterate(lc);
-		ms_usleep(50000);
+		/* main loop for receiving incoming messages and doing background linphone core work: */
+		while(running){
+			linphone_core_iterate(lc);
+			ms_usleep(50000);
+		}
+		
+		/*free(nako);*/
+		free(nako_ke);
+		
+		linphone_chat_room_destroy(chat_room);
+	} else {
+		printf("Could not create chatroom\n");
 	}
-	
-	/*free(nako);
-	free(nako_ke);*/
-	
+		
 	printf("Shutting down...\n");
-	linphone_chat_room_destroy(chat_room);
 	linphone_core_destroy(lc);
 	printf("Exited\n");
 	return 0;

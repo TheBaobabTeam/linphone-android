@@ -1458,14 +1458,6 @@ LINPHONE_PUBLIC void linphone_core_set_chat_database_path(LinphoneCore *lc, cons
  */
 LINPHONE_PUBLIC	LinphoneChatRoom * linphone_core_create_chat_room(LinphoneCore *lc, const char *to);
 /**
- * Create a new chat room for messaging from a sip uri like sip:joe@sip.linphone.org
- * @param lc #LinphoneCore object
- * @param to destination address for messages
- * @return #LinphoneChatRoom where messaging can take place.
- * @deprecated Use linphone_core_get_chat_room() or linphone_core_get_chat_room_from_uri() instead.
- */
-LINPHONE_PUBLIC	LinphoneChatRoom * linphone_core_create_group_chat_room(LinphoneCore *lc, const char *to, const char* participant);
-/**
  * Create a new chat room for messaging from a sip uri like sip:joe@sip.linphone.org if not already existing, else return exisiting one
  * @param lc #LinphoneCore object
  * @param to destination address for messages
@@ -4195,6 +4187,23 @@ LINPHONE_PUBLIC const char * linphone_core_get_video_preset(const LinphoneCore *
  *				This shall be my playground, so behold folks					*
  *******************************************************************************************/
  
+ /**
+ * Create a new chat room for messaging from a sip uri like sip:joe@sip.linphone.org
+ * @param lc #LinphoneCore object
+ * @param to destination address for messages
+ * @return #LinphoneChatRoom where messaging can take place.
+ * @deprecated Use linphone_core_get_chat_room() or linphone_core_get_chat_room_from_uri() instead.
+ */
+LINPHONE_PUBLIC	LinphoneChatRoom * linphone_core_create_group_chat_room(LinphoneCore *lc, const char *group_name, const char* group_members[], int group_size);
+ 
+ /**
+ * Create a message attached to a dedicated chat room;
+ * @param cr the chat room.
+ * @param message text message, NULL if absent.
+ * @return a new #LinphoneChatMessage
+ */
+LINPHONE_PUBLIC	LinphoneChatMessage* linphone_group_chat_room_create_message(LinphoneChatRoom *cr, const char* message);
+ 
 /**
  * Send a message to peer member of this chat room.
  * @deprecated linphone_chat_room_send_message2() gives more control on the message expedition.
@@ -4202,6 +4211,11 @@ LINPHONE_PUBLIC const char * linphone_core_get_video_preset(const LinphoneCore *
  * @param msg message to be sent
  */
 LINPHONE_PUBLIC	void linphone_group_chat_room_send_message(LinphoneChatRoom *cr, const char *msg); 
+
+/**
+ * Prints the properties of a chatroom
+ */
+LINPHONE_PUBLIC	void linphone_chat_room_print(LinphoneCore *lc, LinphoneChatRoom *cr, LinphoneChatMessage *msg);
 
 #ifdef __cplusplus
 }
