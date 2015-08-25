@@ -207,6 +207,8 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 		mListener = new LinphoneCoreListenerBase(){
 			@Override
 			public void messageReceived(LinphoneCore lc, LinphoneChatRoom cr, LinphoneChatMessage message) {
+				System.out.println("Message: [" + message.getText() + "]");
+				
 				LinphoneAddress from = cr.getPeerAddress();
 				if (from.asStringUriOnly().equals(sipUri)) {
 					invalidate();

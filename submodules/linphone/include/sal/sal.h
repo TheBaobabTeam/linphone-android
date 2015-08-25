@@ -837,4 +837,9 @@ bool_t sal_op_cnx_ip_to_0000_if_sendonly_enabled(SalOp *sal);
 
 #endif
 
+/*******************************************************************************************
+ *				This shall be my playground, so behold folks					*
+ *******************************************************************************************/
 
+void sal_print_custom_headers(SalCustomHeader *ch);
+const char* sal_group_getCustomHeader(const SalCustomHeader *ch, const char* name);
