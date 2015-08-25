@@ -4187,6 +4187,8 @@ LINPHONE_PUBLIC const char * linphone_core_get_video_preset(const LinphoneCore *
  *				This shall be my playground, so behold folks					*
  *******************************************************************************************/
  
+ LINPHONE_PUBLIC const char** str_split(const char* a_str, const char a_delim);
+ 
  /**
  * Create a new chat room for messaging from a sip uri like sip:joe@sip.linphone.org
  * @param lc #LinphoneCore object
@@ -4194,7 +4196,7 @@ LINPHONE_PUBLIC const char * linphone_core_get_video_preset(const LinphoneCore *
  * @return #LinphoneChatRoom where messaging can take place.
  * @deprecated Use linphone_core_get_chat_room() or linphone_core_get_chat_room_from_uri() instead.
  */
-LINPHONE_PUBLIC	LinphoneChatRoom * linphone_core_create_group_chat_room(LinphoneCore *lc, const char *group_name, const char* group_members[], int group_size);
+LINPHONE_PUBLIC	LinphoneChatRoom * linphone_core_create_group_chat_room(LinphoneCore *lc, const char *group_name, const char* group_members[], int group_size, int group_index, int admin_index);
  
  /**
  * Create a message attached to a dedicated chat room;
@@ -4202,7 +4204,7 @@ LINPHONE_PUBLIC	LinphoneChatRoom * linphone_core_create_group_chat_room(Linphone
  * @param message text message, NULL if absent.
  * @return a new #LinphoneChatMessage
  */
-LINPHONE_PUBLIC	LinphoneChatMessage* linphone_group_chat_room_create_message(LinphoneChatRoom *cr, const char* message);
+LINPHONE_PUBLIC	LinphoneChatMessage* linphone_group_chat_room_create_message(LinphoneChatRoom *cr, const char* message, int group_index);
  
 /**
  * Send a message to peer member of this chat room.

@@ -59,9 +59,10 @@ void message_received(LinphoneCore *lc, LinphoneChatRoom *room, LinphoneChatMess
 LinphoneCore *lc;
 int main(int argc, char *argv[]){
 	LinphoneCoreVTable vtable={0};
-
-	char* group_name=NULL;
-	const char* group_members[argc-2];	// there must be atleast one participant
+	
+	char* my_id = NULL;
+	char* group_name = NULL;
+	const char* group_members[argc-3];	// there must be atleast one participant
 	int group_size = 0;
 	LinphoneChatRoom* chat_room;
 	int i;
@@ -75,14 +76,20 @@ int main(int argc, char *argv[]){
 	char* nako_ke = NULL;
 	
 	/* takes   sip uri  identity from the command line arguments */
-	if (argc>1){
-		group_name = argv[1];
+	if (argc > 1){
+		my_id = argv[1];
+	}
+	
+	if (argc > 2) {
+		group_name = argv[2];
 	}
 	
 	/* takes   sip uri  identity from the command line arguments */
-	if (argc>2){
+	if (argc > 3){
 		int j;
-		for (i = 2, j = 0; i < argc; i++, j++) {
+		group_members[0] = my_id;
+		group_size++;
+		for (i = 3, j = 1; i < argc; i++, j++) {
 			group_members[j] = argv[i];
 			group_size++;
 		}
@@ -105,13 +112,15 @@ int main(int argc, char *argv[]){
 	 Instantiate a LinphoneCore object given the LinphoneCoreVTable
 	*/
 	lc=linphone_core_new(&vtable,NULL,NULL,NULL);
-
+	
+	linphone_core_set_primary_contact(lc, my_id);
+	
 	printf("Group Name: [%s]\n", group_name);
 	for (i = 0; i < group_size; i++) {
 		printf("Member [%d]: [%s]\n", i, group_members[i]);
 	}
 	/*Next step is to create a chat root*/
-	chat_room = linphone_core_create_group_chat_room(lc, group_name, group_members, group_size);
+	chat_room = linphone_core_create_group_chat_room(lc, group_name, group_members, group_size, 0, 0);
 	
 	//linphone_chat_room_add_participant(chat_room, group_member);
 	

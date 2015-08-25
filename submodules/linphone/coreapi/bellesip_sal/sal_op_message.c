@@ -239,27 +239,27 @@ int sal_message_send(SalOp *op, const char *from, const char *to, const char* co
 	belle_sip_request_t* req;
 	char content_type_raw[256];
 	size_t content_length = msg?strlen(msg):0;
-	time_t curtime=time(NULL);
+	time_t curtime = time(NULL);
 	uint8_t *multipartEncryptedMessage = NULL;
 	int retval;
 	
 	if (op->dialog){
 		/*for SIP MESSAGE that are sent in call's dialog*/
-		req=belle_sip_dialog_create_queued_request(op->dialog,"MESSAGE");
+		req = belle_sip_dialog_create_queued_request(op->dialog,"MESSAGE");
 	}else{
 		sal_op_message_fill_cbs(op);
 		if (from)
-			sal_op_set_from(op,from);
+			sal_op_set_from(op, from);
 		if (to)
-			sal_op_set_to(op,to);
-		op->dir=SalOpDirOutgoing;
+			sal_op_set_to(op, to);
+		op->dir = SalOpDirOutgoing;
 
-		req=sal_op_build_request(op,"MESSAGE");
+		req = sal_op_build_request(op,"MESSAGE");
 		if (req == NULL ){
 			return -1;
 		}
 		if (sal_op_get_contact_address(op)){
-			belle_sip_message_add_header(BELLE_SIP_MESSAGE(req),BELLE_SIP_HEADER(sal_op_create_contact(op)));
+			belle_sip_message_add_header(BELLE_SIP_MESSAGE(req), BELLE_SIP_HEADER(sal_op_create_contact(op)));
 		}
 	}
 
@@ -340,7 +340,7 @@ int sal_message_reply(SalOp *op, SalReason reason){
 }
 
 int sal_text_send(SalOp *op, const char *from, const char *to, const char *msg) {
-	return sal_message_send(op,from,to,"text/plain",msg, NULL);
+	return sal_message_send(op, from, to, "text/plain", msg, NULL);
 }
 
 static belle_sip_listener_callbacks_t op_message_callbacks={0};

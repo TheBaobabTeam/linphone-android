@@ -1172,3 +1172,42 @@ void sal_default_set_sdp_handling(Sal *sal, SalOpSDPHandling sdp_handling_method
 	if (sdp_handling_method != SalOpSDPNormal ) ms_message("Enabling special SDP handling for all new SalOp in Sal[%p]!", sal);
 	sal->default_sdp_handling = sdp_handling_method;
 }
+
+/*******************************************************************************************
+ *				This shall be my playground, so behold folks					*
+ *******************************************************************************************/
+
+void sal_print_custom_headers(SalCustomHeader *ch) {
+	belle_sip_message_t *msg = (belle_sip_message_t*)ch;
+	belle_sip_header_t *h = NULL;
+	const belle_sip_list_t *el;
+	
+	if (msg == NULL){
+		return;
+	}
+	
+	printf(" Belle Message: [%s]\n", belle_sip_message_to_string(msg));
+	h = belle_sip_message_get_header(msg, "Group_Type");
+	if (h != NULL)
+		printf(" Group Name: [%s]\n", belle_sip_header_get_unparsed_value(h));
+	
+	for (el = belle_sip_message_get_all_headers(msg); el != NULL; el = el->next) {
+		h = (belle_sip_header_t*)el->data;
+		printf("H: [%s]\n", belle_sip_header_get_unparsed_value(h));
+	}
+	
+	//printf("Name [%s] Value [%s]\n", ch->header_name, ch->header_value);
+}
+
+const char* sal_group_getCustomHeader(const SalCustomHeader *ch, const char* name) {
+	belle_sip_message_t *msg = (belle_sip_message_t*)ch;
+	belle_sip_header_t *h = NULL;
+	
+	if (msg != NULL) {
+		h = belle_sip_message_get_header(msg, name);
+		if (h != NULL)
+			return belle_sip_header_get_unparsed_value(h);
+	}
+	
+	return NULL;
+}
