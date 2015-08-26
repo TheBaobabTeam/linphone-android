@@ -27,6 +27,7 @@ import org.linphone.core.CallDirection;
 import org.linphone.core.LinphoneAddress;
 import org.linphone.core.LinphoneCallLog;
 import org.linphone.core.LinphoneCallLog.CallStatus;
+import org.linphone.groupchat.FragmentsAvailable;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

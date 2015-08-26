@@ -42,6 +42,7 @@ public class Contact implements Serializable {
 	private transient Bitmap photo;
 	private List<String> numbersOrAddresses;
 	private boolean hasFriends;
+	public boolean selected = false;
 	
 	public Contact(String id, String name) {
 		super();
@@ -115,5 +116,13 @@ public class Contact implements Serializable {
 			}
 		}
 		this.name = Compatibility.refreshContactName(cr, id);
+	}
+
+	public void setSelected(boolean selected) {
+		this.selected = selected;
+	}
+
+	public boolean isSelected() {
+		return selected;
 	}
 }

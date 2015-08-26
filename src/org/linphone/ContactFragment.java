@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import org.linphone.compatibility.Compatibility;
 import org.linphone.core.LinphoneCore;
 import org.linphone.core.LinphoneProxyConfig;
+import org.linphone.groupchat.FragmentsAvailable;
 import org.linphone.mediastream.Log;
 import org.linphone.ui.AvatarWithShadow;
 
