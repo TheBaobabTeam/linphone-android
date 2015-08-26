@@ -43,18 +43,16 @@
             android:textColor="@drawable/text_button" />
     </LinearLayout>
 
-    
-
     <ListView
         android:id="@+id/contactList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="371dp"
         android:cacheColorHint="@color/transparent"
+        android:choiceMode="multipleChoice"
         android:divider="@android:color/darker_gray"
         android:dividerHeight="1dp"
         android:fastScrollAlwaysVisible="true"
-        android:fastScrollEnabled="true"
-        android:choiceMode="multipleChoice"/>
+        android:fastScrollEnabled="true" />
     
     <Button
         android:id="@+id/findSelected"
