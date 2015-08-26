@@ -153,6 +153,20 @@ public class AddMembersActivity extends FragmentActivity{
     private void doOnFalseResult() {
         result = false;
     }
+    
+    
+    private void returnPictureSip()
+    {
+    	
+    	List<Contact> contactsList = dataAdapter.contactsList;
+		for(int i = 0; i < contactsList.size(); i++){
+			Contact contact = contactsList.get(i);
+			if(contact.isSelected()){
+				
+			}
+		}
+    	
+    }
 	
 	private void checkButtonClick(){
 		Button myBtn = (Button)findViewById(R.id.findSelected);
