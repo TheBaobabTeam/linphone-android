@@ -22,6 +22,7 @@ import java.util.List;
 import org.linphone.compatibility.Compatibility;
 import org.linphone.core.LinphoneFriend;
 import org.linphone.core.PresenceActivityType;
+import org.linphone.groupchat.FragmentsAvailable;
 import org.linphone.mediastream.Log;
 
 import android.annotation.SuppressLint;
