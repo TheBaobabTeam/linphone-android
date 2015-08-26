@@ -27,6 +27,7 @@ import org.linphone.core.LinphoneChatMessage;
 import org.linphone.core.LinphoneChatRoom;
 import org.linphone.core.LinphoneCoreException;
 import org.linphone.core.LinphoneCoreFactory;
+import org.linphone.groupchat.FragmentsAvailable;
 import org.linphone.mediastream.Log;
 
 import android.app.ProgressDialog;

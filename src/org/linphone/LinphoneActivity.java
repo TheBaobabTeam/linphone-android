@@ -44,6 +44,8 @@ import org.linphone.core.LinphoneCoreFactory;
 import org.linphone.core.LinphoneCoreListenerBase;
 import org.linphone.core.LinphoneProxyConfig;
 import org.linphone.groupchat.AddMembersActivity;
+import org.linphone.groupchat.FragmentsAvailable;
+import org.linphone.groupchat.GroupChatRoomActivity;
 import org.linphone.groupchat.NewGroupActivity;
 import org.linphone.mediastream.Log;
 import org.linphone.setup.RemoteProvisioningLoginActivity;
@@ -688,6 +690,7 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 		startOrientationSensor();
 		startActivityForResult(intent, CHAT_ACTIVITY);
 	}
+	
 	public void addMembers(String groupName) {
 		Intent intent = new Intent(this, AddMembersActivity.class);
 		intent.putExtra("GroupName", groupName);
@@ -1060,6 +1063,15 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 			extras.putSerializable("NewSipAdress", sipUri);
 			changeCurrentFragment(FragmentsAvailable.EDIT_CONTACT, extras);
 		}
+	}
+	
+	//Added by me
+	public void createGroupChat(String groupName){
+		Intent intent = new Intent(this, GroupChatRoomActivity.class);
+		intent.putExtra("GroupName", groupName);
+		
+		startOrientationSensor();
+		startActivityForResult(intent, CHAT_ACTIVITY);
 	}
 
 	public void editContact(Contact contact)

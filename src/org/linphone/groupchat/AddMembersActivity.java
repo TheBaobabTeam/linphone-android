@@ -37,6 +37,7 @@ import android.widget.Toast;
 public class AddMembersActivity extends FragmentActivity{
 	MyAdapter dataAdapter = null;
 	private TextView back, next;
+	private boolean result;
 
 	
 	@Override
@@ -54,16 +55,22 @@ public class AddMembersActivity extends FragmentActivity{
 			});
 		}
 		
-		next = (TextView)findViewById(R.id.next);
+		displayListView();
+		checkButtonClick();
+		
+		next = (TextView)findViewById(R.id.create);
 		next.setOnClickListener(new View.OnClickListener(){
 			@Override
 			public void onClick(View v) {
-				LinphoneActivity.instance().displayCustomToast("At least one contact must be selected.", Toast.LENGTH_SHORT);
+				if(result){
+					String name = "Baobab";
+					LinphoneActivity.instance().createGroupChat(name.toString());
+				}
+				else{
+					LinphoneActivity.instance().displayCustomToast("At least one must be selected.", Toast.LENGTH_SHORT);
+				}
 			}
 		});
-		
-		displayListView();
-		checkButtonClick();
 	}
 	
 	private void displayListView(){
@@ -77,7 +84,7 @@ public class AddMembersActivity extends FragmentActivity{
 			@Override
 			public void onItemClick(AdapterView<?> parent, View v, int pos,long id) {
 				Contact con = (Contact)parent.getItemAtPosition(pos);
-				Toast.makeText(getApplicationContext(), "Clicked on row: " + con.getName(), Toast.LENGTH_LONG).show();
+				//Toast.makeText(getApplicationContext(), "Selected: " + con.getName(), Toast.LENGTH_SHORT).show();
 				}
 			});
 	}
@@ -114,8 +121,15 @@ public class AddMembersActivity extends FragmentActivity{
 					public void onClick(View v) {
 						CheckBox c = (CheckBox) v;
 						Contact con = (Contact)c.getTag();
-						Toast.makeText(getApplicationContext(), "Clicked on: " +c.getText(), Toast.LENGTH_LONG).show();
+						Toast.makeText(getApplicationContext(), "Selected: " +c.getText(), Toast.LENGTH_SHORT).show();
 						con.setSelected(c.isChecked());
+						
+						if(c.isChecked()){
+							doOnTrueResult();
+						}
+						else{
+							doOnFalseResult();
+						}
 					}
 				});
 			}
@@ -131,6 +145,14 @@ public class AddMembersActivity extends FragmentActivity{
 			return v;
 		}
 	}
+	
+	private void doOnTrueResult() {
+        result = true;
+    }
+
+    private void doOnFalseResult() {
+        result = false;
+    }
 	
 	private void checkButtonClick(){
 		Button myBtn = (Button)findViewById(R.id.findSelected);

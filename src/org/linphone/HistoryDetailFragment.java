@@ -23,6 +23,7 @@ import java.util.Calendar;
 import org.linphone.core.LinphoneAddress;
 import org.linphone.core.LinphoneCoreException;
 import org.linphone.core.LinphoneCoreFactory;
+import org.linphone.groupchat.FragmentsAvailable;
 import org.linphone.mediastream.Log;
 import org.linphone.ui.AvatarWithShadow;
 
