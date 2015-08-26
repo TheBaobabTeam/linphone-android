@@ -43,11 +43,7 @@
             android:textColor="@drawable/text_button" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/findSelected"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Find contacts that are Selected" />
+    
 
     <ListView
         android:id="@+id/contactList"
@@ -59,5 +55,11 @@
         android:fastScrollAlwaysVisible="true"
         android:fastScrollEnabled="true"
         android:choiceMode="multipleChoice"/>
+    
+    <Button
+        android:id="@+id/findSelected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Find contacts that are Selected" />
 
 </LinearLayout>
