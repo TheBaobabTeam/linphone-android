@@ -1871,3 +1871,7 @@ const char** str_split(const char* a_str, const char a_delim) {
 	
 	return result;
 }
+
+int linphone_chat_room_get_type(LinphoneChatRoom *cr) {
+	return cr->type;
+}

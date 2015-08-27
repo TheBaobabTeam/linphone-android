@@ -2059,4 +2059,17 @@ public interface LinphoneCore {
 	 * @return The name of the video preset used for video calls (can be null if the default video preset is used).
 	 */
 	public String getVideoPreset();
+	
+	
+	/*******************************************************************************************
+	 *				This shall be my playground, so behold folks					*
+	 *******************************************************************************************/
+	
+	/**
+	 * Create a new chat room for messaging from a sip uri like sip:joe@sip.linphone.org
+	 * @param to 	destination address for messages
+	 *
+	 * @return {@link LinphoneChatRoom} where messaging can take place.
+	 */
+	LinphoneChatRoom getOrCreateGroupChatRoom(String group_name, String [] group_members, int group_size, int group_index, int admin_index);
 }
