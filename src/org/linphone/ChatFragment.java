@@ -207,7 +207,7 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 		mListener = new LinphoneCoreListenerBase(){
 			@Override
 			public void messageReceived(LinphoneCore lc, LinphoneChatRoom cr, LinphoneChatMessage message) {
-				System.out.println("Message: [" + message.getText() + "]");
+				//System.out.println("Message: [" + message.getText() + "]");
 				
 				LinphoneAddress from = cr.getPeerAddress();
 				if (from.asStringUriOnly().equals(sipUri)) {
@@ -499,16 +499,27 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 		boolean isNetworkReachable = lc == null ? false : lc.isNetworkReachable();
 
 		if (chatRoom != null && messageToSend != null && messageToSend.length() > 0 && isNetworkReachable) {
-			LinphoneChatMessage message = chatRoom.createLinphoneChatMessage(messageToSend);
-			message.setListener(this);
-			chatRoom.sendChatMessage(message);
+			if (chatRoom.getChatRoomType() == 0) {
+				LinphoneChatMessage message = chatRoom.createLinphoneChatMessage(messageToSend);
+				message.setListener(this);
+				chatRoom.sendChatMessage(message);
+				
+				if (LinphoneActivity.isInstanciated()) {
+					LinphoneActivity.instance().onMessageSent(sipUri, messageToSend);
+				}
 
-			if (LinphoneActivity.isInstanciated()) {
-				LinphoneActivity.instance().onMessageSent(sipUri, messageToSend);
+				invalidate();
+				Log.i("Sent message current status: " + message.getStatus());
+			} else {
+				chatRoom.sendGroupMessage(messageToSend);
+				
+				if (LinphoneActivity.isInstanciated()) {
+					LinphoneActivity.instance().onMessageSent(sipUri, messageToSend);
+				}
+				
+				invalidate();
+				//Log.i("Sent message current status: " + message.getStatus());
 			}
-
-			invalidate();
-			Log.i("Sent message current status: " + message.getStatus());
 		} else if (!isNetworkReachable && LinphoneActivity.isInstanciated()) {
 			LinphoneActivity.instance().displayCustomToast(getString(R.string.error_network_unreachable), Toast.LENGTH_LONG);
 		}

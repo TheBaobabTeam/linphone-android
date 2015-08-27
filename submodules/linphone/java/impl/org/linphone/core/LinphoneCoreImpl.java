@@ -1502,4 +1502,15 @@ class LinphoneCoreImpl implements LinphoneCore {
 	public String getVideoPreset() {
 		return getVideoPreset(nativePtr);
 	}
+	
+	
+	/*******************************************************************************************
+	 *				This shall be my playground, so behold folks					*
+	 *******************************************************************************************/
+	
+	private native long getOrCreateGroupChatRoom(long nativePtr, String group_name, String[] group_members, int group_size, int group_index, int admin_index);
+	
+	public synchronized LinphoneChatRoom getOrCreateGroupChatRoom(String group_name, String[] group_members, int group_size, int group_index, int admin_index) {
+		return new LinphoneChatRoomImpl(getOrCreateGroupChatRoom(nativePtr, group_name, group_members, group_size, group_index, admin_index));
+	}
 }

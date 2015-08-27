@@ -4207,6 +4207,15 @@ LINPHONE_PUBLIC	LinphoneChatRoom * linphone_core_create_group_chat_room(Linphone
 LINPHONE_PUBLIC	LinphoneChatMessage* linphone_group_chat_room_create_message(LinphoneChatRoom *cr, const char* message, int group_index);
  
 /**
+ * Create a new chat room for messaging from a sip uri like sip:joe@sip.linphone.org if not already existing, else return exisiting one
+ * @param lc #LinphoneCore object
+ * @param to destination address for messages
+ * @return #LinphoneChatRoom where messaging can take place.
+ * @deprecated Use linphone_core_get_chat_room() or linphone_core_get_chat_room_from_uri() instead.
+ */
+LINPHONE_PUBLIC	LinphoneChatRoom * linphone_core_get_or_create_group_chat_room(LinphoneCore* lc, const char* group_name, const char* group_members[], int group_size, int group_index, int admin_index);
+ 
+/**
  * Send a message to peer member of this chat room.
  * @deprecated linphone_chat_room_send_message2() gives more control on the message expedition.
  * @param cr #LinphoneChatRoom object
@@ -4218,6 +4227,11 @@ LINPHONE_PUBLIC	void linphone_group_chat_room_send_message(LinphoneChatRoom *cr,
  * Prints the properties of a chatroom
  */
 LINPHONE_PUBLIC	void linphone_chat_room_print(LinphoneCore *lc, LinphoneChatRoom *cr, LinphoneChatMessage *msg);
+
+/**
+ * Return the chatroom type
+ */
+LINPHONE_PUBLIC	int linphone_chat_room_get_type(LinphoneChatRoom *cr);
 
 #ifdef __cplusplus
 }

@@ -174,4 +174,32 @@ class LinphoneChatRoomImpl implements LinphoneChatRoom {
 	public void sendChatMessage(LinphoneChatMessage message) {
 		sendChatMessage(nativePtr, message, ((LinphoneChatMessageImpl)message).getNativePtr());
 	}
+	
+	
+	/*******************************************************************************************
+	 *				This shall be my playground, so behold folks					*
+	 *******************************************************************************************/
+	
+	private native long createLinphoneGroupChatMessage(long ptr, String message, int group_index);
+	private native void sendGroupMessage(long ptr, String message);
+	private native int getChatRoomType(long ptr);
+	
+	public void sendGroupMessage(String message) {
+		synchronized(getCore()){
+			sendGroupMessage(nativePtr, message);
+		}
+	}
+	
+	@Override
+	public LinphoneChatMessage createLinphoneGroupChatMessage(String message, int group_index) {
+		synchronized(getCore()){
+			return new LinphoneChatMessageImpl(createLinphoneGroupChatMessage(nativePtr, message, group_index));
+		}
+	}
+	
+	public int getChatRoomType() {
+		synchronized(getCore()) {
+			return getChatRoomType(nativePtr);
+		}
+	}
 }
