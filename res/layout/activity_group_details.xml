@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/numpad_background_dialer"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="org.linphone.Group_details" >
+  
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:background="@drawable/chat_back"
+            android:contentDescription="@string/content_description_back"
+            android:gravity="center"
+            android:paddingTop="15dp"
+            android:scaleType="centerCrop"
+            android:text="@string/button_back"
+            android:textColor="@drawable/text_button" />
+    
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/groupDetails"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignLeft="@+id/topbar"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/group_name"
+        android:cacheColorHint="@color/transparent"
+        android:choiceMode="multipleChoice"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:fastScrollAlwaysVisible="true"
+        android:fastScrollEnabled="true" >
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/group_name"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/topbar"
+        android:layout_below="@+id/topbar"
+        android:text="Group Name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
