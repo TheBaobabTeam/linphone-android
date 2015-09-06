@@ -182,7 +182,10 @@ class LinphoneChatRoomImpl implements LinphoneChatRoom {
 	
 	private native long createLinphoneGroupChatMessage(long ptr, String message, int group_index);
 	private native void sendGroupMessage(long ptr, String message);
+	private native void sendGroupChatMessage(long ptr, Object message, long messagePtr);
 	private native int getChatRoomType(long ptr);
+	private native int getGroupSize(long ptr);
+	private native int getMyGroupIndex(long ptr);
 	
 	public void sendGroupMessage(String message) {
 		synchronized(getCore()){
@@ -197,9 +200,26 @@ class LinphoneChatRoomImpl implements LinphoneChatRoom {
 		}
 	}
 	
+	@Override
+	public void sendGroupChatMessage(LinphoneChatMessage message) {
+		sendGroupChatMessage(nativePtr, message, ((LinphoneChatMessageImpl)message).getNativePtr());
+	}
+	
 	public int getChatRoomType() {
 		synchronized(getCore()) {
 			return getChatRoomType(nativePtr);
+		}
+	}
+	
+	public int getGroupSize() {
+		synchronized(getCore()) {
+			return getGroupSize(nativePtr);
+		}
+	}
+	
+	public int getMyGroupIndex() {
+		synchronized(getCore()) {
+			return getMyGroupIndex(nativePtr);
 		}
 	}
 }

@@ -6,6 +6,7 @@ import java.util.List;
 import org.linphone.Contact;
 import org.linphone.ContactsManager;
 import org.linphone.LinphoneActivity;
+import org.linphone.LinphoneManager;
 import org.linphone.R;
 import android.app.ListActivity;
 
@@ -30,6 +31,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.linphone.core.LinphoneChatRoom;
+import org.linphone.core.LinphoneCore;
+
+import android.content.Intent;
+
 
 /**
  * @author Mpedi Mello
@@ -38,12 +44,17 @@ public class AddMembersActivity extends FragmentActivity{
 	MyAdapter dataAdapter = null;
 	private TextView back, next;
 	private boolean result;
-
+	private String groupName;
+	private LinphoneChatRoom chatRoom;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.add_members_activity);
+		
+		Intent intent = getIntent();
+		
+		groupName = intent.getStringExtra("GroupName");
 		
 		back = (TextView)findViewById(R.id.back);
 		if (back != null) {
@@ -63,8 +74,41 @@ public class AddMembersActivity extends FragmentActivity{
 			@Override
 			public void onClick(View v) {
 				if(result){
-					String name = "Baobab";
-					LinphoneActivity.instance().createGroupChat(name.toString());
+					/*String name = "Baobab";
+					LinphoneActivity.instance().createGroupChat(name.toString());*/
+					
+					List<Contact> contactsList = dataAdapter.contactsList;
+					
+					String [] groupMembers = new String[contactsList.size()];
+					int groupSize = contactsList.size();
+					
+					for(int i = 0; i < contactsList.size(); i++){
+						Contact contact = contactsList.get(i);
+						if(contact.isSelected()){
+							//repsonseText.append("\n" + contact.getName());
+							for (String numberOrAddress : contact.getNumbersOrAddresses()) {
+								String displayednumberOrAddress = numberOrAddress;
+								if (numberOrAddress.startsWith("sip:")) {
+									groupMembers[i] = displayednumberOrAddress;
+								}
+							}
+						}
+					}
+					
+					LinphoneCore lc = LinphoneManager.getLcIfManagerNotDestroyedOrNull();
+					if (lc != null) {
+						chatRoom = lc.getOrCreateGroupChatRoom(groupName, groupMembers, groupSize, 0, 0);
+						
+						if (chatRoom != null) {
+							chatRoom.sendGroupMessage(lc.getPrimaryContactUsername() + ": created this group.");
+							
+							//if (LinphoneActivity.isInstanciated()) {
+								LinphoneActivity.instance().onMessageSent(chatRoom.getPeerAddress().asStringUriOnly(), lc.getPrimaryContactUsername() + ": created this group.");
+							//}
+							
+							LinphoneActivity.instance().goToChatList();
+						}
+					}
 				}
 				else{
 					LinphoneActivity.instance().displayCustomToast("At least one must be selected.", Toast.LENGTH_SHORT);

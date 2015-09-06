@@ -698,6 +698,10 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 		startOrientationSensor();
 		startActivityForResult(intent, CHAT_ACTIVITY);
 	}
+	
+	public void goToChatList() {
+		changeCurrentFragment(FragmentsAvailable.CHATLIST, null);
+	}
 
 	@Override
 	public void onClick(View v) {

@@ -1626,12 +1626,45 @@ static void _linphone_group_chat_room_send_message(LinphoneChatRoom *cr, Linphon
  */
 void linphone_group_chat_room_send_message(LinphoneChatRoom *cr, const char *msg) {
 	int i;
+	LinphoneChatMessage *message = NULL;
 	
 	printf("linphone_group_chat_room_send_message()\n");
 	
 	for (i = 0; i < cr->num_of_members; i++) {
+		message = linphone_group_chat_room_create_message(cr, msg, i);
 		if (i != cr->my_group_index) {
-			_linphone_group_chat_room_send_message(cr, linphone_group_chat_room_create_message(cr, msg, i), i);
+			_linphone_group_chat_room_send_message(cr, message, i);
+		}
+	}
+	
+	linphone_chat_message_ref(message);
+	
+	message->dir = LinphoneChatMessageOutgoing;
+	message->from = linphone_address_new(cr->peer);
+	message->storage_id = linphone_chat_message_store(message);
+	
+	// add to transient list
+	cr->transient_messages = ms_list_append(cr->transient_messages, linphone_chat_message_ref(message));
+
+	if (cr->is_composing == LinphoneIsComposingActive) {
+		cr->is_composing = LinphoneIsComposingIdle;
+	}
+	linphone_chat_room_delete_composing_idle_timer(cr);
+	linphone_chat_room_delete_composing_refresh_timer(cr);
+	
+	linphone_chat_message_unref(message);
+}
+
+void linphone_group_chat_room_send_chat_message(LinphoneChatRoom *cr, LinphoneChatMessage *msg) {
+	int i;
+	
+	printf("linphone_group_chat_room_send_chat_message()\n");
+	
+	msg->state = LinphoneChatMessageStateInProgress;
+	
+	for (i = 0; i < cr->num_of_members; i++) {
+		if (i != cr->my_group_index) {
+			_linphone_group_chat_room_send_message(cr, msg, i);
 		}
 	}
 }
@@ -1699,10 +1732,10 @@ LinphoneChatMessage* linphone_group_chat_room_create_message(LinphoneChatRoom *c
 }
 
 static void _linphone_group_chat_room_send_message(LinphoneChatRoom *cr, LinphoneChatMessage* msg, int to_index){
-	SalOp *op=NULL;
+	SalOp *op = NULL;
 	char* content_type;
-	const char *identity=NULL;
-	time_t t=time(NULL);
+	const char *identity = NULL;
+	time_t t = time(NULL);
 	linphone_chat_message_ref(msg);
 	
 	printf("_linphone_group_chat_room_send_message()\n");
@@ -1786,18 +1819,18 @@ static void _linphone_group_chat_room_send_message(LinphoneChatRoom *cr, Linphon
 		ms_free(peer_uri);
 	}
 
-	msg->dir = LinphoneChatMessageOutgoing;
+	/*msg->dir = LinphoneChatMessageOutgoing;
 	msg->from = linphone_address_new(cr->peer);
-	msg->storage_id = linphone_chat_message_store(msg);
+	msg->storage_id = linphone_chat_message_store(msg);*/
 
 	// add to transient list
 	cr->transient_messages = ms_list_append(cr->transient_messages, linphone_chat_message_ref(msg));
 
-	if (cr->is_composing == LinphoneIsComposingActive) {
+	/*if (cr->is_composing == LinphoneIsComposingActive) {
 		cr->is_composing = LinphoneIsComposingIdle;
 	}
 	linphone_chat_room_delete_composing_idle_timer(cr);
-	linphone_chat_room_delete_composing_refresh_timer(cr);
+	linphone_chat_room_delete_composing_refresh_timer(cr);*/
 	linphone_chat_message_unref(msg);
 }
 
@@ -1874,4 +1907,12 @@ const char** str_split(const char* a_str, const char a_delim) {
 
 int linphone_chat_room_get_type(LinphoneChatRoom *cr) {
 	return cr->type;
+}
+
+int linphone_chat_room_get_group_size(LinphoneChatRoom *cr) {
+	return cr->num_of_members;
+}
+
+int linphone_chat_room_get_my_group_index(LinphoneChatRoom *cr) {
+	return cr->my_group_index;
 }
