@@ -165,8 +165,26 @@ public interface LinphoneChatRoom {
 	LinphoneChatMessage createLinphoneGroupChatMessage(String message, int group_index);
 	
 	/**
+	 * send a message to all members of this chat room.
+	 * @param message to be sent
+	 */
+	void sendGroupChatMessage(LinphoneChatMessage message);
+	
+	/**
 	 * get the chatroom type, either 0 = private or 1 = group
 	 * @return group_type
 	 */
 	int getChatRoomType();
+	
+	/**
+	 * get the current number of members of the group
+	 * @return group_size
+	 */
+	int getGroupSize();
+	
+	/**
+	 * get the current users index
+	 * @return  index
+	 */
+	int getMyGroupIndex();
 }

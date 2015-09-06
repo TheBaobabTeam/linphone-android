@@ -6256,6 +6256,19 @@ extern "C" void Java_org_linphone_core_LinphoneChatRoomImpl_sendGroupMessage(
 	env->ReleaseStringUTFChars(jmessage, message);
 }
 
+extern "C" void Java_org_linphone_core_LinphoneChatRoomImpl_sendGroupChatMessage(
+	JNIEnv*  env,
+	jobject  thiz,
+	jlong chatroom_ptr,
+	jobject message,
+	jlong messagePtr
+) {
+	message = env->NewGlobalRef(message);
+	linphone_chat_message_ref((LinphoneChatMessage*)messagePtr);
+	linphone_chat_message_set_user_data((LinphoneChatMessage*)messagePtr, message);
+	linphone_group_chat_room_send_chat_message((LinphoneChatRoom*)chatroom_ptr, (LinphoneChatMessage*)messagePtr);
+}
+
 extern "C" jint Java_org_linphone_core_LinphoneChatRoomImpl_getChatRoomType(
 	JNIEnv*  env,
 	jobject  thiz,
@@ -6263,4 +6276,22 @@ extern "C" jint Java_org_linphone_core_LinphoneChatRoomImpl_getChatRoomType(
 ) {
 	int chatRoomType = linphone_chat_room_get_type((LinphoneChatRoom*)ptr);
 	return (jint) chatRoomType;
+}
+
+extern "C" jint Java_org_linphone_core_LinphoneChatRoomImpl_getGroupSize(
+	JNIEnv*  env,
+	jobject  thiz,
+	jlong ptr
+) {
+	int group_size = linphone_chat_room_get_group_size((LinphoneChatRoom*)ptr);
+	return (jint) group_size;
+}
+
+extern "C" jint Java_org_linphone_core_LinphoneChatRoomImpl_getMyGroupIndex(
+	JNIEnv*  env,
+	jobject  thiz,
+	jlong ptr
+) {
+	int group_index = linphone_chat_room_get_my_group_index((LinphoneChatRoom*)ptr);
+	return (jint) group_index;
 }
