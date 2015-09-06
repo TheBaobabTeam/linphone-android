@@ -4221,7 +4221,16 @@ LINPHONE_PUBLIC	LinphoneChatRoom * linphone_core_get_or_create_group_chat_room(L
  * @param cr #LinphoneChatRoom object
  * @param msg message to be sent
  */
-LINPHONE_PUBLIC	void linphone_group_chat_room_send_message(LinphoneChatRoom *cr, const char *msg); 
+LINPHONE_PUBLIC	void linphone_group_chat_room_send_message(LinphoneChatRoom *cr, const char *msg);
+
+/**
+ * Send a message to peer member of this chat room.
+ * @param[in] cr LinphoneChatRoom object
+ * @param[in] msg LinphoneChatMessage object
+ * The state of the message sending will be notified via the callbacks defined in the LinphoneChatMessageCbs object that can be obtained
+ * by calling linphone_chat_message_get_callbacks().
+ */
+LINPHONE_PUBLIC void linphone_group_chat_room_send_chat_message(LinphoneChatRoom *cr, LinphoneChatMessage *msg);
 
 /**
  * Prints the properties of a chatroom
@@ -4232,6 +4241,16 @@ LINPHONE_PUBLIC	void linphone_chat_room_print(LinphoneCore *lc, LinphoneChatRoom
  * Return the chatroom type
  */
 LINPHONE_PUBLIC	int linphone_chat_room_get_type(LinphoneChatRoom *cr);
+
+/**
+ * Return the group size
+ */
+LINPHONE_PUBLIC	int linphone_chat_room_get_group_size(LinphoneChatRoom *cr);
+
+/**
+ * Return my group index
+ */
+LINPHONE_PUBLIC	int linphone_chat_room_get_my_group_index(LinphoneChatRoom *cr);
 
 #ifdef __cplusplus
 }

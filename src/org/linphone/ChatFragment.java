@@ -503,7 +503,7 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 				LinphoneChatMessage message = chatRoom.createLinphoneChatMessage(messageToSend);
 				message.setListener(this);
 				chatRoom.sendChatMessage(message);
-				
+
 				if (LinphoneActivity.isInstanciated()) {
 					LinphoneActivity.instance().onMessageSent(sipUri, messageToSend);
 				}
@@ -511,10 +511,10 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 				invalidate();
 				Log.i("Sent message current status: " + message.getStatus());
 			} else {
-				chatRoom.sendGroupMessage(messageToSend);
+				chatRoom.sendGroupMessage(lc.getPrimaryContactUsername() + ": " + messageToSend);
 				
 				if (LinphoneActivity.isInstanciated()) {
-					LinphoneActivity.instance().onMessageSent(sipUri, messageToSend);
+					LinphoneActivity.instance().onMessageSent(sipUri, lc.getPrimaryContactUsername() + ": " + messageToSend);
 				}
 				
 				invalidate();
