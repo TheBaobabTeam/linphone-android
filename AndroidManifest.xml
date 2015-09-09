@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="org.linphone"
-      android:versionCode="2400" android:installLocation="auto">
-    <uses-sdk android:minSdkVersion="12" android:targetSdkVersion="22"/>
+    package="org.linphone"
+    android:installLocation="auto"
+    android:versionCode="2400" >
+
+    <uses-sdk
+        android:minSdkVersion="12"
+        android:targetSdkVersion="22" />
 
     <!-- Permissions for Push Notification -->
     <permission
@@ -310,7 +314,11 @@
         </activity>
         <activity
             android:name=".groupchat.GroupChatRoomActivity"
-            android:theme="@style/NoTitle">
+            android:theme="@style/NoTitle" >
+        </activity>
+        <activity
+            android:name="org.linphone.groupchat.Group_details"
+            android:label="@string/title_activity_group_details" >
         </activity>
     </application>
 
