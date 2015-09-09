@@ -317,7 +317,7 @@
             android:theme="@style/NoTitle" >
         </activity>
         <activity
-            android:name=".Group_details"
+            android:name="org.linphone.groupchat.Group_details"
             android:label="@string/title_activity_group_details" >
         </activity>
     </application>

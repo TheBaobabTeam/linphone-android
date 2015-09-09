@@ -144,14 +144,14 @@
     
     </LinearLayout>
         
-    <TextView 
+    <!-- <TextView 
         android:id="@+id/remoteComposing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
     	android:textColor="@color/text_contrast"
         android:text="@string/remote_composing"
-        android:layout_above="@id/footer"/>
+        android:layout_above="@id/footer"/>-->
 
 	<ListView
 		android:id="@+id/chatMessageList"
