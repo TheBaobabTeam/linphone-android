@@ -165,11 +165,15 @@ public class AddMembersFragment extends Fragment implements OnClickListener {
 	}
 	
 	
+	
+	
 	public static AddMembersFragment instance() {
 		return instance;
 	}
 	
 	private void checkButtonClick() {
+	
+		final List<String> sipAdress = new ArrayList<String>();
 		myBtn = (Button)getActivity().findViewById(R.id.findSelected);
 		myBtn.setTextColor(Color.BLACK);
 		myBtn.setOnClickListener(new OnClickListener(){
@@ -182,8 +186,12 @@ public class AddMembersFragment extends Fragment implements OnClickListener {
 				List<Contact> contactsList = dataAdapter.contactsList;
 				for(int i = 0; i < contactsList.size(); i++){
 					Contact contact = contactsList.get(i);
+					sipAdress.add(contactsList.get(i).getSipAdress(contact));
+					
 					if(contact.isSelected()){
 						repsonseText.append("\n" + contact.getName());
+						
+						
 					}
 				}
 				Toast.makeText(getActivity().getApplicationContext(), repsonseText, Toast.LENGTH_LONG).show();
@@ -194,13 +202,7 @@ public class AddMembersFragment extends Fragment implements OnClickListener {
 	
     private void returnPictureSip()
     {
-    	List<Contact> contactsList = dataAdapter.contactsList;
-		for(int i = 0; i < contactsList.size(); i++){
-			Contact contact = contactsList.get(i);
-			if(contact.isSelected()){
-				
-			}
-		}
+    	
     	
     }
 

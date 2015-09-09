@@ -97,11 +97,33 @@ public class Contact implements Serializable {
 	public Bitmap getPhoto() {
 		return photo;
 	}
-
+	
+	/*public List<String> getSipAdress(String id)
+	{
+		
+	}*/
 	public List<String> getNumbersOrAddresses() {
 		if (numbersOrAddresses == null)
 			numbersOrAddresses = new ArrayList<String>();
 		return numbersOrAddresses;
+	}
+	public String getSipAdress(Contact lelo)
+	{
+			String adress = null ;
+			for (String numberOrAddress : lelo.getNumbersOrAddresses())
+			{
+				
+				String displayednumberOrAddress = numberOrAddress;
+				
+				if (numberOrAddress.startsWith("sip:")) {
+					adress = displayednumberOrAddress;
+					return adress;
+				}
+				
+				
+			}
+			return adress;
+			
 	}
 	
 	public void refresh(ContentResolver cr) {
