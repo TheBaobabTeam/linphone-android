@@ -165,14 +165,12 @@ public class AddMembersFragment extends Fragment implements OnClickListener {
 	}
 	
 	
-	
-	
 	public static AddMembersFragment instance() {
 		return instance;
 	}
 	
 	private void checkButtonClick() {
-	
+		
 		final List<String> sipAdress = new ArrayList<String>();
 		myBtn = (Button)getActivity().findViewById(R.id.findSelected);
 		myBtn.setTextColor(Color.BLACK);
@@ -187,9 +185,15 @@ public class AddMembersFragment extends Fragment implements OnClickListener {
 				for(int i = 0; i < contactsList.size(); i++){
 					Contact contact = contactsList.get(i);
 					sipAdress.add(contactsList.get(i).getSipAdress(contact));
-					
 					if(contact.isSelected()){
 						repsonseText.append("\n" + contact.getName());
+						/*This is where the sip adresses will be displayed
+						 Potego to test you replace it with the followning code below
+						 
+						 repsonseText.append("\n" + contactsList.get(i).getSipAdress(contact));
+						 */
+						
+						 	
 						
 						
 					}
@@ -202,7 +206,13 @@ public class AddMembersFragment extends Fragment implements OnClickListener {
 	
     private void returnPictureSip()
     {
-    	
+    	List<Contact> contactsList = dataAdapter.contactsList;
+		for(int i = 0; i < contactsList.size(); i++){
+			Contact contact = contactsList.get(i);
+			if(contact.isSelected()){
+				
+			}
+		}
     	
     }
 
