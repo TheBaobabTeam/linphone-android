@@ -30,12 +30,12 @@ public class GroupChatRoomActivity extends FragmentActivity {
 			});
 		}
 		
-		Intent intent = getIntent();
-		
-		// 2. get message value from intent
-		String message = intent.getStringExtra("GroupName");
-		
-		// 3. show message on textView 
-		((TextView)findViewById(R.id.groupName)).setText(message);
+		//Intent intent = getIntent();
+		 
+        // 2. get message value from intent
+        //String message = intent.getStringExtra("GroupName");
+ 
+        // 3. show message on textView 
+        //((TextView)findViewById(R.id.groupName)).setText(message);
 	}
 }

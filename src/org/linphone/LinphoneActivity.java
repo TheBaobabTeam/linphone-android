@@ -682,7 +682,7 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 	}
 	
 	/*
-	 * added by me
+	 * added by me, newGroup button
 	 */
 	public void newGroup() {
 		Intent intent = new Intent(this, NewGroupActivity.class);
@@ -691,9 +691,10 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 		startActivityForResult(intent, CHAT_ACTIVITY);
 	}
 	
-	public void addMembers(String groupName) {
+	//Select members for group chat
+	public void addMembers() {
 		Intent intent = new Intent(this, AddMembersActivity.class);
-		intent.putExtra("GroupName", groupName);
+		//intent.putExtra("GroupName", groupName);
 		
 		startOrientationSensor();
 		startActivityForResult(intent, CHAT_ACTIVITY);
@@ -703,6 +704,15 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 		changeCurrentFragment(FragmentsAvailable.CHATLIST, null);
 	}
 
+	//Added by me
+		public void createGroupChat(){
+			Intent intent = new Intent(this, GroupChatRoomActivity.class);
+			//intent.putExtra("GroupName", groupName);
+			
+			startOrientationSensor();
+			startActivityForResult(intent, CHAT_ACTIVITY);
+		}
+		
 	@Override
 	public void onClick(View v) {
 		int id = v.getId();
@@ -1069,14 +1079,6 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 		}
 	}
 	
-	//Added by me
-	public void createGroupChat(String groupName){
-		Intent intent = new Intent(this, GroupChatRoomActivity.class);
-		intent.putExtra("GroupName", groupName);
-		
-		startOrientationSensor();
-		startActivityForResult(intent, CHAT_ACTIVITY);
-	}
 
 	public void editContact(Contact contact)
 	{

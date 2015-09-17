@@ -117,6 +117,27 @@ public class Contact implements Serializable {
 		}
 		this.name = Compatibility.refreshContactName(cr, id);
 	}
+	
+	
+	//fUNCTION TO RETURN SIP ADRESSES
+	public String getSipAdress(Contact lelo)
+	{
+			String adress = null ;
+			for (String numberOrAddress : lelo.getNumbersOrAddresses())
+			{
+				
+				String displayednumberOrAddress = numberOrAddress;
+				
+				if (numberOrAddress.startsWith("sip:")) {
+					adress = displayednumberOrAddress;
+					return adress;
+				}
+				
+				
+			}
+			return adress;
+			
+	}
 
 	public void setSelected(boolean selected) {
 		this.selected = selected;

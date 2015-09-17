@@ -1,35 +1,10 @@
 package org.linphone.groupchat;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.linphone.Contact;
-import org.linphone.ContactsManager;
-import org.linphone.LinphoneActivity;
-import org.linphone.LinphoneManager;
 import org.linphone.R;
-import android.app.ListActivity;
 
-import android.content.Context;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.provider.Contacts;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CheckedTextView;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import org.linphone.core.LinphoneChatRoom;
 import org.linphone.core.LinphoneCore;
@@ -41,7 +16,33 @@ import android.content.Intent;
  * @author Mpedi Mello
  */
 public class AddMembersActivity extends FragmentActivity{
-	MyAdapter dataAdapter = null;
+	private static final String ADD_MEMBERS_FRAGMENT = "addMembersFragment";
+	private AddMembersFragment addMembersFragment;
+	
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.add_members_activity);
+		
+		AddMembersFragment fragment = new AddMembersFragment();
+		getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainerMembers, fragment, "addMembersFragment").commit();
+		
+		FragmentManager fm = getSupportFragmentManager();
+		addMembersFragment = (AddMembersFragment) fm.findFragmentByTag(ADD_MEMBERS_FRAGMENT);
+
+	    // If the Fragment is non-null, then it is currently being
+	    // retained across a configuration change.
+		if (addMembersFragment == null) {
+			addMembersFragment = new AddMembersFragment();
+			fm.beginTransaction().add(R.id.fragmentContainerMembers, addMembersFragment, ADD_MEMBERS_FRAGMENT).commit();
+	    }
+	}
+	
+	
+	
+	
+	
+	/*MyAdapter dataAdapter = null;
 	private TextView back, next;
 	private boolean result;
 	private String groupName;
@@ -75,7 +76,7 @@ public class AddMembersActivity extends FragmentActivity{
 			public void onClick(View v) {
 				if(result){
 					/*String name = "Baobab";
-					LinphoneActivity.instance().createGroupChat(name.toString());*/
+					LinphoneActivity.instance().createGroupChat(name.toString());
 					
 					List<Contact> contactsList = dataAdapter.contactsList;
 					
@@ -231,7 +232,7 @@ public class AddMembersActivity extends FragmentActivity{
 				Toast.makeText(getApplicationContext(), repsonseText, Toast.LENGTH_LONG).show();
 			}
 		});
-	}
+	}*/
 	
 }
 
