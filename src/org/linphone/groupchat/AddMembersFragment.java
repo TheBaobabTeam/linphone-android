@@ -2,12 +2,14 @@ package org.linphone.groupchat;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Arrays;
 
 import org.linphone.ChatFragment;
 import org.linphone.Contact;
 import org.linphone.ContactsFragment;
 import org.linphone.ContactsManager;
 import org.linphone.LinphoneActivity;
+import org.linphone.LinphoneManager;
 import org.linphone.R;
 
 import android.content.Context;
@@ -27,6 +29,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.linphone.core.LinphoneCore;
+import org.linphone.core.LinphoneAddress;
+import org.linphone.core.LinphoneProxyConfig;
+
 public class AddMembersFragment extends Fragment implements OnClickListener {
 	
 	private static AddMembersFragment instance;
@@ -36,6 +42,7 @@ public class AddMembersFragment extends Fragment implements OnClickListener {
 	private Button myBtn; 
 	protected boolean result;
 	private String sipUri;
+	private String groupName;
 	
 	private void TrueResult() {
         result = true;
@@ -61,6 +68,10 @@ public class AddMembersFragment extends Fragment implements OnClickListener {
 		
 		// Retain the fragment across configuration changes
 		setRetainInstance(true);
+		
+		//Retrieve parameter from intent
+		groupName = getArguments().getString("GroupName");
+		
 		return view;
 	}
 	
@@ -186,15 +197,11 @@ public class AddMembersFragment extends Fragment implements OnClickListener {
 					Contact contact = contactsList.get(i);
 					sipAdress.add(contactsList.get(i).getSipAdress(contact));
 					if(contact.isSelected()){
-						repsonseText.append("\n" + contact.getName());
+						//repsonseText.append("\n" + contact.getName());
 						/*This is where the sip adresses will be displayed
-						 Potego to test you replace it with the followning code below:
-						 
-						 repsonseText.append("\n" + contactsList.get(i).getSipAdress(contact));
-						 */
-						 	
+						Potego to test you replace it with the followning code below:*/
 						
-						
+						repsonseText.append("\n" + contactsList.get(i).getSipAdress(contact));
 					}
 				}
 				Toast.makeText(getActivity().getApplicationContext(), repsonseText, Toast.LENGTH_LONG).show();
@@ -220,12 +227,38 @@ public class AddMembersFragment extends Fragment implements OnClickListener {
 		//if(getResult()){
 			//String name = "Baobab";
 			//Toast.makeText(getActivity().getApplicationContext(),"Result is: "+ result, Toast.LENGTH_SHORT).show();
-			LinphoneActivity.instance().createGroupChat();
-			//}
-		//else{
-			//Toast.makeText(getActivity().getApplicationContext(),"Result is: "+ result, Toast.LENGTH_SHORT).show();
-			//LinphoneActivity.instance().displayCustomToast("At least one must be selected.", Toast.LENGTH_SHORT);
-			//}
+		final List<String> sipAdress = new ArrayList<String>();
+		List<Contact> contactsList = dataAdapter.contactsList;
+		
+		LinphoneCore lc = LinphoneManager.getLcIfManagerNotDestroyedOrNull();
+		LinphoneProxyConfig pc = lc.getDefaultProxyConfig();
+		String identity = pc.getIdentity();
+		sipAdress.add(identity);	// very important
+		
+		boolean flag = false;
+		for (int i = 0; i < contactsList.size(); i++) {
+			Contact contact = contactsList.get(i);
+			if(contact.isSelected()) {
+				sipAdress.add(contactsList.get(i).getSipAdress(contact));
+				
+				flag = true;
+			}
+		}
+		
+		if (flag == true) {
+			String [] groupMembers = sipAdress.toArray(new String[sipAdress.size()]);
+			int groupSize = sipAdress.size();
+			//String toDisplay = "Group Name : " + groupName + "\nGroup Members: " + Arrays.toString(groupMembers) + "\nGroup Size: " + (sipAdress.size() + 1);
+			//Toast.makeText(getActivity().getApplicationContext(), toDisplay, Toast.LENGTH_LONG).show();
+			
+			LinphoneActivity.instance().createGroupChat(groupName, groupMembers, groupSize);
+			
+			LinphoneActivity.instance().goToChatList();
+			
+			getActivity().finish();
+		} else {
+			LinphoneActivity.instance().displayCustomToast("At least one contact must be selected.", Toast.LENGTH_SHORT);
+		}
 		
 	}
 }

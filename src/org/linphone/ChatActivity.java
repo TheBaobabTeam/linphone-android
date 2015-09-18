@@ -35,10 +35,31 @@ public class ChatActivity extends FragmentActivity {
 		setContentView(R.layout.chat_activity);
 		
 		Bundle extras = new Bundle();
-		extras.putString("SipUri", getIntent().getExtras().getString("SipUri"));
-		extras.putString("DisplayName", getIntent().getExtras().getString("DisplayName"));
-		extras.putString("PictureUri", getIntent().getExtras().getString("PictureUri"));
-		extras.putString("ThumbnailUri", getIntent().getExtras().getString("ThumbnailUri"));
+		if (getIntent().hasExtra("SipUri") == true) {
+			extras.putString("SipUri", getIntent().getExtras().getString("SipUri"));
+		}	
+		if (getIntent().hasExtra("DisplayName") == true) {
+			extras.putString("DisplayName", getIntent().getExtras().getString("DisplayName"));
+		}
+		if (getIntent().hasExtra("PictureUri") == true) {
+			extras.putString("PictureUri", getIntent().getExtras().getString("PictureUri"));
+		}
+		if (getIntent().hasExtra("ThumbnailUri") == true) {
+			extras.putString("ThumbnailUri", getIntent().getExtras().getString("ThumbnailUri"));
+		}
+		
+		if (getIntent().hasExtra("GroupName") == true) {
+			extras.putString("GroupName", getIntent().getExtras().getString("GroupName"));
+		}
+		if (getIntent().hasExtra("GroupMembers") == true) {
+			extras.putStringArray("GroupMembers", getIntent().getExtras().getStringArray("GroupMembers"));
+		}
+		if (getIntent().hasExtra("GroupSize") == true) {
+			extras.putInt("GroupSize", getIntent().getExtras().getInt("GroupSize"));
+		}
+		if (getIntent().hasExtra("ChatType") == true) {
+			extras.putInt("ChatType", getIntent().getExtras().getInt("ChatType"));
+		}
 		
 		ChatFragment fragment = new ChatFragment();
 		fragment.setArguments(extras);

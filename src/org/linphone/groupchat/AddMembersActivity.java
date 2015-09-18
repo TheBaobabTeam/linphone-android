@@ -24,7 +24,11 @@ public class AddMembersActivity extends FragmentActivity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.add_members_activity);
 		
+		Bundle extras = new Bundle();
+		extras.putString("GroupName", getIntent().getExtras().getString("GroupName"));
+		
 		AddMembersFragment fragment = new AddMembersFragment();
+		fragment.setArguments(extras);
 		getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainerMembers, fragment, "addMembersFragment").commit();
 		
 		FragmentManager fm = getSupportFragmentManager();
@@ -34,6 +38,7 @@ public class AddMembersActivity extends FragmentActivity{
 	    // retained across a configuration change.
 		if (addMembersFragment == null) {
 			addMembersFragment = new AddMembersFragment();
+			addMembersFragment.setArguments(extras);
 			fm.beginTransaction().add(R.id.fragmentContainerMembers, addMembersFragment, ADD_MEMBERS_FRAGMENT).commit();
 	    }
 	}
