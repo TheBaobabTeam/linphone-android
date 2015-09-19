@@ -429,5 +429,6 @@
     <string name="group_info">Group info</string>
      <string name="clear_chat">Clear chat</string>
     <string name="title_activity_group_details">Group_details</string>
+   
 
 </resources>

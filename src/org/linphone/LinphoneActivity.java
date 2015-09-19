@@ -47,6 +47,7 @@ import org.linphone.groupchat.AddMembersActivity;
 import org.linphone.groupchat.FragmentsAvailable;
 import org.linphone.groupchat.GroupChatRoomActivity;
 import org.linphone.groupchat.NewGroupActivity;
+import org.linphone.groupchat.GroupDetailsAcivity;
 import org.linphone.mediastream.Log;
 import org.linphone.setup.RemoteProvisioningLoginActivity;
 import org.linphone.setup.SetupActivity;
@@ -686,6 +687,8 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 	 */
 	public void newGroup() {
 		Intent intent = new Intent(this, NewGroupActivity.class);
+		//Testing the group detail Activity GroupDetailsAcivity
+		//Intent intent = new Intent(this, GroupDetailsAcivity.class);
 		
 		startOrientationSensor();
 		startActivityForResult(intent, CHAT_ACTIVITY);

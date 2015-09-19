@@ -206,14 +206,7 @@ public class AddMembersFragment extends Fragment implements OnClickListener {
 	
     private void returnPictureSip()
     {
-    	List<Contact> contactsList = dataAdapter.contactsList;
-		for(int i = 0; i < contactsList.size(); i++){
-			Contact contact = contactsList.get(i);
-			if(contact.isSelected()){
-				
-			}
-		}
-    	
+    //hold on for now
     }
 
 	@Override
