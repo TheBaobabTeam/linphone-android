@@ -144,4 +144,47 @@ public interface LinphoneChatRoom {
 	 * @param message
 	 */
 	void sendChatMessage(LinphoneChatMessage message);
+	
+	
+	/*******************************************************************************************
+	 *				This shall be my playground, so behold folks					*
+	 *******************************************************************************************/
+	
+	/**
+	 * send a message to peer member of this chat room.
+	 * @param  	message to be sent
+	 */
+	void sendGroupMessage(String message);
+	
+	/**
+	 * Create a LinphoneChatMessage
+	 * @param chatRoom chat room associated to the message
+	 * @param message message to send
+	 * @return LinphoneChatMessage object
+	 */
+	LinphoneChatMessage createLinphoneGroupChatMessage(String message, int group_index);
+	
+	/**
+	 * send a message to all members of this chat room.
+	 * @param message to be sent
+	 */
+	void sendGroupChatMessage(LinphoneChatMessage message);
+	
+	/**
+	 * get the chatroom type, either 0 = private or 1 = group
+	 * @return group_type
+	 */
+	int getChatRoomType();
+	
+	/**
+	 * get the current number of members of the group
+	 * @return group_size
+	 */
+	int getGroupSize();
+	
+	/**
+	 * get the current users index
+	 * @return  index
+	 */
+	int getMyGroupIndex();
 }

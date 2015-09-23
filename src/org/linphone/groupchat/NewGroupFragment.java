@@ -108,7 +108,9 @@ public class NewGroupFragment extends Fragment implements OnClickListener {
 		if (group_name.getText().toString().equals("")) {
 			LinphoneActivity.instance().displayCustomToast("Please provide group name", Toast.LENGTH_SHORT);
 		} else {
-			LinphoneActivity.instance().addMembers();//group_name.getText().toString());
+			LinphoneActivity.instance().addMembers(group_name.getText().toString());
+			
+			getActivity().finish();
 		}
 	}
 	

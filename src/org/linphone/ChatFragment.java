@@ -39,6 +39,7 @@ import org.linphone.core.LinphoneChatMessage.State;
 import org.linphone.core.LinphoneCoreException;
 import org.linphone.core.LinphoneCoreFactory;
 import org.linphone.core.LinphoneCoreListenerBase;
+import org.linphone.core.LinphoneProxyConfig;
 import org.linphone.mediastream.Log;
 import org.linphone.ui.AvatarWithShadow;
 import org.linphone.ui.BubbleChat;
@@ -199,7 +200,51 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 
 		LinphoneCore lc = LinphoneManager.getLcIfManagerNotDestroyedOrNull();
 		if (lc != null) {
-			chatRoom = lc.getOrCreateChatRoom(sipUri);
+			//if (getArguments().getInt("ChatType", 0) == 1) {
+				/*String groupName = getArguments().getString("GroupName");
+				String [] groupMembers = getArguments().getStringArray("GroupMembers");
+				int groupSize = getArguments().getInt("GroupSize");
+				
+				//chatRoom = lc.getOrCreateGroupChatRoom(groupName, groupMembers, groupSize, 0, 0);
+				
+				if (chatRoom != null) {
+					LinphoneAddress la = chatRoom.getPeerAddress();
+					
+					sipUri = la.asStringUriOnly();
+					displayName = la.getDisplayName();
+				}*/
+				
+				//String toDisplay = "Group Name : " + groupName + "\nGroup Members: " + Arrays.toString(groupMembers) + "\nGroup Size: " + (sipAdress.size() + 1);
+				//Toast.makeText(getActivity().getApplicationContext(), "ChatFragment", Toast.LENGTH_LONG).show();
+				/*chatRoom = lc.getOrCreateChatRoom(sipUri);
+				
+				LinphoneProxyConfig pc = lc.getDefaultProxyConfig();
+				String identity = pc.getIdentity();
+				
+				LinphoneAddress la;
+				String id = "";
+				try {
+					la = LinphoneCoreFactory.instance().createLinphoneAddress(identity);
+					id = la.getUserName();
+				} catch (LinphoneCoreException e) {
+					Log.e("Cannot display chat",e);
+					//return;
+				}
+				
+				String groupName = getArguments().getString("GroupName");
+				
+				String message = id + " created group " + groupName;
+				chatRoom.sendGroupMessage(message);
+				
+				if (LinphoneActivity.isInstanciated()) {
+					LinphoneActivity.instance().onMessageSent(sipUri, message);
+				}
+				
+				invalidate();
+				//Log.i("Sent message current status: " + message.getStatus());*/
+			//} else {
+				chatRoom = lc.getOrCreateChatRoom(sipUri);
+			//}
 			//Only works if using liblinphone storage
 			chatRoom.markAsRead();
 		}
@@ -207,7 +252,7 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 		mListener = new LinphoneCoreListenerBase(){
 			@Override
 			public void messageReceived(LinphoneCore lc, LinphoneChatRoom cr, LinphoneChatMessage message) {
-				System.out.println("Message: [" + message.getText() + "]");
+				//System.out.println("Message: [" + message.getText() + "]");
 				
 				LinphoneAddress from = cr.getPeerAddress();
 				if (from.asStringUriOnly().equals(sipUri)) {
@@ -499,16 +544,40 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 		boolean isNetworkReachable = lc == null ? false : lc.isNetworkReachable();
 
 		if (chatRoom != null && messageToSend != null && messageToSend.length() > 0 && isNetworkReachable) {
-			LinphoneChatMessage message = chatRoom.createLinphoneChatMessage(messageToSend);
-			message.setListener(this);
-			chatRoom.sendChatMessage(message);
+			if (chatRoom.getChatRoomType() == 0) {
+				LinphoneChatMessage message = chatRoom.createLinphoneChatMessage(messageToSend);
+				message.setListener(this);
+				chatRoom.sendChatMessage(message);
 
-			if (LinphoneActivity.isInstanciated()) {
-				LinphoneActivity.instance().onMessageSent(sipUri, messageToSend);
+				if (LinphoneActivity.isInstanciated()) {
+					LinphoneActivity.instance().onMessageSent(sipUri, messageToSend);
+				}
+
+				invalidate();
+				Log.i("Sent message current status: " + message.getStatus());
+			} else {
+				LinphoneProxyConfig pc = lc.getDefaultProxyConfig();
+				String identity = pc.getIdentity();
+				
+				LinphoneAddress la;
+				String id = "";
+				try {
+					la = LinphoneCoreFactory.instance().createLinphoneAddress(identity);
+					id = la.getUserName() + ": ";
+				} catch (LinphoneCoreException e) {
+					Log.e("Cannot display chat",e);
+					return;
+				}
+				
+				chatRoom.sendGroupMessage(id + messageToSend);
+				
+				if (LinphoneActivity.isInstanciated()) {
+					LinphoneActivity.instance().onMessageSent(sipUri, id + messageToSend);
+				}
+				
+				invalidate();
+				//Log.i("Sent message current status: " + message.getStatus());
 			}
-
-			invalidate();
-			Log.i("Sent message current status: " + message.getStatus());
 		} else if (!isNetworkReachable && LinphoneActivity.isInstanciated()) {
 			LinphoneActivity.instance().displayCustomToast(getString(R.string.error_network_unreachable), Toast.LENGTH_LONG);
 		}

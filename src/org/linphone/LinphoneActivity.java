@@ -26,6 +26,8 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.List;
 
+import java.util.Arrays;
+
 import org.linphone.LinphoneManager.AddressType;
 import org.linphone.compatibility.Compatibility;
 import org.linphone.core.CallDirection;
@@ -692,21 +694,74 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 	}
 	
 	//Select members for group chat
-	public void addMembers() {
+	public void addMembers(String groupName) {
 		Intent intent = new Intent(this, AddMembersActivity.class);
-		//intent.putExtra("GroupName", groupName);
+		intent.putExtra("GroupName", groupName);
 		
 		startOrientationSensor();
 		startActivityForResult(intent, CHAT_ACTIVITY);
 	}
+	
+	public void goToChatList() {
+		changeCurrentFragment(FragmentsAvailable.CHATLIST, null);
+		chat.setSelected(true);
+	}
 
 	//Added by me
-		public void createGroupChat(){
-			Intent intent = new Intent(this, GroupChatRoomActivity.class);
+		public void createGroupChat(String groupName, String [] groupMembers, int groupSize){
+			//Intent intent = new Intent(this, ChatActivity.class);
 			//intent.putExtra("GroupName", groupName);
+			//intent.putExtra("GroupMembers", groupMembers);
+			//intent.putExtra("GroupSize", groupSize);
+			//intent.putExtra("ChatType", 1);
 			
-			startOrientationSensor();
+			LinphoneCore lc = LinphoneManager.getLcIfManagerNotDestroyedOrNull();
+			if (lc != null) {
+				LinphoneChatRoom chatRoom = null;
+				chatRoom = lc.getOrCreateGroupChatRoom(groupName, groupMembers, groupSize, 0, 0);
+				
+				if (chatRoom != null) {
+					LinphoneAddress la = chatRoom.getPeerAddress();
+					
+					String sipUri = la.asStringUriOnly();
+					String displayName = la.getDisplayName();
+					
+					//intent.putExtra("SipUri", sipUri);
+					//intent.putExtra("DisplayName", displayName);
+					
+					LinphoneProxyConfig pc = lc.getDefaultProxyConfig();
+					String identity = pc.getIdentity();
+					
+					String id = "";
+					try {
+						la = LinphoneCoreFactory.instance().createLinphoneAddress(identity);
+						id = la.getUserName();
+					} catch (LinphoneCoreException e) {
+						Log.e("Cannot display chat",e);
+						//return;
+					}
+					
+					String message = id + " created group " + groupName;
+					chatRoom.sendGroupMessage(message);
+					
+					onMessageSent(sipUri, message);
+					
+					//goToChatList();
+					
+					//displayCustomToast("Simunye grooves: " + sipUri, Toast.LENGTH_SHORT);
+				}
+				
+				//LinphoneProxyConfig pc = lc.getDefaultProxyConfig();
+				//String identity = pc.getIdentity();
+				//displayCustomToast("I am: " + identity, Toast.LENGTH_SHORT);
+			}
+			
+			/*startOrientationSensor();
 			startActivityForResult(intent, CHAT_ACTIVITY);
+			
+			LinphoneService.instance().resetMessageNotifCount();
+			LinphoneService.instance().removeMessageNotification();
+			displayMissedChats(getChatStorage().getUnreadMessageCount());*/
 		}
 		
 	@Override
