@@ -187,4 +187,10 @@ public interface LinphoneChatRoom {
 	 * @return  index
 	 */
 	int getMyGroupIndex();
+	
+	/**
+	 * get the name of the group
+	 * @return String
+	 */
+	String getGroupName();
 }

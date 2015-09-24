@@ -6295,3 +6295,12 @@ extern "C" jint Java_org_linphone_core_LinphoneChatRoomImpl_getMyGroupIndex(
 	int group_index = linphone_chat_room_get_my_group_index((LinphoneChatRoom*)ptr);
 	return (jint) group_index;
 }
+
+extern "C" jstring Java_org_linphone_core_LinphoneChatRoomImpl_getGroupName(
+	JNIEnv* env, 
+	jobject  thiz, 
+	jlong ptr
+) {
+	const char * group_name = linphone_chat_room_get_group_name((LinphoneChatRoom*)ptr);
+	return group_name ? env->NewStringUTF(group_name) : NULL;
+}

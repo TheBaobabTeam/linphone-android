@@ -253,9 +253,9 @@ public class AddMembersFragment extends Fragment implements OnClickListener {
 			
 			LinphoneActivity.instance().createGroupChat(groupName, groupMembers, groupSize);
 			
-			LinphoneActivity.instance().goToChatList();
+			//LinphoneActivity.instance().goToChatList();
 			
-			getActivity().finish();
+			//getActivity().finish();	// close the current activity
 		} else {
 			LinphoneActivity.instance().displayCustomToast("At least one contact must be selected.", Toast.LENGTH_SHORT);
 		}

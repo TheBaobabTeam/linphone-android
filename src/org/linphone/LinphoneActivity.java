@@ -725,6 +725,7 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 					
 					String sipUri = la.asStringUriOnly();
 					String displayName = la.getDisplayName();
+					String addrStr = la.asString();
 					
 					//intent.putExtra("SipUri", sipUri);
 					//intent.putExtra("DisplayName", displayName);
@@ -748,7 +749,11 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 					
 					//goToChatList();
 					
-					//displayCustomToast("Simunye grooves: " + sipUri, Toast.LENGTH_SHORT);
+					String toDisplay = "Display Name: " + displayName;
+					toDisplay += "\nSIP URI: " + sipUri;
+					toDisplay += "\nGroup Name: " + chatRoom.getGroupName();
+					toDisplay += "\nGroup Address: " + addrStr;
+					displayCustomToast(toDisplay, Toast.LENGTH_SHORT);
 				}
 				
 				//LinphoneProxyConfig pc = lc.getDefaultProxyConfig();

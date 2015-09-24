@@ -4252,6 +4252,11 @@ LINPHONE_PUBLIC	int linphone_chat_room_get_group_size(LinphoneChatRoom *cr);
  */
 LINPHONE_PUBLIC	int linphone_chat_room_get_my_group_index(LinphoneChatRoom *cr);
 
+/**
+ * Return group name
+ */
+LINPHONE_PUBLIC	const char* linphone_chat_room_get_group_name(LinphoneChatRoom *cr);
+
 #ifdef __cplusplus
 }
 #endif
