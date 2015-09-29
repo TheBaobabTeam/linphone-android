@@ -15,7 +15,7 @@
 \begin{document}
 
 \newpage
-\input{./TitlePage.tex}
+\input{./titlePage.tex}
 
 \newpage
 \begin{center}
@@ -112,7 +112,7 @@ We are required to develop the following functionality for the Linphone project:
 		  
 		\item Store uploaded content (i.e. docs, images)
 		  \begin{itemize}
-			  \item If a user wants to upload an article or images responding to a specific post it should be possible.
+			  \item The system should allow the user to be able to upload an image should they wish to.
 		  \end{itemize}					
 		
 \end{itemize}
@@ -215,10 +215,10 @@ Thanks to its modular architecture and its limited number of required dependenci
 
 \section{Technologies}
 \begin{itemize}
-\item For version control, we are using github. It has our git repository, which has a branch for each feature or bug. The branches are only merged with the main trunk once it passes the unit test and travis test (CI)\\
+\item For version control, we are using github. It has our git repository, which has a branch for each feature or bug. The branches are only merged with the main trunk once it passes the unit test and travis-ci for th continuous integration\\
 \item IDE we are using is Eclipse\\
-\item For builds, we are using Travis. It is used for building and performing continuous integration or Continuous deployment. If the build fails then we do not merge the new feature or bug fix with the main trunk until it can build with Travis which is linked with our git repository.\\
-\item For our scrum board and product backlog we are using Trello to ensure that we are following the agile software development methodology.\\
+\item We are using travis-ci for builds. It is used for building and performing continuous integration or Continuous deployment. If the build fails then we do not merge the new feature or bug fix with the main trunk until it can build with Travis which is linked with our git repository.\\
+\item We are using Trello for our scrum board, where there is our product backlog with all our user stories to be implemented, it has the sprint backlog for each sprint, it has a list of completed user stories and those that still need to be completed.\\
 \item The group chat user interface is coded in java (Android) and for unit test, JUnit is used\\
 \item The group chat back-end functionality is coded in C and for unit testing, CUnit is used.
 

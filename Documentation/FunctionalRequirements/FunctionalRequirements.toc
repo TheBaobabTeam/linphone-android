@@ -9,20 +9,4 @@
 \contentsline {subsubsection}{\numberline {3.1.2}Prioritization:}{4}{subsubsection.3.1.2}
 \contentsline {subsubsection}{\numberline {3.1.3}Conditions and Data Structures:}{4}{subsubsection.3.1.3}
 \contentsline {subsubsection}{\numberline {3.1.4}Process Specifications:}{5}{subsubsection.3.1.4}
-\contentsline {subsection}{\numberline {3.2}View Group Chat}{5}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Required Functionality:}{5}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}Prioritization:}{6}{subsubsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.3}Conditions and Data Structures:}{6}{subsubsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.4}Process Specifications:}{6}{subsubsection.3.2.4}
-\contentsline {subsection}{\numberline {3.3}Update Group Chat}{7}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}Required Functionality:}{7}{subsubsection.3.3.1}
-\contentsline {subsection}{\numberline {3.4}Update Group Chat}{7}{subsection.3.4}
-\contentsline {subsubsection}{\numberline {3.4.1}Prioritization:}{7}{subsubsection.3.4.1}
-\contentsline {subsubsection}{\numberline {3.4.2}Conditions and Data Structures:}{7}{subsubsection.3.4.2}
-\contentsline {subsubsection}{\numberline {3.4.3}Process Specifications:}{8}{subsubsection.3.4.3}
-\contentsline {subsection}{\numberline {3.5}Delete Group Chat}{8}{subsection.3.5}
-\contentsline {subsubsection}{\numberline {3.5.1}Required Functionality:}{8}{subsubsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.2}Prioritization:}{9}{subsubsection.3.5.2}
-\contentsline {subsubsection}{\numberline {3.5.3}Conditions and Data Structures:}{9}{subsubsection.3.5.3}
-\contentsline {subsubsection}{\numberline {3.5.4}Process Specifications:}{9}{subsubsection.3.5.4}
-\contentsline {subsection}{\numberline {3.6}Domain model}{9}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.2}Domain model}{5}{subsection.3.2}

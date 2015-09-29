@@ -15,7 +15,7 @@
 \begin{document}
 
 \newpage
-\input{./TitlePage.tex}
+\input{./titlePage.tex}
 
 \newpage
 \begin{center}
@@ -79,19 +79,19 @@ We are required to develop the following functionality for the Linphone project:
 \caption{Create Group Chat use case diagram}
 \end{figure}
 
-\textbf{Description:}This use case encapsulates the ability for a user to create a new group chat that will be associated with a number of members. 
-Each group chat will have a chat room to start with. The creator of the group chat will be the administrator with the ability to add new  members, as well as remove them, and also delete the group chat.
+\textbf{Description:}This use case encapsulates the ability for a user to create a new group chat. Upon the creation of the group chat, the user will have the group chat appear on thier chats screen. The user will now be able to chat with other group members.
 
 \subsubsection{Prioritization:}Critical
 \subsubsection{Conditions and Data Structures:}
 \textbf{Pre-Conditions:}
 \begin{itemize}
-	\item The user wanting to create a new group chat should have a sip address and have a linphone application. 
-	\item The user should have the sip addresses for the members they want to add to the group.
+	\item The user wanting to create a new group chat should register on linphone and have a registered account.
+	\item The user should have the people that they want to add to the group chat as contacts on their linphone application. 
+		  The participants to be added should also have a registered linphone account.
 \end{itemize}
 \textbf{Post-Conditions:}
 \begin{itemize}
-	\item A message is displayed to inform the creator of the group chat that the creation has been successful. Users can now start chatting in the group.
+	\item A message is displayed to inform the creator of the group chat that the creation has been successful. Users can now chat in the group.
 	\item If this service has been rejected, an exception is thrown and an error message will be displayed to the user.
 \end{itemize}
 	
@@ -99,101 +99,6 @@ Each group chat will have a chat room to start with. The creator of the group ch
 \begin{figure}[H]
 \includegraphics[width=1\linewidth]{./pictures/create_GroupChat.jpg}
 \caption{Create Group Chat activity diagram }
-\end{figure}
-
-
-% View GROUP CHAT
-\subsection{View Group Chat}
-
-\subsubsection{Required Functionality:} 
-\begin{figure}[H]
-\includegraphics[width=1\linewidth]{./pictures/viewGroupChat.jpg}
-\caption{View Group Chat use case diagram}
-\end{figure}
-
-\textbf{Description:}This use case includes the ability to View Group Chat, this is, to view the chats in the Group (and thus have access to them), and also to view the
-properties of the specific group (i.e. the members of the group, date of creation and the creator of the group as well as chat history).
-
-\subsubsection{Prioritization:} Critical
-
-\subsubsection{Conditions and Data Structures:}
-\textbf{Pre-Conditions:}
-\begin{itemize}
-	\item The user should be associated with the group. 
-\end{itemize}
-\textbf{Post-Conditions:}
-\begin{itemize}
-	\item User can view chat properties.
-\end{itemize}
-
-\subsubsection{Process Specifications:} 
-\begin{figure}[H]
-\includegraphics[width=1\linewidth]{./pictures/view_GroupChat.jpg}
-\caption{View Group Chat activity diagram}
-\end{figure}
-
-
-%UPDATE GROUP CHAT
-\subsection{Update Group Chat}
-\subsubsection{Required Functionality:} 
-\begin{figure}[H]
-\includegraphics[width=1\linewidth]{./pictures/updateGroupChat.jpg}
-\caption{Update Group Chat use case diagram}
-\end{figure}
-
-\subsection{Update Group Chat}
-\textbf{Description:}This use case gives the ability for a user edit group icon, get members, update group chat, add members, remove members and edit group name. 
-
-\subsubsection{Prioritization:} Important
-
-\subsubsection{Conditions and Data Structures:}
-\textbf{Pre-Conditions:}
-\begin{itemize}
-	\item The user should be associated with the group. 
-\end{itemize}
-\textbf{Post-Conditions:}
-\begin{itemize}
-	\item A message is displayed to let the user know that the update has been done successfully
-	\item If the service was rejected, an exception is thrown and an error message is displayed to let the user know.
-\end{itemize}
-
-\subsubsection{Process Specifications:} 
-\begin{figure}[H]
-\includegraphics[width=1\linewidth]{./pictures/update_GroupChat.jpg}
-\caption{Update Group Chat activity diagram}
-\end{figure}
-
-
-
-%DELETE GROUP CHAT
-\subsection{Delete Group Chat}
-
-\subsubsection{Required Functionality:}
-
-\begin{figure}[H]
-\includegraphics[width=1\linewidth]{./pictures/deleteGroupChat.jpg}
-\caption{Delete Group Chat use case diagram}
-\end{figure} 
-
-\textbf{Description:}This use case includes the ability to delete a Group Chat when the creator of the group chats delete the group. Only the creator of the Group Chat will be able to delete a Group Chat, except if he removes himself from the group then a new group administrator will be assigned.
-
-\subsubsection{Prioritization:} Critical
-
-\subsubsection{Conditions and Data Structures:}
-\textbf{Pre-Conditions:}
-\begin{itemize}
-	\item The user should be associated with the group. 
-	\item The user should be the group creator. 
-\end{itemize}
-\textbf{Post-Conditions:}
-\begin{itemize}
-	\item The group chat is deleted and archived for future reference. 
-\end{itemize}
-
-\subsubsection{Process Specifications:} 
-\begin{figure}[H]
-\includegraphics[width=1\linewidth]{./pictures/delete_GroupChat.jpg}
-\caption{Delete Group Chat activity diagram}
 \end{figure}
 
 \subsection{Domain model}
