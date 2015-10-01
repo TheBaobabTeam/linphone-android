@@ -8,25 +8,25 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         android:orientation="horizontal"
-        android:id="@+id/topbar">
-
+        android:id="@+id/topbar"
+        android:background="@drawable/background_top_bar" >
+         
         <TextView
-            android:contentDescription="@string/content_description_back"
             android:id="@+id/back"
-            android:background="@drawable/chat_back"
-            android:text="@string/button_back"
-            android:gravity="center"
-            android:paddingTop="20dp"
-            android:textColor="@drawable/text_button"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
+            android:layout_width="2dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="250dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.29"
             android:adjustViewBounds="true"
-            android:layout_weight="1"/>
+            android:background="@drawable/chat_back"
+            android:contentDescription="@string/content_description_back"
+            android:gravity="center"
+            android:scaleType="centerCrop" />
 
-        <TextView
+        <!-- <TextView
             android:contentDescription="@string/content_description_mark"
             android:id="@+id/mark"
             android:background="@drawable/toolsbar_background"
@@ -38,7 +38,7 @@
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:adjustViewBounds="true"
-            android:layout_weight="1"/>
+            android:layout_weight="1"/> -->
 
     </LinearLayout>
     
