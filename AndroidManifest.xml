@@ -305,8 +305,16 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-	 <activity
-            android:name=".groupchat.GroupDetailsAcivity"
+        
+        <activity
+            android:name=".groupchat.GroupDetailsActivity"
+            android:theme="@style/NoTitle" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name=".groupchat.GroupdetailsFragment"
             android:theme="@style/NoTitle" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -319,14 +327,7 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-	<activity
-            android:name=".groupchat.AddMembersFragment"
-            android:theme="@style/NoTitle" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-	<activity
+        <activity
             android:name=".groupchat.Groupdetails"
             android:theme="@style/NoTitle" >
             <intent-filter>
@@ -337,7 +338,10 @@
             android:name=".groupchat.GroupChatRoomActivity"
             android:theme="@style/NoTitle" >
         </activity>
-	
+        <activity
+            android:name="org.linphone.groupchat.WelcomeActivity"
+            android:label="@string/title_activity_welcome" >
+        </activity>
     </application>
 
 </manifest>
