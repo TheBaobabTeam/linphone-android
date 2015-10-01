@@ -7,50 +7,77 @@
     
     <LinearLayout 
 	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:orientation="horizontal">
-        
-        <TextView 
-            android:contentDescription="@string/content_description_new_discussion"
-            android:id="@+id/newDiscussion"
-            android:background="@drawable/chat_new"
-            android:text="@string/button_new_chat"
+	    android:layout_height="80dp"
+	    android:orientation="horizontal"
+	    android:background="@drawable/background_top_bar">
+
+        <TextView
+            android:id="@+id/linphone"
+            android:layout_width="wrap_content"
+        	android:layout_height="match_parent"
+        	android:layout_marginLeft="5dp"
+        	android:textSize="20sp"
             android:gravity="center"
-            android:paddingTop="25dp"
-            android:textColor="@drawable/text_button"
-		    android:layout_width="match_parent"
-		    android:layout_height="match_parent"
-		    android:scaleType="centerCrop"
-		    android:adjustViewBounds="true"
-		    android:layout_weight="1"/>
+            android:textStyle="normal|bold|italic"
+            android:typeface="serif"
+            android:paddingTop="20dp"
+            android:textColor="@color/text_button"
+            android:text="@string/linphone"/>
+        
+        
+        <TextView
+            android:id="@+id/newDiscussion"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/chat_new"
+            android:contentDescription="@string/content_description_new_discussion"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:scaleType="centerCrop"
+            android:textColor="@drawable/text_button"/>
         
         <!-- added by me -->
-        <TextView 
-            android:contentDescription="@string/content_description_new_group"
+
+        <TextView
             android:id="@+id/newGroup"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:paddingTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:adjustViewBounds="true"
             android:background="@drawable/chat_group"
-            android:text="@string/button_new_group"
+            android:contentDescription="@string/content_description_new_group"
             android:gravity="center"
-            android:paddingTop="25dp"
+            android:scaleType="centerCrop"
+            android:textColor="@drawable/text_button" />
+        
+        <TextView 
+            android:contentDescription="@string/content_description_search"
+            android:id="@+id/search"
+            android:background="@drawable/search"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:layout_marginLeft="10dp"
             android:textColor="@drawable/text_button"
-		    android:layout_width="match_parent"
-		    android:layout_height="match_parent"
+		    android:layout_width="30dp"
+		    android:layout_height="30dp"
 		    android:scaleType="centerCrop"
-		    android:adjustViewBounds="true"
-		    android:layout_weight="1"/>
+		    android:adjustViewBounds="true"/>
         
         <TextView 
             android:contentDescription="@string/content_description_edit"
             android:id="@+id/edit"
             android:background="@drawable/chat_edit"
-            android:text="@string/button_edit"
             android:gravity="center"
             android:paddingTop="20dp"
+            android:layout_marginLeft="10dp"
             android:textColor="@drawable/text_button"
-		    android:layout_width="match_parent"
-		    android:layout_height="match_parent"
-		    android:adjustViewBounds="true"
-		    android:layout_weight="1"/>
+		    android:layout_width="30dp"
+		    android:layout_height="30dp"
+		    android:scaleType="centerCrop"
+		    android:adjustViewBounds="true"/>
         
         <TextView 
             android:contentDescription="@string/content_description_validate"
@@ -59,12 +86,13 @@
             android:text="@string/button_ok"
             android:gravity="center"
             android:paddingTop="20dp"
+            android:layout_marginLeft="10dp"
             android:textColor="@drawable/text_button"
             android:visibility="gone"
-		    android:layout_width="match_parent"
-		    android:layout_height="match_parent"
-		    android:adjustViewBounds="true"
-		    android:layout_weight="1"/>
+		    android:layout_width="30dp"
+		    android:layout_height="30dp"
+		    android:scaleType="centerCrop"
+		    android:adjustViewBounds="true"/>
         
     </LinearLayout>
     
@@ -82,7 +110,8 @@
 	        android:layout_centerVertical="true"
 	        android:layout_alignParentRight="true"
 	        android:paddingLeft="5dp"
-	        android:paddingRight="5dp"/>
+	        android:paddingRight="5dp"
+	        android:visibility="gone"/>
         
 	    <EditText
             android:textCursorDrawable="@null"
@@ -95,7 +124,8 @@
 	        android:gravity="center"
 	        android:layout_toLeftOf="@id/clearFastChatField"
 	        android:paddingRight="5dp"
-	        android:inputType="textEmailAddress"/>
+	        android:inputType="textEmailAddress"
+	         android:visibility="gone"/>
 	    
     </RelativeLayout>
     

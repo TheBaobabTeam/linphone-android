@@ -44,6 +44,7 @@ public class NewGroupFragment extends Fragment implements OnClickListener {
 	private EditText group_name;
 	private ImageView im;
 	private String uploadImagePath = "";
+	private RoundImage roundedImage;
 	
 	public static boolean isInstanciated() {
 		return instance != null;
@@ -89,6 +90,10 @@ public class NewGroupFragment extends Fragment implements OnClickListener {
 		
 		//select group icon
 		im = (ImageView)view.findViewById(R.id.GroupIcon);
+		Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.group3);
+		roundedImage = new RoundImage(bm);
+		im.setImageDrawable(roundedImage);
+		
 		im.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
