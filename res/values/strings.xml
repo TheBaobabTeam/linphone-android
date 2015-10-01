@@ -429,10 +429,7 @@
     <string name="group_info">Group info</string>
     <string name="clear_chat">Clear chat</string>
     <string name="title_activity_group_details">Group_details</string>
-<<<<<<< HEAD
     <string name="title_activity_welcome">MainActivity</string>
-=======
    <string name="linphone">Linphone</string>
->>>>>>> ee9454af8004736ad1fd003b94d134eda7bd0719
 
 </resources>
