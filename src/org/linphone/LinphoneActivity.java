@@ -49,6 +49,7 @@ import org.linphone.groupchat.GroupChatRoomActivity;
 import org.linphone.groupchat.NewGroupActivity;
 import org.linphone.groupchat.GroupDetailsActivity;
 import org.linphone.groupchat.WelcomeActivity;
+import org.linphone.groupchat.aboutActivity;
 import org.linphone.mediastream.Log;
 import org.linphone.setup.RemoteProvisioningLoginActivity;
 import org.linphone.setup.SetupActivity;
@@ -696,6 +697,11 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 	}
 	public void nextScreenAfterWelcome(){
 		Intent intent = new Intent(this,NewGroupActivity.class);
+		startOrientationSensor();
+		startActivityForResult(intent, CHAT_ACTIVITY);
+	}
+	public void aboutScreen(){
+		Intent intent = new Intent(this,aboutActivity.class);
 		startOrientationSensor();
 		startActivityForResult(intent, CHAT_ACTIVITY);
 	}
