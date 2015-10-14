@@ -19,7 +19,7 @@ package org.linphone;
  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
  */
 import static android.content.Intent.ACTION_MAIN;
-
+import org.linphone.groupchat.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -110,12 +110,13 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 	private List<FragmentsAvailable> fragmentsHistory;
 	private Fragment dialerFragment, messageListFragment, friendStatusListenerFragment;
 	private ChatFragment chatFragment;
+	private GroupChatRoomFragment gcFragment;
 	private SavedState dialerSavedState;
 	private boolean isAnimationDisabled = false, preferLinphoneContacts = false;
 	private OrientationEventListener mOrientationHelper;
 	private LinphoneCoreListenerBase mListener;
 
-	static final boolean isInstanciated() {
+	public static final boolean isInstanciated() {
 		return instance != null;
 	}
 
@@ -718,7 +719,11 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 	//Added by me
 		public void createGroupChat(){
 			Intent intent = new Intent(this, GroupChatRoomActivity.class);
-			//intent.putExtra("GroupName", groupName);
+			/*intent.putExtra("SipUri", sipUri);
+			if (contact != null) {
+				intent.putExtra("DisplayName", contact.getName());
+				intent.putExtra("PictureUri", pictureUri);
+				intent.putExtra("ThumbnailUri", thumbnailUri);*/
 			
 			startOrientationSensor();
 			startActivityForResult(intent, CHAT_ACTIVITY);
@@ -812,6 +817,10 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 
 	public void updateChatFragment(ChatFragment fragment) {
 		chatFragment = fragment;
+	}
+	
+	public void updateGroupChatRoomFragment(GroupChatRoomFragment fragment) {
+		gcFragment = fragment;
 	}
 
 	public void updateChatListFragment(ChatListFragment fragment) {

@@ -32,11 +32,7 @@ public class GroupDetailsActivity extends FragmentActivity{
 			fm.beginTransaction().add(R.id.groupDetailsFragment, groupDetails, GROUP_DETAILS_FRAGMENT).commit();
 	    }
 	}
-	
-	
-	
-	
-	
+
 	
 }
 

@@ -7,7 +7,7 @@
   	android:background="@drawable/background" >
 
     <LinearLayout
-        android:id="@+id/topbar"
+        android:id="@+id/grouptopbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentRight="true"
@@ -46,7 +46,10 @@
             android:layout_weight="1"/>
         -->
 
-        <ImageView
+     
+
+        
+     <ImageView
             android:id="@+id/GroupChatIcon"
             android:layout_width="54dp"
             android:layout_height="wrap_content"
@@ -55,16 +58,17 @@
             android:clickable="true"
             android:contentDescription="@string/groupchat_icon"
             android:src="@drawable/ic_group_black_36dp" />
+        
 
         <LinearLayout
             android:id="@+id/GroupClickableLayout"
-            android:layout_width="211dp"
+            android:layout_width="179dp"
             android:layout_height="48dp"
-            android:layout_weight="1.21"
+            android:layout_weight="0.57"
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/textViewyy"
+                android:id="@+id/groupname"
                 android:layout_width="149dp"
                 android:layout_height="wrap_content"
                 android:text="Group Name"
@@ -72,14 +76,13 @@
                 android:textColor="@color/text_switch_selected" />
 
             <TextView
-                android:id="@+id/textView1"
-                android:layout_width="match_parent"
+                android:id="@+id/grouppartic"
+                android:layout_width="148dp"
                 android:layout_height="match_parent"
                 android:layout_marginTop="4dp"
                 android:text="Group Participants"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="@color/text_switch_selected" />
-            
         </LinearLayout>
 
         <RelativeLayout
@@ -90,8 +93,8 @@
                 android:id="@+id/image_attach"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
                 android:clickable="true"
                 android:src="@drawable/ic_attach_file_black_18dp" />
 
@@ -101,10 +104,10 @@
                 android:layout_height="24dp"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
                 android:layout_weight="4.5"
                 android:clickable="true"
                 android:src="@drawable/ic_more_vert_black_18dp" />
+
         </RelativeLayout>
     </LinearLayout>
     
@@ -117,32 +120,33 @@
 	    android:layout_centerHorizontal="true"
    		android:background="@drawable/chat_background">
        
-	    <RelativeLayout 
-	        android:id="@+id/messageLayout"
-		    android:layout_width="match_parent"
-		    android:layout_height="wrap_content">
-	        
+	    <RelativeLayout
+	        android:id="@+id/groupmessageLayout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+
 	        <TextView
-	            android:id="@+id/sendPicture"
-	            android:text="@string/button_send_picture"
+	            android:id="@+id/groupsendMessage"
+	            android:layout_width="24dp"
+	            android:layout_height="24dp"
+	            android:layout_alignBottom="@+id/sendPicture"
+	            android:layout_alignParentRight="true"
+	            android:drawableTop="@drawable/groupchat_send_message"
 	            android:gravity="center"
-	            android:textColor="@drawable/text_color"
+	            android:textColor="@drawable/text_color" 
+	             android:paddingLeft="10dp"
+	            android:paddingRight="10dp"
+	            android:layout_centerVertical="true"
+	            android:clickable="true"/>
+
+	        <EditText
+	            android:id="@+id/groupmessage"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_centerVertical="true"
-	            android:drawableTop="@drawable/chat_send_picture"
-	            android:paddingLeft="10dp"
-	            android:paddingRight="10dp" />
-	        
-	        <EditText
-	            android:id="@+id/message"
-	            android:layout_width="match_parent"
-	            android:layout_height="wrap_content"
-	            android:layout_alignTop="@+id/sendPicture"
-	            android:layout_toRightOf="@id/sendPicture"
-	            android:layout_toLeftOf="@id/sendMessage"
+	            android:layout_alignBottom="@+id/groupsendMessage"
+	            android:layout_centerHorizontal="true"
 	            android:background="@drawable/chat_field_background"
+	            android:ems="10"
 	            android:imeOptions="flagNoExtractUi"
 	            android:inputType="textMultiLine"
 	            android:maxLines="3"
@@ -150,57 +154,59 @@
 	            android:textCursorDrawable="@null" />
 
 	        <TextView
-	            android:id="@+id/sendMessage"
-	            android:layout_width="24dp"
-	            android:layout_height="24dp"
-	            android:layout_alignBottom="@+id/sendPicture"
-	            android:layout_alignParentRight="true"
-	            android:drawableTop="@drawable/chat_send_message"
+	            android:id="@+id/groupsendPicture"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_alignTop="@+id/groupsendMessage"
+	            android:clickable="true"
+	            android:drawableTop="@drawable/chat_send_picture"
 	            android:gravity="center"
-	            android:textColor="@drawable/text_color" 
-	             android:paddingLeft="10dp"
+	            android:paddingLeft="10dp"
 	            android:paddingRight="10dp"
-	            android:layout_centerVertical="true"/>
+	            android:text="@string/button_send_picture"
+	            android:textColor="@drawable/text_color" />
 	        
 	    </RelativeLayout>
 	    
 	    <RelativeLayout 
-	        android:id="@+id/uploadLayout"
+	        android:id="@+id/groupuploadLayout"
 		    android:layout_width="match_parent"
 		    android:layout_height="wrap_content">
 	        
-	        <LinearLayout
-	            android:layout_width="match_parent"
-	            android:layout_height="wrap_content"
-	            android:gravity="center"
-	            android:orientation="vertical"
-	            android:paddingBottom="20dp" >
-	        
-	        </LinearLayout>
+	        <ProgressBar
+		            android:id="@+id/groupprogressbar"
+		            android:layout_width="match_parent"
+		            android:layout_height="15dp"
+		     		style="@android:style/Widget.ProgressBar.Horizontal"
+		            android:paddingTop="2dp"
+		            android:paddingLeft="2dp"
+		            android:paddingRight="2dp" />
 	        
 	    </RelativeLayout>
     
     </LinearLayout>
-        
-    <!-- <TextView 
-        android:id="@+id/remoteComposing"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-    	android:textColor="@color/text_contrast"
-        android:text="@string/remote_composing"
-        android:layout_above="@id/footer"/>-->
 
 	<ListView
-	    android:id="@+id/chatMessageList"
+	    android:id="@+id/groupchatMessageList"
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent"
 	    android:layout_above="@+id/footer"
-	    android:layout_below="@+id/topbar"
+	    android:layout_below="@+id/grouptopbar"
 	    android:cacheColorHint="@color/transparent"
 	    android:divider="@android:color/transparent"
 	    android:dividerHeight="1dp"
 	    android:stackFromBottom="true"
 	    android:transcriptMode="alwaysScroll" />
+
+	<TextView
+	    android:id="@+id/groupremoteComposing"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignParentTop="true"
+	    android:text="@string/remote_composing"
+	    android:textAppearance="?android:attr/textAppearanceSmall"
+	    android:textColor="@color/text_contrast" />
     
 </RelativeLayout>
