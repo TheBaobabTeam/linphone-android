@@ -1,0 +1,99 @@
+\documentclass[a4paper]{article}
+\usepackage{graphicx} %Required for diagrams
+\usepackage[bookmarks=true]{hyperref}
+\usepackage{bookmark}%Required to do pdf bookmarking
+\usepackage[margin=1.2in]{geometry}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{hyperref}%Required for referencing website pages
+\usepackage[english]{babel}
+%\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage[table]{xcolor}
+%\usepackage[colorinlistoftodos]{todonotes}
+
+\title{ Incremental backlog and implemented user stories}
+\author{Baobab Team}
+
+\begin{document}
+\newpage
+
+\input{./titlePage.tex}
+\newpage
+
+\section{User Roles}
+
+\setlength{\arrayrulewidth}{0.5mm}
+\setlength{\tabcolsep}{12pt}
+\renewcommand{\arraystretch}{2} 
+\begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|  }
+\hline
+\rowcolor{lightgray}\multicolumn{2}{|c|}{Scrum User Roles} \\
+\hline
+Role & Name\\
+\hline
+Scrum master  & Potego Mello\\ \hline 
+Client representative  & Patience Mtsweni\\ \hline 
+UX developer  & Lutfiyya Razak and Lerato Molokomme\\ \hline 
+Backend developer  & Ephiphania Munava and Potego Mello\\ \hline 
+Crypto developer  & Tsepo Ntsaba \\ \hline 
+CI / CD support  & Patience Mtsweni \\ 
+\hline
+\end{tabular}
+\newpage
+
+\section{Incremental Backlog}
+
+\setlength{\arrayrulewidth}{0.5mm}
+\setlength{\tabcolsep}{12pt}
+\renewcommand{\arraystretch}{2} 
+\begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|  }
+\hline
+\rowcolor{lightgray}\multicolumn{3}{|c|}{Backlog} \\
+\hline
+ID & Backlog Title & Progress\\
+\hline
+1 & Environment Setup & Done\\
+\hline
+2 & Setup CI & In Progress\\
+\hline
+3 & Setup CD & In Progress\\
+\hline
+4 & Group Chat Interface & In Progress\\
+\hline
+5 & Group Chat & In Progress\\
+\hline
+6 & User Interface Improvements & In Progress\\
+\hline
+7 & Secure Group Chat & Pending\\
+\hline
+8 & Voice Recording & Pending\\
+\hline
+\end{tabular}
+
+\newpage
+
+\section{User Stories}
+\setlength{\arrayrulewidth}{0.5mm}
+\setlength{\tabcolsep}{12pt}
+\renewcommand{\arraystretch}{2} 
+\begin{tabular}{ |p{2.5cm}|p{2.5cm}|p{2.5cm} |p{2.5cm}|p{2.5cm}|p{2.5cm}| }
+\hline
+\rowcolor{lightgray}\multicolumn{5}{|c|}{User Stories} \\
+\hline
+User story title & As a/an & I want to... & so that... & Progress \\
+\hline 
+Group Chat & As a linphone user & I want to create a group chat & so that I can communicate with more than one person & In progress \\ 
+\hline
+Select Participants & As a group administrator & I want to select the people  & so that we can communicate in the group chat & In progress \\ 
+\hline
+Type Message & As a group participant & I want to type a message in the group & so that I can communicate with the members of the group & In progress \\ 
+\hline
+Send Message & As a group participant & I want to send a message in the group & so that I can share my message with the members of the group & In progress \\ 
+\hline
+
+\end{tabular}
+
+
+\end{document}

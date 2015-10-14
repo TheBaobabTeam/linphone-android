@@ -1,0 +1,1 @@
+/home/mello/projects/linphone-android/submodules/externals/ffmpeg/Makefile

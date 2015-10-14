@@ -1,0 +1,8 @@
+\newpage
+\begin{center}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.4\linewidth]{./pictures/LinphoneSip.jpg}
+\caption{\label{fig:Agile}Linphone SIP Registration.}
+\end{figure}
+\end{center}
