@@ -1,64 +1,57 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.linphone.groupchat.WelcomeActivity"
-    tools:ignore="MergeRootFrame"
-    android:background="@drawable/background_top_bar">
+  	android:background="@drawable/pic1"
+    android:orientation="vertical"
+    android:id="@+id/container" >
     
     <LinearLayout
         android:id="@+id/topbar"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@drawable/background_top_bar"
+        android:layout_height="60dp"
         android:orientation="horizontal" >
 
+        <TextView
+           android:id="@+id/back_from_welcome"
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/group_chat_back" />
+
+	     <TextView
+	         android:id="@+id/textView1" 
+	         android:layout_width="match_parent"
+	         android:layout_height="55dp"
+	         android:layout_marginLeft="250dp"
+	        android:background="@drawable/group_chat_next" />
         
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView1"
+   
+
+    <LinearLayout
+        android:id="@+id/bottom"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/pic1" />
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="300dp" >
 
-    <TextView
-           android:id="@+id/back_from_welcome"
-            android:layout_width="94dp"
-            android:layout_height="58dp"
-            android:background="@drawable/chat_back" />
+        <TextView
+            android:id="@+id/aboutLinphone"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/group_chat_info"/>
 
-     <TextView
-         android:id="@+id/textView1"
-         android:layout_width="match_parent"
-         android:layout_height="56dp"
-         android:layout_marginLeft="250dp"
-        
-         android:background="@drawable/chat_ok" />
+        <TextView
+            android:id="@+id/helpLinphone"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/group_chat_help" />
+    </LinearLayout>
 
-     <TextView
-         android:id="@+id/helpLinphone"
-         android:layout_width="98dp"
-         android:layout_height="wrap_content"
-         android:layout_marginLeft="155dp"
-         android:layout_marginTop="440dp"
-         android:background="@drawable/about"
-         android:text="Help"
-         android:textAlignment="center"
-    
-         android:textSize="30dp" />
-
-     <TextView
-         android:id="@+id/aboutLinphone"
-         android:layout_width="104dp"
-         android:layout_height="wrap_content"
-         android:layout_marginLeft="50dp"
-         android:layout_marginTop="440dp"
-         android:background="@drawable/about"
-         android:fontFamily="@string/app_name"
-         android:text="about"
-        
-         android:textSize="30dp" />
-
-</FrameLayout>
+</LinearLayout>

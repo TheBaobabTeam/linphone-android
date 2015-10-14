@@ -14,7 +14,7 @@ public class GroupChatRoomActivity extends FragmentActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.chat_activity);
+		setContentView(R.layout.activity_new_group_chat_room);
 		
 	/*	Bundle extras = new Bundle();
 		extras.putString("SipUri", getIntent().getExtras().getString("SipUri"));
@@ -24,7 +24,7 @@ public class GroupChatRoomActivity extends FragmentActivity {
 		
 		GroupChatRoomFragment fragment = new GroupChatRoomFragment();
 	//	fragment.setArguments(extras);
-		getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainer, fragment, "GroupChatRoomFragment").commit();
+		getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainerNew, fragment, "GroupChatRoomFragment").commit();
 		
 		FragmentManager fm = getSupportFragmentManager();
 		GroupChatRoomFragment = (GroupChatRoomFragment) fm.findFragmentByTag(CHAT_FRAGMENT);
@@ -33,7 +33,7 @@ public class GroupChatRoomActivity extends FragmentActivity {
 	    // retained across a configuration change.
 		if (GroupChatRoomFragment == null) {
 			GroupChatRoomFragment = new GroupChatRoomFragment();
-			fm.beginTransaction().add(R.id.fragmentContainer, GroupChatRoomFragment, CHAT_FRAGMENT).commit();
+			fm.beginTransaction().add(R.id.fragmentContainerNew, GroupChatRoomFragment, CHAT_FRAGMENT).commit();
 	    }
 	}
 }

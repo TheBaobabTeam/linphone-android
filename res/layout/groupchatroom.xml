@@ -131,7 +131,7 @@
 	            android:layout_height="24dp"
 	            android:layout_alignBottom="@+id/sendPicture"
 	            android:layout_alignParentRight="true"
-	            android:drawableTop="@drawable/groupchat_send_message"
+	            android:drawableTop="@drawable/group_chat_send_message"
 	            android:gravity="center"
 	            android:textColor="@drawable/text_color" 
 	             android:paddingLeft="10dp"

@@ -1,44 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:linphone="http://schemas.android.com/apk/res-auto"
     android:id="@+id/top_layout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@drawable/background" >
 
     <LinearLayout
         android:id="@+id/topbar"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         android:orientation="horizontal"
         android:background="@drawable/background_top_bar" >
 
-        <TextView
-            android:id="@+id/back"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:background="@drawable/chat_back"
-            android:contentDescription="@string/content_description_back"
-            android:gravity="center"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="150dp"
-            android:scaleType="centerCrop"/>
+       <TextView
+           android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/group_chat_back" />
 
-
-        <TextView
-            android:id="@+id/next"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:background="@drawable/chat_ok"
-            android:contentDescription="@string/content_description_next"
-            android:gravity="center"
-            android:layout_marginTop="10dp"
-             android:layout_marginLeft="30dp"
-            android:scaleType="centerCrop"/>
+	     <TextView
+	         android:id="@+id/next" 
+	         android:layout_width="50dp"
+	         android:layout_height="55dp"
+	         android:layout_marginLeft="250dp"
+	        android:background="@drawable/group_chat_next" />
+        
     </LinearLayout>
 
     <LinearLayout

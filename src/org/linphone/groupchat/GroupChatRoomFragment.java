@@ -245,7 +245,7 @@ public class GroupChatRoomFragment extends Fragment implements OnClickListener, 
 			}
 		});*/
 
-		LinphoneCore lc = LinphoneManager.getLcIfManagerNotDestroyedOrNull();
+		/*LinphoneCore lc = LinphoneManager.getLcIfManagerNotDestroyedOrNull();
 		if (lc != null) {
 			chatRoom = lc.getOrCreateChatRoom(sipUri);
 			//Only works if using liblinphone storage
@@ -269,7 +269,7 @@ public class GroupChatRoomFragment extends Fragment implements OnClickListener, 
 					remoteComposing.setVisibility(chatRoom.isRemoteComposing() ? View.VISIBLE : View.GONE);
 				}
 			}
-		};
+		};*/
 
 		 textWatcher = new TextWatcher() {
 			public void afterTextChanged(Editable arg0) {}
