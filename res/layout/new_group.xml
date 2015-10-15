@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:linphone="http://schemas.android.com/apk/res-auto"
     android:id="@+id/top_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,58 +8,39 @@
     <LinearLayout
         android:id="@+id/topbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@drawable/background_top_bar" >
 
-        <TextView
-            android:id="@+id/back"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:background="@drawable/chat_back"
-            android:contentDescription="@string/content_description_back"
-            android:gravity="center"
-            android:paddingTop="20dp"
-            android:scaleType="centerCrop"
-            android:text="@string/button_back"
-            android:textColor="@drawable/text_button" />
+       <TextView
+           android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/group_chat_back" />
 
-        <TextView
-            android:id="@+id/next"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:background="@drawable/chat_ok"
-            android:contentDescription="@string/content_description_next"
-            android:enabled="true"
-            android:gravity="center"
-            android:paddingTop="20dp"
-            android:scaleType="centerCrop"
-            android:text="@string/button_next"
-            android:textColor="@drawable/text_button" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="match_parent"
-            android:layout_height="67dp" />
+	     <TextView
+	         android:id="@+id/next" 
+	         android:layout_width="50dp"
+	         android:layout_height="55dp"
+	         android:layout_marginLeft="250dp"
+	        android:background="@drawable/group_chat_next" />
+        
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical" >
 
+        <LinearLayout
+        android:id="@+id/imageAndText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
     <ImageView
         android:id="@+id/GroupIcon"
         android:layout_width="100dp"
@@ -70,8 +50,19 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:contentDescription="@string/groupchat_icon"
-        android:src="@drawable/conference_over" 
+        android:src="@drawable/group3" 
         android:clickable="true" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:text="@string/description"
+        android:textColor="@color/text_button"
+        android:textSize="17dp" />
+
+    </LinearLayout>
     
     <EditText
         android:id="@+id/groupName"
@@ -79,21 +70,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/GroupIcon"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="60dp"
         android:ems="10"
         android:hint="@string/groupchat_name"
         android:textColor="@color/edittextcolor" />
 
-    <TextView
-        android:id="@+id/description"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_alignBottom="@+id/GroupIcon"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/GroupIcon"
-        android:layout_marginRight="4dp"
-        android:text="@string/description"
-        android:textColor="@color/text_button"
-        android:textSize="17dp" />
+    </LinearLayout>
 
 </RelativeLayout>
