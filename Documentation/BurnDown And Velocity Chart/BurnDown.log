@@ -1,9 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.27)  15 OCT 2015 13:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.27)  15 OCT 2015 14:29
 entering extended mode
-**ProductBacklog.tex
-
-("C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\Product Backlog
-\ProductBacklog.tex"
+**BurnDown.tex
+(C:\Users\Eppy\Desktop\Documentation\BurnDown\BurnDown.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -305,11 +303,7 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-("C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\Product Backlog
-\ProductBacklog.aux"
-
-LaTeX Warning: Label `tab:template' multiply defined.
-
+(C:\Users\Eppy\Desktop\Documentation\BurnDown\BurnDown.aux
 
 LaTeX Warning: Label `tab:template' multiply defined.
 
@@ -395,12 +389,10 @@ LaTeX Info: Redefining \nameref on input line 19.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-
-("C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\Product Backlog
-\titlePage.tex" <pictures/logo.jpg, id=3, 877.02657pt x 325.215pt>
+(C:\Users\Eppy\Desktop\Documentation\BurnDown\titlePage.tex
+<pictures/logo.jpg, id=3, 877.02657pt x 325.215pt>
 File: pictures/logo.jpg Graphic file (type jpg)
-
-<use pictures/logo.jpg>
+ <use pictures/logo.jpg>
 Package pdftex.def Info: pictures/logo.jpg used on input line 5.
 (pdftex.def)             Requested size: 401.50146pt x 148.88612pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -409,18 +401,18 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 8.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 8.
- <pictures/Team.jpg, id=4, 975.645pt x 549.05125pt>
-File: pictures/Team.jpg Graphic file (type jpg)
 
-<use pictures/Team.jpg>
+<pictures/Team.jpg, id=4, 975.645pt x 549.05125pt>
+File: pictures/Team.jpg Graphic file (type jpg)
+ <use pictures/Team.jpg>
 Package pdftex.def Info: pictures/Team.jpg used on input line 18.
 (pdftex.def)             Requested size: 351.31378pt x 197.70018pt.
- [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Eppy/Documents/G
-itHub/linphone-android/Documentation/Product Backlog/pictures/logo.jpg> <C:/Use
-rs/Eppy/Documents/GitHub/linphone-android/Documentation/Product Backlog/picture
-s/Team.jpg>])
+[1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Eppy/Desktop/Doc
+umentation/BurnDown/pictures/logo.jpg> <C:/Users/Eppy/Desktop/Documentation/Bur
+nDown/pictures/Team.jpg>])
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 36.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -449,763 +441,389 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.52 \newpage
-              [1]
-Overfull \hbox (5.63068pt too wide) in paragraph at lines 61--61
-[]|\OT1/cmr/m/n/10 Priority| 
+l.53 
+      [1]
+Underfull \hbox (badness 10000) in paragraph at lines 61--61
+[]|\OT1/cmr/m/n/10 Task
  []
 
 
-Overfull \hbox (13.87657pt too wide) in paragraph at lines 63--63
-[]|\OT1/cmr/m/n/10 Environment
+Underfull \hbox (badness 10000) in paragraph at lines 61--61
+\OT1/cmr/m/n/10 Num-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--63
-[]|\OT1/cmr/m/n/10 Linux, Eclipse,
+Overfull \hbox (16.18625pt too wide) in paragraph at lines 61--61
+[]|\OT1/cmr/m/n/10 Estimated
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--63
-\OT1/cmr/m/n/10 An-droid SDK,
+Underfull \hbox (badness 10000) in paragraph at lines 61--61
+\OT1/cmr/m/n/10 Ef-fort
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--63
-\OT1/cmr/m/n/10 Lin-phone project
+Underfull \hbox (badness 10000) in paragraph at lines 61--61
+\OT1/cmr/m/n/10 (in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 63--63
-\OT1/cmr/m/n/10 re-cur-sive one,
+Overfull \hbox (1.35287pt too wide) in paragraph at lines 61--61
+\OT1/cmr/m/n/10 Hours)| 
  []
 
 
-Overfull \hbox (4.35287pt too wide) in paragraph at lines 63--63
-[]|\OT1/cmr/m/n/10 Critical| 
+Overfull \hbox (0.71399pt too wide) in paragraph at lines 61--61
+[]|\OT1/cmr/m/n/10 Actual
  []
 
 
-Underfull \hbox (badness 2326) in paragraph at lines 64--64
-\OT1/cmr/m/n/10 mented code ex-e-
+Underfull \hbox (badness 10000) in paragraph at lines 61--61
+\OT1/cmr/m/n/10 Ef-fort
  []
 
 
-Underfull \hbox (badness 1881) in paragraph at lines 64--64
-\OT1/cmr/m/n/10 does not cause a
+Underfull \hbox (badness 10000) in paragraph at lines 61--61
+\OT1/cmr/m/n/10 (in
  []
 
 
-Overfull \hbox (16.29738pt too wide) in paragraph at lines 64--64
-[]|\OT1/cmr/m/n/10 Important| 
+Overfull \hbox (1.35287pt too wide) in paragraph at lines 61--61
+\OT1/cmr/m/n/10 Hours)| 
  []
 
 
-Underfull \hbox (badness 4686) in paragraph at lines 66--66
-[]|\OT1/cmr/m/n/10 I can con-tin-u-ally
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+[]|\OT1/cmr/m/n/10 Effort
  []
 
 
-Underfull \hbox (badness 3471) in paragraph at lines 66--66
-\OT1/cmr/m/n/10 de-ploy a work-ing
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+\OT1/cmr/m/n/10 Re-
  []
 
 
-Underfull \hbox (badness 5652) in paragraph at lines 66--66
-\OT1/cmr/m/n/10 phone de-vices to
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+\OT1/cmr/m/n/10 main-
  []
 
 
-Overfull \hbox (16.29738pt too wide) in paragraph at lines 66--66
-[]|\OT1/cmr/m/n/10 Important| 
+Overfull \hbox (1.35287pt too wide) in paragraph at lines 61--62
+\OT1/cmr/m/n/10 Hours)| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--68
-[]|\OT1/cmr/m/n/10 Group
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+[]|\OT1/cmr/m/n/10 Clone Lin-phone
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--68
-\OT1/cmr/m/n/10 Chat
+Underfull \hbox (badness 10000) in paragraph at lines 89--89
+[]|\OT1/cmr/m/n/10 Activity for Each
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--68
-\OT1/cmr/m/n/10 In-ter-face
+Overfull \hbox (71.14629pt too wide) in paragraph at lines 57--94
+[][] 
+ []
+
+[2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
+[]|\OT1/cmr/m/n/10 Task
  []
 
 
-Underfull \hbox (badness 3396) in paragraph at lines 68--68
-[]|\OT1/cmr/m/n/10 As a lin-phone
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
+\OT1/cmr/m/n/10 Num-
  []
 
 
-Underfull \hbox (badness 2903) in paragraph at lines 68--68
-[]|\OT1/cmr/m/n/10 This in-cludes the
+Overfull \hbox (16.18625pt too wide) in paragraph at lines 106--106
+[]|\OT1/cmr/m/n/10 Estimated
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--68
-\OT1/cmr/m/n/10 tion-al-ity, Cre-ate
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
+\OT1/cmr/m/n/10 Ef-fort
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--68
-\OT1/cmr/m/n/10 new group chat
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
+\OT1/cmr/m/n/10 (in
  []
 
 
-Overfull \hbox (4.35287pt too wide) in paragraph at lines 68--68
-[]|\OT1/cmr/m/n/10 Critical| 
+Overfull \hbox (1.35287pt too wide) in paragraph at lines 106--106
+\OT1/cmr/m/n/10 Hours)| 
  []
 
 
-Overfull \hbox (61.37268pt too wide) in paragraph at lines 57--73
+Overfull \hbox (0.71399pt too wide) in paragraph at lines 106--106
+[]|\OT1/cmr/m/n/10 Actual
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
+\OT1/cmr/m/n/10 Ef-fort
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--106
+\OT1/cmr/m/n/10 (in
+ []
+
+
+Overfull \hbox (1.35287pt too wide) in paragraph at lines 106--106
+\OT1/cmr/m/n/10 Hours)| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+[]|\OT1/cmr/m/n/10 Effort
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+\OT1/cmr/m/n/10 Re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+\OT1/cmr/m/n/10 main-
+ []
+
+
+Overfull \hbox (1.35287pt too wide) in paragraph at lines 106--107
+\OT1/cmr/m/n/10 Hours)| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--109
+[]|\OT1/cmr/m/n/10 List Mem-ber User-
+ []
+
+
+Underfull \hbox (badness 2573) in paragraph at lines 123--123
+[]|\OT1/cmr/m/n/10 Select Group De-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
+[]|\OT1/cmr/m/n/10 In
+ []
+
+
+Overfull \hbox (7.26953pt too wide) in paragraph at lines 142--142
+\OT1/cmr/m/n/10 progress| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--145
+[]|\OT1/cmr/m/n/10 Receive Record
+ []
+
+
+Overfull \hbox (71.14629pt too wide) in paragraph at lines 102--148
 [][] 
  []
 
 
-Overfull \hbox (5.63068pt too wide) in paragraph at lines 83--83
-[]|\OT1/cmr/m/n/10 Priority| 
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+[]|\OT1/cmr/m/n/10 Task
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--86
-[]|\OT1/cmr/m/n/10 Welcome
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+\OT1/cmr/m/n/10 Num-
  []
 
 
-Underfull \hbox (badness 5460) in paragraph at lines 86--86
-[]|\OT1/cmr/m/n/10 I want to know
+Overfull \hbox (16.18625pt too wide) in paragraph at lines 160--160
+[]|\OT1/cmr/m/n/10 Estimated
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--86
-\OT1/cmr/m/n/10 what to ex-pect
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+\OT1/cmr/m/n/10 Ef-fort
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--86
-\OT1/cmr/m/n/10 when cre-at-ing a
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+\OT1/cmr/m/n/10 (in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--86
-\OT1/cmr/m/n/10 group chat and
+Overfull \hbox (1.35287pt too wide) in paragraph at lines 160--160
+\OT1/cmr/m/n/10 Hours)| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--86
-[]|\OT1/cmr/m/n/10 Nice
+Overfull \hbox (0.71399pt too wide) in paragraph at lines 160--160
+[]|\OT1/cmr/m/n/10 Actual
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--86
-\OT1/cmr/m/n/10 To
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+\OT1/cmr/m/n/10 Ef-fort
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--88
-[]|\OT1/cmr/m/n/10 Selecting
+Underfull \hbox (badness 10000) in paragraph at lines 160--160
+\OT1/cmr/m/n/10 (in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--88
-\OT1/cmr/m/n/10 group
+Overfull \hbox (1.35287pt too wide) in paragraph at lines 160--160
+\OT1/cmr/m/n/10 Hours)| 
  []
 
 
-Underfull \hbox (badness 3396) in paragraph at lines 88--88
-[]|\OT1/cmr/m/n/10 As a lin-phone
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+[]|\OT1/cmr/m/n/10 Effort
  []
 
 
-Underfull \hbox (badness 7740) in paragraph at lines 88--88
-\OT1/cmr/m/n/10 group name and
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+\OT1/cmr/m/n/10 Re-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--88
-[]|\OT1/cmr/m/n/10 Nice
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+\OT1/cmr/m/n/10 main-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--88
-\OT1/cmr/m/n/10 to
+Overfull \hbox (1.35287pt too wide) in paragraph at lines 160--161
+\OT1/cmr/m/n/10 Hours)| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--91
-[]|\OT1/cmr/m/n/10 Select
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
+[]|\OT1/cmr/m/n/10 Send En-crypted
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--91
-\OT1/cmr/m/n/10 Par-tic-i-
+Underfull \hbox (badness 1057) in paragraph at lines 166--166
+[]|\OT1/cmr/m/n/10 Receive En-crypted
  []
 
 
-Underfull \hbox (badness 3354) in paragraph at lines 91--91
-[]|\OT1/cmr/m/n/10 A screen ap-pears
+Underfull \hbox (badness 10000) in paragraph at lines 166--166
+[]|\OT1/cmr/m/n/10 Receive En-crypted
  []
 
 
-Underfull \hbox (badness 2285) in paragraph at lines 91--91
-\OT1/cmr/m/n/10 with the con-tacts
- []
-
-
-Underfull \hbox (badness 2547) in paragraph at lines 91--91
-\OT1/cmr/m/n/10 tor can se-lect to
- []
-
-
-Overfull \hbox (4.35287pt too wide) in paragraph at lines 91--91
-[]|\OT1/cmr/m/n/10 Critical| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--93
-[]|\OT1/cmr/m/n/10 Select
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--93
-\OT1/cmr/m/n/10 Group
- []
-
-
-Underfull \hbox (badness 2285) in paragraph at lines 93--93
-\OT1/cmr/m/n/10 on more in-for-ma-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--93
-[]|\OT1/cmr/m/n/10 Nice
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--93
-\OT1/cmr/m/n/10 To
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--93
+Underfull \hbox (badness 10000) in paragraph at lines 166--166
 []|\OT1/cmr/m/n/10 In
  []
 
 
-Overfull \hbox (7.26953pt too wide) in paragraph at lines 93--93
+Overfull \hbox (7.26953pt too wide) in paragraph at lines 166--166
 \OT1/cmr/m/n/10 progress| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--96
-[]|\OT1/cmr/m/n/10 Type
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+[]|\OT1/cmr/m/n/10 Send En-crypted
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--96
-\OT1/cmr/m/n/10 mes-sage in the
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+[]|\OT1/cmr/m/n/10 In
  []
 
 
-Underfull \hbox (badness 2828) in paragraph at lines 96--96
-\OT1/cmr/m/n/10 com-mu-ni-cate with
+Overfull \hbox (7.26953pt too wide) in paragraph at lines 170--170
+\OT1/cmr/m/n/10 progress| 
  []
 
 
-Underfull \hbox (badness 1112) in paragraph at lines 96--96
-\OT1/cmr/m/n/10 group can type a
+Underfull \hbox (badness 1057) in paragraph at lines 173--173
+[]|\OT1/cmr/m/n/10 Receive En-crypted
  []
 
 
-Underfull \hbox (badness 2452) in paragraph at lines 96--96
-\OT1/cmr/m/n/10 mes-sage that will
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+[]|\OT1/cmr/m/n/10 Receive En-crypted
  []
 
 
-Underfull \hbox (badness 6125) in paragraph at lines 96--96
-\OT1/cmr/m/n/10 be sent and re-
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+[]|\OT1/cmr/m/n/10 In
  []
 
 
-Overfull \hbox (4.35287pt too wide) in paragraph at lines 96--96
-[]|\OT1/cmr/m/n/10 Critical| 
+Overfull \hbox (7.26953pt too wide) in paragraph at lines 173--173
+\OT1/cmr/m/n/10 progress| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--98
-[]|\OT1/cmr/m/n/10 Send
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
+[]|\OT1/cmr/m/n/10 Send En-crypted
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--98
-[]|\OT1/cmr/m/n/10 I want to send
+Underfull \hbox (badness 10000) in paragraph at lines 177--177
+[]|\OT1/cmr/m/n/10 In
  []
 
 
-Underfull \hbox (badness 1762) in paragraph at lines 98--98
-\OT1/cmr/m/n/10 a mes-sage in the
+Overfull \hbox (7.26953pt too wide) in paragraph at lines 177--177
+\OT1/cmr/m/n/10 progress| 
  []
 
 
-Underfull \hbox (badness 1087) in paragraph at lines 98--98
-\OT1/cmr/m/n/10 share my mes-sage
+Underfull \hbox (badness 1057) in paragraph at lines 180--180
+[]|\OT1/cmr/m/n/10 Receive En-crypted
  []
 
 
-Overfull \hbox (4.35287pt too wide) in paragraph at lines 98--98
-[]|\OT1/cmr/m/n/10 Critical| 
+Underfull \hbox (badness 10000) in paragraph at lines 180--180
+[]|\OT1/cmr/m/n/10 Receive En-crypted
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--100
-[]|\OT1/cmr/m/n/10 Receive
+Underfull \hbox (badness 10000) in paragraph at lines 180--180
+[]|\OT1/cmr/m/n/10 In
  []
 
 
-Underfull \hbox (badness 1478) in paragraph at lines 100--100
-[]|\OT1/cmr/m/n/10 I want to re-ceive
+Overfull \hbox (7.26953pt too wide) in paragraph at lines 180--180
+\OT1/cmr/m/n/10 progress| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--100
-\OT1/cmr/m/n/10 mes-sages in the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--100
-\OT1/cmr/m/n/10 group from the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--100
-\OT1/cmr/m/n/10 mem-bers of the
- []
-
-
-Overfull \hbox (4.35287pt too wide) in paragraph at lines 100--100
-[]|\OT1/cmr/m/n/10 Critical| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 102--102
-[]|\OT1/cmr/m/n/10 Record
- []
-
-
-Underfull \hbox (badness 1590) in paragraph at lines 102--102
-\OT1/cmr/m/n/10 voice note in the
- []
-
-
-Underfull \hbox (badness 3977) in paragraph at lines 102--102
-\OT1/cmr/m/n/10 group can record
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 102--102
-[]|\OT1/cmr/m/n/10 Nice
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 102--102
-\OT1/cmr/m/n/10 to
- []
-
-
-Overfull \hbox (61.37268pt too wide) in paragraph at lines 79--107
+Overfull \hbox (71.14629pt too wide) in paragraph at lines 156--183
 [][] 
  []
 
-
-LaTeX Warning: Float too large for page by 47.33267pt on input line 109.
-
-
-Overfull \hbox (5.63068pt too wide) in paragraph at lines 117--117
-[]|\OT1/cmr/m/n/10 Priority| 
- []
-
-
-Overfull \hbox (6.49385pt too wide) in paragraph at lines 117--118
-[]|\OT1/cmr/m/n/10 Status| 
- []
-
-
-Underfull \hbox (badness 1590) in paragraph at lines 120--120
-\OT1/cmr/m/n/10 voice note in the
- []
-
-
-Underfull \hbox (badness 8113) in paragraph at lines 120--120
-[]|\OT1/cmr/m/n/10 The mem-bers of
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--120
-\OT1/cmr/m/n/10 the group can
- []
-
-
-Underfull \hbox (badness 3179) in paragraph at lines 120--120
-\OT1/cmr/m/n/10 and send to one
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--120
-[]|\OT1/cmr/m/n/10 Nice
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--120
-\OT1/cmr/m/n/10 to
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--120
-[]|\OT1/cmr/m/n/10 In
- []
-
-
-Overfull \hbox (14.38272pt too wide) in paragraph at lines 120--120
-\OT1/cmr/m/n/10 progress| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--122
-[]|\OT1/cmr/m/n/10 Receive
- []
-
-
-Underfull \hbox (badness 1590) in paragraph at lines 122--122
-\OT1/cmr/m/n/10 voice note in the
- []
-
-
-Underfull \hbox (badness 1418) in paragraph at lines 122--122
-\OT1/cmr/m/n/10 group and re-ceive
- []
-
-
-Underfull \hbox (badness 7221) in paragraph at lines 122--122
-\OT1/cmr/m/n/10 voice notes from
- []
-
-
-Underfull \hbox (badness 3977) in paragraph at lines 122--122
-\OT1/cmr/m/n/10 group can record
- []
-
-
-Underfull \hbox (badness 3199) in paragraph at lines 122--122
-\OT1/cmr/m/n/10 voice notes, send
- []
-
-
-Underfull \hbox (badness 3168) in paragraph at lines 122--122
-\OT1/cmr/m/n/10 from other group
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--122
-[]|\OT1/cmr/m/n/10 Nice
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--122
-\OT1/cmr/m/n/10 to
- []
-
-
-Overfull \hbox (1.29938pt too wide) in paragraph at lines 122--122
-[]|\OT1/cmr/m/n/10 Done| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--124
-[]|\OT1/cmr/m/n/10 Send En-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--124
-\OT1/cmr/m/n/10 crypted
- []
-
-
-Underfull \hbox (badness 2393) in paragraph at lines 124--124
-\OT1/cmr/m/n/10 Group Mes-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 124--124
-[]|\OT1/cmr/m/n/10 I want to send
- []
-
-
-Underfull \hbox (badness 8113) in paragraph at lines 124--124
-[]|\OT1/cmr/m/n/10 The mem-bers of
- []
-
-
-Overfull \hbox (4.35287pt too wide) in paragraph at lines 124--124
-[]|\OT1/cmr/m/n/10 Critical| 
- []
-
-
-Overfull \hbox (1.29938pt too wide) in paragraph at lines 124--124
-[]|\OT1/cmr/m/n/10 Done| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 126--126
-[]|\OT1/cmr/m/n/10 Receive
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 126--126
-\OT1/cmr/m/n/10 En-crypted
- []
-
-
-Underfull \hbox (badness 2393) in paragraph at lines 126--126
-\OT1/cmr/m/n/10 Group Mes-
- []
-
-
-Underfull \hbox (badness 1478) in paragraph at lines 126--126
-[]|\OT1/cmr/m/n/10 I want to re-ceive
- []
-
-
-Underfull \hbox (badness 2088) in paragraph at lines 126--126
-\OT1/cmr/m/n/10 group can re-ceive
- []
-
-
-Overfull \hbox (4.35287pt too wide) in paragraph at lines 126--126
-[]|\OT1/cmr/m/n/10 Critical| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 126--126
-[]|\OT1/cmr/m/n/10 In
- []
-
-
-Overfull \hbox (14.38272pt too wide) in paragraph at lines 126--126
-\OT1/cmr/m/n/10 progress| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--128
-[]|\OT1/cmr/m/n/10 Send En-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--128
-\OT1/cmr/m/n/10 crypted
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--128
-\OT1/cmr/m/n/10 Group Pic-
- []
-
-
-Overfull \hbox (4.35287pt too wide) in paragraph at lines 128--128
-[]|\OT1/cmr/m/n/10 Critical| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--128
-[]|\OT1/cmr/m/n/10 In
- []
-
-
-Overfull \hbox (14.38272pt too wide) in paragraph at lines 128--128
-\OT1/cmr/m/n/10 progress| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 130--130
-[]|\OT1/cmr/m/n/10 Receive
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 130--130
-\OT1/cmr/m/n/10 En-crypted
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 130--130
-\OT1/cmr/m/n/10 Group Pic-
- []
-
-
-Underfull \hbox (badness 1478) in paragraph at lines 130--130
-[]|\OT1/cmr/m/n/10 I want to re-ceive
- []
-
-
-Underfull \hbox (badness 1852) in paragraph at lines 130--130
-\OT1/cmr/m/n/10 en-crypted pic-tures
- []
-
-
-Underfull \hbox (badness 2088) in paragraph at lines 130--130
-\OT1/cmr/m/n/10 group can re-ceive
- []
-
-
-Underfull \hbox (badness 1852) in paragraph at lines 130--130
-\OT1/cmr/m/n/10 en-crypted pic-tures
- []
-
-
-Overfull \hbox (4.35287pt too wide) in paragraph at lines 130--130
-[]|\OT1/cmr/m/n/10 Critical| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 130--130
-[]|\OT1/cmr/m/n/10 In
- []
-
-
-Overfull \hbox (14.38272pt too wide) in paragraph at lines 130--130
-\OT1/cmr/m/n/10 progress| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--132
-[]|\OT1/cmr/m/n/10 Send En-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--132
-\OT1/cmr/m/n/10 crypted
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--132
-\OT1/cmr/m/n/10 Recorded
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--132
-[]|\OT1/cmr/m/n/10 I want to send
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--132
-\OT1/cmr/m/n/10 mem-bers of the
- []
-
-
-Underfull \hbox (badness 8113) in paragraph at lines 132--132
-[]|\OT1/cmr/m/n/10 The mem-bers of
- []
-
-
-Overfull \hbox (4.35287pt too wide) in paragraph at lines 132--132
-[]|\OT1/cmr/m/n/10 Critical| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--132
-[]|\OT1/cmr/m/n/10 In
- []
-
-
-Overfull \hbox (14.38272pt too wide) in paragraph at lines 132--132
-\OT1/cmr/m/n/10 progress| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 134--134
-[]|\OT1/cmr/m/n/10 Receive
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 134--134
-\OT1/cmr/m/n/10 En-crypted
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 134--134
-\OT1/cmr/m/n/10 Recorded
- []
-
-
-Underfull \hbox (badness 1478) in paragraph at lines 134--134
-[]|\OT1/cmr/m/n/10 I want to re-ceive
- []
-
-
-Underfull \hbox (badness 7221) in paragraph at lines 134--134
-\OT1/cmr/m/n/10 voice notes from
- []
-
-
-Underfull \hbox (badness 2088) in paragraph at lines 134--134
-\OT1/cmr/m/n/10 group can re-ceive
- []
-
-
-Underfull \hbox (badness 7221) in paragraph at lines 134--134
-\OT1/cmr/m/n/10 voice notes from
- []
-
-
-Overfull \hbox (4.35287pt too wide) in paragraph at lines 134--134
-[]|\OT1/cmr/m/n/10 Critical| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
-[]|\OT1/cmr/m/n/10 In
- []
-
-
-Overfull \hbox (14.38272pt too wide) in paragraph at lines 134--135
-\OT1/cmr/m/n/10 progress| 
- []
-
-
-Overfull \hbox (68.48587pt too wide) in paragraph at lines 113--138
-[][] 
- []
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 160.
-[2] [3] [4] [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 160.
-
-("C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\Product Backlog
-\ProductBacklog.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 160.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 160.
+[4] [5] [6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 193.
+ [7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 193.
+ (C:\Users\Eppy\Desktop\Documentation\BurnDown\BurnDown.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 193.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 193.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 193.
  ) 
 Here is how much of TeX's memory you used:
- 7596 strings out of 493921
- 114048 string characters out of 3147285
- 234998 words of memory out of 3000000
- 10818 multiletter control sequences out of 15000+200000
+ 7601 strings out of 493921
+ 113716 string characters out of 3147285
+ 225992 words of memory out of 3000000
+ 10820 multiletter control sequences out of 15000+200000
  7587 words of font info for 27 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 41i,11n,38p,378b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,11n,38p,257b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on ProductBacklog.pdf (6 pages, 232662 bytes).
+Output written on BurnDown.pdf (8 pages, 235797 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 13 named destinations out of 1000 (max. 500000)
- 35 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 PDF objects out of 1000 (max. 8388607)
+ 16 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
