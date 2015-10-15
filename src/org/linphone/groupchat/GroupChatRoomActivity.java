@@ -1,41 +1,40 @@
 package org.linphone.groupchat;
 
-import org.linphone.R;
-
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
-
+import android.support.v4.app.FragmentManager;
+import org.linphone.R;
+/**
+ * @Author TeamBaobab
+ */
 public class GroupChatRoomActivity extends FragmentActivity {
+	private static final String CHAT_FRAGMENT = "GroupChatRoomFragment";
+	private GroupChatRoomFragment GroupChatRoomFragment;
 	
-	private TextView back;
-
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.groupchatroom);
+		setContentView(R.layout.activity_new_group_chat_room);
 		
-		back = (TextView)findViewById(R.id.back);
-		if (back != null) {
-			back.setOnClickListener(new View.OnClickListener() {
-				@Override
-				public void onClick(View v) {
-					finish();
-				}
-			});
-		}
+	/*	Bundle extras = new Bundle();
+		extras.putString("SipUri", getIntent().getExtras().getString("SipUri"));
+		extras.putString("DisplayName", getIntent().getExtras().getString("DisplayName"));
+		extras.putString("PictureUri", getIntent().getExtras().getString("PictureUri"));
+		extras.putString("ThumbnailUri", getIntent().getExtras().getString("ThumbnailUri"));*/
 		
-		//Intent intent = getIntent();
-		 
-        // 2. get message value from intent
-        //String message = intent.getStringExtra("GroupName");
- 
-        // 3. show message on textView 
-        //((TextView)findViewById(R.id.groupName)).setText(message);
+		GroupChatRoomFragment fragment = new GroupChatRoomFragment();
+	//	fragment.setArguments(extras);
+		getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainerNew, fragment, "GroupChatRoomFragment").commit();
+		
+		FragmentManager fm = getSupportFragmentManager();
+		GroupChatRoomFragment = (GroupChatRoomFragment) fm.findFragmentByTag(CHAT_FRAGMENT);
+
+	    // If the Fragment is non-null, then it is currently being
+	    // retained across a configuration change.
+		if (GroupChatRoomFragment == null) {
+			GroupChatRoomFragment = new GroupChatRoomFragment();
+			fm.beginTransaction().add(R.id.fragmentContainerNew, GroupChatRoomFragment, CHAT_FRAGMENT).commit();
+	    }
 	}
 }
+

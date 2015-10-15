@@ -26,6 +26,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 import android.provider.ContactsContract;
+import android.view.View;
 
 import org.linphone.compatibility.Compatibility;
 import org.linphone.core.LinphoneAddress;
@@ -341,6 +342,8 @@ public class ContactsManager {
 		}
 		return null;
 	}
+	
+	
 
 	public Contact findContactWithAddress(ContentResolver contentResolver, LinphoneAddress address){
 		String sipUri = address.asStringUriOnly();
@@ -362,6 +365,7 @@ public class ContactsManager {
 		String selection = new StringBuilder()
 				.append(ContactsContract.CommonDataKinds.SipAddress.SIP_ADDRESS)
 				.append(" = ?").toString();
+		
 
 		Cursor cur = contentResolver.query(ContactsContract.Data.CONTENT_URI, projection, selection,
 				new String[]{sipUri}, null);
