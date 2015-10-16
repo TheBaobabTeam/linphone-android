@@ -35,6 +35,13 @@
 
 #include <assert.h>
 
+#include "help/aes256.c"
+
+#define DUMP(s, i, buf, sz)  {printf(s);                   \
+                              for (i = 0; i < (sz);i++)    \
+                                  printf("%02x ", buf[i]); \
+                              printf("\n");}
+
 #define COMPOSING_DEFAULT_IDLE_TIMEOUT 15
 #define COMPOSING_DEFAULT_REFRESH_TIMEOUT 60
 #define COMPOSING_DEFAULT_REMOTE_REFRESH_TIMEOUT 120
@@ -507,7 +514,11 @@ static LinphoneChatRoom * _linphone_core_get_or_create_group_chat_room(LinphoneC
 	
 	printf("_linphone_core_get_or_create_group_chat_room(): running...\n");
 	
+<<<<<<< HEAD
 	if (group_address != NULL && (parsed_url = linphone_core_create_address(lc, group_address)) != NULL) {
+=======
+	if ((parsed_url = linphone_core_create_address(lc, group_name)) != NULL) {
+>>>>>>> adding encrypting
 		printf("group_name is address\n");
 		to_addr = parsed_url;
 	} else {
@@ -572,7 +583,11 @@ LinphoneChatRoom* linphone_core_create_group_chat_room(LinphoneCore* lc, const c
 	
 	fflush(stdout);
 	
+<<<<<<< HEAD
 	return _linphone_core_get_or_create_group_chat_room(lc, group_name, NULL, group_members, group_size, group_index, admin_index);
+=======
+	return _linphone_core_get_or_create_group_chat_room(lc, group_name, group_members, group_size, group_index, admin_index);
+>>>>>>> adding encrypting
 }
 
 LinphoneChatRoom *linphone_core_get_chat_room(LinphoneCore *lc, const LinphoneAddress *addr){
@@ -806,6 +821,12 @@ void linphone_core_message_received(LinphoneCore *lc, SalOp *op, const SalMessag
 	int is_group = 0;
 	const char* group_name;
 	
+	aes256_context ctx; 
+	uint8_t key[32];
+	uint8_t *buf, i;
+	
+	 for (i = 0; i < sizeof(key);i++) key[i] = i;
+	
 	addr = linphone_address_new(sal_msg->from);
 	linphone_address_clean(addr);
 	
@@ -928,12 +949,23 @@ void linphone_core_message_received(LinphoneCore *lc, SalOp *op, const SalMessag
 		linphone_chat_message_set_external_body_url(msg, (const char *)file_url);
 		xmlFree(file_url);
 	} else { /* message is not rcs file transfer, create it with provided sal_msg->text as ->message */
-		msg = linphone_chat_room_create_message(cr, sal_msg->text);
-		/*if (is_group == 1) {
-			msg = linphone_chat_room_create_message(cr, "Group! :)");
-		} else {
-			msg = linphone_chat_room_create_message(cr, "Not Group :(");
-		}*/
+		
+		char* tpo_msg = NULL;
+		strcpy(tpo_msg, sal_msg->text);
+		buf = malloc(strlen(tpo_msg) + 1);
+		
+		/*copy contents of message to buffer array*/
+		memcpy(buf, tpo_msg, strlen(tpo_msg) + 1);
+		
+		/*decrypt message*/
+		aes256_init(&ctx, key);
+		aes256_decrypt_ecb(&ctx, buf);
+		
+		/*get dycrypted message to the orginal msg*/
+		memcpy(tpo_msg, buf, strlen(tpo_msg) + 1);
+		
+		msg = linphone_chat_room_create_message(cr, tpo_msg);
+		aes256_done(&ctx);
 	}
 	linphone_chat_message_set_from(msg, cr->peer_url);
 
