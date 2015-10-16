@@ -49,11 +49,11 @@ Crypto developer  & Tsepo Ntsaba \\ \hline
 CI / CD support  & Patience Mtsweni \\ 
 \hline
 \end{tabular}
-\newpage
-
+\vfill
+\clearpage
 
 \section{Product Backlog}
-\begin{table} 
+\begin{table}[H]
 \begin{tabular}{p{1.5cm} p{2.5cm} p{3cm} p{3cm} p{1cm} p{1cm}} % The final bracket specifies the number of columns in the table along with left and right borders which are specified using vertical bars (|); each column can be left, right or center-justified using l, r or c. To specify a precise width, use p{width}, e.g. p{5cm}
 \hline %\toprule % Top horizontal line
 & \multicolumn{5}{c}{User Story} \\ % Amalgamating several columns into one cell is done using the \multicolumn command as seen on this line
@@ -65,7 +65,13 @@ Setup CI & As a developer & I can test whether my recently implemented code exec
 
 Setup CD & As a developer & I can continually deploy a working system and test it on a device & Deploy with a cellphone devices to see if it work, there isnt a tool that we can use & Important & Done\\ \cmidrule(l){2-6} % Content row 3
 
-Group Chat Interface And Icon & As a linphone user & I want to create a group chat so that I can communicate with more than one person  & This includes the front end GUI and the backend Functionality, Create new group chat button & Critical & Done\\ % Content row 4
+Group Chat Interface And Icon & As a linphone user & I want to create a group chat so that I can communicate with more than one person  & This includes the front end GUI and the backend Functionality, Create new group chat button & Critical & Done\\ \cmidrule(l){2-6}% Content row 4
+
+
+Welcome Screen & As a user & I want to know what to expect when creating a group chat and receive help. & Information button and help button are there to assist when user needs more information. & Nice To Have & Done\\  \cmidrule(l){2-6}% Content row 5
+
+Selecting group details & As a linphone user & I want to personalise the group details.  & The user can select group name and group icon & Nice to have & Done\\ % Content row 6
+
 
 \midrule % In-table horizontal line
 \midrule % In-table horizontal line
@@ -74,19 +80,15 @@ Group Chat Interface And Icon & As a linphone user & I want to create a group ch
 \label{tab:template} % A label for referencing this table elsewhere, references are used in text as \ref{label}
 \end{table}
 
-\vspace{\baselineskip}
-\begin{table} 
+\vfill
+
+\begin{table}[H]
 \begin{tabular}{p{1.5cm} p{2.5cm} p{3cm} p{3cm} p{1cm} p{1cm}} % The final bracket specifies the number of columns in the table along with left and right borders which are specified using vertical bars (|); each column can be left, right or center-justified using l, r or c. To specify a precise width, use p{width}, e.g. p{5cm}
 \hline %\toprule % Top horizontal line
 & \multicolumn{5}{c}{User Story} \\ % Amalgamating several columns into one cell is done using the \multicolumn command as seen on this line
 \cmidrule(l){2-6} % Horizontal line spanning less than the full width of the table - you can add (r) or (l) just before the opening curly bracket to shorten the rule on the left or right side
 Title & As a/an & User Story & Notes & Priority & Status\\ % Column names row
 \hline %\midrule % In-table horizontal line
-
-Welcome Screen & As a user & I want to know what to expect when creating a group chat and receive help. & Information button and help button are there to assist when user needs more information. & Nice To Have & Done\\  \cmidrule(l){2-6}% Content row 5
-
-Selecting group details & As a linphone user & I want to personalise the group details.  & The user can select group name and group icon & Nice to have & Done\\ \cmidrule(l){2-6}% Content row 6
-
 
 Select Participants & As a group administrator & I want to select the people so that we can communicate in the group chat  & A screen appears with the contacts that a administrator can select to have in the group chat & Critical & Done\\ \cmidrule(l){2-6}% Content row 7
 
@@ -99,7 +101,10 @@ Send Message & As a group participant & I want to send a message in the group so
 
 Receive Message & As a group participant & I want to receive messages in the group from the members of the group & The members of the group type a message then it is sent to the other people in the group and receive them. & Critical & Done\\ \cmidrule(l){2-6} %Content row11
 
-Record Voice & As a group participant & I want to record a voice note in the group & The members of the group can record voice notes for one another. & Nice to have & Done\\ %Content row12
+Record Voice & As a group participant & I want to record a voice note in the group & The members of the group can record voice notes for one another. & Nice to have & Done\\ \cmidrule(l){2-6}%Content row12
+
+Send Record Voice & As a group participant & I want to record a voice note in the group and send it to the members in the group & The members of the group can record voice notes and send to one another. & Nice to have & In progress\\  %Content row13
+
 
 \midrule % In-table horizontal line
 \midrule % In-table horizontal line
@@ -108,16 +113,16 @@ Record Voice & As a group participant & I want to record a voice note in the gro
 \label{tab:template} % A label for referencing this table elsewhere, references are used in text as \ref{label}
 \end{table}
 
-\vspace{\baselineskip}
-\begin{table} 
+\vfill
+\clearpage
+
+\begin{table}[H] 
 \begin{tabular}{p{2cm} p{2.5cm} p{3cm} p{3cm} p{1cm} p{0.75cm}} % The final bracket specifies the number of columns in the table along with left and right borders which are specified using vertical bars (|); each column can be left, right or center-justified using l, r or c. To specify a precise width, use p{width}, e.g. p{5cm}
 \hline %\toprule % Top horizontal line
 & \multicolumn{5}{c}{User Story} \\ % Amalgamating several columns into one cell is done using the \multicolumn command as seen on this line
 \cmidrule(l){2-6} % Horizontal line spanning less than the full width of the table - you can add (r) or (l) just before the opening curly bracket to shorten the rule on the left or right side
 Title & As a/an & User Story & Notes & Priority & Status\\ % Column names row
 \hline %\midrule % In-table horizontal line
-
-Send Record Voice & As a group participant & I want to record a voice note in the group and send it to the members in the group & The members of the group can record voice notes and send to one another. & Nice to have & In progress\\ \cmidrule(l){2-6} %Content row13
 
 Receive Record Voice & As a group participant & I want to record a voice note in the group and receive voice notes from the members in the group & The members of the group can record voice notes, send to one another and receive voice notes from other group members. & Nice to have & Done\\ \cmidrule(l){2-6}%Content row14
 
@@ -139,23 +144,25 @@ Receive Encrypted Recorded Voice Note  & As a group participant & I want to rece
 \label{tab:template} % A label for referencing this table elsewhere, references are used in text as \ref{label}
 \end{table}
 
+\vfill
+\clearpage
 
-\begin{table} 
-\begin{tabular}{p{3cm} p{1.5cm} p{2cm} p{1.5cm}} % The final bracket specifies the number of columns in the table along with left and right borders which are specified using vertical bars (|); each column can be left, right or center-justified using l, r or c. To specify a precise width, use p{width}, e.g. p{5cm}
-\hline %\toprule % Top horizontal line
-\multicolumn{3}{c}{Statistics} \\ % Amalgamating several columns into one cell is done using the \multicolumn command as seen on this line
-\cmidrule(l){2-4} % Horizontal line spanning less than the full width of the table - you can add (r) or (l) just before the opening curly bracket to shorten the rule on the left or right side
-Number Of Items & Done & In progress & Pending \\  \cmidrule(l){2-4}% Column names row
+%\begin{table}[H]
+%\begin{tabular}{p{3cm} p{1.5cm} p{2cm} p{1.5cm}} 
+%\hline %\toprule % Top horizontal line
+%\multicolumn{3}{c}{Statistics} \\ 
+%\cmidrule(l){2-4}
+%Number Of Items & Done & In progress & Pending \\  \cmidrule(l){2-4}% Column names row
 
-20 & 13 & 3 & 4 \\ % Content row last
-\midrule % In-table horizontal line
-\midrule % In-table horizontal line
-Percentage & 55\% & 25\% & 20\%\\ % Summary/total row
-\bottomrule % Bottom horizontal line
-\end{tabular}
-\caption{Product Log and User Stories Table 2} % Table caption, can be commented out if no caption is required
-\label{tab:template} % A label for referencing this table elsewhere, references are used in text as \ref{label}
-\end{table}
+%20 & 13 & 3 & 4 \\ % Content row last
+%\midrule % In-table horizontal line
+%\midrule % In-table horizontal line
+%Percentage & 65\% & 15\% & 20\%\\ % Summary/total row
+%\bottomrule % Bottom horizontal line
+%\end{tabular}
+%\caption{Product Log and User Stories Table 2} % Table caption, can be commented out if no caption is required
+%\label{tab:template} % A label for referencing this table elsewhere, references are used in text as \ref{label}
+%\end{table}
 
 \end{document}
 
