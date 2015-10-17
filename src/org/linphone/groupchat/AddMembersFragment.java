@@ -10,6 +10,13 @@ import org.linphone.ContactsManager;
 import org.linphone.LinphoneActivity;
 import org.linphone.R;
 
+import org.linphone.LinphoneManager;
+
+import org.linphone.core.LinphoneProxyConfig;
+import org.linphone.core.LinphoneCore;
+import org.linphone.core.LinphoneAddress;
+
+
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -61,6 +68,12 @@ public class AddMembersFragment extends Fragment implements OnClickListener {
 		
 		// Retain the fragment across configuration changes
 		setRetainInstance(true);
+<<<<<<< HEAD
+=======
+		
+		groupName = getArguments().getString("GroupName");
+		
+>>>>>>> create_group_chat
 		return view;
 	}
 	
@@ -187,23 +200,47 @@ public class AddMembersFragment extends Fragment implements OnClickListener {
 					sipAdress.add(contactsList.get(i).getSipAdress(contact));
 					if(contact.isSelected()){
 						repsonseText.append("\n" + contact.getName());
+<<<<<<< HEAD
+=======
+						
+>>>>>>> create_group_chat
 						/*This is where the sip adresses will be displayed
 						 Potego to test you replace it with the followning code below
 						 
 						 repsonseText.append("\n" + contactsList.get(i).getSipAdress(contact));
 						 */
 						
+<<<<<<< HEAD
 						 	
 						
+=======
+>>>>>>> create_group_chat
 						
 					}
 				}
+				//repsonseText.append("\n" + getListOfMembers());
 				Toast.makeText(getActivity().getApplicationContext(), repsonseText, Toast.LENGTH_LONG).show();
 			}
 		});
 		
 	}
 	
+<<<<<<< HEAD
+=======
+	public List<Contact> getListOfMembers(){
+		List<Contact> list = new ArrayList<Contact>();
+		List<Contact> contactsList = dataAdapter.contactsList;
+		
+		for(int i = 0; i < contactsList.size(); i++){
+			Contact contact = contactsList.get(i);
+			if(contact.isSelected()){
+				list.add(contact);
+			}
+		}
+		return list;
+	}
+	
+>>>>>>> create_group_chat
     private void returnPictureSip()
     {
     //hold on for now
@@ -214,12 +251,47 @@ public class AddMembersFragment extends Fragment implements OnClickListener {
 		//if(getResult()){
 			//String name = "Baobab";
 			//Toast.makeText(getActivity().getApplicationContext(),"Result is: "+ result, Toast.LENGTH_SHORT).show();
+<<<<<<< HEAD
 			LinphoneActivity.instance().createGroupChat();
 			//}
 		//else{
 			//Toast.makeText(getActivity().getApplicationContext(),"Result is: "+ result, Toast.LENGTH_SHORT).show();
 			//LinphoneActivity.instance().displayCustomToast("At least one must be selected.", Toast.LENGTH_SHORT);
 			//}
+=======
+		final List<String> sipAdress = new ArrayList<String>();
+		List<Contact> contactsList = dataAdapter.contactsList;
+		
+		LinphoneCore lc = LinphoneManager.getLcIfManagerNotDestroyedOrNull();
+		LinphoneProxyConfig pc = lc.getDefaultProxyConfig();
+		String identity = pc.getIdentity();
+		sipAdress.add(identity);	// very important
+		
+		boolean flag = false;
+		for (int i = 0; i < contactsList.size(); i++) {
+			Contact contact = contactsList.get(i);
+			if(contact.isSelected()) {
+				sipAdress.add(contactsList.get(i).getSipAdress(contact));
+				
+				flag = true;
+			}
+		}
+		
+		if (flag == true) {
+			String [] groupMembers = sipAdress.toArray(new String[sipAdress.size()]);
+			int groupSize = sipAdress.size();
+			//String toDisplay = "Group Name : " + groupName + "\nGroup Members: " + Arrays.toString(groupMembers) + "\nGroup Size: " + (sipAdress.size() + 1);
+			//Toast.makeText(getActivity().getApplicationContext(), toDisplay, Toast.LENGTH_LONG).show();
+			
+			LinphoneActivity.instance().createGroupChat(groupName, groupMembers, groupSize);
+			
+			//LinphoneActivity.instance().goToChatList();
+			
+			//getActivity().finish();	// close the current activity
+		} else {
+			LinphoneActivity.instance().displayCustomToast("At least one contact must be selected.", Toast.LENGTH_SHORT);
+		}
+>>>>>>> create_group_chat
 		
 	}
 }

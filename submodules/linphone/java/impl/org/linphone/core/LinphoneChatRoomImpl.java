@@ -186,6 +186,7 @@ class LinphoneChatRoomImpl implements LinphoneChatRoom {
 	private native int getChatRoomType(long ptr);
 	private native int getGroupSize(long ptr);
 	private native int getMyGroupIndex(long ptr);
+	private native String getGroupName(long ptr);
 	
 	public void sendGroupMessage(String message) {
 		synchronized(getCore()){
@@ -220,6 +221,12 @@ class LinphoneChatRoomImpl implements LinphoneChatRoom {
 	public int getMyGroupIndex() {
 		synchronized(getCore()) {
 			return getMyGroupIndex(nativePtr);
+		}
+	}
+	
+	public String getGroupName() {
+		synchronized(getCore()) {
+			return getGroupName(nativePtr);
 		}
 	}
 }

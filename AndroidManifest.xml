@@ -83,7 +83,6 @@
 
                 <data android:scheme="tel" />
                 <data android:scheme="sip" />
- />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SENDTO" />
@@ -313,57 +312,54 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-         <activity
+        
+        <activity
             android:name=".groupchat.aboutActivity"
-            android:theme="@style/NoTitle" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".groupchat.aboutFragment"
-            android:theme="@style/NoTitle" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-         <activity
-            android:name=".groupchat.GroupdetailsFragment"
-            android:theme="@style/NoTitle" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".groupchat.AddMembersFragment"
-            android:theme="@style/NoTitle" >
+            android:theme="@style/NoTitle.CustomTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         
         <activity
-            android:name=".groupchat.Groupdetails"
-            android:theme="@style/NoTitle" >
+            android:name=".groupchat.helpActivity"
+            android:theme="@style/NoTitle.CustomTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".groupchat.WelcomeFragment"
-            android:theme="@style/NoTitle" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
+        
         <activity
             android:name=".groupchat.GroupChatRoomActivity"
             android:theme="@style/NoTitle" >
+	    <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
         </activity>
         
         <activity
             android:name="org.linphone.groupchat.WelcomeActivity"
-            android:label="@string/title_activity_welcome" >
+	    android:theme="@style/NoTitle" >
+            <!--android:label="@string/title_activity_welcome" -->
+	    <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".groupchat.VoiceRecordActivity"
+	    android:theme="@style/NoTitle" >
+            <!--android:label="@string/title_activity_voice_record" -->
+	    <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".VoiceMainActivity"
+	    android:theme="@style/NoTitle" >
+            <!--android:label="@string/title_activity_voice_main" -->
+	    <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
         </activity>
     </application>
 

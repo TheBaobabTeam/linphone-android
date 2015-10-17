@@ -1,5 +1,6 @@
 package org.linphone.groupchat;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 
 import java.util.List;
@@ -15,10 +16,18 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+=======
+import org.linphone.R;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.util.DisplayMetrics;
+>>>>>>> create_group_chat
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+<<<<<<< HEAD
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
@@ -27,16 +36,24 @@ import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+=======
+import android.widget.TextView;
+>>>>>>> create_group_chat
 
 public class aboutFragment extends Fragment implements OnClickListener {
 	
 	private static aboutFragment instance;
+<<<<<<< HEAD
 	private TextView back;
 	private TextView next;
+=======
+	private TextView close;
+>>>>>>> create_group_chat
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		instance = this;
+<<<<<<< HEAD
 		View view = inflater.inflate(R.layout.welcome, container, false);
 		
 		// Retain the fragment across configuration changes
@@ -62,14 +79,34 @@ public class aboutFragment extends Fragment implements OnClickListener {
 		  
 		//Generate list View from ArrayList
 		
+=======
+		View view = inflater.inflate(R.layout.about_container, container, false);
+		
+		// Retain the fragment across configuration changes
+		setRetainInstance(true);
+		
+		DisplayMetrics dm = new DisplayMetrics();
+		getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
+		
+		int width = dm.widthPixels;
+		int height = dm.heightPixels;
+		
+		getActivity().getWindow().setLayout((int)(width*0.8),(int)(height*0.6));
+		
+		return view;
+>>>>>>> create_group_chat
 	}
 
 	@Override
 	public void onClick(View v) {
+<<<<<<< HEAD
 		// TODO Auto-generated method stub
 		LinphoneActivity.instance().nextScreenAfterWelcome();
 		//nextScreenAbout
 		
+=======
+			
+>>>>>>> create_group_chat
 	}
 	
 	

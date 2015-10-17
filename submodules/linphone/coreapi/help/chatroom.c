@@ -122,7 +122,7 @@ int main(int argc, char *argv[]){
 		printf("Member [%d]: [%s]\n", i, group_members[i]);
 	}
 	/*Next step is to create a chat root*/
-	chat_room = linphone_core_create_group_chat_room(lc, group_name, group_members, group_size, 0, 0);
+	chat_room = linphone_core_get_or_create_group_chat_room(lc, group_name, group_members, group_size, 0, 0);
 	
 	//linphone_chat_room_add_participant(chat_room, group_member);
 	

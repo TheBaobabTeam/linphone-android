@@ -12,19 +12,27 @@
         android:orientation="horizontal"
         android:background="@drawable/background_top_bar" >
 
-       <TextView
-           android:id="@+id/back"
-            android:layout_width="50dp"
-            android:layout_height="55dp"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/group_chat_back" />
+        <RelativeLayout
+                android:layout_width="80dp"
+	    		android:layout_height="80dp" >
+	       <TextView
+	           android:id="@+id/back"
+	            android:layout_width="50dp"
+	            android:layout_height="55dp"
+	            android:layout_marginLeft="0dp"
+	            android:background="@drawable/group_chat_back" />
+	       </RelativeLayout>
 
+        <RelativeLayout
+                android:layout_width="80dp"
+	    		android:layout_height="80dp"
+	    		android:layout_marginLeft="225dp" >
 	     <TextView
 	         android:id="@+id/next" 
 	         android:layout_width="50dp"
 	         android:layout_height="55dp"
-	         android:layout_marginLeft="250dp"
 	        android:background="@drawable/group_chat_next" />
+	     </RelativeLayout>
         
     </LinearLayout>
 
@@ -43,14 +51,14 @@
         
     <ImageView
         android:id="@+id/GroupIcon"
-        android:layout_width="100dp"
-        android:layout_height="70dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/linearLayout2"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
         android:contentDescription="@string/groupchat_icon"
-        android:src="@drawable/group3" 
+        android:src="@drawable/picture"
         android:clickable="true" />
 
     <TextView
@@ -60,7 +68,8 @@
         android:layout_marginLeft="50dp"
         android:text="@string/description"
         android:textColor="@color/text_button"
-        android:textSize="17dp" />
+        android:textSize="17dp"
+        android:layout_marginTop="30dp" />
 
     </LinearLayout>
     

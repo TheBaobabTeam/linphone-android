@@ -431,5 +431,13 @@
     <string name="title_activity_group_details">Group_details</string>
     <string name="title_activity_welcome">MainActivity</string>
    <string name="linphone">Linphone</string>
+   <string name="aboutGC">Linphone group chat is specifically an  app that 
+		extend Linphone’s Instant Messaging (IM) implementation on Android 
+		platforms to include group chat and to implement other minor improvements 
+		to Linphones IM capabilities and user interface. Brought to you by Baobab Team</string>
+    <string name="title_activity_voice_record">VoiceRecordActivity</string>
+    <string name="title_activity_voice_main">VoiceMainActivity</string>
+    <string name="Add_participates">Add Participates</string>
+    <string name="Exit_Group">Exit Group</string>
 
 </resources>
