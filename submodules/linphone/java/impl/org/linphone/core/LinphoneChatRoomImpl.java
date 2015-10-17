@@ -174,4 +174,59 @@ class LinphoneChatRoomImpl implements LinphoneChatRoom {
 	public void sendChatMessage(LinphoneChatMessage message) {
 		sendChatMessage(nativePtr, message, ((LinphoneChatMessageImpl)message).getNativePtr());
 	}
+	
+	
+	/*******************************************************************************************
+	 *				This shall be my playground, so behold folks					*
+	 *******************************************************************************************/
+	
+	private native long createLinphoneGroupChatMessage(long ptr, String message, int group_index);
+	private native void sendGroupMessage(long ptr, String message);
+	private native void sendGroupChatMessage(long ptr, Object message, long messagePtr);
+	private native int getChatRoomType(long ptr);
+	private native int getGroupSize(long ptr);
+	private native int getMyGroupIndex(long ptr);
+	private native String getGroupName(long ptr);
+	
+	public void sendGroupMessage(String message) {
+		synchronized(getCore()){
+			sendGroupMessage(nativePtr, message);
+		}
+	}
+	
+	@Override
+	public LinphoneChatMessage createLinphoneGroupChatMessage(String message, int group_index) {
+		synchronized(getCore()){
+			return new LinphoneChatMessageImpl(createLinphoneGroupChatMessage(nativePtr, message, group_index));
+		}
+	}
+	
+	@Override
+	public void sendGroupChatMessage(LinphoneChatMessage message) {
+		sendGroupChatMessage(nativePtr, message, ((LinphoneChatMessageImpl)message).getNativePtr());
+	}
+	
+	public int getChatRoomType() {
+		synchronized(getCore()) {
+			return getChatRoomType(nativePtr);
+		}
+	}
+	
+	public int getGroupSize() {
+		synchronized(getCore()) {
+			return getGroupSize(nativePtr);
+		}
+	}
+	
+	public int getMyGroupIndex() {
+		synchronized(getCore()) {
+			return getMyGroupIndex(nativePtr);
+		}
+	}
+	
+	public String getGroupName() {
+		synchronized(getCore()) {
+			return getGroupName(nativePtr);
+		}
+	}
 }

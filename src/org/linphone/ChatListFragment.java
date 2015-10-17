@@ -35,7 +35,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.graphics.Bitmap;
-import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
@@ -64,7 +63,7 @@ public class ChatListFragment extends Fragment implements OnClickListener, OnIte
 	private LayoutInflater mInflater;
 	private List<String> mConversations, mDrafts;
 	private ListView chatList;
-	private TextView edit, ok, newDiscussion, noChatHistory, search, linphone;
+	private TextView edit, ok, newDiscussion, noChatHistory;
 	private ImageView clearFastChat;
 	private EditText fastNewChat;
 	private boolean isEditMode = false;
@@ -101,9 +100,6 @@ public class ChatListFragment extends Fragment implements OnClickListener, OnIte
 		
 		ok = (TextView) view.findViewById(R.id.ok);
 		ok.setOnClickListener(this);
-		
-		search = (TextView)view.findViewById(R.id.search);
-		search.setOnClickListener(this);
 		
 		clearFastChat = (ImageView) view.findViewById(R.id.clearFastChatField);
 		clearFastChat.setOnClickListener(this);
@@ -220,17 +216,7 @@ public class ChatListFragment extends Fragment implements OnClickListener, OnIte
 	public void onClick(View v) {
 		int id = v.getId();
 		
-		if(id == R.id.search){
-			if(clearFastChat.getVisibility() == View.VISIBLE){
-				clearFastChat.setVisibility(View.GONE);
-				fastNewChat.setVisibility(View.GONE);
-			}
-			else if(clearFastChat.getVisibility() != View.VISIBLE){
-				clearFastChat.setVisibility(View.VISIBLE);
-				fastNewChat.setVisibility(View.VISIBLE);
-			}
-		}
-		else if (id == R.id.clearFastChatField) {
+		if (id == R.id.clearFastChatField) {
 			fastNewChat.setText("");
 		}
 		else if (id == R.id.ok) {

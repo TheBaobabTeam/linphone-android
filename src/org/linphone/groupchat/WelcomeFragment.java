@@ -33,7 +33,9 @@ public class WelcomeFragment extends Fragment implements OnClickListener {
 	private static WelcomeFragment instance;
 	private TextView back;
 	private TextView next;
+	private TextView help;
 	private TextView about;
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -43,9 +45,26 @@ public class WelcomeFragment extends Fragment implements OnClickListener {
 		// Retain the fragment across configuration changes
 		setRetainInstance(true);
 		next = (TextView) view.findViewById(R.id.textView1);
-		about = (TextView) view.findViewById(R.id.aboutLinphone);
 		next.setOnClickListener(this);
-		about.setOnClickListener(this);
+		
+		about = (TextView)view.findViewById(R.id.aboutLinphone);
+		about.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				LinphoneActivity.instance().aboutScreen();
+			}
+		});
+		
+		help = (TextView) view.findViewById(R.id.helpLinphone);
+		help.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				LinphoneActivity.instance().helpScreen();
+			}
+		});
+		
 		return view;
 	}
 	
@@ -60,23 +79,11 @@ public class WelcomeFragment extends Fragment implements OnClickListener {
 					}
 				});
 			}
-		  
-		  
-		  
-		//Generate list View from ArrayList
-		
 	}
 
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
-
-			
 			LinphoneActivity.instance().nextScreenAfterWelcome();
-		
-		
-		
-		
 	}
 	
 	

@@ -6190,3 +6190,117 @@ JNIEXPORT jstring JNICALL Java_org_linphone_core_LinphoneCoreImpl_getVideoPreset
 	const char *tmp = linphone_core_get_video_preset((LinphoneCore *)lc);
 	return tmp ? env->NewStringUTF(tmp) : NULL;
 }
+
+
+/*******************************************************************************************
+ *				This shall be my playground, so behold folks					*
+ *******************************************************************************************/
+
+extern "C" jlong Java_org_linphone_core_LinphoneCoreImpl_getOrCreateGroupChatRoom(
+	JNIEnv*  env, 
+	jobject  thiz, 
+	jlong lc, 
+	jstring jgroup_name,
+	jobjectArray jgroup_members,
+	jint jgroup_size,
+	jint jgroup_index,
+	jint jadmin_index
+) {
+	LinphoneChatRoom* lResult = NULL;
+	const char* group_name = env->GetStringUTFChars(jgroup_name, NULL);
+	char* group_members[(int)jgroup_size];
+	int i;
+	for (i = 0; i < (int)jgroup_size; i++) {
+		jstring elem = (jstring)env->GetObjectArrayElement(jgroup_members, i);
+		const char* rawString = env->GetStringUTFChars(elem, NULL);
+		group_members[i] = (char*)malloc(strlen(rawString)+1);
+		strcpy(group_members[i], rawString);
+		
+		env->ReleaseStringUTFChars(elem, rawString);
+		env->DeleteLocalRef(elem);
+	}
+	
+	lResult = linphone_core_get_or_create_group_chat_room((LinphoneCore*)lc, group_name, (const char**)group_members, (int)jgroup_size, (int)jgroup_index, (int)jadmin_index);
+	
+	env->ReleaseStringUTFChars(jgroup_name, group_name);
+	
+	for (i = 0; i < (int)jgroup_size; i++) {
+		free(group_members[i]);
+	}
+	
+	return (jlong)lResult;
+}
+
+extern "C" jlong Java_org_linphone_core_LinphoneChatRoomImpl_createLinphoneGroupChatMessage(
+	JNIEnv*  env,
+	jobject  thiz,
+	jlong ptr,
+	jstring jmessage,
+	jint jgroup_index
+) {
+	const char* message = env->GetStringUTFChars(jmessage, NULL);
+	LinphoneChatMessage *chatMessage = linphone_group_chat_room_create_message((LinphoneChatRoom *)ptr, message, (int)jgroup_index);
+	env->ReleaseStringUTFChars(jmessage, message);
+	
+	return (jlong) chatMessage;
+}
+
+extern "C" void Java_org_linphone_core_LinphoneChatRoomImpl_sendGroupMessage(
+	JNIEnv*  env,
+	jobject  thiz,
+	jlong ptr,
+	jstring jmessage
+) {
+	const char* message = env->GetStringUTFChars(jmessage, NULL);
+	linphone_group_chat_room_send_message((LinphoneChatRoom*)ptr, message);
+	env->ReleaseStringUTFChars(jmessage, message);
+}
+
+extern "C" void Java_org_linphone_core_LinphoneChatRoomImpl_sendGroupChatMessage(
+	JNIEnv*  env,
+	jobject  thiz,
+	jlong chatroom_ptr,
+	jobject message,
+	jlong messagePtr
+) {
+	message = env->NewGlobalRef(message);
+	linphone_chat_message_ref((LinphoneChatMessage*)messagePtr);
+	linphone_chat_message_set_user_data((LinphoneChatMessage*)messagePtr, message);
+	linphone_group_chat_room_send_chat_message((LinphoneChatRoom*)chatroom_ptr, (LinphoneChatMessage*)messagePtr);
+}
+
+extern "C" jint Java_org_linphone_core_LinphoneChatRoomImpl_getChatRoomType(
+	JNIEnv*  env,
+	jobject  thiz,
+	jlong ptr
+) {
+	int chatRoomType = linphone_chat_room_get_type((LinphoneChatRoom*)ptr);
+	return (jint) chatRoomType;
+}
+
+extern "C" jint Java_org_linphone_core_LinphoneChatRoomImpl_getGroupSize(
+	JNIEnv*  env,
+	jobject  thiz,
+	jlong ptr
+) {
+	int group_size = linphone_chat_room_get_group_size((LinphoneChatRoom*)ptr);
+	return (jint) group_size;
+}
+
+extern "C" jint Java_org_linphone_core_LinphoneChatRoomImpl_getMyGroupIndex(
+	JNIEnv*  env,
+	jobject  thiz,
+	jlong ptr
+) {
+	int group_index = linphone_chat_room_get_my_group_index((LinphoneChatRoom*)ptr);
+	return (jint) group_index;
+}
+
+extern "C" jstring Java_org_linphone_core_LinphoneChatRoomImpl_getGroupName(
+	JNIEnv* env, 
+	jobject  thiz, 
+	jlong ptr
+) {
+	const char * group_name = linphone_chat_room_get_group_name((LinphoneChatRoom*)ptr);
+	return group_name ? env->NewStringUTF(group_name) : NULL;
+}

@@ -305,7 +305,6 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        
         <activity
             android:name=".groupchat.GroupDetailsActivity"
             android:theme="@style/NoTitle" >
@@ -313,20 +312,35 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-         <activity
+        <activity
             android:name=".groupchat.aboutActivity"
-            android:theme="@style/NoTitle" >
+            android:theme="@style/NoTitle.CustomTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
             android:name=".groupchat.aboutFragment"
-            android:theme="@style/NoTitle" >
+            android:theme="@style/NoTitle.CustomTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".groupchat.helpActivity"
+            android:theme="@style/NoTitle.CustomTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".groupchat.helpFragment"
+            android:theme="@style/NoTitle.CustomTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        
          <activity
             android:name=".groupchat.GroupdetailsFragment"
             android:theme="@style/NoTitle" >
@@ -341,7 +355,6 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        
         <activity
             android:name=".groupchat.Groupdetails"
             android:theme="@style/NoTitle" >
@@ -360,10 +373,18 @@
             android:name=".groupchat.GroupChatRoomActivity"
             android:theme="@style/NoTitle" >
         </activity>
-        
         <activity
             android:name="org.linphone.groupchat.WelcomeActivity"
-            android:label="@string/title_activity_welcome" >
+            android:theme="@style/NoTitle"  >
+
+        </activity>
+        <activity
+            android:name=".groupchat.VoiceRecordActivity"
+            android:label="@string/title_activity_voice_record" >
+        </activity>
+        <activity
+            android:name=".VoiceMainActivity"
+            android:label="@string/title_activity_voice_main" >
         </activity>
     </application>
 

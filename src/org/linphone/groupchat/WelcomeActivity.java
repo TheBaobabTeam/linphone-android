@@ -5,6 +5,7 @@ import org.linphone.R;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.util.Log;
 
 
 /**
@@ -13,6 +14,7 @@ import android.support.v4.app.FragmentManager;
 public class WelcomeActivity extends FragmentActivity{
 	private static final String WELCOME_FRAGMENT = "welcome";
 	private WelcomeFragment fragDetails;
+	String msg = "WelcomeActivity : ";
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -33,10 +35,22 @@ public class WelcomeActivity extends FragmentActivity{
 	    }
 	}
 	
+	@Override
+	   protected void onPause() {
+	      super.onPause();
+	      Log.d(msg, "The onPause() event");
+	   }
 	
-	
-	
-	
-	
+	@Override
+	   protected void onStop() {
+	      super.onStop();
+	      Log.d(msg, "The onStop() event");
+	   }
+
+	@Override
+	   public void onDestroy() {
+	      super.onDestroy();
+	      Log.d(msg, "The onDestroy() event");
+	   }
 }
 

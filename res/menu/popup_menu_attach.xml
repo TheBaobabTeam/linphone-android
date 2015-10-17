@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+   
+  <item 
+        android:id="@+id/attachPic"
+        android:title="Attach Picture" />
+    
+    <item
+        android:id="@+id/attachAudio"
+        android:title="Attach Audio"
+     />
+    
+    
+</menu>

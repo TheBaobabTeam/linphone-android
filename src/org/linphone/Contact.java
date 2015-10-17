@@ -97,16 +97,29 @@ public class Contact implements Serializable {
 	public Bitmap getPhoto() {
 		return photo;
 	}
-	
-	/*public List<String> getSipAdress(String id)
-	{
-		
-	}*/
+
 	public List<String> getNumbersOrAddresses() {
 		if (numbersOrAddresses == null)
 			numbersOrAddresses = new ArrayList<String>();
 		return numbersOrAddresses;
 	}
+	
+	public void refresh(ContentResolver cr) {
+		this.numbersOrAddresses = Compatibility.extractContactNumbersAndAddresses(id, cr);
+		LinphoneCore lc = LinphoneManager.getLcIfManagerNotDestroyedOrNull();
+		if(lc != null && lc.getFriendList() != null) {
+			for (LinphoneFriend friend :lc.getFriendList()){
+				if (friend.getRefKey().equals(id)) {
+					hasFriends = true;
+					this.numbersOrAddresses.add(friend.getAddress().asStringUriOnly());
+				}
+			}
+		}
+		this.name = Compatibility.refreshContactName(cr, id);
+	}
+	
+	
+	//fUNCTION TO RETURN SIP ADRESSES
 	public String getSipAdress(Contact lelo)
 	{
 			String adress = null ;
@@ -124,20 +137,6 @@ public class Contact implements Serializable {
 			}
 			return adress;
 			
-	}
-	
-	public void refresh(ContentResolver cr) {
-		this.numbersOrAddresses = Compatibility.extractContactNumbersAndAddresses(id, cr);
-		LinphoneCore lc = LinphoneManager.getLcIfManagerNotDestroyedOrNull();
-		if(lc != null && lc.getFriendList() != null) {
-			for (LinphoneFriend friend :lc.getFriendList()){
-				if (friend.getRefKey().equals(id)) {
-					hasFriends = true;
-					this.numbersOrAddresses.add(friend.getAddress().asStringUriOnly());
-				}
-			}
-		}
-		this.name = Compatibility.refreshContactName(cr, id);
 	}
 
 	public void setSelected(boolean selected) {
