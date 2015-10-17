@@ -231,6 +231,7 @@ int32_t WelsReorderRefList (PWelsDecoderContext pCtx) {
                 && (pSliceHeader->iSpsId != ppRefList[i]->iSpsId)) {    //check;
               WelsLog (& (pCtx->sLogCtx), WELS_LOG_WARNING, "WelsReorderRefList()::::BASE LAYER::::iSpsId:%d, ref_sps_id:%d",
                        pSliceHeader->iSpsId, ppRefList[i]->iSpsId);
+			  return ERR_NONE;
               pCtx->iErrorCode = dsNoParamSets;	//cross-IDR reference frame selection, SHOULD request IDR.--
               return ERR_INFO_REFERENCE_PIC_LOST;
             } else {

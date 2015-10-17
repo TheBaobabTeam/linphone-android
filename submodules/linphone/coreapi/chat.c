@@ -514,11 +514,8 @@ static LinphoneChatRoom * _linphone_core_get_or_create_group_chat_room(LinphoneC
 	
 	printf("_linphone_core_get_or_create_group_chat_room(): running...\n");
 	
-<<<<<<< HEAD
+
 	if (group_address != NULL && (parsed_url = linphone_core_create_address(lc, group_address)) != NULL) {
-=======
-	if ((parsed_url = linphone_core_create_address(lc, group_name)) != NULL) {
->>>>>>> adding encrypting
 		printf("group_name is address\n");
 		to_addr = parsed_url;
 	} else {
@@ -583,11 +580,7 @@ LinphoneChatRoom* linphone_core_create_group_chat_room(LinphoneCore* lc, const c
 	
 	fflush(stdout);
 	
-<<<<<<< HEAD
 	return _linphone_core_get_or_create_group_chat_room(lc, group_name, NULL, group_members, group_size, group_index, admin_index);
-=======
-	return _linphone_core_get_or_create_group_chat_room(lc, group_name, group_members, group_size, group_index, admin_index);
->>>>>>> adding encrypting
 }
 
 LinphoneChatRoom *linphone_core_get_chat_room(LinphoneCore *lc, const LinphoneAddress *addr){
