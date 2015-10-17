@@ -32,7 +32,7 @@ public class ChatActivity extends FragmentActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.chat_activity);
+		setContentView(R.layout.activity_new_group_chat_room);
 		
 		Bundle extras = new Bundle();
 		if (getIntent().hasExtra("SipUri") == true) {
@@ -63,7 +63,7 @@ public class ChatActivity extends FragmentActivity {
 		
 		ChatFragment fragment = new ChatFragment();
 		fragment.setArguments(extras);
-		getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainer, fragment, "ChatFragment").commit();
+		getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainerNew, fragment, "ChatFragment").commit();
 		
 		FragmentManager fm = getSupportFragmentManager();
 		chatFragment = (ChatFragment) fm.findFragmentByTag(CHAT_FRAGMENT);
@@ -73,7 +73,7 @@ public class ChatActivity extends FragmentActivity {
 		if (chatFragment == null) {
 			chatFragment = new ChatFragment();
 			chatFragment.setArguments(extras);
-			fm.beginTransaction().add(R.id.fragmentContainer, chatFragment, CHAT_FRAGMENT).commit();
+			fm.beginTransaction().add(R.id.fragmentContainerNew, chatFragment, CHAT_FRAGMENT).commit();
 	    }
 	}
 }

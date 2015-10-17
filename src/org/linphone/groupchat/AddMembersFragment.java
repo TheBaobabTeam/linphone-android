@@ -2,15 +2,20 @@ package org.linphone.groupchat;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Arrays;
 
 import org.linphone.ChatFragment;
 import org.linphone.Contact;
 import org.linphone.ContactsFragment;
 import org.linphone.ContactsManager;
 import org.linphone.LinphoneActivity;
-import org.linphone.LinphoneManager;
 import org.linphone.R;
+
+import org.linphone.LinphoneManager;
+
+import org.linphone.core.LinphoneProxyConfig;
+import org.linphone.core.LinphoneCore;
+import org.linphone.core.LinphoneAddress;
+
 
 import android.content.Context;
 import android.graphics.Color;
@@ -28,10 +33,6 @@ import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.linphone.core.LinphoneCore;
-import org.linphone.core.LinphoneAddress;
-import org.linphone.core.LinphoneProxyConfig;
 
 public class AddMembersFragment extends Fragment implements OnClickListener {
 	
@@ -69,7 +70,6 @@ public class AddMembersFragment extends Fragment implements OnClickListener {
 		// Retain the fragment across configuration changes
 		setRetainInstance(true);
 		
-		//Retrieve parameter from intent
 		groupName = getArguments().getString("GroupName");
 		
 		return view;
@@ -197,29 +197,40 @@ public class AddMembersFragment extends Fragment implements OnClickListener {
 					Contact contact = contactsList.get(i);
 					sipAdress.add(contactsList.get(i).getSipAdress(contact));
 					if(contact.isSelected()){
-						//repsonseText.append("\n" + contact.getName());
-						/*This is where the sip adresses will be displayed
-						Potego to test you replace it with the followning code below:*/
+						repsonseText.append("\n" + contact.getName());
 						
-						repsonseText.append("\n" + contactsList.get(i).getSipAdress(contact));
+						/*This is where the sip adresses will be displayed
+						 Potego to test you replace it with the followning code below
+						 
+						 repsonseText.append("\n" + contactsList.get(i).getSipAdress(contact));
+						 */
+						
+						
 					}
 				}
+				//repsonseText.append("\n" + getListOfMembers());
 				Toast.makeText(getActivity().getApplicationContext(), repsonseText, Toast.LENGTH_LONG).show();
 			}
 		});
 		
 	}
 	
-    private void returnPictureSip()
-    {
-    	List<Contact> contactsList = dataAdapter.contactsList;
+	public List<Contact> getListOfMembers(){
+		List<Contact> list = new ArrayList<Contact>();
+		List<Contact> contactsList = dataAdapter.contactsList;
+		
 		for(int i = 0; i < contactsList.size(); i++){
 			Contact contact = contactsList.get(i);
 			if(contact.isSelected()){
-				
+				list.add(contact);
 			}
 		}
-    	
+		return list;
+	}
+	
+    private void returnPictureSip()
+    {
+    //hold on for now
     }
 
 	@Override

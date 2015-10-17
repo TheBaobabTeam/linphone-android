@@ -45,10 +45,16 @@ import org.linphone.core.LinphoneCoreException;
 import org.linphone.core.LinphoneCoreFactory;
 import org.linphone.core.LinphoneCoreListenerBase;
 import org.linphone.core.LinphoneProxyConfig;
+
 import org.linphone.groupchat.AddMembersActivity;
 import org.linphone.groupchat.FragmentsAvailable;
 import org.linphone.groupchat.GroupChatRoomActivity;
 import org.linphone.groupchat.NewGroupActivity;
+import org.linphone.groupchat.GroupDetailsActivity;
+import org.linphone.groupchat.WelcomeActivity;
+import org.linphone.groupchat.aboutActivity;
+import org.linphone.groupchat.helpActivity;
+
 import org.linphone.mediastream.Log;
 import org.linphone.setup.RemoteProvisioningLoginActivity;
 import org.linphone.setup.SetupActivity;
@@ -114,7 +120,7 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 	private OrientationEventListener mOrientationHelper;
 	private LinphoneCoreListenerBase mListener;
 
-	static final boolean isInstanciated() {
+	public static final boolean isInstanciated() {
 		return instance != null;
 	}
 
@@ -687,7 +693,7 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 	 * added by me, newGroup button
 	 */
 	public void newGroup() {
-		Intent intent = new Intent(this, NewGroupActivity.class);
+		Intent intent = new Intent(this, WelcomeActivity.class);
 		
 		startOrientationSensor();
 		startActivityForResult(intent, CHAT_ACTIVITY);
@@ -705,6 +711,27 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 	public void goToChatList() {
 		changeCurrentFragment(FragmentsAvailable.CHATLIST, null);
 		chat.setSelected(true);
+	}
+	
+	//opens new group screen
+	public void nextScreenAfterWelcome(){
+		Intent intent = new Intent(this,NewGroupActivity.class);
+		startOrientationSensor();
+		startActivityForResult(intent, CHAT_ACTIVITY);
+	}
+	
+	//help button
+		public void helpScreen(){
+			Intent intent = new Intent(this,helpActivity.class);
+			startOrientationSensor();
+			startActivityForResult(intent, CHAT_ACTIVITY);
+		}
+	
+	//info button
+	public void aboutScreen(){
+		Intent intent = new Intent(this,aboutActivity.class);
+		startOrientationSensor();
+		startActivityForResult(intent, CHAT_ACTIVITY);
 	}
 
 	//Added by me
@@ -747,13 +774,13 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 					
 					onMessageSent(sipUri, message);
 					
-					//goToChatList();
+					goToChatList();
 					
-					String toDisplay = "Display Name: " + displayName;
+					/*String toDisplay = "Display Name: " + displayName;
 					toDisplay += "\nSIP URI: " + sipUri;
 					toDisplay += "\nGroup Name: " + chatRoom.getGroupName();
 					toDisplay += "\nGroup Address: " + addrStr;
-					displayCustomToast(toDisplay, Toast.LENGTH_SHORT);
+					displayCustomToast(toDisplay, Toast.LENGTH_SHORT);*/
 				}
 				
 				//LinphoneProxyConfig pc = lc.getDefaultProxyConfig();
