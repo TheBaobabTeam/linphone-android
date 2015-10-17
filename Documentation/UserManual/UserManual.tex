@@ -52,11 +52,15 @@ CI / CD support  & Patience Mtsweni \\
 
 \subsection{System Overview}
 
-The system we are working on is called Linphone. We are are adding additional functionality to an already existing project. The main aim of the functionality we are developing in the Linphone project is to allow a group of users to be able to communicate or exchange messages with each other. \\
-This functionality is achieved by creating a group chat were there will be an interface that allows those messages to be exchanged and viewed. A  participant can send messages and pictures to a group, send voice recordings,update the group picture and change the  group name. \\
-A participant can become an administrator in the group -  usually this is the person who creates the group ,who is 
-responsible for adding and  removing other participants.\\
+%The system we are working on is called Linphone. We are are adding additional functionality to an already existing project. The main aim of the functionality we are developing in the Linphone project is to allow a group of users to be able to communicate or exchange messages with each other. \\
+%This functionality is achieved by creating a group chat were there will be an interface that allows those messages to be exchanged and viewed. A  participant can send messages and pictures to a group, send voice recordings,update the group picture and change the  group name. \\
+%A participant can become an administrator in the group - usually this is the person who creates the group ,who is 
+%responsible for adding and  removing other participants.\\
 
+
+Linphone is the leading open source implementation of Voice over IP (VoIP) and Instant Messaging (IM) functionalities. This particular release of Linphone runs on the android platform and aims to extend Linphone's IM capabilities by including group chat and improving it's user interface. This application also seeks to secure the group chat, so that the user's communication is not intercepted by third parties. The application provides the end-user with group chat functionalities found in closed source competitors like WhatsApp. Now users are able to exchange messages in a conference like manner. In addition to exchaging text messages, multiple users are also now able to exchange pictures in a single chatroom and the messages are distinguished according to the person who sent them. \\
+
+There are two types of users levels for the group chat, namely admin and standard users. Admin users can do everything that the standard user can do, plus some additional capabilities. Only admin users (initially the person who created the group) are able to add and remove members of the group, with the current capacity being 20 members per group. Standard users are provided the functionality to remove themselves from the group if they no longer want to be part of that group. In the case that the person leaving the group is an admin, then a random user is selected from the remaining members to be the admin. If all members leave the group, then it is destroyed and ceases to exist. The only other way to delete the group is via an admin. The admin is also allowed to remove individual members they feel should no longer be part of the group.
 
 \subsection{System Configuration}
 
@@ -85,7 +89,7 @@ The linphone application requires registration to a SIP provider before you can 
 \end{center}
 
 Linphone.org hosts a free SIP service which allows users to make audio or video calls using SIP addresses under the domain sip.linphone.org. \\
-When creating your sip address like sip:baobab@sip.linphone.org you simple use the form provided on http://www.linphone.org/free-sip-service.html and your friends can communicate with you by simply making use of the sip address.
+When creating your sip address like sip:baobab@sip.linphone.org you simply use the form provided on http://www.linphone.org/free-sip-service.html and your friends can communicate with you by simply making use of the sip address.
 
 
 \newpage
@@ -97,13 +101,16 @@ When creating your sip address like sip:baobab@sip.linphone.org you simple use t
 \end{figure}
 \end{center}
 
+All of the above describes configuration of the already existing Linphone application. This is not by mistake. The process used by the group chat to exchage messages is similar to that of private chats. All of the group capabilities are on the client side (code that sits purely on your Android device). Therefore, there is no extra configuration needed to accommodate the group chat functionality. We pride ourselves in making the transition into group chat easy and simple for the user.
+
 
 \subsection{Installation}
 \begin{itemize}
-\item Turn on your Android Smartphone and click on the Google Play icon to launch Google Play.
-\item Tap the “Search” button in the upper right corner and type “Linphone”
-\item From the result list tap the result with the title “Linphone Video” to expand it
-\item Tap the “Install” button, Linphone for Android will be downloaded and the installation procedure will begin
+\item Turn on your Android Smartphone and open your favourite web browser.
+\item In the address bar, type in “http://thebaobabteam.github.io/linphone-android” and hit enter.
+\item Download the file “Linphone-andoid.apk”.
+\item Go to your phone settings and turn on the option to allow installation of non-Market applications (Unknown sources).
+\item Run the downloaded file (linphone-android.apk) by clicking on it.
 \item Confirm that you accept the Linphone application rights on the screen that will be appear on your Smartphone by tapping “Accept”. When the file installation is done tap “Open”.
 \item Press “Agree” when the License Agreement appears on your screen to finalize the install and start Linphone for Android.
 \end{itemize}
@@ -159,17 +166,29 @@ After successful installation and setup (sip account) of the linphone applicatio
 \begin{center}
 \begin{figure}[H]
 \centering
+%<<<<<<< HEAD
+%\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-03-20-14-47.png}
+%=======
 \includegraphics[width=0.4\linewidth]{pictures/home.png}
+%>>>>>>> 0265efb2a8d0fad380ad6ee2db01f8d521764145
 \caption{\label{fig:Screen1}Main Screen.}
 \end{figure}
 \end{center}
 
+%<<<<<<< HEAD
+%To make call via VoIP (Voice over Internet Protocol), type in (where it's written "Number or address") the sip address of the person you would like to contact and press the dial button like screen two:
+%=======
 To make call via VoIP (Voice over Internet Protocol), type in (where it's written "Number or address") the sip address or the phone number of the person you would like to contact and press the dial button like screen two:
+%>>>>>>> 0265efb2a8d0fad380ad6ee2db01f8d521764145
 
 \begin{center}
 \begin{figure}[H]
 \centering
+%<<<<<<< HEAD
+%\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-03-20-16-19.png}
+%=======
 \includegraphics[width=0.4\linewidth]{pictures/Screenshot_2015-08-04-05-38-27.png}
+%>>>>>>> 0265efb2a8d0fad380ad6ee2db01f8d521764145
 \caption{\label{fig:Screen2}Screen two.}
 \end{figure}
 \end{center}
@@ -179,7 +198,11 @@ To start chatting just click on the chat button in the menu at bottom of the scr
 \begin{center}
 \begin{figure}[H]
 \centering
+%<<<<<<< HEAD
+%\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-03-20-28-33.png}
+%=======
 \includegraphics[width=0.4\linewidth]{pictures/s1.jpg}
+%>>>>>>> 0265efb2a8d0fad380ad6ee2db01f8d521764145
 \caption{\label{fig:Screen3}Screen three.}
 \end{figure}
 \end{center}
@@ -189,7 +212,11 @@ Now click on the "new conversation" button at the top left position which will t
 \begin{center}
 \begin{figure}[H]
 \centering
+%<<<<<<< HEAD
+%\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-03-20-38-20.png}
+%=======
 \includegraphics[width=0.4\linewidth]{pictures/Screenshot_2015-08-04-05-37-18.png}
+%>>>>>>> 0265efb2a8d0fad380ad6ee2db01f8d521764145
 \caption{\label{fig:Screen4}Contact List.}
 \end{figure}
 \end{center}
@@ -199,7 +226,11 @@ Selecting a contact to chat with should now take you to the chatroom which is th
 \begin{center}
 \begin{figure}[H]
 \centering
+%<<<<<<< HEAD
+%\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-03-20-40-02.png}
+%=======
 \includegraphics[width=0.4\linewidth]{pictures/Screenshot_2015-08-04-05-37-53.png}
+%>>>>>>> 0265efb2a8d0fad380ad6ee2db01f8d521764145
 \caption{\label{fig:Screen5}Chatroom.}
 \end{figure}
 \end{center}
@@ -209,7 +240,11 @@ There is a small text box at the bottom of the chatroom that can be used to comp
 \begin{center}
 \begin{figure}[H]
 \centering
+%<<<<<<< HEAD
+%\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-03-20-39-25.png}
+%=======
 \includegraphics[width=0.4\linewidth]{pictures/Screenshot_2015-08-04-05-38-27.png}
+%>>>>>>> 0265efb2a8d0fad380ad6ee2db01f8d521764145
 \caption{\label{fig:Screen6}Chatroom 2.}
 \end{figure}
 \end{center}
@@ -219,7 +254,11 @@ To add new contacts via linphone just go back to the main screen and click on th
 \begin{center}
 \begin{figure}[H]
 \centering
+%<<<<<<< HEAD
+%\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-03-20-34-22.png}
+%=======
 \includegraphics[width=0.4\linewidth]{pictures/Screenshot_2015-08-04-05-39-24.png}
+%>>>>>>> 0265efb2a8d0fad380ad6ee2db01f8d521764145
 \caption{\label{fig:Screen7}Create New Contact.}
 \end{figure}
 \end{center}
@@ -229,7 +268,11 @@ Now you can fill in the details required in the form and then click on Okay to s
 \begin{center}
 \begin{figure}[H]
 \centering
+%<<<<<<< HEAD
+%\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-03-20-35-39.png}
+%=======
 \includegraphics[width=0.4\linewidth]{pictures/Screenshot_2015-08-04-05-40-26.png}
+%>>>>>>> 0265efb2a8d0fad380ad6ee2db01f8d521764145
 \caption{\label{fig:Screen8}Create New Contact with details.}
 \end{figure}
 \end{center}
@@ -239,12 +282,20 @@ Your call logs can be found by going back to the main screen and then clicking o
 \begin{center}
 \begin{figure}[H]
 \centering
+%<<<<<<< HEAD
+%\includegraphics[width=0.7\linewidth]{pictures/Screenshot_2015-08-03-20-40-17.png}
+%=======
 \includegraphics[width=0.4\linewidth]{pictures/Screenshot_2015-08-04-05-42-53.png}
+%>>>>>>> 0265efb2a8d0fad380ad6ee2db01f8d521764145
 \caption{\label{fig:Screen9}Call Log History.}
 \end{figure}
 \end{center}
 
 \newpage
+%<<<<<<< HEAD
+%\subsection{System Configuration}
+%Tsepo Edit Here
+%=======
 \subsection{Troubleshooting}
 \textbf{Troubleshooting, FAQ and Problems} \\
 
@@ -278,6 +329,7 @@ Please note: you can't access 10111 and other emergency service numbers through 
 \textbf{Bugs reporting and suggestions} \\
 First go to linphone's home page at http://www.linphone.org to check if you have the
 latest version of linphone. \\
+%>>>>>>> 0265efb2a8d0fad380ad6ee2db01f8d521764145
 
 \end{document}
 
