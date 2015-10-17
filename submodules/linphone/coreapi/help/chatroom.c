@@ -40,6 +40,13 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 #include <signal.h>
 
+#include "aes256.c"
+
+#define DUMP(s, i, buf, sz)  {printf(s);                   \
+                              for (i = 0; i < (sz);i++)    \
+                                  printf("%02x ", buf[i]); \
+                              printf("\n");}
+
 static bool_t running=TRUE;
 
 static void stop(int signum){
@@ -52,12 +59,17 @@ static void stop(int signum){
 
 void message_received(LinphoneCore *lc, LinphoneChatRoom *room, LinphoneChatMessage *message) {
 	//printf(" Message [%s] received from [%s] \n",message,linphone_address_as_string (from));
+	//2(&ctx, key);
+	//aes256_decrypt_ecb(&ctx, buf);
+	//DUMP("dec: ", i, buf, sizeof(buf));
+	
 	linphone_chat_room_print(lc, room, message);
 }
 
 
 LinphoneCore *lc;
 int main(int argc, char *argv[]){
+	
 	LinphoneCoreVTable vtable={0};
 	
 	//char* my_id = NULL;
@@ -75,6 +87,17 @@ int main(int argc, char *argv[]){
 	char* ke = NULL;
 	
 	char* nako_ke = NULL;
+	
+	char* nakoke = NULL;
+	
+	aes256_context ctx; 
+	uint8_t key[32];
+	uint8_t *buf, a;
+	
+	/* put a test vector */
+	//for (a = 0; a < sizeof(buf);a++) buf[a] = a * 16 + a;
+	for (a = 0; a < sizeof(key);a++) key[a] = a;
+
 	
 	/* takes   sip uri  identity from the command line arguments */
 	if (argc > 1){
@@ -127,6 +150,7 @@ int main(int argc, char *argv[]){
 	//linphone_chat_room_add_participant(chat_room, group_member);
 	
 	if (chat_room != NULL) {
+		
 		time(&rawtime);
 		timeinfo = localtime(&rawtime);
 		
@@ -138,8 +162,34 @@ int main(int argc, char *argv[]){
 		strcpy(nako_ke, ke);
 		strcat(nako_ke, nako);
 		
+		/*allocate buffer array dynamically, depending on the string*/
+		buf = malloc(strlen(nako_ke) + 1);
+		nakoke = malloc(strlen(nako_ke) + 1);
+		
+		/*copy contents of message to buffer array*/
+		memcpy(buf, nako_ke, strlen(nako_ke) + 1);
+		//DUMP("buf before encrypting: ", i, buf,strlen(nako_ke) + 1);
+		
+		/*encrypt the message*/
+		aes256_init(&ctx, key);
+		aes256_encrypt_ecb(&ctx, buf);
+		
+		//DUMP("buf after encrypting: ", i, buf,strlen(nako_ke) + 1);
+		
+		memcpy(nakoke, buf, strlen(nako_ke) + 1);
+		//DUMP("nako_ke: ", i, nakoke,strlen(nakoke) + 1);
+		
+		/*decrypt message*/
+		//aes256_init(&ctx, key);
+		//aes256_decrypt_ecb(&ctx, buf);
+		
+		//DUMP("buf after decrypting: ", i, buf,strlen(nako_ke) + 1);
+		//memcpy(nakoke, buf,strlen(nako_ke) + 1);
+		//DUMP("key: ", i, key,32);
+		
 		//msg = linphone_group_chat_room_create_message(chat_room, nako_ke);
-		linphone_group_chat_room_send_message(chat_room, nako_ke); /*sending message*/
+		
+		linphone_group_chat_room_send_message(chat_room, nakoke); /*sending message*/
 
 		/* main loop for receiving incoming messages and doing background linphone core work: */
 		while(running){
@@ -157,6 +207,7 @@ int main(int argc, char *argv[]){
 		
 	printf("Shutting down...\n");
 	linphone_core_destroy(lc);
+	aes256_done(&ctx);
 	printf("Exited\n");
 	return 0;
 }
