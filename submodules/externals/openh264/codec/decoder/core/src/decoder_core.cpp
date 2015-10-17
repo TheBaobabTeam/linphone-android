@@ -2174,8 +2174,8 @@ int32_t DecodeCurrentAccessUnit (PWelsDecoderContext pCtx, uint8_t** ppDst, SBuf
       if ((iLastIdD < 0) ||  //case 1: first layer
           (iLastIdD == iCurrIdD)) { //case 2: same uiDId
         InitDqLayerInfo (dq_cur, &pLayerInfo, pNalCur, pCtx->pDec);
-        if (0){
-        //if (!dq_cur->sLayerInfo.pSps->bGapsInFrameNumValueAllowedFlag) {
+
+        if (!dq_cur->sLayerInfo.pSps->bGapsInFrameNumValueAllowedFlag) {
           const bool kbIdrFlag = dq_cur->sLayerInfo.sNalHeaderExt.bIdrFlag
                                  || (dq_cur->sLayerInfo.sNalHeaderExt.sNalUnitHeader.eNalUnitType == NAL_UNIT_CODED_SLICE_IDR);
           // Subclause 8.2.5.2 Decoding process for gaps in frame_num
