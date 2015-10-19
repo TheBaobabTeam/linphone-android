@@ -184,7 +184,8 @@ public class AddMembersFragment extends Fragment implements OnClickListener {
 		
 		final List<String> sipAdress = new ArrayList<String>();
 		myBtn = (Button)getActivity().findViewById(R.id.findSelected);
-		myBtn.setTextColor(Color.BLACK);
+		//myBtn.setTextColor(Color.BLACK);
+		//myBtn .setBackgroundColor(Color.BLACK);
 		myBtn.setOnClickListener(new OnClickListener(){
 
 			@Override
@@ -262,6 +263,8 @@ public class AddMembersFragment extends Fragment implements OnClickListener {
 			//String toDisplay = "Group Name : " + groupName + "\nGroup Members: " + Arrays.toString(groupMembers) + "\nGroup Size: " + (sipAdress.size() + 1);
 			//Toast.makeText(getActivity().getApplicationContext(), toDisplay, Toast.LENGTH_LONG).show();
 			
+			
+			//LinphoneActivity.instance().testGroupDetails();
 			LinphoneActivity.instance().createGroupChat(groupName, groupMembers, groupSize);
 			
 			//LinphoneActivity.instance().goToChatList();

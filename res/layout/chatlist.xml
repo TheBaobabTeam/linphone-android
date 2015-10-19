@@ -7,7 +7,7 @@
     
     <LinearLayout 
 	    android:layout_width="match_parent"
-	    android:layout_height="100dp"
+	    android:layout_height="80dp"
 	    android:orientation="vertical"
 	    android:background="@drawable/background_top_bar">
 
@@ -19,8 +19,8 @@
             android:gravity="center"
             android:text="@string/linphone"
             android:textColor="@color/text_switch_selected"
-            android:textSize="25sp"
-            android:textStyle="normal|bold|italic"
+            android:textSize="20sp"
+            android:textStyle="normal|bold"
             android:typeface="serif" />
         
         <LinearLayout 

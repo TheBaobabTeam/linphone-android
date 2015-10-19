@@ -5,42 +5,53 @@
     android:layout_height="match_parent"
     android:background="@drawable/background" >
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/topbar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal"
         android:background="@drawable/background_top_bar" >
 
-        <RelativeLayout
-                android:layout_width="80dp"
-	    		android:layout_height="80dp" >
 	       <TextView
 	           android:id="@+id/back"
-	            android:layout_width="50dp"
-	            android:layout_height="55dp"
-	            android:layout_marginLeft="0dp"
-	            android:background="@drawable/group_chat_back" />
-	       </RelativeLayout>
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:layout_alignParentBottom="true"
+	           android:layout_alignParentLeft="true"
+	           android:layout_alignParentStart="true"
+	           android:layout_alignParentTop="true"
+	           android:background="@drawable/group_chat_back" />
 
-        <RelativeLayout
-                android:layout_width="80dp"
-	    		android:layout_height="80dp"
-	    		android:layout_marginLeft="225dp" >
-	     <TextView
-	         android:id="@+id/next" 
-	         android:layout_width="50dp"
-	         android:layout_height="55dp"
-	        android:background="@drawable/group_chat_next" />
-	     </RelativeLayout>
+	       <TextView
+	           android:id="@+id/next"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:layout_alignBottom="@+id/back"
+	           android:layout_alignParentEnd="true"
+	           android:layout_alignParentRight="true"
+	           android:layout_alignParentTop="true"
+	           android:layout_alignParentBottom="true"
+	           android:background="@drawable/group_chat_next" />
+
+	       <TextView
+	           android:id="@+id/newGroup"
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:layout_centerHorizontal="true"
+	           android:layout_centerVertical="true"
+	           android:gravity="center"
+	           android:text="@string/newGroup"
+	           android:textColor="@color/text_switch_selected"
+	           android:textSize="20sp"
+	           android:textStyle="normal|bold" />
         
-    </LinearLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="70dp"
         android:orientation="vertical" >
 
         <LinearLayout
@@ -72,18 +83,47 @@
         android:layout_marginTop="30dp" />
 
     </LinearLayout>
-    
-    <EditText
-        android:id="@+id/groupName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/GroupIcon"
-        android:layout_marginTop="60dp"
-        android:ems="10"
-        android:hint="@string/groupchat_name"
-        android:textColor="@color/edittextcolor" />
 
-    </LinearLayout>
+        <EditText
+            android:id="@+id/groupName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:ems="10"
+            android:hint="@string/groupchat_name"
+            android:textColor="@color/edittextcolor" >
+
+            <requestFocus />
+        </EditText>
+
+	</LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_top_bar"
+        android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/aboutLinphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+        		android:layout_alignParentTop="true"
+                android:background="@drawable/group_chat_info" />
+
+	        <TextView
+	            android:id="@+id/helpLinphone"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentEnd="true"
+	            android:layout_alignParentRight="true"
+	            android:layout_alignParentTop="true"
+	            android:background="@drawable/group_chat_help" />
+
+    </RelativeLayout>
 
 </RelativeLayout>

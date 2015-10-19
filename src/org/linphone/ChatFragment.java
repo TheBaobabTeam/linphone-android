@@ -156,7 +156,7 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 		progressBar = (ProgressBar) view.findViewById(R.id.groupprogressbar);
 		groupNameView = (TextView) view.findViewById(R.id.groupname);
 		//groupNameView.setText(displayName);
-		participantsView = (TextView) view.findViewById(R.id.grouppartic);
+	/*	participantsView = (TextView) view.findViewById(R.id.grouppartic);
 		
 		String members = "";
 		List<Contact> list = new ArrayList<Contact>();
@@ -166,7 +166,8 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 			members += list.get(i).getName() + ",";
 		}
 		
-		participantsView.setText(members);
+		participantsView.setText(members);*/
+		
 		//Set OnClickListeners and Initialize UI
 		topBar = (LinearLayout) view.findViewById(R.id.grouptopbar);
 		//topBar.setOnClickListener(this);

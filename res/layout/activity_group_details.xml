@@ -7,71 +7,69 @@
     android:orientation="vertical"
     tools:context="org.linphone.groupchat.Group_details" >
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/topbar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:background="@drawable/background_top_bar" >
+        android:background="@drawable/background_top_bar"
+        android:orientation="horizontal" >
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/back"
             android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:orientation="horizontal"
-		    android:gravity="left" >
-		    
-            <TextView
-                android:id="@+id/back"
-		        android:layout_width="50dp"
-		        android:layout_height="55dp"
-		        android:layout_marginLeft="10dp"
-		        android:background="@drawable/group_chat_back" />
-         </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/group_chat_back" />
 
         <TextView
             android:id="@+id/groupdetailsname"
             android:layout_width="148dp"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/textView1"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="28dp"
+            android:layout_centerVertical="true"
             android:gravity="center"
             android:text="Group Name"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/text_switch_selected"
-            android:textSize="30dp" />
-    </LinearLayout>
+            android:textSize="20dp" />
+    </RelativeLayout>
 
-	<TextView
-	    android:id="@+id/textView1"
-	    android:layout_width="match_parent"
-	    android:layout_height="50dp"
-	    android:layout_marginTop="14dp"
-	    android:text="@string/Add_participates"
-	    android:textColor="@color/edittextcolor"
-	    android:textColorHint="@color/text_switch_selected"
-	    android:textSize="20dp" />
-	
+    <Button
+        android:id="@+id/AddParticipant"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_top_bar"
+        android:text="@string/Add_participates"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="normal" />
+
     <ListView
         android:id="@+id/groupDetails"
         android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_height="300dp"
         android:cacheColorHint="@color/transparent"
-        android:choiceMode="multipleChoice"
-        android:divider="@android:color/darker_gray"
-        android:dividerHeight="1dp"
-        android:fastScrollAlwaysVisible="true"
-        android:fastScrollEnabled="true" >
+        android:fastScrollEnabled="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" >
+
     </ListView>
-    
+
     <Button
         android:id="@+id/exitGroup"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/RED"
+        android:layout_gravity="center"
+        android:background="@drawable/background_top_bar"
         android:text="@string/Exit_Group"
-        android:textColorHint="@color/RED" />
-
-    
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="normal" />
 
 </LinearLayout>

@@ -4,24 +4,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.linphone.Contact;
+import org.linphone.LinphoneActivity;
 import org.linphone.R;
 
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.view.ContextMenu.ContextMenuInfo;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.AdapterView.AdapterContextMenuInfo;
 
 public class GroupdetailsFragment extends Fragment implements OnClickListener {
 	
 	private static GroupdetailsFragment instance;
 	private TextView back;
+	private Button AddParticipant, ExitGroup;
 	private MyAdapter dataAdapter = null;
 	
 	//Check if its instantiated
@@ -39,6 +46,29 @@ public class GroupdetailsFragment extends Fragment implements OnClickListener {
 		
 		// Retain the fragment across configuration changes
 		setRetainInstance(true);
+		
+		//Add more members to a group
+		AddParticipant = (Button)view.findViewById(R.id.AddParticipant);
+		AddParticipant.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+		//Exit or delete group
+		ExitGroup = (Button)view.findViewById(R.id.exitGroup);
+		ExitGroup.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
 		return view;
 	}
 
@@ -56,6 +86,7 @@ public class GroupdetailsFragment extends Fragment implements OnClickListener {
 		//Generate list View from ArrayList
 		  displayListView();
 	}
+
 	
 	//Custom Adapter
 		private class MyAdapter extends ArrayAdapter<Contact>{
@@ -69,6 +100,7 @@ public class GroupdetailsFragment extends Fragment implements OnClickListener {
 			
 			private class ViewHolder{
 				TextView name;
+				TextView delete;
 				}
 			
 			@Override
@@ -82,6 +114,9 @@ public class GroupdetailsFragment extends Fragment implements OnClickListener {
 					holder = new ViewHolder();
 					holder.name = (TextView)v.findViewById(R.id.name);
 					holder.name.setTextColor(Color.BLACK);
+					
+					holder.delete = (TextView)v.findViewById(R.id.deleteParticipant);
+					
 					v.setTag(holder);
 					}
 				else{
@@ -91,6 +126,18 @@ public class GroupdetailsFragment extends Fragment implements OnClickListener {
 				Contact contact = contactsList.get(position);
 				holder.name.setText(contact.getName());
 				holder.name.setTag(contact);
+				
+				
+				//delete contact
+				holder.delete.setOnClickListener(new View.OnClickListener(){
+
+					@Override
+					public void onClick(View arg0) {
+						// TODO Auto-generated method stub
+						
+					}
+					
+				});
 				
 				return v;
 				}

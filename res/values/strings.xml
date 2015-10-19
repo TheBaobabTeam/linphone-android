@@ -431,6 +431,8 @@
     <string name="title_activity_group_details">Group_details</string>
     <string name="title_activity_welcome">MainActivity</string>
    <string name="linphone">Linphone</string>
+   <string name="linphoneGC">Linphone Group Chat</string>
+   <string name="newGroup">New Group</string>
    <string name="aboutGC">Linphone group chat is specifically an  app that 
 		extend Linphone’s Instant Messaging (IM) implementation on Android 
 		platforms to include group chat and to implement other minor improvements 
@@ -439,5 +441,6 @@
     <string name="title_activity_voice_main">VoiceMainActivity</string>
     <string name="Add_participates">Add Participates</string>
     <string name="Exit_Group">Exit Group</string>
+    <string name="contactsSelected">Contacts that were selected...</string>
 
 </resources>

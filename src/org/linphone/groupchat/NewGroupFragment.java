@@ -39,7 +39,7 @@ public class NewGroupFragment extends Fragment implements OnClickListener {
 	
 	private static final int REQUEST_CAMERA = 2;
 	private static final int SELECT_FILE = 1;
-	private TextView back, next;
+	private TextView back, next, help, about;
 	private TextWatcher textWatcher;
 	private EditText group_name;
 	private ImageView im;
@@ -69,6 +69,23 @@ public class NewGroupFragment extends Fragment implements OnClickListener {
 				}
 			});
 		}
+		
+		about = (TextView)view.findViewById(R.id.aboutLinphone);
+		about.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				LinphoneActivity.instance().aboutScreen();
+				}
+			});
+		
+		
+		help = (TextView) view.findViewById(R.id.helpLinphone);
+		help.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				LinphoneActivity.instance().helpScreen();
+				}
+			});
 		
 		textWatcher = new TextWatcher() {
 			public void afterTextChanged(Editable arg0) {}
