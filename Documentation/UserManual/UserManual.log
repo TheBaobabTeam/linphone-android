@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.27)  17 OCT 2015 16:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.27)  17 OCT 2015 19:54
 entering extended mode
 **UserManual.tex
 
@@ -286,7 +286,14 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
 (C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\UserManual\UserM
-anual.aux)
+anual.aux
+
+LaTeX Warning: Label `fig:Agile' multiply defined.
+
+
+LaTeX Warning: Label `fig:Agile' multiply defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
@@ -421,12 +428,12 @@ Underfull \hbox (badness 5548) in paragraph at lines 47--47
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
@@ -434,22 +441,22 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.70 
+l.65 
       [1] <./pictures/android.jpg, id=20, 602.25pt x 301.125pt>
 File: ./pictures/android.jpg Graphic file (type jpg)
 
 <use ./pictures/android.jpg>
-Package pdftex.def Info: ./pictures/android.jpg used on input line 74.
+Package pdftex.def Info: ./pictures/android.jpg used on input line 69.
 (pdftex.def)             Requested size: 296.84093pt x 148.42554pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
 <./pictures/sip.jpg, id=21, 512.66531pt x 331.2375pt>
 File: ./pictures/sip.jpg Graphic file (type jpg)
  <use ./pictures/sip.jpg>
-Package pdftex.def Info: ./pictures/sip.jpg used on input line 86.
+Package pdftex.def Info: ./pictures/sip.jpg used on input line 81.
 (pdftex.def)             Requested size: 296.84093pt x 191.7944pt.
 
 [2 <C:/Users/Eppy/Documents/GitHub/linphone-android/Documentation/UserManual/pi
@@ -459,22 +466,22 @@ ion/UserManual/pictures/sip.jpg>] [3]
 File: ./pictures/LinphoneSip.jpg Graphic file (type jpg)
 
 <use ./pictures/LinphoneSip.jpg>
-Package pdftex.def Info: ./pictures/LinphoneSip.jpg used on input line 99.
+Package pdftex.def Info: ./pictures/LinphoneSip.jpg used on input line 94.
 (pdftex.def)             Requested size: 169.62154pt x 254.45035pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 109.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 104.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 109.
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no œ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no  in font cmr10!
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 104.
+Missing character: There is no â in font cmbx10!
+Missing character: There is no € in font cmbx10!
+Missing character: There is no œ in font cmbx10!
+Missing character: There is no â in font cmbx10!
+Missing character: There is no € in font cmbx10!
+Missing character: There is no  in font cmbx10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no œ in font cmr10!
@@ -503,30 +510,30 @@ Missing character: There is no  in font cmr10!
 ictures/LinphoneSip.jpg>] <pictures/home.png, id=48, 542.025pt x 963.6pt>
 File: pictures/home.png Graphic file (type png)
  <use pictures/home.png>
-Package pdftex.def Info: pictures/home.png used on input line 130.
+Package pdftex.def Info: pictures/home.png used on input line 125.
 (pdftex.def)             Requested size: 271.01183pt x 481.79883pt.
 
 <pictures/settings.png, id=49, 542.025pt x 963.6pt>
 File: pictures/settings.png Graphic file (type png)
 
 <use pictures/settings.png>
-Package pdftex.def Info: pictures/settings.png used on input line 135.
+Package pdftex.def Info: pictures/settings.png used on input line 130.
 (pdftex.def)             Requested size: 271.01183pt x 481.79883pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
 
  []
 
 <pictures/welcome.png, id=50, 542.025pt x 963.6pt>
 File: pictures/welcome.png Graphic file (type png)
  <use pictures/welcome.png>
-Package pdftex.def Info: pictures/welcome.png used on input line 148.
+Package pdftex.def Info: pictures/welcome.png used on input line 143.
 (pdftex.def)             Requested size: 271.01183pt x 481.79883pt.
 
 <pictures/options.png, id=51, 542.025pt x 963.6pt>
 File: pictures/options.png Graphic file (type png)
  <use pictures/options.png>
-Package pdftex.def Info: pictures/options.png used on input line 153.
+Package pdftex.def Info: pictures/options.png used on input line 148.
 (pdftex.def)             Requested size: 271.01183pt x 481.79883pt.
 
 [5 <C:/Users/Eppy/Documents/GitHub/linphone-android/Documentation/UserManual/pi
@@ -537,141 +544,80 @@ tHub/linphone-android/Documentation/UserManual/pictures/options.png>]
 File: pictures/home.png Graphic file (type png)
 
 <use pictures/home.png>
-Package pdftex.def Info: pictures/home.png used on input line 172.
+Package pdftex.def Info: pictures/home.png used on input line 165.
 (pdftex.def)             Requested size: 169.62154pt x 301.55066pt.
-
-<pictures/Screenshot_2015-08-04-05-38-27.png, id=58, 542.025pt x 963.6pt>
-File: pictures/Screenshot_2015-08-04-05-38-27.png Graphic file (type png)
-
-<use pictures/Screenshot_2015-08-04-05-38-27.png>
-Package pdftex.def Info: pictures/Screenshot_2015-08-04-05-38-27.png used on in
-put line 190.
-(pdftex.def)             Requested size: 169.62154pt x 301.55066pt.
- [6]
-<pictures/s1.jpg, id=66, 722.7pt x 1284.8pt>
+ <pictures/s1.jpg, id=58, 722.7pt x 1284.8pt>
 File: pictures/s1.jpg Graphic file (type jpg)
- <use pictures/s1.jpg>
-Package pdftex.def Info: pictures/s1.jpg used on input line 204.
+
+<use pictures/s1.jpg>
+Package pdftex.def Info: pictures/s1.jpg used on input line 190.
 (pdftex.def)             Requested size: 169.62154pt x 301.53595pt.
- [7 <C:/Users/Eppy/Documents/GitHub/linphone-android/Documentation/UserManual/p
-ictures/Screenshot_2015-08-04-05-38-27.png>]
-<pictures/Screenshot_2015-08-04-05-37-18.png, id=72, 542.025pt x 963.6pt>
-File: pictures/Screenshot_2015-08-04-05-37-18.png Graphic file (type png)
-
-<use pictures/Screenshot_2015-08-04-05-37-18.png>
-Package pdftex.def Info: pictures/Screenshot_2015-08-04-05-37-18.png used on in
-put line 218.
-(pdftex.def)             Requested size: 169.62154pt x 301.55066pt.
- [8 <C:/Users/Eppy/Documents/GitHub/linphone-android/Documentation/UserManual/p
-ictures/s1.jpg>]
-<pictures/Screenshot_2015-08-04-05-37-53.png, id=78, 542.025pt x 963.6pt>
-File: pictures/Screenshot_2015-08-04-05-37-53.png Graphic file (type png)
-
-<use pictures/Screenshot_2015-08-04-05-37-53.png>
-Package pdftex.def Info: pictures/Screenshot_2015-08-04-05-37-53.png used on in
-put line 232.
-(pdftex.def)             Requested size: 169.62154pt x 301.55066pt.
- [9 <C:/Users/Eppy/Documents/GitHub/linphone-android/Documentation/UserManual/p
-ictures/Screenshot_2015-08-04-05-37-18.png>]
-File: pictures/Screenshot_2015-08-04-05-38-27.png Graphic file (type png)
- <use pictures/Screenshot_2015-08-04-05-38-27.png>
-Package pdftex.def Info: pictures/Screenshot_2015-08-04-05-38-27.png used on in
-put line 246.
-(pdftex.def)             Requested size: 169.62154pt x 301.55066pt.
- [10 <C:/Users/Eppy/Documents/GitHub/linphone-android/Documentation/UserManual/
-pictures/Screenshot_2015-08-04-05-37-53.png>]
-<pictures/Screenshot_2015-08-04-05-39-24.png, id=89, 542.025pt x 963.6pt>
-File: pictures/Screenshot_2015-08-04-05-39-24.png Graphic file (type png)
-
-<use pictures/Screenshot_2015-08-04-05-39-24.png>
-Package pdftex.def Info: pictures/Screenshot_2015-08-04-05-39-24.png used on in
-put line 260.
-(pdftex.def)             Requested size: 169.62154pt x 301.55066pt.
- [11]
-<pictures/Screenshot_2015-08-04-05-40-26.png, id=95, 542.025pt x 963.6pt>
-File: pictures/Screenshot_2015-08-04-05-40-26.png Graphic file (type png)
-
-<use pictures/Screenshot_2015-08-04-05-40-26.png>
-Package pdftex.def Info: pictures/Screenshot_2015-08-04-05-40-26.png used on in
-put line 274.
-(pdftex.def)             Requested size: 169.62154pt x 301.55066pt.
- [12 <C:/Users/Eppy/Documents/GitHub/linphone-android/Documentation/UserManual/
-pictures/Screenshot_2015-08-04-05-39-24.png>]
-<pictures/Screenshot_2015-08-04-05-42-53.png, id=102, 542.025pt x 963.6pt>
-File: pictures/Screenshot_2015-08-04-05-42-53.png Graphic file (type png)
-
-<use pictures/Screenshot_2015-08-04-05-42-53.png>
-Package pdftex.def Info: pictures/Screenshot_2015-08-04-05-42-53.png used on in
-put line 288.
-(pdftex.def)             Requested size: 169.62154pt x 301.55066pt.
- [13 <C:/Users/Eppy/Documents/GitHub/linphone-android/Documentation/UserManual/
-pictures/Screenshot_2015-08-04-05-40-26.png>] [14 <C:/Users/Eppy/Documents/GitH
-ub/linphone-android/Documentation/UserManual/pictures/Screenshot_2015-08-04-05-
-42-53.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 300--301
+ [6] [7 <C:/Users/Eppy/Documents/GitHub/linphone-android/Documentation/UserManu
+al/pictures/s1.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 257--258
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--309
+Underfull \hbox (badness 10000) in paragraph at lines 259--266
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--313
+Underfull \hbox (badness 10000) in paragraph at lines 267--270
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--316
+Underfull \hbox (badness 10000) in paragraph at lines 271--273
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--322
+Underfull \hbox (badness 10000) in paragraph at lines 274--279
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 323--328
+Underfull \hbox (badness 10000) in paragraph at lines 280--285
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 329--333
+Underfull \hbox (badness 10000) in paragraph at lines 286--289
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 334.
-[15]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 334.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 290.
+[8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 290.
 
 (C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\UserManual\UserM
 anual.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 334.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 334.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 290.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 290.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 334.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 290.
  ) 
 Here is how much of TeX's memory you used:
- 7682 strings out of 493921
- 116346 string characters out of 3147285
- 210046 words of memory out of 3000000
- 10859 multiletter control sequences out of 15000+200000
+ 7631 strings out of 493921
+ 114740 string characters out of 3147285
+ 210333 words of memory out of 3000000
+ 10828 multiletter control sequences out of 15000+200000
  8202 words of font info for 29 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 41i,9n,38p,866b,398s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,9n,38p,866b,387s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on UserManual.pdf (16 pages, 1183169 bytes).
+Output written on UserManual.pdf (9 pages, 913631 bytes).
 PDF statistics:
- 183 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
- 177 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 137 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 500000)
+ 147 words of extra memory for PDF output out of 10000 (max. 10000000)
 
