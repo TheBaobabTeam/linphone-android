@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.27)  21 OCT 2015 18:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.27)  21 OCT 2015 14:49
 entering extended mode
-**UserManual.tex
+**SprintFive.tex
 
-(C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\UserManual\UserM
-anual.tex
+(C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\SprintReport5\Sp
+rintFive.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -285,15 +285,8 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-(C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\UserManual\UserM
-anual.aux
-
-LaTeX Warning: Label `fig:Agile' multiply defined.
-
-
-LaTeX Warning: Label `fig:Agile' multiply defined.
-
-)
+(C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\SprintReport5\Sp
+rintFive.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
@@ -373,8 +366,8 @@ LaTeX Info: Redefining \nameref on input line 18.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-(C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\UserManual\title
-Page.tex <pictures/logo.jpg, id=3, 877.02657pt x 325.215pt>
+(C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\SprintReport5\ti
+tlePage.tex <pictures/logo.jpg, id=3, 877.02657pt x 325.215pt>
 File: pictures/logo.jpg Graphic file (type jpg)
 
 <use pictures/logo.jpg>
@@ -387,63 +380,29 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 8.
 
-Overfull \hbox (24.54762pt too wide) in paragraph at lines 8--22
+Overfull \hbox (24.54762pt too wide) in paragraph at lines 8--21
  []
  []
 
 <pictures/Team.jpg, id=4, 975.645pt x 549.05125pt>
 File: pictures/Team.jpg Graphic file (type jpg)
  <use pictures/Team.jpg>
-Package pdftex.def Info: pictures/Team.jpg used on input line 24.
+Package pdftex.def Info: pictures/Team.jpg used on input line 23.
 (pdftex.def)             Requested size: 351.31378pt x 197.70018pt.
 
 [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Eppy/Documents/G
-itHub/linphone-android/Documentation/UserManual/pictures/logo.jpg> <C:/Users/Ep
-py/Documents/GitHub/linphone-android/Documentation/UserManual/pictures/Team.jpg
->])
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 36.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 36.
+itHub/linphone-android/Documentation/SprintReport5/pictures/logo.jpg> <C:/Users
+/Eppy/Documents/GitHub/linphone-android/Documentation/SprintReport5/pictures/Te
+am.jpg>]) <./pictures/backlog.jpg, id=13, 955.31906pt x 478.78876pt>
+File: ./pictures/backlog.jpg Graphic file (type jpg)
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
-[]|\OT1/cmr/m/n/10 Linphone Group
- []
+<use ./pictures/backlog.jpg>
+Package pdftex.def Info: ./pictures/backlog.jpg used on input line 27.
+(pdftex.def)             Requested size: 424.06033pt x 212.53065pt.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--45
-[]|\OT1/cmr/m/n/10 Client rep-re-sen-ta-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 47--47
-[]|\OT1/cmr/m/n/10 Ephiphania Mu-
- []
-
-
-Underfull \hbox (badness 5548) in paragraph at lines 47--47
-\OT1/cmr/m/n/10 nava and Potego
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
@@ -451,196 +410,158 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.63 
-      [1]
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
+l.32 \newpage
+              [1 <C:/Users/Eppy/Documents/GitHub/linphone-android/Documentation
+/SprintReport5/pictures/backlog.jpg>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 41.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 41.
 
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
+[]|\OT1/cmr/m/n/10 Client rep-re-sen-ta-
  []
 
-<./pictures/android.jpg, id=20, 602.25pt x 301.125pt>
-File: ./pictures/android.jpg Graphic file (type jpg)
 
-<use ./pictures/android.jpg>
-Package pdftex.def Info: ./pictures/android.jpg used on input line 75.
-(pdftex.def)             Requested size: 296.84093pt x 148.42554pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
-
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
+[]|\OT1/cmr/m/n/10 Ephiphania Mu-
  []
 
-<./pictures/sip.jpg, id=21, 512.66531pt x 331.2375pt>
-File: ./pictures/sip.jpg Graphic file (type jpg)
- <use ./pictures/sip.jpg>
-Package pdftex.def Info: ./pictures/sip.jpg used on input line 87.
-(pdftex.def)             Requested size: 212.03017pt x 136.996pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--102
-
+Underfull \hbox (badness 5548) in paragraph at lines 50--50
+\OT1/cmr/m/n/10 nava and Potego
  []
 
-[2 <C:/Users/Eppy/Documents/GitHub/linphone-android/Documentation/UserManual/pi
-ctures/android.jpg> <C:/Users/Eppy/Documents/GitHub/linphone-android/Documentat
-ion/UserManual/pictures/sip.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 103--105
 
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+[]|\OT1/cmr/m/n/10 Environment
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 111.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 111.
-Missing character: There is no ‚ in font cmbx10!
-Missing character: There is no Ä in font cmbx10!
-Missing character: There is no ú in font cmbx10!
-Missing character: There is no ‚ in font cmbx10!
-Missing character: There is no Ä in font cmbx10!
-Missing character: There is no ù in font cmbx10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-
-<pictures/home.png, id=32, 542.025pt x 963.6pt>
-File: pictures/home.png Graphic file (type png)
- <use pictures/home.png>
-Package pdftex.def Info: pictures/home.png used on input line 132.
-(pdftex.def)             Requested size: 271.01183pt x 481.79883pt.
-
-<pictures/settings.png, id=33, 542.025pt x 963.6pt>
-File: pictures/settings.png Graphic file (type png)
-
-<use pictures/settings.png>
-Package pdftex.def Info: pictures/settings.png used on input line 137.
-(pdftex.def)             Requested size: 271.01183pt x 481.79883pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
-
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\OT1/cmr/m/n/10 User In-ter-face
  []
 
-<pictures/welcome.png, id=34, 542.025pt x 963.6pt>
-File: pictures/welcome.png Graphic file (type png)
- <use pictures/welcome.png>
-Package pdftex.def Info: pictures/welcome.png used on input line 150.
-(pdftex.def)             Requested size: 271.01183pt x 481.79883pt.
 
-<pictures/options.png, id=35, 542.025pt x 963.6pt>
-File: pictures/options.png Graphic file (type png)
- <use pictures/options.png>
-Package pdftex.def Info: pictures/options.png used on input line 155.
-(pdftex.def)             Requested size: 271.01183pt x 481.79883pt.
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+\OT1/cmr/m/n/10 and Cre-ate
+ []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[3]
-File: pictures/home.png Graphic file (type png)
- <use pictures/home.png>
-Package pdftex.def Info: pictures/home.png used on input line 172.
-(pdftex.def)             Requested size: 169.62154pt x 301.55066pt.
- [4 <C:/Users/Eppy/Documents/GitHub/linphone-android/Documentation/UserManual/p
-ictures/home.png> <C:/Users/Eppy/Documents/GitHub/linphone-android/Documentatio
-n/UserManual/pictures/settings.png> <C:/Users/Eppy/Documents/GitHub/linphone-an
-droid/Documentation/UserManual/pictures/welcome.png> <C:/Users/Eppy/Documents/G
-itHub/linphone-android/Documentation/UserManual/pictures/options.png>] <picture
-s/s1.jpg, id=51, 722.7pt x 1284.8pt>
-File: pictures/s1.jpg Graphic file (type jpg)
-
-<use pictures/s1.jpg>
-Package pdftex.def Info: pictures/s1.jpg used on input line 197.
-(pdftex.def)             Requested size: 169.62154pt x 301.53595pt.
- [5] [6 <C:/Users/Eppy/Documents/GitHub/linphone-android/Documentation/UserManu
-al/pictures/s1.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 264--265
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--273
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 274--277
-
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+[]|\OT1/cmr/m/n/10 Implemented
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--280
-
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
+\OT1/cmr/m/n/10 in pro-duc-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--286
-
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+[]|\OT1/cmr/m/n/10 Product Back-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--292
-
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+[]|[]\OT1/cmr/m/n/10 Click-able link
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--296
-
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+\OT1/cmr/m/n/10 to Prod-uct
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 297.
-[7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 297.
 
-(C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\UserManual\UserM
-anual.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 297.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 297.
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
+\OT1/cmr/m/n/10 Back-log on
+ []
 
 
-LaTeX Warning: There were multiply-defined labels.
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
+[]|\OT1/cmr/m/n/10 Environment
+ []
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 297.
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+[]|[]\OT1/cmr/m/n/10 Click-able link
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--97
+[]|\OT1/cmr/m/n/10 User In-ter-face
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
+[]|[]\OT1/cmr/m/n/10 Click-able link
+ []
+
+
+Overfull \hbox (75.13481pt too wide) in paragraph at lines 88--101
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--125
+\OT1/cmr/m/n/10 Ephiphania(Back-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--127
+[]|\OT1/cmr/m/n/10 Lerato(GUI) and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--127
+\OT1/cmr/m/n/10 Ephiphania(Back-
+ []
+
+
+Underfull \hbox (badness 1533) in paragraph at lines 136--136
+[]|\OT1/cmr/m/n/10 Get Travis CI to
+ []
+
+
+Overfull \hbox (35.48582pt too wide) in paragraph at lines 115--140
+[][] 
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
+[3] [4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
+
+(C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\SprintReport5\Sp
+rintFive.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 141.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
  ) 
 Here is how much of TeX's memory you used:
- 7628 strings out of 493921
- 114626 string characters out of 3147285
- 210333 words of memory out of 3000000
- 10828 multiletter control sequences out of 15000+200000
+ 7563 strings out of 493921
+ 113529 string characters out of 3147285
+ 215203 words of memory out of 3000000
+ 10780 multiletter control sequences out of 15000+200000
  8202 words of font info for 29 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 41i,9n,38p,567b,391s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,9n,38p,259b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on UserManual.pdf (8 pages, 890010 bytes).
+X 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on SprintFive.pdf (5 pages, 303867 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 26 named destinations out of 1000 (max. 500000)
- 142 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 99 PDF objects out of 1000 (max. 8388607)
+ 19 named destinations out of 1000 (max. 500000)
+ 80 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -53,9 +53,15 @@ CI / CD support  & Patience Mtsweni \\
 \subsection{System Overview}
 
 
-Linphone is the leading open source implementation of Voice over IP (VoIP) and Instant Messaging (IM) functionalities. This particular release of Linphone runs on the android platform and aims to extend Linphone's IM capabilities by including group chat and improving it's user interface. This application also seeks to secure the group chat, so that the user's communication is not intercepted by third parties. The application provides the end-user with group chat functionalities found in closed source competitors like WhatsApp. Now users are able to exchange messages in a conference like manner. In addition to exchaging text messages, multiple users are also now able to exchange pictures in a single chatroom and the messages are distinguished according to the person who sent them. \\
+Linphone is the leading open source implementation of Voice over IP (VoIP) and Instant Messaging (IM) functionalities. This particular release of Linphone runs on the android platform and aims to extend Linphone's instant messaging capabilities by including group chat and improving it's user interface. This application also seeks to secure the group chat, so that the user's communication is not intercepted by third parties. The application provides the end-user with group chat functionalities found in closed source competitors like WhatsApp.\\
 
-There are two types of users levels for the group chat, namely admin and standard users. Admin users can do everything that the standard user can do, plus some additional capabilities. Only admin users (initially the person who created the group) are able to add and remove members of the group, with the current capacity being 20 members per group. Standard users are provided the functionality to remove themselves from the group if they no longer want to be part of that group. In the case that the person leaving the group is an admin, then a random user is selected from the remaining members to be the admin. If all members leave the group, then it is destroyed and ceases to exist. The only other way to delete the group is via an admin. The admin is also allowed to remove individual members they feel should no longer be part of the group.
+Now users are able to exchange messages in a conference like manner. In addition to exchaging text messages, multiple users are also now able to exchange pictures and voice notes in a single chat-room and the messages are distinguished according to the person who sent them. \\
+
+There are two types of users levels for the group chat, namely administrator and standard users. Administrator users can do everything that the standard user can do, plus some additional capabilities. Only administrator users (initially the person who created the group) are able to add and remove members of the group, with the current capacity being 20 members per group.\\
+
+Standard users are provided the functionality to remove themselves from the group if they no longer want to be part of that group. In the case that the person leaving the group is an administrator, then a random user should be selected from the remaining members to be the administrator but with this current release the group is deleted.\\
+
+If all members leave the group, then it is destroyed and ceases to exist. The only other way to delete the group is via an administrator. The administrator is also allowed to remove individual members they feel should no longer be part of the group.
 
 \subsection{System Configuration}
 
@@ -78,25 +84,26 @@ The linphone application requires registration to a SIP provider before you can 
 \begin{center}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\linewidth]{./pictures/sip.jpg}
+\includegraphics[width=0.5\linewidth]{./pictures/sip.jpg}
 \caption{\label{fig:Agile}SIP Protocol.}
 \end{figure}
 \end{center}
 
 Linphone.org hosts a free SIP service which allows users to make audio or video calls using SIP addresses under the domain sip.linphone.org. \\
 When creating your sip address like sip:baobab@sip.linphone.org you simply use the form provided on http://www.linphone.org/free-sip-service.html and your friends can communicate with you by simply making use of the sip address.
+\\
+%\begin{center}
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=0.4\linewidth]{./pictures/LinphoneSip.jpg}
+%\caption{\label{fig:Agile}Linphone SIP Registration.}
+%\end{figure}
+%\end{center}
 
+All of the above describes configuration of the already existing Linphone application. This is not by mistake. The process used by the group chat to exchage messages is similar to that of private chats.
+\\
 
-\newpage
-\begin{center}
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.4\linewidth]{./pictures/LinphoneSip.jpg}
-\caption{\label{fig:Agile}Linphone SIP Registration.}
-\end{figure}
-\end{center}
-
-All of the above describes configuration of the already existing Linphone application. This is not by mistake. The process used by the group chat to exchage messages is similar to that of private chats. All of the group capabilities are on the client side (code that sits purely on your Android device). Therefore, there is no extra configuration needed to accommodate the group chat functionality. We pride ourselves in making the transition into group chat easy and simple for the user.
+All of the group capabilities are on the client side (code that sits purely on your Android device). Therefore, there is no extra configuration needed to accommodate the group chat functionality. We pride ourselves in making the transition into group chat easy and simple for the user.
 
 
 \subsection{Installation}
@@ -113,8 +120,11 @@ All of the above describes configuration of the already existing Linphone applic
 \subsection{Getting started}
 
 \subsubsection{Registering on the network}
-To get started with the system, you need to install Linphone Application onto your android phone. To do this refer to section(2.4), and follow the results as shown there.
-Once you have Linphone installed, you should setup your sip account, which you will need to be able to use the system. For more details on what a SIP address is, refer to section (2.3.2).
+To get started with the system, you need to install Linphone Application onto your android phone. To do this refer to section(2.4), and follow the results as shown there.\\
+
+Once you have Linphone installed, you should setup your sip account, which you will need to be able to use the system. For more details on what a SIP address is, refer to section (2.3.2).\\
+
+
 \begin{itemize}
 \item Click on the \textbf{settings} button on the bottom of the screen. Next click on  \textbf{Account Setup Assistant}.
 \end{itemize}

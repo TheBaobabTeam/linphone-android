@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.27)  17 OCT 2015 16:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.27)  21 OCT 2015 17:54
 entering extended mode
 **titlePage.tex
 
@@ -99,7 +99,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 8.
 ! Undefined control sequence.
 l.10 \LARGE
-           \textbf{Document:} User Manual\\
+           \textbf{Document:}\ User Manual\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -118,7 +118,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no l in font nullfont!
 ! Undefined control sequence.
 l.13 \LARGE
-           \textbf{Project:} Group Chat For Linphone (Agile DO-178)\\
+           \textbf{Project:}\hfill Group Chat For Linphone (Agile DO-178)\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -160,7 +160,7 @@ Missing character: There is no 8 in font nullfont!
 Missing character: There is no ) in font nullfont!
 ! Undefined control sequence.
 l.15 \LARGE
-           \textbf{Advisor:} Kobus Coetzee\\
+           \textbf{Advisor:}\quad  Kobus Coetzee\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -181,7 +181,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 l.17 \LARGE
-           \textbf{Sponsors:} Nanoteq \& Department of Computer Science, Uni...
+           \textbf{Sponsors:} Nanoteq \& Department of Computer Science, UP\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -225,28 +225,10 @@ Missing character: There is no c in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no , in font nullfont!
 Missing character: There is no U in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no f in font nullfont!
 Missing character: There is no P in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no a in font nullfont!
 ! Undefined control sequence.
 l.19 \LARGE
-           \textbf{Date: }\today\\
+           \textbf{Date: }\qquad \today\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -254,10 +236,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-<recently read> \today 
-                       
-l.19 \LARGE\textbf{Date: }\today
-                                \\
+l.19 \LARGE\textbf{Date: }\qquad \today
+                                       \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -420,5 +400,5 @@ Here is how much of TeX's memory you used:
  3406 multiletter control sequences out of 15000+200000
  3948 words of font info for 15 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 19i,7n,12p,124b,243s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 19i,7n,12p,115b,243s stack positions out of 5000i,500n,10000p,200000b,50000s
 !  ==> Fatal error occurred, no output PDF file produced!
