@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.27)  27 OCT 2015 09:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.27)  27 OCT 2015 09:17
 entering extended mode
-**SprintFive.tex
+**SprintSix.tex
 
-(C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\SprintReport5\Sp
-rintFive.tex
+(C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\SprintReport6\Sp
+rintSix.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -285,8 +285,7 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-(C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\SprintReport5\Sp
-rintFive.aux)
+No file SprintSix.aux.
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
@@ -301,7 +300,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
- ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count106
 \scratchdimen=\dimen127
@@ -366,7 +365,7 @@ LaTeX Info: Redefining \nameref on input line 18.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-(C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\SprintReport5\ti
+(C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\SprintReport6\ti
 tlePage.tex <pictures/logo.jpg, id=3, 877.02657pt x 325.215pt>
 File: pictures/logo.jpg Graphic file (type jpg)
 
@@ -393,8 +392,8 @@ Package pdftex.def Info: pictures/Team.jpg used on input line 23.
 [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Eppy/Documents/G
-itHub/linphone-android/Documentation/SprintReport5/pictures/logo.jpg> <C:/Users
-/Eppy/Documents/GitHub/linphone-android/Documentation/SprintReport5/pictures/Te
+itHub/linphone-android/Documentation/SprintReport6/pictures/logo.jpg> <C:/Users
+/Eppy/Documents/GitHub/linphone-android/Documentation/SprintReport6/pictures/Te
 am.jpg>]) <./pictures/backlog.jpg, id=13, 955.31906pt x 478.78876pt>
 File: ./pictures/backlog.jpg Graphic file (type jpg)
 
@@ -412,7 +411,7 @@ been already used, duplicate ignored
                    \relax 
 l.32 \newpage
               [1 <C:/Users/Eppy/Documents/GitHub/linphone-android/Documentation
-/SprintReport5/pictures/backlog.jpg>]
+/SprintReport6/pictures/backlog.jpg>]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 41.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -448,58 +447,53 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--70
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
+[]|\OT1/cmr/m/n/10 13 Septem-ber
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 92--92
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
 []|\OT1/cmr/m/n/10 Implemented
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--92
+Underfull \hbox (badness 10000) in paragraph at lines 94--94
 \OT1/cmr/m/n/10 in pro-duc-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--94
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
 []|\OT1/cmr/m/n/10 Product Back-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--94
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
 []|[]\OT1/cmr/m/n/10 Click-able link
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--94
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
 \OT1/cmr/m/n/10 to Prod-uct
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--94
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
 \OT1/cmr/m/n/10 Back-log on
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--95
-[]|\OT1/cmr/m/n/10 Environment
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--96
-[]|[]\OT1/cmr/m/n/10 Click-able link
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 97--97
-[]|\OT1/cmr/m/n/10 User In-ter-face
+[]|\OT1/cmr/m/n/10 Environment
  []
 
 
@@ -508,60 +502,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--98
  []
 
 
-Overfull \hbox (75.13481pt too wide) in paragraph at lines 88--101
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+[]|\OT1/cmr/m/n/10 User In-ter-face
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+[]|[]\OT1/cmr/m/n/10 Click-able link
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
+[]|[]\OT1/cmr/m/n/10 Click-able link
+ []
+
+
+Overfull \hbox (75.13481pt too wide) in paragraph at lines 90--104
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--125
-\OT1/cmr/m/n/10 Ephiphania(Back-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--127
-[]|\OT1/cmr/m/n/10 Lerato(GUI) and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--127
-\OT1/cmr/m/n/10 Ephiphania(Back-
- []
-
-
-Underfull \hbox (badness 1533) in paragraph at lines 136--136
-[]|\OT1/cmr/m/n/10 Get Travis CI to
- []
-
-
-Overfull \hbox (35.48582pt too wide) in paragraph at lines 115--140
+Overfull \hbox (35.48582pt too wide) in paragraph at lines 116--131
 [][] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 132.
 [3] [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 132.
 
-(C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\SprintReport5\Sp
-rintFive.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 141.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
+(C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\SprintReport6\Sp
+rintSix.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 132.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 132.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
  ) 
 Here is how much of TeX's memory you used:
- 7563 strings out of 493921
- 113529 string characters out of 3147285
- 215203 words of memory out of 3000000
+ 7559 strings out of 493921
+ 113329 string characters out of 3147285
+ 213052 words of memory out of 3000000
  10780 multiletter control sequences out of 15000+200000
  8202 words of font info for 29 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 41i,9n,38p,259b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,9n,38p,258b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on SprintFive.pdf (5 pages, 303879 bytes).
+Output written on SprintSix.pdf (5 pages, 303778 bytes).
 PDF statistics:
  99 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
+ 17 named destinations out of 1000 (max. 500000)
  80 words of extra memory for PDF output out of 10000 (max. 10000000)
 
