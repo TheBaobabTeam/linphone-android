@@ -24,12 +24,12 @@ public class NewGroupActivity extends FragmentActivity {
 		FragmentManager fm = getSupportFragmentManager();
 		newGroupFragment = (NewGroupFragment) fm.findFragmentByTag(NEW_GROUP_FRAGMENT);
 
-	    // If the Fragment is non-null, then it is currently being
-	    // retained across a configuration change.
+		// If the Fragment is non-null, then it is currently being
+		// retained across a configuration change.
 		if (newGroupFragment == null) {
 			newGroupFragment = new NewGroupFragment();
 			fm.beginTransaction().add(R.id.fragmentContainer, newGroupFragment, NEW_GROUP_FRAGMENT).commit();
-	    }
+		}
 	}
 }
 

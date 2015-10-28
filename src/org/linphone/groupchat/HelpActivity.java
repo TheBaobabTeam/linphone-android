@@ -11,27 +11,27 @@ import android.util.Log;
 /**
  * @author Mpedi Mello
  */
-public class WelcomeActivity extends FragmentActivity{
-	private static final String WELCOME_FRAGMENT = "welcomeFragment";
-	private WelcomeFragment welcomeFragment;
-	String msg = "WelcomeActivity : ";
+public class HelpActivity extends FragmentActivity{
+	private static final String HELP_FRAGMENT = "helpFragment";
+	private HelpFragment helpFragment;
+	String msg = "HelpActivity : ";
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.welcome_fragment);
+		setContentView(R.layout.help_activity);
 		
-		WelcomeFragment fragment = new WelcomeFragment();
-		getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainerWelcome, fragment, "WelcomeFragment").commit();
+		HelpFragment fragment = new HelpFragment();
+		getSupportFragmentManager().beginTransaction().add(R.id.HelpfragmentContainer, fragment, "helpFragment").commit();
 		
 		FragmentManager fm = getSupportFragmentManager();
-		welcomeFragment = (WelcomeFragment) fm.findFragmentByTag(WELCOME_FRAGMENT);
+		helpFragment = (HelpFragment) fm.findFragmentByTag(HELP_FRAGMENT);
 		
 		// If the Fragment is non-null, then it is currently being
 		// retained across a configuration change.
-		if (welcomeFragment == null) {
-			welcomeFragment = new WelcomeFragment();
-			fm.beginTransaction().add(R.id.fragmentContainerWelcome, welcomeFragment, WELCOME_FRAGMENT).commit();
+		if (helpFragment == null) {
+			helpFragment = new HelpFragment();
+			fm.beginTransaction().add(R.id.HelpfragmentContainer, helpFragment, HELP_FRAGMENT).commit();
 		}
 	}
 	
@@ -53,4 +53,3 @@ public class WelcomeActivity extends FragmentActivity{
 		Log.d(msg, "The onDestroy() event");
 	}
 }
-

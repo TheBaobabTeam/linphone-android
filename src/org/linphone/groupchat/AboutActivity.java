@@ -11,27 +11,27 @@ import android.util.Log;
 /**
  * @author Mpedi Mello
  */
-public class WelcomeActivity extends FragmentActivity{
-	private static final String WELCOME_FRAGMENT = "welcomeFragment";
-	private WelcomeFragment welcomeFragment;
-	String msg = "WelcomeActivity : ";
+public class AboutActivity extends FragmentActivity{
+	private static final String ABOUT_FRAGMENT = "aboutFragment";
+	private AboutFragment aboutFragment;
+	String msg = "AboutActivity : ";
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.welcome_fragment);
+		setContentView(R.layout.about_activity);
 		
-		WelcomeFragment fragment = new WelcomeFragment();
-		getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainerWelcome, fragment, "WelcomeFragment").commit();
+		AboutFragment fragment = new AboutFragment();
+		getSupportFragmentManager().beginTransaction().add(R.id.AboutContainer, fragment, "AboutFragment").commit();
 		
 		FragmentManager fm = getSupportFragmentManager();
-		welcomeFragment = (WelcomeFragment) fm.findFragmentByTag(WELCOME_FRAGMENT);
+		aboutFragment = (AboutFragment) fm.findFragmentByTag(ABOUT_FRAGMENT);
 		
 		// If the Fragment is non-null, then it is currently being
 		// retained across a configuration change.
-		if (welcomeFragment == null) {
-			welcomeFragment = new WelcomeFragment();
-			fm.beginTransaction().add(R.id.fragmentContainerWelcome, welcomeFragment, WELCOME_FRAGMENT).commit();
+		if (aboutFragment == null) {
+			aboutFragment = new AboutFragment();
+			fm.beginTransaction().add(R.id.AboutContainer, aboutFragment, ABOUT_FRAGMENT).commit();
 		}
 	}
 	
@@ -53,4 +53,3 @@ public class WelcomeActivity extends FragmentActivity{
 		Log.d(msg, "The onDestroy() event");
 	}
 }
-

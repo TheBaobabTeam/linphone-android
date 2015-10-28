@@ -88,13 +88,13 @@ public class NewGroupFragment extends Fragment implements OnClickListener {
 		next.setOnClickListener(this);
 		
 		//select group icon
-		im = (ImageView)view.findViewById(R.id.GroupIcon);
+		im = (ImageView) view.findViewById(R.id.GroupIcon);
 		im.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
 				selectImage();
-				}
-			});
+			}
+		});
 		
 		return view;
 	}
@@ -115,78 +115,78 @@ public class NewGroupFragment extends Fragment implements OnClickListener {
 	}
 	
 	//select Image
-		private void selectImage(){
-			final CharSequence[] items = { "Take Photo", "Choose from Gallery", "Cancel" };
-			AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-			builder.setTitle("Add Group Icon!");
-			builder.setItems(items, new DialogInterface.OnClickListener() {
-				
-			@Override
-			public void onClick(DialogInterface dialog, int item) {
-				if (items[item].equals("Take Photo")) {
-				Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-				startActivityForResult(intent, REQUEST_CAMERA);
-				} 
-				else if (items[item].equals("Choose from Gallery")) {
-					Intent intent = new Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-					intent.setType("image/*");
-					startActivityForResult(
-					Intent.createChooser(intent, "Select File"),SELECT_FILE);
-				} 
-				else if (items[item].equals("Cancel")) {
-					dialog.dismiss();
-					}
-			}
-			});
-			builder.show();
-		}
-		
+	private void selectImage(){
+		final CharSequence[] items = { "Take Photo", "Choose from Gallery", "Cancel" };
+		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+		builder.setTitle("Add Group Icon!");
+		builder.setItems(items, new DialogInterface.OnClickListener() {
+			
 		@Override
-		public void onActivityResult(int requestCode, int resultCode, Intent data) {
-			super.onActivityResult(requestCode, resultCode, data);
-			if (resultCode == Activity.RESULT_OK) {
-				if (requestCode == REQUEST_CAMERA) {
-					Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
-					ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-					thumbnail.compress(Bitmap.CompressFormat.JPEG, 90, bytes);
-					File destination = new File(Environment.getExternalStorageDirectory(),System.currentTimeMillis() + ".jpg");
-					
-					FileOutputStream fo;
-					try {
-						destination.createNewFile();
-						fo = new FileOutputStream(destination);
-						fo.write(bytes.toByteArray());
-						fo.close();
-						} 
-					catch (FileNotFoundException e) {
-						e.printStackTrace();
-						} 
-					catch (IOException e) {
-						e.printStackTrace();
-						}
-					
-					im.setImageBitmap(thumbnail);
-					} 
-				else if(requestCode == SELECT_FILE){
-					Uri selectedImageUri = data.getData();
-		            String tempPath = getPath(selectedImageUri, getActivity());
-		            Bitmap bm;
-		            
-		            BitmapFactory.Options btmapOptions = new BitmapFactory.Options();
-		            bm = BitmapFactory.decodeFile(tempPath, btmapOptions);
-		            im.setImageBitmap(bm);
-		            uploadImagePath = tempPath;
+		public void onClick(DialogInterface dialog, int item) {
+			if (items[item].equals("Take Photo")) {
+			Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+			startActivityForResult(intent, REQUEST_CAMERA);
+			} 
+			else if (items[item].equals("Choose from Gallery")) {
+				Intent intent = new Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+				intent.setType("image/*");
+				startActivityForResult(
+				Intent.createChooser(intent, "Select File"),SELECT_FILE);
+			} 
+			else if (items[item].equals("Cancel")) {
+				dialog.dismiss();
 				}
+		}
+		});
+		builder.show();
+	}
+	
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		if (resultCode == Activity.RESULT_OK) {
+			if (requestCode == REQUEST_CAMERA) {
+				Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
+				ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+				thumbnail.compress(Bitmap.CompressFormat.JPEG, 90, bytes);
+				File destination = new File(Environment.getExternalStorageDirectory(),System.currentTimeMillis() + ".jpg");
+				
+				FileOutputStream fo;
+				try {
+					destination.createNewFile();
+					fo = new FileOutputStream(destination);
+					fo.write(bytes.toByteArray());
+					fo.close();
+					} 
+				catch (FileNotFoundException e) {
+					e.printStackTrace();
+					} 
+				catch (IOException e) {
+					e.printStackTrace();
+					}
+				
+				im.setImageBitmap(thumbnail);
+				} 
+			else if(requestCode == SELECT_FILE){
+				Uri selectedImageUri = data.getData();
+		    String tempPath = getPath(selectedImageUri, getActivity());
+		    Bitmap bm;
+		    
+		    BitmapFactory.Options btmapOptions = new BitmapFactory.Options();
+		    bm = BitmapFactory.decodeFile(tempPath, btmapOptions);
+		    im.setImageBitmap(bm);
+		    uploadImagePath = tempPath;
 			}
 		}
-		
-		@SuppressWarnings("deprecation")
-		public String getPath(Uri uri, Activity activity) {
-		    String[] projection = { MediaColumns.DATA };
-		    Cursor cursor = activity.managedQuery(uri, projection, null, null, null);
-		    int column_index = cursor.getColumnIndexOrThrow(MediaColumns.DATA);
-		    cursor.moveToFirst();
-		    return cursor.getString(column_index);
+	}
+	
+	@SuppressWarnings("deprecation")
+	public String getPath(Uri uri, Activity activity) {
+	    String[] projection = { MediaColumns.DATA };
+	    Cursor cursor = activity.managedQuery(uri, projection, null, null, null);
+	    int column_index = cursor.getColumnIndexOrThrow(MediaColumns.DATA);
+	    cursor.moveToFirst();
+	    return cursor.getString(column_index);
 
-		}
+	}
 }

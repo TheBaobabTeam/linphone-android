@@ -1,22 +1,14 @@
-package org.linphone;
-/*
-ChatFragment.java
-Copyright (C) 2015  Belledonne Communications, Grenoble, France
+package org.linphone.groupchat;
 
-This program is free software; you can redistribute it and/or
-modify it under the terms of the GNU General Public License
-as published by the Free Software Foundation; either version 2
-of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
-*/
+import org.linphone.R;
+import org.linphone.LinphoneManager;
+import org.linphone.Contact;
+import org.linphone.ContactsManager;
+import org.linphone.LinphoneUtils;
+import org.linphone.LinphoneActivity;
+import org.linphone.ChatStorage;
+import org.linphone.LinphoneService;
+import org.linphone.ChatFragment;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -26,9 +18,6 @@ import android.graphics.Matrix;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.linphone.groupchat.AddMembersFragment;
-import org.linphone.groupchat.GroupDetailsActivity;
-import org.linphone.groupchat.VoiceRecordActivity;
 
 import org.linphone.compatibility.Compatibility;
 import org.linphone.core.LinphoneAddress;
@@ -42,7 +31,6 @@ import org.linphone.core.LinphoneChatMessage.State;
 import org.linphone.core.LinphoneCoreException;
 import org.linphone.core.LinphoneCoreFactory;
 import org.linphone.core.LinphoneCoreListenerBase;
-import org.linphone.core.LinphoneProxyConfig;
 import org.linphone.mediastream.Log;
 import org.linphone.ui.AvatarWithShadow;
 import org.linphone.ui.BubbleChat;
@@ -88,12 +76,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
-import android.widget.PopupMenu;
-import android.widget.PopupWindow;
-
-public class ChatFragment extends Fragment implements OnClickListener, LinphoneChatMessageListener {
-	private static ChatFragment instance;
+public class GroupChatFragment extends ChatFragment implements OnClickListener, LinphoneChatMessageListener {
+	private static GroupChatFragment instance;
 
 	private static final int ADD_PHOTO = 1337;
 	private static final int MENU_DELETE_MESSAGE = 0;
@@ -108,14 +92,10 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 	private EditText message;
 	private ImageView cancelUpload;
 	private LinearLayout topBar;
-	private TextView sendImage, sendMessage, contactName, remoteComposing, back, groupNameView, participantsView;
-	//private AvatarWithShadow contactPicture;
-	private ImageView contactPicture;
+	private TextView sendImage, sendMessage, contactName, remoteComposing, back;
+	private AvatarWithShadow contactPicture;
 	private RelativeLayout uploadLayout, textLayout;
 	private ListView messagesList;
-	
-	private ImageView attach;
-	private ImageView moreOptions;
 
 	private ProgressBar progressBar;
 	private Uri imageToUploadUri;
@@ -137,7 +117,7 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		instance = this;
-		View view = inflater.inflate(R.layout.groupchatroom, container, false);
+		View view = inflater.inflate(R.layout.chat, container, false);
 		
 		// Retain the fragment across configuration changes
 		setRetainInstance(true);
@@ -148,129 +128,32 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 		pictureUri = getArguments().getString("PictureUri");
 
 		//Initialize UI
-		//contactName = (TextView) view.findViewById(R.id.contactName);
-		//contactPicture = (AvatarWithShadow) view.findViewById(R.id.contactPicture);
-		contactPicture = (ImageView) view.findViewById(R.id.GroupChatIcon);
-		//messagesList = (ListView) view.findViewById(R.id.chatMessageList);
-		messagesList = (ListView) view.findViewById(R.id.groupchatMessageList);
-		//textLayout = (RelativeLayout) view.findViewById(R.id.messageLayout);
-		textLayout = (RelativeLayout) view.findViewById(R.id.groupmessageLayout);
-		//progressBar = (ProgressBar) view.findViewById(R.id.progressbar);
-		progressBar = (ProgressBar) view.findViewById(R.id.groupprogressbar);
-		//topBar = (LinearLayout) view.findViewById(R.id.topbar);
-		groupNameView = (TextView) view.findViewById(R.id.groupname);
-		if (displayName == null && getResources().getBoolean(R.bool.only_display_username_if_unknown) && LinphoneUtils.isSipAddress(sipUri)) {
-			groupNameView.setText(LinphoneUtils.getUsernameFromAddress(sipUri));
-		} else if (displayName == null) {
-			groupNameView.setText(sipUri);
-		} else {
-			groupNameView.setText(displayName);
-		}
-		participantsView = (TextView) view.findViewById(R.id.grouppartic);
-		
-		//String members = "Me, You";
-		//List<Contact> list = new ArrayList<Contact>();
-		//list = AddMembersFragment.instance().getListOfMembers();
-		
-		/*for(int i = 0; i < list.size(); i++){
-			members += list.get(i).getName() + ",";
-		}*/
-		
-		//participantsView.setText(members);
-		
-		//Set OnClickListeners and Initialize UI
-		topBar = (LinearLayout) view.findViewById(R.id.grouptopbar);
-		topBar.setOnClickListener(new OnClickListener(){
-			@Override
-			public void onClick(View v){
-				Intent intent = new Intent(getActivity(),GroupDetailsActivity.class);
-				intent.putExtra("SipUri", sipUri);
-				getActivity().startActivity(intent);
-			}
-		});
-		
-		attach = (ImageView) view.findViewById(R.id.image_attach);
-		attach.setOnClickListener(new OnClickListener(){
-			@Override
-			public void onClick(View v){
-				PopupMenu pop = new PopupMenu(getActivity(), attach);
-				pop.getMenuInflater().inflate(R.menu.popup_menu_attach, pop.getMenu());
-				
-				pop.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-					
-					@Override
-					public boolean onMenuItemClick(MenuItem item) {
-						switch(item.getItemId()){
-						
-						case R.id.attachPic :
-							pickImage();
-							return true;
-						case R.id.attachAudio :
-							Intent intent = new Intent(getActivity(),VoiceRecordActivity.class);
-							getActivity().startActivity(intent);
-							return true;
-						default : return false;
-						}
-					
-					}
-				});
-				
-				pop.show();
-			}
-		});
-		
-		moreOptions = (ImageView) view.findViewById(R.id.image_more);
-		moreOptions.setOnClickListener(new OnClickListener(){
-			@Override
-			public void onClick(View v){
-				PopupMenu pop = new PopupMenu(getActivity(),moreOptions);
-				pop.getMenuInflater().inflate(R.menu.group_popup_menu, pop.getMenu());
-				
-				pop.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-					
-					@Override
-					public boolean onMenuItemClick(MenuItem item) {
-						switch(item.getItemId()){
-						
-						case R.id.groupdetailsmenu :
-							Intent intent = new Intent(getActivity(),GroupDetailsActivity.class);
-							intent.putExtra("SipUri", sipUri);
-							getActivity().startActivity(intent);
-							return true;
-						default : return false;
-						}
-					
-					}
-				});
-				
-				pop.show();
-			}
-		});
-		
-		//sendMessage = (TextView) view.findViewById(R.id.sendMessage);
-		sendMessage = (TextView) view.findViewById(R.id.groupsendMessage);
+		contactName = (TextView) view.findViewById(R.id.contactName);
+		contactPicture = (AvatarWithShadow) view.findViewById(R.id.contactPicture);
+		messagesList = (ListView) view.findViewById(R.id.chatMessageList);
+		textLayout = (RelativeLayout) view.findViewById(R.id.messageLayout);
+		progressBar = (ProgressBar) view.findViewById(R.id.progressbar);
+		topBar = (LinearLayout) view.findViewById(R.id.topbar);
+
+		sendMessage = (TextView) view.findViewById(R.id.sendMessage);
 		sendMessage.setOnClickListener(this);
 
-		//remoteComposing = (TextView) view.findViewById(R.id.remoteComposing);
-		remoteComposing = (TextView) view.findViewById(R.id.groupremoteComposing);
+		remoteComposing = (TextView) view.findViewById(R.id.remoteComposing);
 		remoteComposing.setVisibility(View.GONE);
 
-		//uploadLayout = (RelativeLayout) view.findViewById(R.id.uploadLayout);
-		uploadLayout = (RelativeLayout) view.findViewById(R.id.groupuploadLayout);
+		uploadLayout = (RelativeLayout) view.findViewById(R.id.uploadLayout);
 		uploadLayout.setVisibility(View.GONE);
 
-		//displayChatHeader(displayName, pictureUri);
+		displayChatHeader(displayName, pictureUri);
 
 		//Manage multiline
-		//message = (EditText) view.findViewById(R.id.message);
-		message = (EditText) view.findViewById(R.id.groupmessage);
+		message = (EditText) view.findViewById(R.id.message);
 		if (!getResources().getBoolean(R.bool.allow_chat_multiline)) {
 			message.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_SHORT_MESSAGE);
 			message.setMaxLines(1);
 		}
 
-		//sendImage = (TextView) view.findViewById(R.id.sendPicture);
-		sendImage = (TextView) view.findViewById(R.id.groupsendPicture);
+		sendImage = (TextView) view.findViewById(R.id.sendPicture);
 		if (!getResources().getBoolean(R.bool.disable_chat_send_file)) {
 			sendImage.setOnClickListener(new View.OnClickListener() {
 				@Override
@@ -282,7 +165,7 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 			sendImage.setEnabled(false);
 		}
 
-		/*back = (TextView) view.findViewById(R.id.back);
+		back = (TextView) view.findViewById(R.id.back);
 		if (back != null) {
 			back.setOnClickListener(new View.OnClickListener() {
 				@Override
@@ -304,28 +187,11 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 					currentMessageInFileTransferUploadState = null;
 				}
 			}
-		});*/
+		});
 
 		LinphoneCore lc = LinphoneManager.getLcIfManagerNotDestroyedOrNull();
 		if (lc != null) {
 			chatRoom = lc.getOrCreateChatRoom(sipUri);
-			
-			String members = "";
-			
-			String[] mem = chatRoom.getMembers();
-			if (mem != null) {
-				for (int i = 0; i < mem.length; i++) {
-					if (LinphoneUtils.isSipAddress(mem[i])) {
-						String sipStr = LinphoneUtils.getUsernameFromAddress(mem[i]);
-						if (i < mem.length - 1)
-							members += sipStr + ", ";
-						else
-							members += sipStr;
-					}
-				}
-			}
-			participantsView.setText(members);
-			
 			//Only works if using liblinphone storage
 			chatRoom.markAsRead();
 		}
@@ -341,25 +207,8 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 			
 			@Override
 			public void isComposingReceived(LinphoneCore lc, LinphoneChatRoom room) {
-				LinphoneAddress crAddr = chatRoom.getPeerAddress();
-				LinphoneAddress rAddr = room.getPeerAddress();
-				
-				//if (chatRoom != null && room != null && crAddr.asStringUriOnly().equals(rAddr.asStringUriOnly()) || (crAddr.getUserName().equals(rAddr.getUserName()) && crAddr.getDomain().equals(rAddr.getDomain()))) {
-				if (chatRoom != null && room != null) {
-					/*String toDisplay = "";
-					toDisplay += chatRoom != null ? "Me: 1\n" : "Me: 0\n";
-					toDisplay += room != null ? "Re: 1\n" : "Re: 0\n";
-					toDisplay += crAddr.asStringUriOnly().equals(rAddr.asStringUriOnly()) || (crAddr.getUserName().equals(rAddr.getUserName()) && crAddr.getDomain().equals(rAddr.getDomain())) ? "CR: 1\n" : "CR: 0\n";
-					toDisplay += "Me: " + crAddr.asStringUriOnly();
-					toDisplay += "\nRe: " + rAddr.asStringUriOnly();
-					toDisplay += "\nCRC: " + chatRoom.isRemoteComposing();
-					toDisplay += "\nRC: " + room.isRemoteComposing();
-					Toast.makeText(getActivity().getApplicationContext(), toDisplay, Toast.LENGTH_SHORT).show();*/
-					
-					remoteComposing.setText(rAddr.getUserName() + " is typing...");
-					
-					//remoteComposing.setVisibility(chatRoom.isRemoteComposing() ? View.VISIBLE : View.GONE);
-					remoteComposing.setVisibility(room.isRemoteComposing() ? View.VISIBLE : View.GONE);
+				if (chatRoom != null && room != null && chatRoom.getPeerAddress().asStringUriOnly().equals(room.getPeerAddress().asStringUriOnly())) {
+					remoteComposing.setVisibility(chatRoom.isRemoteComposing() ? View.VISIBLE : View.GONE);
 				}
 			}
 		};
@@ -386,10 +235,10 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 		return view;
 	}
 
-	public static ChatFragment instance() {
+	public static GroupChatFragment instance() {
 		return instance;
 	}
-
+	
 	@Override
 	public void onSaveInstanceState(Bundle outState) {
 		outState.putString("messageDraft", message.getText().toString());
@@ -469,7 +318,7 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 		public View getView(int position, View convertView, ViewGroup parent) {
 			LinphoneChatMessage message = history[position];
 			
-			BubbleChat bubble = new BubbleChat(context, message, ChatFragment.this);
+			BubbleChat bubble = new BubbleChat(context, message, GroupChatFragment.this);
 			View v = bubble.getView();
 
 			registerForContextMenu(v);
@@ -486,7 +335,7 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 		adapter.notifyDataSetChanged();
 	}
 
-	/*private void displayChatHeader(String displayName, String pictureUri) {
+	private void displayChatHeader(String displayName, String pictureUri) {
 		LinphoneAddress lAddress;
 		try {
 			lAddress = LinphoneCoreFactory.instance().createLinphoneAddress(sipUri);
@@ -509,7 +358,7 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 			contactName.setText(displayName);
 		}
 
-	}*/
+	}
 
 	public void changeDisplayedChat(String newSipUri, String displayName, String pictureUri) {
 		this.sipUri = newSipUri;
@@ -541,8 +390,7 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 			chatRoom.markAsRead();
 		}
 
-		//displayChatHeader(displayName, pictureUri);
-		
+		displayChatHeader(displayName, pictureUri);
 		dispayMessageList();
 	}
 
@@ -641,58 +489,16 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 		boolean isNetworkReachable = lc == null ? false : lc.isNetworkReachable();
 
 		if (chatRoom != null && messageToSend != null && messageToSend.length() > 0 && isNetworkReachable) {
-			if (chatRoom.getChatRoomType() == 0) {
-				LinphoneChatMessage message = chatRoom.createLinphoneChatMessage(messageToSend);
-				message.setListener(this);
-				chatRoom.sendChatMessage(message);
+			LinphoneChatMessage message = chatRoom.createLinphoneChatMessage(messageToSend);
+			message.setListener(this);
+			chatRoom.sendChatMessage(message);
 
-				if (LinphoneActivity.isInstanciated()) {
-					LinphoneActivity.instance().onMessageSent(sipUri, messageToSend);
-				}
-
-				invalidate();
-				Log.i("Sent message current status: " + message.getStatus());
-			} else if (chatRoom.getChatRoomType() == 1) {
-				LinphoneProxyConfig pc = lc.getDefaultProxyConfig();
-				String identity = pc.getIdentity();
-				
-				LinphoneAddress la;
-				String id = "";
-				try {
-					la = LinphoneCoreFactory.instance().createLinphoneAddress(identity);
-					id = la.getUserName() + ": ";
-				} catch (LinphoneCoreException e) {
-					Log.e("Cannot display chat",e);
-					return;
-				}
-				
-				/*la = chatRoom.getPeerAddress();
-				
-				String peer = la.asStringUriOnly();
-				
-				String toDisplay = "GroupName: " + chatRoom.getGroupName() + " :: GIndex: " + chatRoom.getMyGroupIndex() + " :: Peer: " + peer;
-				toDisplay += "\n\n Members: ";
-				
-				String[] mem = chatRoom.getMembers();
-				if (mem != null) {
-					for (int i = 0; i < mem.length; i++) {
-						toDisplay += mem[i] + ",";
-					}
-				}
-				
-				LinphoneActivity.instance().displayCustomToast(toDisplay, Toast.LENGTH_LONG);*/
-				
-				LinphoneChatMessage message = chatRoom.createLinphoneGroupChatMessage(id + messageToSend);
-				message.setListener(this);
-				chatRoom.sendGroupChatMessage(message);
-
-				if (LinphoneActivity.isInstanciated()) {
-					LinphoneActivity.instance().onMessageSent(sipUri, id + messageToSend);
-				}
-				
-				invalidate();
-				Log.i("Sent message current status: " + message.getStatus());
+			if (LinphoneActivity.isInstanciated()) {
+				LinphoneActivity.instance().onMessageSent(sipUri, messageToSend);
 			}
+
+			invalidate();
+			Log.i("Sent message current status: " + message.getStatus());
 		} else if (!isNetworkReachable && LinphoneActivity.isInstanciated()) {
 			LinphoneActivity.instance().displayCustomToast(getString(R.string.error_network_unreachable), Toast.LENGTH_LONG);
 		}
@@ -779,21 +585,12 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 			String fileName = path.substring(path.lastIndexOf("/") + 1);
 			content.setName(fileName);
 			
-			if (chatRoom.getChatRoomType() == 0) {
-				LinphoneChatMessage message = chatRoom.createFileTransferMessage(content);
-				message.setListener(ChatFragment.this);
-				message.setAppData(path);
-				
-				chatRoom.sendChatMessage(message);
-				currentMessageInFileTransferUploadState = message;
-			} else if (chatRoom.getChatRoomType() == 1) {
-				LinphoneChatMessage message = chatRoom.createGroupFileTransferMessage(content);
-				message.setListener(ChatFragment.this);
-				message.setAppData(path);
-				
-				chatRoom.sendGroupChatMessage(message);
-				currentMessageInFileTransferUploadState = message;
-			}
+			LinphoneChatMessage message = chatRoom.createFileTransferMessage(content);
+			message.setListener(GroupChatFragment.this);
+			message.setAppData(path);
+			
+			chatRoom.sendChatMessage(message);
+			currentMessageInFileTransferUploadState = message;
 		}
 	}
 

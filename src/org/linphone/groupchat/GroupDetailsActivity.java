@@ -19,18 +19,23 @@ public class GroupDetailsActivity extends FragmentActivity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_group_details2);
 		
+		Bundle extras = new Bundle();
+		extras.putString("SipUri", getIntent().getExtras().getString("SipUri"));
+		
 		GroupdetailsFragment fragment = new GroupdetailsFragment();
+		fragment.setArguments(extras);
 		getSupportFragmentManager().beginTransaction().add(R.id.groupDetailsFragment, fragment, "groupDetails").commit();
 		
 		FragmentManager fm = getSupportFragmentManager();
 		groupDetails = (GroupdetailsFragment) fm.findFragmentByTag(GROUP_DETAILS_FRAGMENT);
 
-	    // If the Fragment is non-null, then it is currently being
-	    // retained across a configuration change.
+		// If the Fragment is non-null, then it is currently being
+		// retained across a configuration change.
 		if (groupDetails == null) {
 			groupDetails = new GroupdetailsFragment();
+			groupDetails.setArguments(extras);
 			fm.beginTransaction().add(R.id.groupDetailsFragment, groupDetails, GROUP_DETAILS_FRAGMENT).commit();
-	    }
+		}
 	}
 
 	

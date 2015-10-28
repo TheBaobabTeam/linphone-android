@@ -187,6 +187,15 @@ class LinphoneChatRoomImpl implements LinphoneChatRoom {
 	private native int getGroupSize(long ptr);
 	private native int getMyGroupIndex(long ptr);
 	private native String getGroupName(long ptr);
+	private native long createGroupFileTransferMessage(long ptr, String name, String type, String subtype, int size, int my_group_index);
+	private native String[] getMembers(long ptr);
+	
+	@Override
+	public LinphoneChatMessage createGroupFileTransferMessage(LinphoneContent content) {
+		synchronized(getCore()) {
+			return new LinphoneChatMessageImpl(createGroupFileTransferMessage(nativePtr, content.getName(), content.getType(), content.getSubtype(), content.getRealSize(), this.getMyGroupIndex()));
+		}
+	}
 	
 	public void sendGroupMessage(String message) {
 		synchronized(getCore()){
@@ -195,9 +204,9 @@ class LinphoneChatRoomImpl implements LinphoneChatRoom {
 	}
 	
 	@Override
-	public LinphoneChatMessage createLinphoneGroupChatMessage(String message, int group_index) {
+	public LinphoneChatMessage createLinphoneGroupChatMessage(String message) {
 		synchronized(getCore()){
-			return new LinphoneChatMessageImpl(createLinphoneGroupChatMessage(nativePtr, message, group_index));
+			return new LinphoneChatMessageImpl(createLinphoneGroupChatMessage(nativePtr, message, this.getMyGroupIndex()));
 		}
 	}
 	
@@ -227,6 +236,12 @@ class LinphoneChatRoomImpl implements LinphoneChatRoom {
 	public String getGroupName() {
 		synchronized(getCore()) {
 			return getGroupName(nativePtr);
+		}
+	}
+	
+	public String[] getMembers() {
+		synchronized(getCore()) {
+			return getMembers(nativePtr);
 		}
 	}
 }

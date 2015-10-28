@@ -5,6 +5,11 @@ import java.util.List;
 
 import org.linphone.Contact;
 import org.linphone.R;
+import org.linphone.LinphoneManager;
+//import org.linphone.LinphoneUtils;
+
+import org.linphone.core.LinphoneCore;
+import org.linphone.core.LinphoneChatRoom;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -24,6 +29,9 @@ public class GroupdetailsFragment extends Fragment implements OnClickListener {
 	private TextView back;
 	private MyAdapter dataAdapter = null;
 	
+	private LinphoneChatRoom chatRoom;
+	private String sipUri;
+	
 	//Check if its instantiated
 	   
 		public static boolean isInstanciated() {
@@ -39,6 +47,23 @@ public class GroupdetailsFragment extends Fragment implements OnClickListener {
 		
 		// Retain the fragment across configuration changes
 		setRetainInstance(true);
+		
+		//Retrieve parameter from intent
+		sipUri = getArguments().getString("SipUri");
+		
+		LinphoneCore lc = LinphoneManager.getLcIfManagerNotDestroyedOrNull();
+		if (lc != null) {
+			chatRoom = lc.getOrCreateChatRoom(sipUri);
+			
+			//String members = "";
+			
+			//String[] mem = chatRoom.getMembers();
+			
+			
+			//Only works if using liblinphone storage
+			chatRoom.markAsRead();
+		}
+		
 		return view;
 	}
 
@@ -58,12 +83,12 @@ public class GroupdetailsFragment extends Fragment implements OnClickListener {
 	}
 	
 	//Custom Adapter
-		private class MyAdapter extends ArrayAdapter<Contact>{
-			private List<Contact> contactsList;
+		private class MyAdapter extends ArrayAdapter<String>{
+			private List<String> contactsList;
 			
-			public MyAdapter(Context context, int textViewResourceId, List<Contact> contactsList){
+			public MyAdapter(Context context, int textViewResourceId, List<String> contactsList){
 				super(context, textViewResourceId,contactsList);
-				this.contactsList = new ArrayList<Contact>();
+				this.contactsList = new ArrayList<String>();
 				this.contactsList.addAll(contactsList);
 				}
 			
@@ -88,8 +113,8 @@ public class GroupdetailsFragment extends Fragment implements OnClickListener {
 					holder = (ViewHolder)v.getTag();
 					}
 				
-				Contact contact = contactsList.get(position);
-				holder.name.setText(contact.getName());
+				String contact = contactsList.get(position);
+				holder.name.setText(contact);
 				holder.name.setTag(contact);
 				
 				return v;
@@ -104,8 +129,15 @@ public class GroupdetailsFragment extends Fragment implements OnClickListener {
 	}
 	
 	public void displayListView() {
-		List<Contact> contactsList = new ArrayList<Contact>();
-		contactsList = AddMembersFragment.instance().getListOfMembers();
+		List<String> contactsList = new ArrayList<String>();
+		//contactsList = AddMembersFragment.instance().getListOfMembers();
+		
+		String[] mem = chatRoom.getMembers();
+		if (mem != null) {
+			for (int i = 0; i < mem.length; i++) {
+				contactsList.add(mem[i]);
+			}
+		}
 		
 		dataAdapter = new MyAdapter(getActivity(),R.layout.group_details_list_item,contactsList);
 		ListView listview = (ListView)getActivity().findViewById(R.id.groupDetails);

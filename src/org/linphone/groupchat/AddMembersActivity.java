@@ -6,11 +6,6 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 
-import org.linphone.core.LinphoneChatRoom;
-import org.linphone.core.LinphoneCore;
-
-import android.content.Intent;
-
 
 /**
  * @author Mpedi Mello
@@ -29,20 +24,18 @@ public class AddMembersActivity extends FragmentActivity{
 		
 		AddMembersFragment fragment = new AddMembersFragment();
 		fragment.setArguments(extras);
-		getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainerMembers, fragment, "addMembersFragment").commit();
+		getSupportFragmentManager().beginTransaction().add(R.id.fragmentContainerMembers, fragment, "AddMembersFragment").commit();
 		
 		FragmentManager fm = getSupportFragmentManager();
 		addMembersFragment = (AddMembersFragment) fm.findFragmentByTag(ADD_MEMBERS_FRAGMENT);
 
-	    // If the Fragment is non-null, then it is currently being
-	    // retained across a configuration change.
+		// If the Fragment is non-null, then it is currently being
+		// retained across a configuration change.
 		if (addMembersFragment == null) {
 			addMembersFragment = new AddMembersFragment();
 			addMembersFragment.setArguments(extras);
 			fm.beginTransaction().add(R.id.fragmentContainerMembers, addMembersFragment, ADD_MEMBERS_FRAGMENT).commit();
-	    }
-
+		}
 	}
-	
 }
 

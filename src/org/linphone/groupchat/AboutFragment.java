@@ -11,10 +11,11 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class aboutFragment extends Fragment implements OnClickListener {
+public class AboutFragment extends Fragment implements OnClickListener {
+	private static AboutFragment instance;
 	
-	private static aboutFragment instance;
 	private TextView close;
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -37,8 +38,6 @@ public class aboutFragment extends Fragment implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-			
+		
 	}
-	
-	
 }
