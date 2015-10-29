@@ -73,7 +73,6 @@ We are required to develop the following functionality for the Linphone project:
 	\begin{itemize}
 	\item Phonebook contacts
 	\item Pictures
-	\item Videos
 	\item Sound
 	\end{itemize}
 	
@@ -85,7 +84,7 @@ We are required to develop the following functionality for the Linphone project:
 \begin{itemize}	
 		\item Platform independent
 			\begin{itemize}
-				\item The system is accessible on the website however the group chat functionality will be accessible implemented is only for a android mobile application.
+				\item The system is accessible on the website however the group chat functionality will be accessible only for an android mobile application.
 			\end{itemize}
 \end{itemize}
 
@@ -100,17 +99,16 @@ We are required to develop the following functionality for the Linphone project:
 \begin{itemize}	
 		\item Security
 			\begin{itemize}
-				\item Confidentiality: Encrypt messages when users are chatting		
+				\item Confidentiality: Encrypt messages, pictures and voice when users are chatting.
 			\end{itemize}
 			
 		\item Backup
 		  \begin{itemize}
-			  \item The system should run on multiple servers.
-			  \item The system should have an automated database backup.
+			  \item The system should have an automated data backup.
 			  \item The system should have alternative platforms(i.e. smart phones, etc.).
 		  \end{itemize}					
 		  
-		\item Store uploaded content (i.e. docs, images)
+		\item Store uploaded content (i.e. voice notes, images)
 		  \begin{itemize}
 			  \item The system should allow the user to be able to upload an image should they wish to.
 		  \end{itemize}					
@@ -187,31 +185,31 @@ Since we are also using continuous integration, which means merging several deve
 Liblinphone is a high level library integrating all the SIP video calls feature into a single easy to use API. Usually telecommunications is made of two things: media (transport of voice or video, encoding and decoding), and signalling (routing calls, ringing, accepting a call).
 Liblinphone aims at combining the two things together and doing most things automatically. This makes it easier to the programmer to implement video calls in any application, without being an expert in VoIP and telecommunications. Liblinphone is an open source library based on Mediastreamer2 for voice/video streaming, and belle-sip for SIP signalling.
 
-\subsection{Mediastreamer2}
-
-Mediastreamer2 is a powerful and lightweight streaming engine specialized for voice/video telephony applications.
-This open source library is responsible for all the receiving and sending of multimedia streams in Linphone, including voice/video capture, encoding and decoding, and rendering.
+%\subsection{Mediastreamer2}
+%
+%Mediastreamer2 is a powerful and lightweight streaming engine specialized for voice/video telephony applications.
+%This open source library is responsible for all the receiving and sending of multimedia streams in Linphone, including voice/video capture, encoding and decoding, and rendering.
 
 \subsection{Belle-SIP}
 
 Belle-sip is a C object oriented SIP Stack.
 
-\subsection{ORTP}
-
-oRTP is a library implementing Real-time Transport Protocol (RFC3550), licensed under LGPL.
-
-\subsection{Bcg729}
-
-Bcg729 is a software G729A encoder and decoder library written in C, developed by Belldone communications, the company supporting the Linphone project. It was written from scratch and is NOT a derivative work of ITU reference source code in any kind.
-It can be executed on many platforms, including both ARM and x86 with very decent performances. Libbcg729 supports concurrent channel encoding/decoding for multi-call applications such as conferencing.
-The source code also contains a mediastreamer2 compatible plugin, designed for use of this codec in Linphone or mediastreamer2-based software. However a direct API is available for those not using bcg729 with mediastreamer2.
-
-\subsection{Flexisip}
-
-Flexisip is a SIP proxy server implementation compliant to RFC3261.
-The project was started by Belldone Communications in 2011. The focus was to develop a SIP proxy solution easy to install, configure and maintain, and offering “out of the box” all the required features to deploy a SIP service tuned for mobile applications.
-The free linphone.org SIP service is running with Flexisip since 2011, and enables Linphone users to create their SIP addresses in order to communicate together.
-Thanks to its modular architecture and its limited number of required dependencies, Flexisip can perfectly run on small hardware’s (embedded systems).
+%\subsection{ORTP}
+%
+%oRTP is a library implementing Real-time Transport Protocol (RFC3550), licensed under LGPL.
+%
+%\subsection{Bcg729}
+%
+%Bcg729 is a software G729A encoder and decoder library written in C, developed by Belldone communications, the company supporting the Linphone project. It was written from scratch and is NOT a derivative work of ITU reference source code in any kind.
+%It can be executed on many platforms, including both ARM and x86 with very decent performances. Libbcg729 supports concurrent channel encoding/decoding for multi-call applications such as conferencing.
+%The source code also contains a mediastreamer2 compatible plugin, designed for use of this codec in Linphone or mediastreamer2-based software. However a direct API is available for those not using bcg729 with mediastreamer2.
+%
+%\subsection{Flexisip}
+%
+%Flexisip is a SIP proxy server implementation compliant to RFC3261.
+%The project was started by Belldone Communications in 2011. The focus was to develop a SIP proxy solution easy to install, configure and maintain, and offering “out of the box” all the required features to deploy a SIP service tuned for mobile applications.
+%The free linphone.org SIP service is running with Flexisip since 2011, and enables Linphone users to create their SIP addresses in order to communicate together.
+%Thanks to its modular architecture and its limited number of required dependencies, Flexisip can perfectly run on small hardware’s (embedded systems).
 
 \section{Technologies}
 \begin{itemize}
@@ -219,7 +217,7 @@ Thanks to its modular architecture and its limited number of required dependenci
 \item IDE we are using is Eclipse\\
 \item We are using travis-ci for builds. It is used for building and performing continuous integration or Continuous deployment. If the build fails then we do not merge the new feature or bug fix with the main trunk until it can build with Travis which is linked with our git repository.\\
 \item We are using Trello for our scrum board, where there is our product backlog with all our user stories to be implemented, it has the sprint backlog for each sprint, it has a list of completed user stories and those that still need to be completed.\\
-\item The group chat user interface is coded in java (Android) and for unit test, JUnit is used\\
+\item The group chat user interface is coded in java (Android) and for unit test, Android Testing Library is used\\
 \item The group chat back-end functionality is coded in C and for unit testing, CUnit is used.
 
 \end{itemize}

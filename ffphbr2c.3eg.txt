@@ -1,0 +1,569 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 5 and 4 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# Changes to be committed:
+#	deleted:    Documentation/Backpage.docx
+#	deleted:    Documentation/Backpage.pdf
+#	deleted:    Documentation/BurnDown And Velocity Chart/BurnDown.aux
+#	deleted:    Documentation/BurnDown And Velocity Chart/BurnDown.log
+#	deleted:    Documentation/BurnDown And Velocity Chart/BurnDown.pdf
+#	deleted:    Documentation/BurnDown And Velocity Chart/BurnDown.synctex.gz
+#	deleted:    Documentation/BurnDown And Velocity Chart/BurnDown.tex
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/BurndownChart.jpg
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/IMG-20150803-WA0017.jpg
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/IMG-20150804-WA0010.jpg
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/IMG-20150804-WA0016.jpg
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/Screenshot_2015-05-22-11-08-36.png
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/Screenshot_2015-05-22-11-09-05.png
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/Screenshot_2015-08-04-05-27-54.png
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/Screenshot_2015-08-04-05-28-32.png
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/Screenshot_2015-08-04-05-37-18.png
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/Screenshot_2015-08-04-05-37-53.png
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/Screenshot_2015-08-04-05-38-27.png
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/Screenshot_2015-08-04-05-38-41.png
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/Screenshot_2015-08-04-05-39-24.png
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/Screenshot_2015-08-04-05-40-26.png
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/Screenshot_2015-08-04-05-42-21.png
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/Screenshot_2015-08-04-05-42-53.png
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/Team.jpg
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/Thumbs.db
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/VelocityChart.jpg
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/android.jpg
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/baobab.jpg
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/details.png
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/home.png
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/linacc.png
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/linphoneSip.jpg
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/linphone_acc.png
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/logo.jpg
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/options.png
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/s1.jpg
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/s2.jpg
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/s3.jpg
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/settings.png
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/sip.jpg
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/sip_acc.png
+#	deleted:    Documentation/BurnDown And Velocity Chart/pictures/welcome.png
+#	deleted:    Documentation/BurnDown And Velocity Chart/titlePage.tex
+#	deleted:    Documentation/GeneralDocuments/Baobab.pptx
+#	deleted:    Documentation/GeneralDocuments/Book1 (Autosaved).xlsx
+#	deleted:    Documentation/GeneralDocuments/SDP_SDE.docx
+#	deleted:    Documentation/GeneralDocuments/Scrum Plan.xlsm
+#	deleted:    Documentation/GeneralDocuments/USER STORY.docx
+#	deleted:    Documentation/GeneralDocuments/titlePage.tex
+#	deleted:    Documentation/PSAC/PSAC.aux
+#	deleted:    Documentation/PSAC/PSAC.lof
+#	deleted:    Documentation/PSAC/PSAC.log
+#	deleted:    Documentation/PSAC/PSAC.pdf
+#	deleted:    Documentation/PSAC/PSAC.synctex.gz
+#	deleted:    Documentation/PSAC/PSAC.tex
+#	deleted:    Documentation/PSAC/PSAC.toc
+#	deleted:    Documentation/PSAC/pictures/CI-CD.jpg
+#	deleted:    Documentation/PSAC/pictures/ClientServer.jpg
+#	deleted:    Documentation/PSAC/pictures/Doc2.docx
+#	deleted:    Documentation/PSAC/pictures/Registrar.jpg
+#	deleted:    Documentation/PSAC/pictures/Team.jpg
+#	deleted:    Documentation/PSAC/pictures/Thumbs.db
+#	deleted:    Documentation/PSAC/pictures/agile.jpg
+#	deleted:    Documentation/PSAC/pictures/backlog.jpg
+#	deleted:    Documentation/PSAC/pictures/baobab.jpg
+#	deleted:    Documentation/PSAC/pictures/burnDown.jpg
+#	deleted:    Documentation/PSAC/pictures/image1.jpg
+#	deleted:    Documentation/PSAC/pictures/linphone.jpeg
+#	deleted:    Documentation/PSAC/pictures/logo.jpg
+#	deleted:    Documentation/PSAC/pictures/peer.jpg
+#	deleted:    Documentation/PSAC/pictures/pictures/CI-CD.jpg
+#	deleted:    Documentation/PSAC/pictures/pictures/ClientServer.jpg
+#	deleted:    Documentation/PSAC/pictures/pictures/Doc2.docx
+#	deleted:    Documentation/PSAC/pictures/pictures/Registrar.jpg
+#	deleted:    Documentation/PSAC/pictures/pictures/Team.jpg
+#	deleted:    Documentation/PSAC/pictures/pictures/Thumbs.db
+#	deleted:    Documentation/PSAC/pictures/pictures/burnDown.jpg
+#	deleted:    Documentation/PSAC/pictures/pictures/image1.jpg
+#	deleted:    Documentation/PSAC/pictures/pictures/linphone.jpeg
+#	deleted:    Documentation/PSAC/pictures/pictures/logo.jpg
+#	deleted:    Documentation/PSAC/pictures/pictures/peer.jpg
+#	deleted:    Documentation/PSAC/pictures/pictures/proxy1.jpg
+#	deleted:    Documentation/PSAC/pictures/pictures/proxy2.jpg
+#	deleted:    Documentation/PSAC/pictures/pictures/redirect.jpg
+#	deleted:    Documentation/PSAC/pictures/pictures/role.jpg
+#	deleted:    Documentation/PSAC/pictures/pictures/scrum.jpg
+#	deleted:    Documentation/PSAC/pictures/pictures/task.jpg
+#	deleted:    Documentation/PSAC/pictures/proxy1.jpg
+#	deleted:    Documentation/PSAC/pictures/proxy2.jpg
+#	deleted:    Documentation/PSAC/pictures/redirect.jpg
+#	deleted:    Documentation/PSAC/pictures/role.jpg
+#	deleted:    Documentation/PSAC/pictures/scrum.jpg
+#	deleted:    Documentation/PSAC/pictures/sprintbacklog.jpg
+#	deleted:    Documentation/PSAC/pictures/sprintlog.png
+#	deleted:    Documentation/PSAC/pictures/task.jpg
+#	deleted:    Documentation/PSAC/titlePage.log
+#	deleted:    Documentation/PSAC/titlePage.tex
+#	deleted:    Documentation/Product Backlog/PreviousStories/IncrementalBacklog_UserStories.aux
+#	deleted:    Documentation/Product Backlog/PreviousStories/IncrementalBacklog_UserStories.log
+#	deleted:    Documentation/Product Backlog/PreviousStories/IncrementalBacklog_UserStories.pdf
+#	deleted:    Documentation/Product Backlog/PreviousStories/IncrementalBacklog_UserStories.synctex.gz
+#	deleted:    Documentation/Product Backlog/PreviousStories/IncrementalBacklog_UserStories.tex
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/CI-CD.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/ClientServer.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/Doc2.docx
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/Registrar.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/Team.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/Thumbs.db
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/agile.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/backlog.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/baobab.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/burnDown.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/image1.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/linphone.jpeg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/logo.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/peer.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/pictures/CI-CD.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/pictures/ClientServer.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/pictures/Doc2.docx
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/pictures/Registrar.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/pictures/Team.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/pictures/Thumbs.db
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/pictures/burnDown.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/pictures/image1.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/pictures/linphone.jpeg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/pictures/logo.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/pictures/peer.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/pictures/proxy1.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/pictures/proxy2.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/pictures/redirect.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/pictures/role.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/pictures/scrum.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/pictures/task.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/proxy1.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/proxy2.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/redirect.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/role.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/scrum.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/sprintbacklog.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/sprintlog.png
+#	deleted:    Documentation/Product Backlog/PreviousStories/pictures/task.jpg
+#	deleted:    Documentation/Product Backlog/PreviousStories/titlePage.tex
+#	deleted:    Documentation/Product Backlog/ProductBacklog.aux
+#	deleted:    Documentation/Product Backlog/ProductBacklog.log
+#	deleted:    Documentation/Product Backlog/ProductBacklog.pdf
+#	deleted:    Documentation/Product Backlog/ProductBacklog.synctex.gz
+#	deleted:    Documentation/Product Backlog/ProductBacklog.tex
+#	deleted:    Documentation/Product Backlog/pictures/IMG-20150803-WA0017.jpg
+#	deleted:    Documentation/Product Backlog/pictures/IMG-20150804-WA0010.jpg
+#	deleted:    Documentation/Product Backlog/pictures/IMG-20150804-WA0016.jpg
+#	deleted:    Documentation/Product Backlog/pictures/Screenshot_2015-05-22-11-08-36.png
+#	deleted:    Documentation/Product Backlog/pictures/Screenshot_2015-05-22-11-09-05.png
+#	deleted:    Documentation/Product Backlog/pictures/Screenshot_2015-08-04-05-27-54.png
+#	deleted:    Documentation/Product Backlog/pictures/Screenshot_2015-08-04-05-28-32.png
+#	deleted:    Documentation/Product Backlog/pictures/Screenshot_2015-08-04-05-37-18.png
+#	deleted:    Documentation/Product Backlog/pictures/Screenshot_2015-08-04-05-37-53.png
+#	deleted:    Documentation/Product Backlog/pictures/Screenshot_2015-08-04-05-38-27.png
+#	deleted:    Documentation/Product Backlog/pictures/Screenshot_2015-08-04-05-38-41.png
+#	deleted:    Documentation/Product Backlog/pictures/Screenshot_2015-08-04-05-39-24.png
+#	deleted:    Documentation/Product Backlog/pictures/Screenshot_2015-08-04-05-40-26.png
+#	deleted:    Documentation/Product Backlog/pictures/Screenshot_2015-08-04-05-42-21.png
+#	deleted:    Documentation/Product Backlog/pictures/Screenshot_2015-08-04-05-42-53.png
+#	deleted:    Documentation/Product Backlog/pictures/Team.jpg
+#	deleted:    Documentation/Product Backlog/pictures/Thumbs.db
+#	deleted:    Documentation/Product Backlog/pictures/android.jpg
+#	deleted:    Documentation/Product Backlog/pictures/baobab.jpg
+#	deleted:    Documentation/Product Backlog/pictures/details.png
+#	deleted:    Documentation/Product Backlog/pictures/home.png
+#	deleted:    Documentation/Product Backlog/pictures/linacc.png
+#	deleted:    Documentation/Product Backlog/pictures/linphoneSip.jpg
+#	deleted:    Documentation/Product Backlog/pictures/linphone_acc.png
+#	deleted:    Documentation/Product Backlog/pictures/logo.jpg
+#	deleted:    Documentation/Product Backlog/pictures/options.png
+#	deleted:    Documentation/Product Backlog/pictures/s1.jpg
+#	deleted:    Documentation/Product Backlog/pictures/s2.jpg
+#	deleted:    Documentation/Product Backlog/pictures/s3.jpg
+#	deleted:    Documentation/Product Backlog/pictures/settings.png
+#	deleted:    Documentation/Product Backlog/pictures/sip.jpg
+#	deleted:    Documentation/Product Backlog/pictures/sip_acc.png
+#	deleted:    Documentation/Product Backlog/pictures/welcome.png
+#	deleted:    Documentation/Product Backlog/titlePage.log
+#	deleted:    Documentation/Product Backlog/titlePage.tex
+#	deleted:    Documentation/SprintReport1/SprintReport.aux
+#	deleted:    Documentation/SprintReport1/SprintReport.log
+#	deleted:    Documentation/SprintReport1/SprintReport.pdf
+#	deleted:    Documentation/SprintReport1/SprintReport.synctex.gz
+#	deleted:    Documentation/SprintReport1/SprintReport.tex
+#	deleted:    Documentation/SprintReport1/pictures/CI-CD.jpg
+#	deleted:    Documentation/SprintReport1/pictures/ClientServer.jpg
+#	deleted:    Documentation/SprintReport1/pictures/Doc2.docx
+#	deleted:    Documentation/SprintReport1/pictures/Registrar.jpg
+#	deleted:    Documentation/SprintReport1/pictures/Team.jpg
+#	deleted:    Documentation/SprintReport1/pictures/Thumbs.db
+#	deleted:    Documentation/SprintReport1/pictures/agile.jpg
+#	deleted:    Documentation/SprintReport1/pictures/backlog.jpg
+#	deleted:    Documentation/SprintReport1/pictures/baobab.jpg
+#	deleted:    Documentation/SprintReport1/pictures/burnDown.jpg
+#	deleted:    Documentation/SprintReport1/pictures/image1.jpg
+#	deleted:    Documentation/SprintReport1/pictures/linphone.jpeg
+#	deleted:    Documentation/SprintReport1/pictures/logo.jpg
+#	deleted:    Documentation/SprintReport1/pictures/peer.jpg
+#	deleted:    Documentation/SprintReport1/pictures/pictures/CI-CD.jpg
+#	deleted:    Documentation/SprintReport1/pictures/pictures/ClientServer.jpg
+#	deleted:    Documentation/SprintReport1/pictures/pictures/Doc2.docx
+#	deleted:    Documentation/SprintReport1/pictures/pictures/Registrar.jpg
+#	deleted:    Documentation/SprintReport1/pictures/pictures/Team.jpg
+#	deleted:    Documentation/SprintReport1/pictures/pictures/Thumbs.db
+#	deleted:    Documentation/SprintReport1/pictures/pictures/burnDown.jpg
+#	deleted:    Documentation/SprintReport1/pictures/pictures/image1.jpg
+#	deleted:    Documentation/SprintReport1/pictures/pictures/linphone.jpeg
+#	deleted:    Documentation/SprintReport1/pictures/pictures/logo.jpg
+#	deleted:    Documentation/SprintReport1/pictures/pictures/peer.jpg
+#	deleted:    Documentation/SprintReport1/pictures/pictures/proxy1.jpg
+#	deleted:    Documentation/SprintReport1/pictures/pictures/proxy2.jpg
+#	deleted:    Documentation/SprintReport1/pictures/pictures/redirect.jpg
+#	deleted:    Documentation/SprintReport1/pictures/pictures/role.jpg
+#	deleted:    Documentation/SprintReport1/pictures/pictures/scrum.jpg
+#	deleted:    Documentation/SprintReport1/pictures/pictures/task.jpg
+#	deleted:    Documentation/SprintReport1/pictures/proxy1.jpg
+#	deleted:    Documentation/SprintReport1/pictures/proxy2.jpg
+#	deleted:    Documentation/SprintReport1/pictures/redirect.jpg
+#	deleted:    Documentation/SprintReport1/pictures/role.jpg
+#	deleted:    Documentation/SprintReport1/pictures/scrum.jpg
+#	deleted:    Documentation/SprintReport1/pictures/sprintbacklog.jpg
+#	deleted:    Documentation/SprintReport1/pictures/sprintlog.png
+#	deleted:    Documentation/SprintReport1/pictures/task.jpg
+#	deleted:    Documentation/SprintReport1/titlePage.tex
+#	deleted:    Documentation/SprintReport2/SprintTwo.aux
+#	deleted:    Documentation/SprintReport2/SprintTwo.log
+#	deleted:    Documentation/SprintReport2/SprintTwo.pdf
+#	deleted:    Documentation/SprintReport2/SprintTwo.synctex.gz
+#	deleted:    Documentation/SprintReport2/SprintTwo.tex
+#	deleted:    Documentation/SprintReport2/pictures/CI-CD.jpg
+#	deleted:    Documentation/SprintReport2/pictures/ClientServer.jpg
+#	deleted:    Documentation/SprintReport2/pictures/Doc2.docx
+#	deleted:    Documentation/SprintReport2/pictures/Registrar.jpg
+#	deleted:    Documentation/SprintReport2/pictures/Team.jpg
+#	deleted:    Documentation/SprintReport2/pictures/Thumbs.db
+#	deleted:    Documentation/SprintReport2/pictures/agile.jpg
+#	deleted:    Documentation/SprintReport2/pictures/backlog.jpg
+#	deleted:    Documentation/SprintReport2/pictures/baobab.jpg
+#	deleted:    Documentation/SprintReport2/pictures/burnDown.jpg
+#	deleted:    Documentation/SprintReport2/pictures/image1.jpg
+#	deleted:    Documentation/SprintReport2/pictures/linphone.jpeg
+#	deleted:    Documentation/SprintReport2/pictures/logo.jpg
+#	deleted:    Documentation/SprintReport2/pictures/peer.jpg
+#	deleted:    Documentation/SprintReport2/pictures/pictures/CI-CD.jpg
+#	deleted:    Documentation/SprintReport2/pictures/pictures/ClientServer.jpg
+#	deleted:    Documentation/SprintReport2/pictures/pictures/Doc2.docx
+#	deleted:    Documentation/SprintReport2/pictures/pictures/Registrar.jpg
+#	deleted:    Documentation/SprintReport2/pictures/pictures/Team.jpg
+#	deleted:    Documentation/SprintReport2/pictures/pictures/Thumbs.db
+#	deleted:    Documentation/SprintReport2/pictures/pictures/burnDown.jpg
+#	deleted:    Documentation/SprintReport2/pictures/pictures/image1.jpg
+#	deleted:    Documentation/SprintReport2/pictures/pictures/linphone.jpeg
+#	deleted:    Documentation/SprintReport2/pictures/pictures/logo.jpg
+#	deleted:    Documentation/SprintReport2/pictures/pictures/peer.jpg
+#	deleted:    Documentation/SprintReport2/pictures/pictures/proxy1.jpg
+#	deleted:    Documentation/SprintReport2/pictures/pictures/proxy2.jpg
+#	deleted:    Documentation/SprintReport2/pictures/pictures/redirect.jpg
+#	deleted:    Documentation/SprintReport2/pictures/pictures/role.jpg
+#	deleted:    Documentation/SprintReport2/pictures/pictures/scrum.jpg
+#	deleted:    Documentation/SprintReport2/pictures/pictures/task.jpg
+#	deleted:    Documentation/SprintReport2/pictures/proxy1.jpg
+#	deleted:    Documentation/SprintReport2/pictures/proxy2.jpg
+#	deleted:    Documentation/SprintReport2/pictures/redirect.jpg
+#	deleted:    Documentation/SprintReport2/pictures/role.jpg
+#	deleted:    Documentation/SprintReport2/pictures/scrum.jpg
+#	deleted:    Documentation/SprintReport2/pictures/sprintbacklog.jpg
+#	deleted:    Documentation/SprintReport2/pictures/sprintlog.png
+#	deleted:    Documentation/SprintReport2/pictures/task.jpg
+#	deleted:    Documentation/SprintReport2/titlePage.tex
+#	deleted:    Documentation/SprintReport3/SprintThree.pdf
+#	deleted:    Documentation/SprintReport3/pictures/Team.jpg
+#	deleted:    Documentation/SprintReport3/pictures/Thumbs.db
+#	deleted:    Documentation/SprintReport3/pictures/baobab.jpg
+#	deleted:    Documentation/SprintReport3/pictures/logo.jpg
+#	deleted:    Documentation/SprintReport3/titlePage.tex
+#	deleted:    Documentation/SprintReport4/SprintFour.aux
+#	deleted:    Documentation/SprintReport4/SprintFour.log
+#	deleted:    Documentation/SprintReport4/SprintFour.pdf
+#	deleted:    Documentation/SprintReport4/SprintFour.synctex.gz
+#	deleted:    Documentation/SprintReport4/SprintFour.tex
+#	deleted:    Documentation/SprintReport4/pictures/Team.jpg
+#	deleted:    Documentation/SprintReport4/pictures/Thumbs.db
+#	deleted:    Documentation/SprintReport4/pictures/baobab.jpg
+#	deleted:    Documentation/SprintReport4/pictures/logo.jpg
+#	deleted:    Documentation/SprintReport4/titlePage.tex
+#	deleted:    Documentation/SprintReport5/SprintFive.aux
+#	deleted:    Documentation/SprintReport5/SprintFive.log
+#	deleted:    Documentation/SprintReport5/SprintFive.pdf
+#	deleted:    Documentation/SprintReport5/SprintFive.synctex.gz
+#	deleted:    Documentation/SprintReport5/SprintFive.tex
+#	deleted:    Documentation/SprintReport5/pictures/CI-CD.jpg
+#	deleted:    Documentation/SprintReport5/pictures/ClientServer.jpg
+#	deleted:    Documentation/SprintReport5/pictures/Doc2.docx
+#	deleted:    Documentation/SprintReport5/pictures/Registrar.jpg
+#	deleted:    Documentation/SprintReport5/pictures/Team.jpg
+#	deleted:    Documentation/SprintReport5/pictures/Thumbs.db
+#	deleted:    Documentation/SprintReport5/pictures/agile.jpg
+#	deleted:    Documentation/SprintReport5/pictures/backlog.jpg
+#	deleted:    Documentation/SprintReport5/pictures/baobab.jpg
+#	deleted:    Documentation/SprintReport5/pictures/burnDown.jpg
+#	deleted:    Documentation/SprintReport5/pictures/image1.jpg
+#	deleted:    Documentation/SprintReport5/pictures/linphone.jpeg
+#	deleted:    Documentation/SprintReport5/pictures/logo.jpg
+#	deleted:    Documentation/SprintReport5/pictures/peer.jpg
+#	deleted:    Documentation/SprintReport5/pictures/pictures/CI-CD.jpg
+#	deleted:    Documentation/SprintReport5/pictures/pictures/ClientServer.jpg
+#	deleted:    Documentation/SprintReport5/pictures/pictures/Doc2.docx
+#	deleted:    Documentation/SprintReport5/pictures/pictures/Registrar.jpg
+#	deleted:    Documentation/SprintReport5/pictures/pictures/Team.jpg
+#	deleted:    Documentation/SprintReport5/pictures/pictures/Thumbs.db
+#	deleted:    Documentation/SprintReport5/pictures/pictures/burnDown.jpg
+#	deleted:    Documentation/SprintReport5/pictures/pictures/image1.jpg
+#	deleted:    Documentation/SprintReport5/pictures/pictures/linphone.jpeg
+#	deleted:    Documentation/SprintReport5/pictures/pictures/logo.jpg
+#	deleted:    Documentation/SprintReport5/pictures/pictures/peer.jpg
+#	deleted:    Documentation/SprintReport5/pictures/pictures/proxy1.jpg
+#	deleted:    Documentation/SprintReport5/pictures/pictures/proxy2.jpg
+#	deleted:    Documentation/SprintReport5/pictures/pictures/redirect.jpg
+#	deleted:    Documentation/SprintReport5/pictures/pictures/role.jpg
+#	deleted:    Documentation/SprintReport5/pictures/pictures/scrum.jpg
+#	deleted:    Documentation/SprintReport5/pictures/pictures/task.jpg
+#	deleted:    Documentation/SprintReport5/pictures/proxy1.jpg
+#	deleted:    Documentation/SprintReport5/pictures/proxy2.jpg
+#	deleted:    Documentation/SprintReport5/pictures/redirect.jpg
+#	deleted:    Documentation/SprintReport5/pictures/role.jpg
+#	deleted:    Documentation/SprintReport5/pictures/scrum.jpg
+#	deleted:    Documentation/SprintReport5/pictures/sprintbacklog.jpg
+#	deleted:    Documentation/SprintReport5/pictures/sprintlog.png
+#	deleted:    Documentation/SprintReport5/pictures/task.jpg
+#	deleted:    Documentation/SprintReport5/titlePage.tex
+#	deleted:    Documentation/SprintReport6/SprintSix.aux
+#	deleted:    Documentation/SprintReport6/SprintSix.log
+#	deleted:    Documentation/SprintReport6/SprintSix.pdf
+#	deleted:    Documentation/SprintReport6/SprintSix.synctex.gz
+#	deleted:    Documentation/SprintReport6/SprintSix.tex
+#	deleted:    Documentation/SprintReport6/pictures/CI-CD.jpg
+#	deleted:    Documentation/SprintReport6/pictures/ClientServer.jpg
+#	deleted:    Documentation/SprintReport6/pictures/Doc2.docx
+#	deleted:    Documentation/SprintReport6/pictures/Registrar.jpg
+#	deleted:    Documentation/SprintReport6/pictures/Team.jpg
+#	deleted:    Documentation/SprintReport6/pictures/Thumbs.db
+#	deleted:    Documentation/SprintReport6/pictures/agile.jpg
+#	deleted:    Documentation/SprintReport6/pictures/backlog.jpg
+#	deleted:    Documentation/SprintReport6/pictures/baobab.jpg
+#	deleted:    Documentation/SprintReport6/pictures/burnDown.jpg
+#	deleted:    Documentation/SprintReport6/pictures/image1.jpg
+#	deleted:    Documentation/SprintReport6/pictures/linphone.jpeg
+#	deleted:    Documentation/SprintReport6/pictures/logo.jpg
+#	deleted:    Documentation/SprintReport6/pictures/peer.jpg
+#	deleted:    Documentation/SprintReport6/pictures/pictures/CI-CD.jpg
+#	deleted:    Documentation/SprintReport6/pictures/pictures/ClientServer.jpg
+#	deleted:    Documentation/SprintReport6/pictures/pictures/Doc2.docx
+#	deleted:    Documentation/SprintReport6/pictures/pictures/Registrar.jpg
+#	deleted:    Documentation/SprintReport6/pictures/pictures/Team.jpg
+#	deleted:    Documentation/SprintReport6/pictures/pictures/Thumbs.db
+#	deleted:    Documentation/SprintReport6/pictures/pictures/burnDown.jpg
+#	deleted:    Documentation/SprintReport6/pictures/pictures/image1.jpg
+#	deleted:    Documentation/SprintReport6/pictures/pictures/linphone.jpeg
+#	deleted:    Documentation/SprintReport6/pictures/pictures/logo.jpg
+#	deleted:    Documentation/SprintReport6/pictures/pictures/peer.jpg
+#	deleted:    Documentation/SprintReport6/pictures/pictures/proxy1.jpg
+#	deleted:    Documentation/SprintReport6/pictures/pictures/proxy2.jpg
+#	deleted:    Documentation/SprintReport6/pictures/pictures/redirect.jpg
+#	deleted:    Documentation/SprintReport6/pictures/pictures/role.jpg
+#	deleted:    Documentation/SprintReport6/pictures/pictures/scrum.jpg
+#	deleted:    Documentation/SprintReport6/pictures/pictures/task.jpg
+#	deleted:    Documentation/SprintReport6/pictures/proxy1.jpg
+#	deleted:    Documentation/SprintReport6/pictures/proxy2.jpg
+#	deleted:    Documentation/SprintReport6/pictures/redirect.jpg
+#	deleted:    Documentation/SprintReport6/pictures/role.jpg
+#	deleted:    Documentation/SprintReport6/pictures/scrum.jpg
+#	deleted:    Documentation/SprintReport6/pictures/sprintbacklog.jpg
+#	deleted:    Documentation/SprintReport6/pictures/sprintlog.png
+#	deleted:    Documentation/SprintReport6/pictures/task.jpg
+#	deleted:    Documentation/SprintReport6/titlePage.tex
+#	deleted:    Documentation/SprintReport7/SprintSeven.tex
+#	deleted:    Documentation/SprintReport7/pictures/CI-CD.jpg
+#	deleted:    Documentation/SprintReport7/pictures/ClientServer.jpg
+#	deleted:    Documentation/SprintReport7/pictures/Doc2.docx
+#	deleted:    Documentation/SprintReport7/pictures/Registrar.jpg
+#	deleted:    Documentation/SprintReport7/pictures/Team.jpg
+#	deleted:    Documentation/SprintReport7/pictures/Thumbs.db
+#	deleted:    Documentation/SprintReport7/pictures/agile.jpg
+#	deleted:    Documentation/SprintReport7/pictures/backlog.jpg
+#	deleted:    Documentation/SprintReport7/pictures/baobab.jpg
+#	deleted:    Documentation/SprintReport7/pictures/burnDown.jpg
+#	deleted:    Documentation/SprintReport7/pictures/image1.jpg
+#	deleted:    Documentation/SprintReport7/pictures/linphone.jpeg
+#	deleted:    Documentation/SprintReport7/pictures/logo.jpg
+#	deleted:    Documentation/SprintReport7/pictures/peer.jpg
+#	deleted:    Documentation/SprintReport7/pictures/pictures/CI-CD.jpg
+#	deleted:    Documentation/SprintReport7/pictures/pictures/ClientServer.jpg
+#	deleted:    Documentation/SprintReport7/pictures/pictures/Doc2.docx
+#	deleted:    Documentation/SprintReport7/pictures/pictures/Registrar.jpg
+#	deleted:    Documentation/SprintReport7/pictures/pictures/Team.jpg
+#	deleted:    Documentation/SprintReport7/pictures/pictures/Thumbs.db
+#	deleted:    Documentation/SprintReport7/pictures/pictures/burnDown.jpg
+#	deleted:    Documentation/SprintReport7/pictures/pictures/image1.jpg
+#	deleted:    Documentation/SprintReport7/pictures/pictures/linphone.jpeg
+#	deleted:    Documentation/SprintReport7/pictures/pictures/logo.jpg
+#	deleted:    Documentation/SprintReport7/pictures/pictures/peer.jpg
+#	deleted:    Documentation/SprintReport7/pictures/pictures/proxy1.jpg
+#	deleted:    Documentation/SprintReport7/pictures/pictures/proxy2.jpg
+#	deleted:    Documentation/SprintReport7/pictures/pictures/redirect.jpg
+#	deleted:    Documentation/SprintReport7/pictures/pictures/role.jpg
+#	deleted:    Documentation/SprintReport7/pictures/pictures/scrum.jpg
+#	deleted:    Documentation/SprintReport7/pictures/pictures/task.jpg
+#	deleted:    Documentation/SprintReport7/pictures/proxy1.jpg
+#	deleted:    Documentation/SprintReport7/pictures/proxy2.jpg
+#	deleted:    Documentation/SprintReport7/pictures/redirect.jpg
+#	deleted:    Documentation/SprintReport7/pictures/role.jpg
+#	deleted:    Documentation/SprintReport7/pictures/scrum.jpg
+#	deleted:    Documentation/SprintReport7/pictures/sprintbacklog.jpg
+#	deleted:    Documentation/SprintReport7/pictures/sprintlog.png
+#	deleted:    Documentation/SprintReport7/pictures/task.jpg
+#	deleted:    Documentation/SprintReport7/titlePage.tex
+#	deleted:    Documentation/UserManual/New Text Document.txt
+#	deleted:    Documentation/UserManual/UserManual.log
+#	deleted:    Documentation/UserManual/pictures/IMG-20150803-WA0017.jpg
+#	deleted:    Documentation/UserManual/pictures/IMG-20150804-WA0010.jpg
+#	deleted:    Documentation/UserManual/pictures/IMG-20150804-WA0016.jpg
+#	deleted:    Documentation/UserManual/pictures/Screenshot_2015-05-22-11-08-36.png
+#	deleted:    Documentation/UserManual/pictures/Screenshot_2015-05-22-11-09-05.png
+#	deleted:    Documentation/UserManual/pictures/Screenshot_2015-08-04-05-37-18.png
+#	deleted:    Documentation/UserManual/pictures/Screenshot_2015-08-04-05-37-53.png
+#	deleted:    Documentation/UserManual/pictures/Screenshot_2015-08-04-05-38-27.png
+#	deleted:    Documentation/UserManual/pictures/Screenshot_2015-08-04-05-39-24.png
+#	deleted:    Documentation/UserManual/pictures/Screenshot_2015-08-04-05-40-26.png
+#	deleted:    Documentation/UserManual/pictures/Screenshot_2015-08-04-05-42-53.png
+#	deleted:    Documentation/UserManual/pictures/Team.jpg
+#	deleted:    Documentation/UserManual/pictures/Thumbs.db
+#	deleted:    Documentation/UserManual/pictures/android.jpg
+#	deleted:    Documentation/UserManual/pictures/baobab.jpg
+#	deleted:    Documentation/UserManual/pictures/details.png
+#	deleted:    Documentation/UserManual/pictures/home.png
+#	deleted:    Documentation/UserManual/pictures/linacc.png
+#	deleted:    Documentation/UserManual/pictures/linphoneSip.jpg
+#	deleted:    Documentation/UserManual/pictures/linphone_acc.png
+#	deleted:    Documentation/UserManual/pictures/logo.jpg
+#	deleted:    Documentation/UserManual/pictures/options.png
+#	deleted:    Documentation/UserManual/pictures/s1.jpg
+#	deleted:    Documentation/UserManual/pictures/s2.jpg
+#	deleted:    Documentation/UserManual/pictures/s3.jpg
+#	deleted:    Documentation/UserManual/pictures/settings.png
+#	deleted:    Documentation/UserManual/pictures/sip.jpg
+#	deleted:    Documentation/UserManual/pictures/sip_acc.png
+#	deleted:    Documentation/UserManual/pictures/welcome.png
+#	deleted:    Documentation/UserManual/titlePage.tex
+#	deleted:    Documentation/pictures/CI-CD.jpg
+#	deleted:    Documentation/pictures/ClientServer.jpg
+#	deleted:    Documentation/pictures/Doc2.docx
+#	deleted:    Documentation/pictures/Registrar.jpg
+#	deleted:    Documentation/pictures/Team.jpg
+#	deleted:    Documentation/pictures/Thumbs.db
+#	deleted:    Documentation/pictures/agile.jpg
+#	deleted:    Documentation/pictures/backlog.jpg
+#	deleted:    Documentation/pictures/baobab.jpg
+#	deleted:    Documentation/pictures/burnDown.jpg
+#	deleted:    Documentation/pictures/image1.jpg
+#	deleted:    Documentation/pictures/linphone.jpeg
+#	deleted:    Documentation/pictures/logo.jpg
+#	deleted:    Documentation/pictures/peer.jpg
+#	deleted:    Documentation/pictures/pictures/CI-CD.jpg
+#	deleted:    Documentation/pictures/pictures/ClientServer.jpg
+#	deleted:    Documentation/pictures/pictures/Doc2.docx
+#	deleted:    Documentation/pictures/pictures/Registrar.jpg
+#	deleted:    Documentation/pictures/pictures/Team.jpg
+#	deleted:    Documentation/pictures/pictures/Thumbs.db
+#	deleted:    Documentation/pictures/pictures/burnDown.jpg
+#	deleted:    Documentation/pictures/pictures/image1.jpg
+#	deleted:    Documentation/pictures/pictures/linphone.jpeg
+#	deleted:    Documentation/pictures/pictures/logo.jpg
+#	deleted:    Documentation/pictures/pictures/peer.jpg
+#	deleted:    Documentation/pictures/pictures/proxy1.jpg
+#	deleted:    Documentation/pictures/pictures/proxy2.jpg
+#	deleted:    Documentation/pictures/pictures/redirect.jpg
+#	deleted:    Documentation/pictures/pictures/role.jpg
+#	deleted:    Documentation/pictures/pictures/scrum.jpg
+#	deleted:    Documentation/pictures/pictures/task.jpg
+#	deleted:    Documentation/pictures/proxy1.jpg
+#	deleted:    Documentation/pictures/proxy2.jpg
+#	deleted:    Documentation/pictures/redirect.jpg
+#	deleted:    Documentation/pictures/role.jpg
+#	deleted:    Documentation/pictures/scrum.jpg
+#	deleted:    Documentation/pictures/sprintbacklog.jpg
+#	deleted:    Documentation/pictures/sprintlog.png
+#	deleted:    Documentation/pictures/task.jpg
+#	deleted:    hs_err_pid4218.log
+#	deleted:    res/drawable-xhdpi/about.jpg
+#	deleted:    res/drawable-xhdpi/group_icon_default.png
+#	deleted:    res/drawable-xhdpi/group_list_delete_default.png
+#	deleted:    res/drawable-xhdpi/group_list_delete_over.png
+#	deleted:    res/drawable-xhdpi/search.png
+#	deleted:    res/drawable/group_chat_list_delete.xml
+#	deleted:    res/layout/popup_window_attach.xml
+#	deleted:    rhrcwv4c.w3i.txt
+#	deleted:    welcome2.xml
+#
+# Untracked files:
+#	Documentation/Backpage.docx
+#	Documentation/Backpage.pdf
+#	Documentation/BurnDown And Velocity Chart/
+#	Documentation/GeneralDocuments/
+#	Documentation/PSAC/
+#	Documentation/Product Backlog/
+#	Documentation/SprintReport1/
+#	Documentation/SprintReport2/
+#	Documentation/SprintReport3/
+#	Documentation/SprintReport4/
+#	Documentation/SprintReport5/
+#	Documentation/SprintReport6/
+#	Documentation/SprintReport7/
+#	Documentation/UserManual/New Text Document.txt
+#	Documentation/UserManual/UserManual.log
+#	Documentation/UserManual/pictures/IMG-20150803-WA0017.jpg
+#	Documentation/UserManual/pictures/IMG-20150804-WA0010.jpg
+#	Documentation/UserManual/pictures/IMG-20150804-WA0016.jpg
+#	Documentation/UserManual/pictures/Screenshot_2015-05-22-11-08-36.png
+#	Documentation/UserManual/pictures/Screenshot_2015-05-22-11-09-05.png
+#	Documentation/UserManual/pictures/Screenshot_2015-08-04-05-37-18.png
+#	Documentation/UserManual/pictures/Screenshot_2015-08-04-05-37-53.png
+#	Documentation/UserManual/pictures/Screenshot_2015-08-04-05-38-27.png
+#	Documentation/UserManual/pictures/Screenshot_2015-08-04-05-39-24.png
+#	Documentation/UserManual/pictures/Screenshot_2015-08-04-05-40-26.png
+#	Documentation/UserManual/pictures/Screenshot_2015-08-04-05-42-53.png
+#	Documentation/UserManual/pictures/Team.jpg
+#	Documentation/UserManual/pictures/Thumbs.db
+#	Documentation/UserManual/pictures/android.jpg
+#	Documentation/UserManual/pictures/baobab.jpg
+#	Documentation/UserManual/pictures/details.png
+#	Documentation/UserManual/pictures/home.png
+#	Documentation/UserManual/pictures/linacc.png
+#	Documentation/UserManual/pictures/linphoneSip.jpg
+#	Documentation/UserManual/pictures/linphone_acc.png
+#	Documentation/UserManual/pictures/logo.jpg
+#	Documentation/UserManual/pictures/options.png
+#	Documentation/UserManual/pictures/s1.jpg
+#	Documentation/UserManual/pictures/s2.jpg
+#	Documentation/UserManual/pictures/s3.jpg
+#	Documentation/UserManual/pictures/settings.png
+#	Documentation/UserManual/pictures/sip.jpg
+#	Documentation/UserManual/pictures/sip_acc.png
+#	Documentation/UserManual/pictures/welcome.png
+#	Documentation/UserManual/titlePage.tex
+#	Documentation/pictures/
+#	hs_err_pid4218.log
+#	res/drawable-xhdpi/about.jpg
+#	res/drawable-xhdpi/group_icon_default.png
+#	res/drawable-xhdpi/group_list_delete_default.png
+#	res/drawable-xhdpi/group_list_delete_over.png
+#	res/drawable-xhdpi/search.png
+#	res/drawable/group_chat_list_delete.xml
+#	res/layout/popup_window_attach.xml
+#	rhrcwv4c.w3i.txt
+#	welcome2.xml
+#
+
