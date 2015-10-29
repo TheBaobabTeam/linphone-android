@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 <?xml version='1.0' encoding='UTF-8'?>
 <nvd xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://nvd.nist.gov/feeds/cve/1.2" nvd_xml_version="1.2" pub_date="2008-10-17" xsi:schemaLocation="http://nvd.nist.gov/feeds/cve/1.2 http://nvd.nist.gov/schema/nvdcve.xsd">
+=======
+<?xml version='1.0' encoding='UTF-8'?>
+<nvd xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://nvd.nist.gov/feeds/cve/1.2" nvd_xml_version="1.2" pub_date="2008-10-17" xsi:schemaLocation="http://nvd.nist.gov/feeds/cve/1.2 http://nvd.nist.gov/schema/nvdcve.xsd">
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:P/I:P/A:P)" CVSS_base_score="6.8" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="6.4" name="CVE-2008-4503" seq="2008-4503" severity="Medium" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="6.8" modified="2008-10-11">
         <desc>
             <descript source="cve">The Settings Manager in Adobe Flash Player 9.0.124.0 and earlier allows remote attackers to cause victims to unknowingly click on a link or dialog via access control dialogs disguised as normal graphical elements, as demonstrated by hijacking the camera or microphone, and related to "clickjacking."</descript>
@@ -52,7 +57,11 @@
                 <vers num="9.0.124.0" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:P/I:P/A:P)" CVSS_base_score="6.8" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="6.4" name="CVE-2008-4504" seq="2008-4504" severity="Medium" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="6.8" modified="2008-10-09">
         <desc>
             <descript source="cve">Heap-based buffer overflow in Mplayer.exe in Herosoft Inc. Hero DVD Player 3.0.8 allows user-assisted remote attackers to execute arbitrary code via an M3u file with a "long entry." NOTE: the provenance of this information is unknown; the details are obtained solely from third party information.</descript>
@@ -76,7 +85,11 @@
                 <vers num="3.0.8" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:N/I:N/A:C)" CVSS_base_score="7.8" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.9" name="CVE-2008-4505" seq="2008-4505" severity="High" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="7.8" modified="2008-10-09">
         <desc>
             <descript source="cve">Unspecified vulnerability in IBM Lotus Quickr 8.1 before Fix pack 1 (8.1.0.1) might allow attackers to cause a denial of service (system crash) via a "nonstandard URL argument" to the OpenDocument command. NOTE: due to lack of details from the vendor, it is not clear whether this is a vulnerability.</descript>
@@ -99,7 +112,11 @@
                 <vers num="8.1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4506" seq="2008-4506" severity="High" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-11">
         <desc>
             <descript source="cve">Unspecified vulnerability in IBM Lotus Quickr 8.1 before Fix pack 1 (8.1.0.1) allows a place manager to "demote or delete a place superuser group" via unknown vectors.</descript>
@@ -125,7 +142,11 @@
                 <vers num="8.1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4507" seq="2008-4507" severity="High" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-09">
         <desc>
             <descript source="cve">Unspecified vulnerability in IBM Lotus Quickr 8.1 before Fix pack 1 (8.1.0.1) allows editors to delete pages that were created by a different author via unknown vectors.</descript>
@@ -150,7 +171,11 @@
                 <vers num="8.1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:N/I:N/A:C)" CVSS_base_score="7.8" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.9" name="CVE-2008-4508" seq="2008-4508" severity="High" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="7.8" modified="2008-10-09">
         <desc>
             <descript source="cve">Stack-based buffer overflow in the file parsing function in Tonec Internet Download Manager, possibly 5.14 and earlier, allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via a crafted AppleDouble file containing a long string.  NOTE: this is probably a different vulnerability than CVE-2005-2210.</descript>
@@ -171,7 +196,11 @@
                 <vers num="5.14" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="10.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="10.0" name="CVE-2008-4509" seq="2008-4509" severity="High" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="10.0" modified="2008-10-09">
         <desc>
             <descript source="cve">Unrestricted file upload vulnerability in processFiles.php in FOSS Gallery Admin and FOSS Gallery Public 1.0 beta allows remote attackers to execute arbitrary code by uploading a file with an executable extension, then accessing it via a direct request to the file in the root directory.</descript>
@@ -199,7 +228,11 @@
                 <vers edition="beta:admin" num="1.0" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:L/AC:L/Au:N/C:N/I:N/A:C)" CVSS_base_score="4.9" CVSS_exploit_subscore="3.9" CVSS_impact_subscore="6.9" name="CVE-2008-4510" seq="2008-4510" severity="Medium" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="4.9" modified="2008-10-09">
         <desc>
             <descript source="cve">Microsoft Windows Vista Home and Ultimate Edition SP1 and earlier allows local users to cause a denial of service (page fault and system crash) via multiple attempts to access a virtual address in a PAGE_NOACCESS memory page.</descript>
@@ -228,7 +261,11 @@
                 <vers edition="sp1:home_premium" num="vista" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:N/A:N)" CVSS_base_score="5.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="2.9" name="CVE-2008-4511" seq="2008-4511" severity="Medium" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="5.0" modified="2008-10-09">
         <desc>
             <descript source="cve">Todd Woolums ASP News Management, possibly 2.21, stores db/news.mdb under the web root with insufficient access control, which allows remote attackers to obtain sensitive information via a direct request.</descript>
@@ -247,7 +284,11 @@
                 <vers num="2.21" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:N/A:N)" CVSS_base_score="5.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="2.9" name="CVE-2008-4512" seq="2008-4512" severity="Medium" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="5.0" modified="2008-10-09">
         <desc>
             <descript source="cve">ASP/MS Access Shoutbox, probably 1.1 beta, stores db/shoutdb.mdb under the web root with insufficient access control, which allows remote attackers to obtain sensitive information via a direct request.</descript>
@@ -261,7 +302,11 @@
         <refs>
             <ref source="BUGTRAQ" url="http://www.securityfocus.com/archive/1/archive/1/496789/100/0/threaded">20080927 shoutbox Remote Password Disclouse Vulnerability</ref>
         </refs>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:N/I:P/A:N)" CVSS_base_score="4.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="2.9" name="CVE-2008-4513" seq="2008-4513" severity="Medium" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="4.3" modified="2008-10-09">
         <desc>
             <descript source="cve">Cross-site scripting (XSS) vulnerability in BBcode API module in Phorum 5.2.8 allows remote attackers to inject arbitrary web script or HTML via nested BBcode image tags.</descript>
@@ -284,7 +329,11 @@
                 <vers num="5.2.8" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:N/I:N/A:P)" CVSS_base_score="5.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="2.9" name="CVE-2008-4514" seq="2008-4514" severity="Medium" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="5.0" modified="2008-10-09">
         <desc>
             <descript source="cve">The HTML parser in KDE Konqueror 3.5.9 allows remote attackers to cause a denial of service (application crash) via a font tag with a long color value, which triggers an assertion error.</descript>
@@ -304,7 +353,11 @@
                 <vers num="3.5.9" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4515" seq="2008-4515" severity="High" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-09">
         <desc>
             <descript source="cve">Blue Coat K9 Web Protection 4.0.230 Beta relies on client-side JavaScript as a protection mechanism, which allows remote attackers to bypass authentication and access the (1) summary, (2) detail, (3) overrides, and (4) pwemail pages by disabling JavaScript.</descript>
@@ -328,7 +381,11 @@
                 <vers edition="beta" num="4.0.230" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4516" seq="2008-4516" severity="High" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-09">
         <desc>
             <descript source="cve">SQL injection vulnerability in galerie.php in Galerie 3.2 allows remote attackers to execute arbitrary SQL commands via the pic parameter.</descript>
@@ -352,7 +409,11 @@
                 <vers num="3.2" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4517" seq="2008-4517" severity="High" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-09">
         <desc>
             <descript source="cve">SQL injection vulnerability in leggi.php in geccBBlite 2.0 allows remote attackers to execute arbitrary SQL commands via the id parameter.</descript>
@@ -375,7 +436,11 @@
                 <vers num="2.0" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4518" seq="2008-4518" severity="High" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-10">
         <desc>
             <descript source="cve">Multiple SQL injection vulnerabilities in Fastpublish CMS 1.9.9.9.9 d (1.9999 d) allow remote attackers to execute arbitrary SQL commands via the (1) sprache parameter to index2.php and the (2) artikel parameter to index.php.</descript>
@@ -400,7 +465,11 @@
                 <vers num="1.9999d" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4519" seq="2008-4519" severity="High" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-10">
         <desc>
             <descript source="cve">Multiple directory traversal vulnerabilities in Fastpublish CMS 1.9999 d allow remote attackers to include and execute arbitrary local files via a .. (dot dot) in the target parameter to (1) index2.php and (2) index.php.</descript>
@@ -424,7 +493,11 @@
                 <vers num="1.9999d" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:N/I:P/A:N)" CVSS_base_score="4.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="2.9" name="CVE-2008-4520" seq="2008-4520" severity="Medium" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="4.3" modified="2008-10-10">
         <desc>
             <descript source="cve">Cross-site scripting (XSS) vulnerability in bulk_update.pl in AutoNessus before 1.2.2 allows remote attackers to inject arbitrary web script or HTML via the remark parameter.</descript>
@@ -453,7 +526,11 @@
                 <vers num="1.2.1" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4521" seq="2008-4521" severity="High" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-10">
         <desc>
             <descript source="cve">SQL injection vulnerability in thisraidprogress.php in the World of Warcraft tracker infusion (raidtracker_panel) module 2.0 for PHP-Fusion allows remote attackers to execute arbitrary SQL commands via the INFO_RAID_ID parameter.</descript>
@@ -476,7 +553,11 @@
                 <vers num="2.0" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4522" seq="2008-4522" severity="High" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-10">
         <desc>
             <descript source="cve">Multiple directory traversal vulnerabilities in JMweb MP3 Music Audio Search and Download Script allow remote attackers to include and execute arbitrary local files via a .. (dot dot) in the src parameter to (1) listen.php and (2) download.php.</descript>
@@ -500,7 +581,11 @@
                 <vers num="" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4523" seq="2008-4523" severity="High" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-10">
         <desc>
             <descript source="cve">SQL injection vulnerability in login.php in IP Reg 0.4 and earlier allows remote attackers to execute arbitrary SQL commands via the user_name parameter.</descript>
@@ -527,7 +612,11 @@
                 <vers num="0.4" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4524" seq="2008-4524" severity="High" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-10">
         <desc>
             <descript source="cve">SQL injection vulnerability in the "Check User" feature (includes/check_user.php) in AdaptCMS Lite and AdaptCMS Pro 1.3 allows remote attackers to execute arbitrary SQL commands via the user_name parameter.</descript>
@@ -555,7 +644,11 @@
                 <vers edition="unknown:pro" num="1.3" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4525" seq="2008-4525" severity="High" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-10">
         <desc>
             <descript source="cve">SQL injection vulnerability in index.php in AmpJuke 0.7.5 allows remote attackers to execute arbitrary SQL commands via the special parameter in a performerid action.</descript>
@@ -579,7 +672,11 @@
                 <vers num="0.7.5" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="10.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="10.0" name="CVE-2008-4526" seq="2008-4526" severity="High" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="10.0" modified="2008-10-10">
         <desc>
             <descript source="cve">Multiple directory traversal vulnerabilities in CCMS 3.1 allow remote attackers to include and execute arbitrary local files via a .. (dot dot) in the skin parameter to (1) index.php, (2) forums.php, (3) admin.php, (4) header.php, (5) pages/story.php and (6) pages/poll.php.</descript>
@@ -601,7 +698,11 @@
                 <vers num="3.1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4527" seq="2008-4527" severity="High" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-10">
         <desc>
             <descript source="cve">SQL injection vulnerability in recept.php in the Recepies (Recept) module 1.1 for PHP-Fusion allows remote attackers to execute arbitrary SQL commands via the kat_id parameter in a kategorier action.  NOTE: some of these details are obtained from third party information.</descript>
@@ -625,7 +726,11 @@
                 <vers num="1.1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4528" seq="2008-4528" severity="High" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-10">
         <desc>
             <descript source="cve">Directory traversal vulnerability in notes.php in Phlatline's Personal Information Manager (pPIM) 1.01 allows remote attackers to include and execute arbitrary local files via a .. (dot dot) in the id parameter in an edit action.</descript>
@@ -648,7 +753,11 @@
                 <vers num="1.01" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4529" seq="2008-4529" severity="High" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-11">
         <desc>
             <descript source="cve">Multiple PHP remote file inclusion vulnerabilities in asiCMS alpha 0.208 allow remote attackers to execute arbitrary PHP code via a URL in the _ENV[asicms][path] parameter to (1) Association.php, (2) BigMath.php, (3) DiffieHellman.php, (4) DumbStore.php, (5) Extension.php, (6) FileStore.php, (7) HMAC.php, (8) MemcachedStore.php, (9) Message.php, (10) Nonce.php, (11) SQLStore.php, (12) SReg.php, (13) TrustRoot.php, and (14) URINorm.php in classes/Auth/OpenID/; and (15) XRDS.php, (16) XRI.php and (17) XRIRes.php in classes/Auth/Yadis/.</descript>
@@ -671,7 +780,11 @@
                 <vers edition="alpha" num="0.208" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:N/I:P/A:N)" CVSS_base_score="4.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="2.9" name="CVE-2008-4530" seq="2008-4530" severity="Medium" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="4.3" modified="2008-10-10">
         <desc>
             <descript source="cve">Cross-site scripting (XSS) vulnerability in Brilliant Gallery 5.x before 5.x-4.2, a module for Drupal, allows remote authenticated users with permissions to inject arbitrary web script or HTML via unspecified vectors related to posting of answers.</descript>
@@ -719,7 +832,11 @@
                 <vers num="5.x-4.1" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4531" seq="2008-4531" severity="High" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-10">
         <desc>
             <descript source="cve">SQL injection vulnerability in Brilliant Gallery 5.x before 5.x-4.2, a module for Drupal, allows remote attackers to execute arbitrary SQL commands via unspecified vectors, related to queries.  NOTE: this might be the same issue as CVE-2008-4338.</descript>
@@ -768,7 +885,11 @@
                 <vers num="5.x-4.1" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:N/I:P/A:N)" CVSS_base_score="4.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="2.9" name="CVE-2008-4532" seq="2008-4532" severity="Medium" type="CVE" published="2008-10-09" CVSS_version="2.0" CVSS_score="4.3" modified="2008-10-10">
         <desc>
             <descript source="cve">Cross-site scripting (XSS) vulnerability in index.php in MaxiScript Website Directory allows remote attackers to inject arbitrary web script or HTML via the keyword parameter in a search action.</descript>
@@ -791,7 +912,11 @@
                 <vers num="" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:P/I:P/A:P)" CVSS_base_score="6.8" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="6.4" name="CVE-2008-3432" seq="2008-3432" severity="Medium" type="CVE" published="2008-10-10" CVSS_version="2.0" CVSS_score="6.8" modified="2008-10-10">
         <desc>
             <descript source="cve">Heap-based buffer overflow in the mch_expand_wildcards function in os_unix.c in Vim 6.2 and 6.3 allows user-assisted attackers to execute arbitrary code via shell metacharacters in filenames, as demonstrated by the netrw.v3 test case.</descript>
@@ -819,7 +944,11 @@
                 <vers num="6.3" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="10.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="10.0" name="CVE-2008-3641" seq="2008-3641" severity="High" type="CVE" published="2008-10-10" CVSS_version="2.0" CVSS_score="10.0" modified="2008-10-15">
         <desc>
             <descript source="cve">The Hewlett-Packard Graphics Language (HPGL) filter in CUPS before 1.3.9 allows remote attackers to execute arbitrary code via crafted pen width and pen color opcodes that overwrite arbitrary memory.</descript>
@@ -919,7 +1048,11 @@
                 <vers num="1.3.8" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:C/I:C/A:C)" CVSS_base_score="9.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="10.0" name="CVE-2008-3642" seq="2008-3642" severity="High" type="CVE" published="2008-10-10" CVSS_version="2.0" CVSS_score="9.3" modified="2008-10-10">
         <desc>
             <descript source="cve">Buffer overflow in ColorSync in Mac OS X 10.4.11 and 10.5.5 allows remote attackers to cause a denial of service (application termination) and possibly execute arbitrary code via an image with a crafted ICC profile.</descript>
@@ -947,7 +1080,11 @@
                 <vers num="10.5.5" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:N/I:N/A:C)" CVSS_base_score="7.8" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.9" name="CVE-2008-3643" seq="2008-3643" severity="High" type="CVE" published="2008-10-10" CVSS_version="2.0" CVSS_score="7.8" modified="2008-10-10">
         <desc>
             <descript source="cve">Unspecified vulnerability in Finder in Mac OS X 10.5.5 allows user-assisted attackers to cause a denial of service (continuous termination and restart) via a crafted Desktop file that generates an error when producing its icon, related to an "error recovery issue."</descript>
@@ -970,7 +1107,11 @@
                 <vers num="10.5.5" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:L/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="7.2" CVSS_exploit_subscore="3.9" CVSS_impact_subscore="10.0" name="CVE-2008-3645" seq="2008-3645" severity="High" type="CVE" published="2008-10-10" CVSS_version="2.0" CVSS_score="7.2" modified="2008-10-10">
         <desc>
             <descript source="cve">Heap-based buffer overflow in the local IPC component in the EAPOLController plugin for configd (Networking component) in Mac OS X 10.4.11 and 10.5.5 allows local users to execute arbitrary code via unknown vectors.</descript>
@@ -998,7 +1139,11 @@
                 <vers num="10.5.5" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:P/I:P/A:P)" CVSS_base_score="6.8" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="6.4" name="CVE-2008-3646" seq="2008-3646" severity="Medium" type="CVE" published="2008-10-10" CVSS_version="2.0" CVSS_score="6.8" modified="2008-10-10">
         <desc>
             <descript source="cve">The Postfix configuration file in Mac OS X 10.5.5 causes Postfix to be network-accessible when mail is sent from a local command-line tool, which allows remote attackers to send mail to local Mac OS X users.</descript>
@@ -1021,7 +1166,11 @@
                 <vers num="10.5.5" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:C/I:C/A:C)" CVSS_base_score="9.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="10.0" name="CVE-2008-3647" seq="2008-3647" severity="High" type="CVE" published="2008-10-10" CVSS_version="2.0" CVSS_score="9.3" modified="2008-10-10">
         <desc>
             <descript source="cve">Buffer overflow in PSNormalizer in Mac OS X 10.4.11 and 10.5.5 allows remote attackers to cause a denial of service (application termination) and execute arbitrary code via a PostScript file with a crafted bounding box comment.</descript>
@@ -1050,7 +1199,11 @@
                 <vers num="10.5.5" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="10.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="10.0" name="CVE-2008-4211" seq="2008-4211" severity="High" type="CVE" published="2008-10-10" CVSS_version="2.0" CVSS_score="10.0" modified="2008-10-10">
         <desc>
             <descript source="cve">Integer signedness error in QuickLook in Mac OS X 10.5.5 allows remote attackers to cause a denial of service (application termination) and execute arbitrary code via a crafted Microsoft Excel file that triggers an out-of-bounds memory access.</descript>
@@ -1076,7 +1229,11 @@
                 <vers num="10.5.5" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="10.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="10.0" name="CVE-2008-4212" seq="2008-4212" severity="High" type="CVE" published="2008-10-10" CVSS_version="2.0" CVSS_score="10.0" modified="2008-10-10">
         <desc>
             <descript source="cve">Unspecified vulnerability in rlogind in the rlogin component in Mac OS X 10.4.11 and 10.5.5 applies hosts.equiv entries to root despite what is stated in documentation, which might allow remote attackers to bypass intended access restrictions.</descript>
@@ -1104,7 +1261,11 @@
                 <vers num="10.5.5" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:L/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="4.6" CVSS_exploit_subscore="3.9" CVSS_impact_subscore="6.4" name="CVE-2008-4214" seq="2008-4214" severity="Medium" type="CVE" published="2008-10-10" CVSS_version="2.0" CVSS_score="4.6" modified="2008-10-10">
         <desc>
             <descript source="cve">Unspecified vulnerability in Script Editor in Mac OS X 10.4.11 and 10.5.5 allows local users to cause the scripting dictionary to be written to arbitrary locations, related to an "insecure file operation" on temporary files.</descript>
@@ -1131,7 +1292,11 @@
                 <vers num="10.5.5" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4215" seq="2008-4215" severity="High" type="CVE" published="2008-10-10" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-10">
         <desc>
             <descript source="cve">Weblog in Mac OS X Server 10.4.11 does not properly check an error condition when a weblog posting access control list is specified for a user that has multiple short names, which might allow attackers to bypass intended access restrictions.</descript>
@@ -1154,7 +1319,11 @@
                 <vers num="10.4.11" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:L/AC:M/Au:N/C:C/I:C/A:C)" CVSS_base_score="6.9" CVSS_exploit_subscore="3.4" CVSS_impact_subscore="10.0" name="CVE-2008-4394" seq="2008-4394" severity="Medium" type="CVE" published="2008-10-10" CVSS_version="2.0" CVSS_score="6.9" modified="2008-10-10">
         <desc>
             <descript source="cve">Multiple untrusted search path vulnerabilities in Portage before 2.1.4.5 include the current working directory in the Python search path, which allows local users to execute arbitrary code via a modified Python module that is loaded by the (1) ys-apps/portage, (2) net-mail/fetchmail, (3) app-editors/leo ebuilds, and other ebuilds.</descript>
@@ -1181,7 +1350,11 @@
                 <vers num="2.1.4.4" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:N/I:P/A:N)" CVSS_base_score="4.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="2.9" name="CVE-2008-4533" seq="2008-4533" severity="Medium" type="CVE" published="2008-10-10" CVSS_version="2.0" CVSS_score="4.3" modified="2008-10-10">
         <desc>
             <descript source="cve">Cross-site scripting (XSS) vulnerability in Kantan WEB Server 1.8 and earlier allows remote attackers to inject arbitrary web script or HTML via unknown vectors.</descript>
@@ -1208,7 +1381,11 @@
                 <vers num="1.8" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4534" seq="2008-4534" severity="High" type="CVE" published="2008-10-10" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-10">
         <desc>
             <descript source="cve">SQL injection vulnerability in EC-CUBE Ver2 2.1.2a and earlier, and Ver2 RC 2.3.0-rc1 and earlier, allows remote attackers to execute arbitrary SQL commands via unspecified vectors.</descript>
@@ -1237,7 +1414,11 @@
                 <vers num="2.3.0" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:N/I:P/A:N)" CVSS_base_score="4.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="2.9" name="CVE-2008-4535" seq="2008-4535" severity="Medium" type="CVE" published="2008-10-10" CVSS_version="2.0" CVSS_score="4.3" modified="2008-10-10">
         <desc>
             <descript source="cve">Cross-site scripting (XSS) vulnerability in EC-CUBE Ver2 2.1.2a and earlier, EC-CUBE Ver2 Beta(RC) 2.2.0-beta and earlier, and EC-CUBE Community Edition Nighly-Build r17623 and earlier allows remote attackers to inject arbitrary web script or HTML via unspecified vectors, a different issue than CVE-2008-4536 and CVE-2008-4537.</descript>
@@ -1264,7 +1445,11 @@
                 <vers num="2.3.0" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:N/I:P/A:N)" CVSS_base_score="4.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="2.9" name="CVE-2008-4536" seq="2008-4536" severity="Medium" type="CVE" published="2008-10-10" CVSS_version="2.0" CVSS_score="4.3" modified="2008-10-10">
         <desc>
             <descript source="cve">Cross-site scripting (XSS) vulnerability in EC-CUBE Ver1 1.4.6 and earlier, Ver1 Beta 1.5.0-beta and earlier, Ver2 2.1.2a and earlier, Ver2 Beta(RC) 2.2.0-beta and earlier, Community Edition 1.3.4 and earlier, and Community Edition Nightly-Build r17319 and earlier allows remote attackers to inject arbitrary web script or HTML via unspecified vectors, a different issue than CVE-2008-4535 and CVE-2008-4537.</descript>
@@ -1292,7 +1477,11 @@
                 <vers num="2.3.0" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:N/I:P/A:N)" CVSS_base_score="4.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="2.9" name="CVE-2008-4537" seq="2008-4537" severity="Medium" type="CVE" published="2008-10-10" CVSS_version="2.0" CVSS_score="4.3" modified="2008-10-10">
         <desc>
             <descript source="cve">Cross-site scripting (XSS) vulnerability in EC-CUBE Ver1 1.4.6 and earlier, Ver1 Beta 1.5.0-beta and earlier, Ver2 2.1.2a and earlier, Ver2 Beta(RC) 2.1.1-beta and earlier, Community Edition 1.3.4 and earlier, and Community Edition Nightly-Build r17336 and earlier allows remote attackers to inject arbitrary web script or HTML via unspecified vectors, a different issue than CVE-2008-4535 and CVE-2008-4536.</descript>
@@ -1321,7 +1510,11 @@
                 <vers num="2.3.0" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:P/I:N/A:N)" CVSS_base_score="4.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="2.9" name="CVE-2008-3271" seq="2008-3271" severity="Medium" type="CVE" published="2008-10-13" CVSS_version="2.0" CVSS_score="4.3" modified="2008-10-14">
         <desc>
             <descript source="cve">Apache Tomcat 5.5.0 and 4.1.0 through 4.1.31 allows remote attackers to bypass an IP address restriction and obtain sensitive information via a request that is processed concurrently with another request but in a different thread, leading to an instance-variable overwrite associated with a "synchronization problem" and lack of thread safety, and related to RemoteFilterValve, RemoteAddrValve, and RemoteHostValve.</descript>
@@ -1379,7 +1572,11 @@
                 <vers num="5.5.0" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:C)" CVSS_base_score="9.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="8.5" name="CVE-2008-3544" seq="2008-3544" severity="High" type="CVE" published="2008-10-13" CVSS_version="2.0" CVSS_score="9.0" modified="2008-10-14">
         <desc>
             <descript source="cve">Multiple stack-based buffer overflows in ovalarmsrv in HP OpenView Network Node Manager (OV NNM) 7.51, and possibly 7.01, 7.50, and 7.53, allow remote attackers to execute arbitrary code via a long (1) REQUEST_SEV_CHANGE (aka number 47), (2) REQUEST_SAVE_STATE (aka number 61), or (3) REQUEST_RESTORE_STATE (aka number 62) request to TCP port 2954.</descript>
@@ -1408,7 +1605,11 @@
                 <vers num="7.53" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:N/I:N/A:C)" CVSS_base_score="7.8" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.9" name="CVE-2008-3545" seq="2008-3545" severity="High" type="CVE" published="2008-10-13" CVSS_version="2.0" CVSS_score="7.8" modified="2008-10-14">
         <desc>
             <descript source="cve">Unspecified vulnerability in ovtopmd in HP OpenView Network Node Manager (OV NNM) 7.01, 7.51, and 7.53 allows remote attackers to cause a denial of service via unknown vectors, a different vulnerability than CVE-2008-3536, CVE-2008-3537, and CVE-2008-3544.  NOTE: due to insufficient details from the vendor, it is not clear whether this is the same as CVE-2008-1853.</descript>
@@ -1432,7 +1633,11 @@
                 <vers num="7.53" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:N/I:P/A:N)" CVSS_base_score="4.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="2.9" name="CVE-2008-4411" seq="2008-4411" severity="Medium" type="CVE" published="2008-10-13" CVSS_version="2.0" CVSS_score="4.3" modified="2008-10-13">
         <desc>
             <descript source="cve">Cross-site scripting (XSS) vulnerability in HP System Management Homepage (SMH) before 2.1.15.210 on Linux and Windows allows remote attackers to inject arbitrary web script or HTML via unspecified vectors, a different vulnerability than CVE-2008-1663.</descript>
@@ -1486,7 +1691,11 @@
                 <vers num="2.1.9-178" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:L/AC:L/Au:N/C:P/I:N/A:N)" CVSS_base_score="2.1" CVSS_exploit_subscore="3.9" CVSS_impact_subscore="2.9" name="CVE-2008-4540" seq="2008-4540" severity="Low" type="CVE" published="2008-10-13" CVSS_version="2.0" CVSS_score="2.1" modified="2008-10-14">
         <desc>
             <descript source="cve">Windows Mobile 6 on the HTC Hermes device makes WLAN passwords available to an auto-completion mechanism for the password input field, which allows physically proximate attackers to bypass password authentication and obtain WLAN access.</descript>
@@ -1505,7 +1714,11 @@
                 <vers num="6.0" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="10.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="10.0" name="CVE-2008-4541" seq="2008-4541" severity="High" type="CVE" published="2008-10-13" CVSS_version="2.0" CVSS_score="10.0" modified="2008-10-14">
         <desc>
             <descript source="cve">Heap-based buffer overflow in the FTP subsystem in Sun Java System Web Proxy Server 4.0 through 4.0.7 allows remote attackers to execute arbitrary code via unspecified vectors.</descript>
@@ -1573,7 +1786,11 @@
                 <vers edition=":linux" num="4.0.7" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:S/C:N/I:P/A:N)" CVSS_base_score="3.5" CVSS_exploit_subscore="6.8" CVSS_impact_subscore="2.9" name="CVE-2008-4542" seq="2008-4542" severity="Low" type="CVE" published="2008-10-13" CVSS_version="2.0" CVSS_score="3.5" modified="2008-10-14">
         <desc>
             <descript source="cve">Cross-site scripting (XSS) vulnerability in Cisco Unity 4.x before 4.2(1)ES162, 5.x before 5.0(1)ES56, and 7.x before 7.0(2)ES8 allows remote authenticated administrators to inject arbitrary web script or HTML by entering it in the database (aka data store).</descript>
@@ -1609,7 +1826,11 @@
                 <vers num="7.0(2)" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:N/I:N/A:C)" CVSS_base_score="7.1" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="6.9" name="CVE-2008-4543" seq="2008-4543" severity="High" type="CVE" published="2008-10-13" CVSS_version="2.0" CVSS_score="7.1" modified="2008-10-14">
         <desc>
             <descript source="cve">Cisco Unity 4.x before 4.2(1)ES161, 5.x before 5.0(1)ES53, and 7.x before 7.0(2)ES8, when using anonymous authentication (aka native Unity authentication), allows remote attackers to cause a denial of service (session exhaustion) via a large number of connections.</descript>
@@ -1644,7 +1865,11 @@
                 <vers num="7.0(2)" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:N/I:N/A:P)" CVSS_base_score="5.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="2.9" name="CVE-2008-4544" seq="2008-4544" severity="Medium" type="CVE" published="2008-10-13" CVSS_version="2.0" CVSS_score="5.0" modified="2008-10-14">
         <desc>
             <descript source="cve">Unspecified vulnerability in an unspecified Microsoft API, as used by Cisco Unity and possibly other products, allows remote attackers to cause a denial of service by sending crafted packets to dynamic UDP ports, related to a "processing error."</descript>
@@ -1667,7 +1892,11 @@
                 <vers num="" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:S/C:P/I:N/A:N)" CVSS_base_score="4.0" CVSS_exploit_subscore="8.0" CVSS_impact_subscore="2.9" name="CVE-2008-4545" seq="2008-4545" severity="Medium" type="CVE" published="2008-10-13" CVSS_version="2.0" CVSS_score="4.0" modified="2008-10-14">
         <desc>
             <descript source="cve">Cisco Unity 4.x before 4.2(1)ES161, 5.x before 5.0(1)ES53, and 7.x before 7.0(2)ES8 uses weak permissions for the D:\CommServer\Reports directory, which allows remote authenticated users to obtain sensitive information by reading files in this directory.</descript>
@@ -1702,7 +1931,11 @@
                 <vers num="7.0(2)" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:N/I:N/A:C)" CVSS_base_score="7.8" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.9" name="CVE-2008-4441" seq="2008-4441" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="7.8" modified="2008-10-17">
         <desc>
             <descript source="cve">The Marvell driver for the Linksys WAP4400N Wi-Fi access point with firmware 1.2.14 on the Marvell 88W8361P-BEM1 chipset, when WEP mode is enabled, does not properly parse malformed 802.11 frames, which allows remote attackers to cause a denial of service (reboot or hang-up) via a malformed association request containing the WEP flag, as demonstrated by a request that is too short, a different vulnerability than CVE-2008-1144 and CVE-2008-1197.</descript>
@@ -1725,7 +1958,11 @@
                 <vers num="1.2.14" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:N/I:N/A:P)" CVSS_base_score="4.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="2.9" name="CVE-2008-4546" seq="2008-4546" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="4.3" modified="2008-10-14">
         <desc>
             <descript source="cve">Adobe Flash Player 9.0.45.0, 9.0.112.0, 9.0.124.0, and 10.0.12.10 allows remote web servers to cause a denial of service (NULL pointer dereference and browser crash) by returning a different response when an HTTP request is sent a second time, as demonstrated by two responses that provide SWF files with different SWF version numbers.</descript>
@@ -1749,7 +1986,11 @@
                 <vers num="9.0.45.0" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:C/I:C/A:C)" CVSS_base_score="9.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="10.0" name="CVE-2008-4547" seq="2008-4547" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="9.3" modified="2008-10-15">
         <desc>
             <descript source="cve">Heap-based buffer overflow in the PdvrAtl.PdvrOcx.1 ActiveX control (pdvratl.dll) in DVRHOST Web CMS OCX 1.0.1.25 allows remote attackers to execute arbitrary code via a long second argument to the TimeSpanFormat method.</descript>
@@ -1773,7 +2014,11 @@
                 <vers num="1.0.1.25" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:C/I:C/A:C)" CVSS_base_score="9.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="10.0" name="CVE-2008-4548" seq="2008-4548" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="9.3" modified="2008-10-15">
         <desc>
             <descript source="cve">Stack-based buffer overflow in the PTZCamPanelCtrl ActiveX control (CamPanel.dll) in RTS Sentry 2.1.0.2 allows remote attackers to execute arbitrary code via a long second argument to the ConnectServer method.</descript>
@@ -1799,7 +2044,11 @@
                 <vers num="2.1.0.2" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:H/Au:N/C:P/I:N/A:N)" CVSS_base_score="2.6" CVSS_exploit_subscore="4.9" CVSS_impact_subscore="2.9" name="CVE-2008-4549" seq="2008-4549" severity="Low" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="2.6" modified="2008-10-15">
         <desc>
             <descript source="cve">The ImageShack Toolbar ActiveX control (ImageShackToolbar.dll) in ImageShack Toolbar 4.5.7, possibly including 4.5.7.69, allows remote attackers to force the upload of arbitrary image files to the ImageShack site via a file: URI argument to the BuildSlideShow method.</descript>
@@ -1824,7 +2073,11 @@
                 <vers num="4.5.7.69" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:N/I:N/A:P)" CVSS_base_score="5.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="2.9" name="CVE-2008-4551" seq="2008-4551" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="5.0" modified="2008-10-15">
         <desc>
             <descript source="cve">strongSwan 4.2.6 and earlier allows remote attackers to cause a denial of service (daemon crash) via an IKE_SA_INIT message with a large number of NULL values in a Key Exchange payload, which triggers a NULL pointer dereference for the return value of the mpz_export function in the GNU Multiprecision Library (GMP).</descript>
@@ -1908,7 +2161,11 @@
                 <vers num="4.2.6" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4552" seq="2008-4552" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-15">
         <desc>
             <descript source="cve">nfs-utils 1.0.9, and possibly other versions before 1.1.3, invokes the host_ctl function with the wrong order of arguments, which causes TCP Wrappers to ignore netgroups and allows remote attackers to bypass intended access restrictions.</descript>
@@ -1952,7 +2209,11 @@
                 <vers num="1.1.2" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-3639" seq="2008-3639" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-15">
         <desc>
             <descript source="cve">Heap-based buffer overflow in the read_rle16 function in imagetops in CUPS before 1.3.9 allows remote attackers to execute arbitrary code via an SGI image with malformed Run Length Encoded (RLE) data containing a small image and a large row count.</descript>
@@ -2053,7 +2314,11 @@
                 <vers num="1.3.8" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:P/I:P/A:P)" CVSS_base_score="6.8" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="6.4" name="CVE-2008-3640" seq="2008-3640" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="6.8" modified="2008-10-15">
         <desc>
             <descript source="cve">Integer overflow in the WriteProlog function in texttops in CUPS before 1.3.9 allows remote attackers to execute arbitrary code via a crafted PostScript file that triggers a heap-based buffer overflow.</descript>
@@ -2156,7 +2421,11 @@
                 <vers num="" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:C/I:C/A:C)" CVSS_base_score="9.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="10.0" name="CVE-2008-4385" seq="2008-4385" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="9.3" modified="2008-10-15">
         <desc>
             <descript source="cve">Husdawg, LLC Systems Requirements Lab 3 allows remote attackers to force the download and execution of arbitrary programs via unknown vectors in (1) ActiveX control (sysreqlab.dll, sysreqlabsli.dll, or sysreqlab2.dll) and (2) Java applet in RLApplet.class in sysreqlab2.jar or sysreqlab.jar.</descript>
@@ -2178,7 +2447,11 @@
                 <vers num="3" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="10.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="10.0" name="CVE-2008-4397" seq="2008-4397" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="10.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Directory traversal vulnerability in the RPC interface (asdbapi.dll) in CA ARCserve Backup (formerly BrightStor ARCserve Backup) r11.1 through r12.0 allows remote attackers to execute arbitrary commands via a .. (dot dot) in an RPC call with opnum 0x10A.</descript>
@@ -2211,7 +2484,11 @@
                 <vers num="r2" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:N/I:N/A:P)" CVSS_base_score="5.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="2.9" name="CVE-2008-4398" seq="2008-4398" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="5.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the tape engine service in asdbapi.dll in CA ARCserve Backup (formerly BrightStor ARCserve Backup) r11.1 through r12.0 allows remote attackers to cause a denial of service (crash) via a crafted request.</descript>
@@ -2240,7 +2517,11 @@
                 <vers num="r2" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:N/I:N/A:P)" CVSS_base_score="5.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="2.9" name="CVE-2008-4399" seq="2008-4399" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="5.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the database engine service in asdbapi.dll in CA ARCserve Backup (formerly BrightStor ARCserve Backup) r11.1 through r12.0 allows remote attackers to cause a denial of service (crash) via a crafted request, related to "insufficient validation."</descript>
@@ -2269,7 +2550,11 @@
                 <vers num="r2" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:N/I:N/A:P)" CVSS_base_score="5.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="2.9" name="CVE-2008-4400" seq="2008-4400" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="5.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in asdbapi.dll in CA ARCserve Backup (formerly BrightStor ARCserve Backup) r11.1 through r12.0 allows remote attackers to cause a denial of service (crash of multiple services) via crafted authentication credentials, related to "insufficient validation."</descript>
@@ -2298,7 +2583,11 @@
                 <vers num="r2" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:S/C:C/I:C/A:C)" CVSS_base_score="8.5" CVSS_exploit_subscore="6.8" CVSS_impact_subscore="10.0" name="CVE-2008-4555" seq="2008-4555" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="8.5" modified="2008-10-15">
         <desc>
             <descript source="cve">Stack-based buffer overflow in the push_subg function in parser.y (lib/graph/parser.c) in Graphviz 2.20.2, and possibly earlier versions, allows user-assisted remote attackers to cause a denial of service (memory corruption) or execute arbitrary code via a DOT file with a large number of Agraph_t elements.</descript>
@@ -2364,7 +2653,11 @@
                 <vers num="2.8" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:L/AC:L/Au:N/C:P/I:N/A:N)" CVSS_base_score="2.1" CVSS_exploit_subscore="3.9" CVSS_impact_subscore="2.9" name="CVE-2008-2588" seq="2008-2588" severity="Low" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="2.1" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Oracle JDeveloper component in Oracle Application Server 10.1.2.2 allows local users to affect confidentiality via unknown vectors.</descript>
@@ -2383,7 +2676,11 @@
                 <vers num="10.1.2.2" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:L/AC:L/Au:S/C:N/I:N/A:P)" CVSS_base_score="1.7" CVSS_exploit_subscore="3.1" CVSS_impact_subscore="2.9" name="CVE-2008-2619" seq="2008-2619" severity="Low" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="1.7" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Oracle Reports Developer component in Oracle Application Server 1.0.2.2, 9.0.4.3, and 10.1.2.2, and E-Business Suite 11.5.10.2, allows remote authenticated users to affect availability via unknown vectors.</descript>
@@ -2407,7 +2704,11 @@
                 <vers num="11.5.10.2" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:S/C:P/I:P/A:P)" CVSS_base_score="6.5" CVSS_exploit_subscore="8.0" CVSS_impact_subscore="6.4" name="CVE-2008-2624" seq="2008-2624" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="6.5" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Oracle OLAP component in Oracle Database 10.1.0.5 allows remote authenticated users to affect confidentiality, integrity, and availability via unknown vectors.</descript>
@@ -2429,7 +2730,11 @@
                 <vers num="10.1.0.5" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:H/Au:N/C:P/I:P/A:N)" CVSS_base_score="4.0" CVSS_exploit_subscore="4.9" CVSS_impact_subscore="4.9" name="CVE-2008-2625" seq="2008-2625" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="4.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Core RDBMS component in Oracle Database 9.2.0.8, 9.2.0.8DV, 10.1.0.5, and 10.2.0.2 allows remote attackers to affect confidentiality and integrity via unknown vectors.</descript>
@@ -2454,7 +2759,11 @@
                 <vers num="9.2.0.8dv" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:N/I:P/A:N)" CVSS_base_score="5.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="2.9" name="CVE-2008-3975" seq="2008-3975" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="5.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Oracle Portal component in Oracle Application Server 9.0.4.3 and 10.1.2.3 allows remote attackers to affect integrity via unknown vectors.</descript>
@@ -2474,7 +2783,11 @@
                 <vers num="9.0.4.3" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:S/C:P/I:P/A:N)" CVSS_base_score="5.5" CVSS_exploit_subscore="8.0" CVSS_impact_subscore="4.9" name="CVE-2008-3976" seq="2008-3976" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="5.5" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Oracle Spatial component in Oracle Database 9.2.0.8, 9.2.0.8DV, 10.1.0.5, and 10.2.0.3 allows remote authenticated users to affect confidentiality and integrity via unknown vectors.</descript>
@@ -2499,7 +2812,11 @@
                 <vers num="9.2.0.8dv" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:N/I:P/A:N)" CVSS_base_score="5.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="2.9" name="CVE-2008-3977" seq="2008-3977" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="5.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Oracle Portal component in Oracle Application Server 9.0.4.3 and 10.1.2.3 allows remote attackers to affect integrity via unknown vectors.</descript>
@@ -2519,7 +2836,11 @@
                 <vers num="9.0.4.3" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:S/C:P/I:P/A:N)" CVSS_base_score="4.9" CVSS_exploit_subscore="6.8" CVSS_impact_subscore="4.9" name="CVE-2008-3980" seq="2008-3980" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="4.9" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Upgrade component in Oracle Database 10.1.0.5 and 10.2.0.3 allows remote authenticated users to affect confidentiality and integrity via unknown vectors.</descript>
@@ -2540,7 +2861,11 @@
                 <vers num="10.2.0.3" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:S/C:P/I:P/A:N)" CVSS_base_score="5.5" CVSS_exploit_subscore="8.0" CVSS_impact_subscore="4.9" name="CVE-2008-3982" seq="2008-3982" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="5.5" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Workspace Manager component in Oracle Database 9.2.0.8, 9.2.0.8DV, 10.1.0.5, 10.2.0.3, and 11.1.0.6 allows remote authenticated users to affect confidentiality and integrity, related to SYS.LT and WMSYS.LT.</descript>
@@ -2568,7 +2893,11 @@
                 <vers num="9.2.0.8dv" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:S/C:P/I:P/A:N)" CVSS_base_score="5.5" CVSS_exploit_subscore="8.0" CVSS_impact_subscore="4.9" name="CVE-2008-3983" seq="2008-3983" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="5.5" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Workspace Manager component in Oracle Database 9.2.0.8, 9.2.0.8DV, 10.1.0.5, 10.2.0.3, and 11.1.0.6 allows remote authenticated users to affect confidentiality and integrity, related to SYS.LT and WMSYS.LT.</descript>
@@ -2596,7 +2925,11 @@
                 <vers num="9.2.0.8dv" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:S/C:P/I:P/A:N)" CVSS_base_score="5.5" CVSS_exploit_subscore="8.0" CVSS_impact_subscore="4.9" name="CVE-2008-3984" seq="2008-3984" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="5.5" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Workspace Manager component in Oracle Database 9.2.0.8, 9.2.0.8DV, 10.1.0.5, 10.2.0.3, and 11.1.0.6 allows remote authenticated users to affect confidentiality and integrity, related to SYS.LT and WMSYS.LT.</descript>
@@ -2624,7 +2957,11 @@
                 <vers num="9.2.0.8dv" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:N/A:N)" CVSS_base_score="5.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="2.9" name="CVE-2008-3985" seq="2008-3985" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="5.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Oracle Applications Technology Stack component in Oracle E-Business Suite 12.0.4 allows remote attackers to affect confidentiality via unknown vectors.</descript>
@@ -2643,7 +2980,11 @@
                 <vers num="12.0.4" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:L/AC:H/Au:S/C:P/I:N/A:N)" CVSS_base_score="1.0" CVSS_exploit_subscore="1.5" CVSS_impact_subscore="2.9" name="CVE-2008-3986" seq="2008-3986" severity="Low" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="1.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Oracle Discoverer Administrator component in Oracle Application Server 9.0.4.3 and 10.1.2.2 allows local users to affect confidentiality via unknown vectors.</descript>
@@ -2663,7 +3004,11 @@
                 <vers num="9.0.4.3" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:L/AC:H/Au:S/C:P/I:N/A:N)" CVSS_base_score="1.0" CVSS_exploit_subscore="1.5" CVSS_impact_subscore="2.9" name="CVE-2008-3987" seq="2008-3987" severity="Low" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="1.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Oracle Discoverer Desktop component in Oracle Application Server 10.1.2.3 allows local users to affect confidentiality via unknown vectors.</descript>
@@ -2682,7 +3027,11 @@
                 <vers num="10.1.2.3" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:N/A:N)" CVSS_base_score="5.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="2.9" name="CVE-2008-3988" seq="2008-3988" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="5.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the iSupplier Portal component in Oracle E-Business Suite 11.5.10.2 and 12.0.4 allows remote attackers to affect confidentiality via unknown vectors.</descript>
@@ -2703,7 +3052,11 @@
                 <vers num="12.0.4" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:S/C:P/I:P/A:P)" CVSS_base_score="6.5" CVSS_exploit_subscore="8.0" CVSS_impact_subscore="6.4" name="CVE-2008-3989" seq="2008-3989" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="6.5" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Oracle Data Mining component in Oracle Database 10.2.0.3 allows remote authenticated users to affect confidentiality, integrity, and availability, related to DMSYS.ODM_MODEL_UTIL.</descript>
@@ -2724,7 +3077,11 @@
                 <vers num="10.2.0.3" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:S/C:N/I:N/A:P)" CVSS_base_score="4.0" CVSS_exploit_subscore="8.0" CVSS_impact_subscore="2.9" name="CVE-2008-3990" seq="2008-3990" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="4.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Oracle OLAP component in Oracle Database 9.2.08, 9.2.0.8DV, and 10.1.0.5 allows remote authenticated users to affect availability, related to OLAPSYS.CWM2_OLAP_AW_AWUTIL.</descript>
@@ -2747,7 +3104,11 @@
                 <vers num="9.2.0.8dv" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:S/C:N/I:N/A:P)" CVSS_base_score="4.0" CVSS_exploit_subscore="8.0" CVSS_impact_subscore="2.9" name="CVE-2008-3991" seq="2008-3991" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="4.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Oracle OLAP component in Oracle Database 9.2.08, 9.2.0.8DV, and 10.1.0.5 allows remote authenticated users to affect availability, related to OLAPSYS.CWM2_OLAP_AW_AWUTIL.</descript>
@@ -2770,7 +3131,11 @@
                 <vers num="9.2.0.8dv" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:S/C:P/I:P/A:N)" CVSS_base_score="5.5" CVSS_exploit_subscore="8.0" CVSS_impact_subscore="4.9" name="CVE-2008-3992" seq="2008-3992" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="5.5" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Oracle Data Mining component in Oracle Database 10.2.0.4 allows remote authenticated users to affect confidentiality and integrity, related to DMSYS.DBMS_DM_EXP_INTERNAL.</descript>
@@ -2790,7 +3155,11 @@
                 <vers num="10.2.0.4" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:S/C:N/I:P/A:N)" CVSS_base_score="3.5" CVSS_exploit_subscore="6.8" CVSS_impact_subscore="2.9" name="CVE-2008-3993" seq="2008-3993" severity="Low" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="3.5" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Oracle Applications Framework component in Oracle E-Business Suite 11.5.10.2 and 12.0.4 allows remote authenticated users to affect integrity via unknown vectors.</descript>
@@ -2811,7 +3180,11 @@
                 <vers num="12.0.4" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:S/C:P/I:P/A:N)" CVSS_base_score="5.5" CVSS_exploit_subscore="8.0" CVSS_impact_subscore="4.9" name="CVE-2008-3994" seq="2008-3994" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="5.5" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Workspace Manager component in Oracle Database 9.2.0.8, 9.2.0.8DV, 10.1.0.5, 10.2.0.3, and 11.1.0.6 allows remote authenticated users to affect confidentiality and integrity, related to WMSYS.LTADM.</descript>
@@ -2839,7 +3212,11 @@
                 <vers num="9.2.0.8dv" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:S/C:P/I:P/A:N)" CVSS_base_score="5.5" CVSS_exploit_subscore="8.0" CVSS_impact_subscore="4.9" name="CVE-2008-3995" seq="2008-3995" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="5.5" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Change Data Capture component in Oracle Database 10.1.0.5, 10.2.0.4, and 11.1.0.6 allows remote authenticated users to affect confidentiality and integrity, related to DBMS_CDC_PUBLISH.</descript>
@@ -2863,7 +3240,11 @@
                 <vers num="11.1.0.6" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:S/C:P/I:P/A:N)" CVSS_base_score="5.5" CVSS_exploit_subscore="8.0" CVSS_impact_subscore="4.9" name="CVE-2008-3996" seq="2008-3996" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="5.5" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Change Data Capture component in Oracle Database 10.1.0.5, 10.2.0.4, and 11.1.0.6 allows remote authenticated users to affect confidentiality and integrity, related to SYS.DBMS_CDC_IPUBLISH.</descript>
@@ -2887,7 +3268,11 @@
                 <vers num="11.1.0.6" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:S/C:P/I:P/A:N)" CVSS_base_score="4.9" CVSS_exploit_subscore="6.8" CVSS_impact_subscore="4.9" name="CVE-2008-3998" seq="2008-3998" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="4.9" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Oracle iStore component in Oracle E-Business Suite 12.0.4 allows remote authenticated users to affect confidentiality and integrity via unknown vectors.</descript>
@@ -2907,7 +3292,11 @@
                 <vers num="12.0.4" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:N)" CVSS_base_score="6.4" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="4.9" name="CVE-2008-4000" seq="2008-4000" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="6.4" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the PeopleTools component in Oracle PeopleSoft Enterprise and JD Edwards EnterpriseOne 8.48.18 and 8.49.14 allows remote attackers to affect confidentiality and integrity via unknown vectors.</descript>
@@ -2936,7 +3325,11 @@
                 <vers num="8.49.14" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:S/C:P/I:P/A:N)" CVSS_base_score="4.9" CVSS_exploit_subscore="6.8" CVSS_impact_subscore="4.9" name="CVE-2008-4001" seq="2008-4001" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="4.9" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the PeopleSoft Enterprise Portal component in Oracle PeopleSoft Enterprise and JD Edwards EnterpriseOne EP 8.9 and EP 9.0 allows remote authenticated users to affect confidentiality and integrity via unknown vectors.</descript>
@@ -2961,7 +3354,11 @@
                 <vers num="9.0" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:S/C:P/I:N/A:N)" CVSS_base_score="3.5" CVSS_exploit_subscore="6.8" CVSS_impact_subscore="2.9" name="CVE-2008-4002" seq="2008-4002" severity="Low" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="3.5" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the PeopleTools component in Oracle PeopleSoft Enterprise and JD Edwards EnterpriseOne 8.48.18 and 8.49.14 allows remote authenticated users to affect confidentiality via unknown vectors.</descript>
@@ -2985,7 +3382,11 @@
                 <vers num="8.49.14" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:P/I:N/A:N)" CVSS_base_score="4.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="2.9" name="CVE-2008-4003" seq="2008-4003" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="4.3" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the PeopleTools component in Oracle PeopleSoft Enterprise and JD Edwards EnterpriseOne 8.48.18 and 8.49.14 allows remote attackers to affect confidentiality via unknown vectors.</descript>
@@ -3009,7 +3410,11 @@
                 <vers num="8.49.14" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:L/AC:L/Au:S/C:P/I:P/A:N)" CVSS_base_score="3.2" CVSS_exploit_subscore="3.1" CVSS_impact_subscore="4.9" name="CVE-2008-4004" seq="2008-4004" severity="Low" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="3.2" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the JDE EnterpriseOne Business Service Server component in Oracle PeopleSoft Enterprise and JD Edwards EnterpriseOne 8.97.2.2 and 8.98.0.1 allows local users to affect confidentiality and integrity via unknown vectors.</descript>
@@ -3034,7 +3439,11 @@
                 <vers num="8.98.0.1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:H/Au:M/C:P/I:P/A:P)" CVSS_base_score="4.3" CVSS_exploit_subscore="3.2" CVSS_impact_subscore="6.4" name="CVE-2008-4005" seq="2008-4005" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="4.3" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the Oracle Application Express component in Oracle Database 11.1.0.6 allows remote authenticated users to affect confidentiality, integrity, and availability via unknown vectors.</descript>
@@ -3056,7 +3465,11 @@
                 <vers num="11.1.0.6" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="10.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="10.0" name="CVE-2008-4008" seq="2008-4008" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="10.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the WebLogic Server Plugins for Apache component in BEA Product Suite 10.3, 10.0 MP1, 9.2 MP3, 9.1, 9.0, 8.1 SP6, 7.0 SP7, and 6.1 SP7 allows remote attackers to affect confidentiality, integrity, and availability via unknown vectors.</descript>
@@ -3085,7 +3498,11 @@
                 <vers edition="mp3" num="9.2" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:H/Au:N/C:P/I:P/A:P)" CVSS_base_score="5.1" CVSS_exploit_subscore="4.9" CVSS_impact_subscore="6.4" name="CVE-2008-4009" seq="2008-4009" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="5.1" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the WebLogic Server component in BEA Product Suite 9.1 allows remote attackers to affect confidentiality, integrity, and availability via unknown vectors.</descript>
@@ -3107,7 +3524,11 @@
                 <vers num="9.1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:P/I:P/A:P)" CVSS_base_score="6.8" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="6.4" name="CVE-2008-4010" seq="2008-4010" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="6.8" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the WebLogic Workshop component in BEA Product Suite 10.3, 10.2, 10.0 MP1, 9.2 MP3, and 8.1 SP6 allows remote attackers to affect confidentiality, integrity, and availability via unknown vectors.</descript>
@@ -3132,7 +3553,11 @@
                 <vers edition="mp3" num="9.2" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:H/Au:S/C:N/I:P/A:N)" CVSS_base_score="2.1" CVSS_exploit_subscore="3.9" CVSS_impact_subscore="2.9" name="CVE-2008-4011" seq="2008-4011" severity="Low" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="2.1" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the WebLogic Server component in BEA Product Suite 10.0 MP1, 9.2 MP3, 9.1, and 9.0 allows remote authenticated users to affect integrity via unknown vectors.</descript>
@@ -3154,7 +3579,11 @@
                 <vers edition="mp3" num="9.2" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:H/Au:N/C:P/I:P/A:P)" CVSS_base_score="5.1" CVSS_exploit_subscore="4.9" CVSS_impact_subscore="6.4" name="CVE-2008-4012" seq="2008-4012" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="5.1" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the WebLogic Workshop component in BEA Product Suite WLW 8.1SP5 allows remote attackers to affect confidentiality, integrity, and availability via unknown vectors.</descript>
@@ -3179,7 +3608,11 @@
                 <vers edition="sp5" num="8.1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:P/I:P/A:P)" CVSS_base_score="6.8" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="6.4" name="CVE-2008-4013" seq="2008-4013" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="6.8" modified="2008-10-15">
         <desc>
             <descript source="cve">Unspecified vulnerability in the WebLogic Server component in BEA Product Suite 10.0 MP1, 9.2 MP3, 9.1, 9.0, and 8.1 SP6 allows remote attackers to affect confidentiality, integrity, and availability via unknown vectors.</descript>
@@ -3204,7 +3637,11 @@
                 <vers edition="mp3" num="9.2" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="10.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="10.0" name="CVE-2008-4478" seq="2008-4478" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="10.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Multiple integer overflows in dhost.exe in Novell eDirectory 8.8 before 8.8.3, and 8.73 before 8.7.3.10 ftf1, allow remote attackers to execute arbitrary code via a crafted (1) Content-Length header in a SOAP request or (2) Netware Core Protocol opcode 0x0F message, which triggers a heap-based buffer overflow.</descript>
@@ -3255,7 +3692,11 @@
                 <vers edition=":linux" num="8.8.2" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="10.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="10.0" name="CVE-2008-4479" seq="2008-4479" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="10.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Heap-based buffer overflow in dhost.exe in Novell eDirectory 8.8 before 8.8.3, and 8.7.3 before 8.7.3.10 ftf1, allows remote attackers to execute arbitrary code via a SOAP request with a long Accept-Language header.</descript>
@@ -3301,7 +3742,11 @@
                 <vers edition=":windows_2003" num="8.8.2" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="10.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="10.0" name="CVE-2008-4480" seq="2008-4480" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="10.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Heap-based buffer overflow in dhost.exe in Novell eDirectory 8.x before 8.8.3, and 8.7.3 before 8.7.3.10 ftf1, allows remote attackers to execute arbitrary code via a crafted Netware Core Protocol opcode 0x24 message that triggers a calculation error that under-allocates a heap buffer.</descript>
@@ -3347,7 +3792,11 @@
                 <vers edition=":windows_2003" num="8.8.2" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="10.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="10.0" name="CVE-2008-4556" seq="2008-4556" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="10.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Stack-based buffer overflow in the adm_build_path function in sadmind in Sun Solstice AdminSuite on Solaris 8 and 9 allows remote attackers to execute arbitrary code via a crafted request.</descript>
@@ -3375,7 +3824,11 @@
                 <vers edition=":sparc" num="9" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="10.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="10.0" name="CVE-2008-4557" seq="2008-4557" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="10.0" modified="2008-10-15">
         <desc>
             <descript source="cve">plugins/wacko/highlight/html.php in Strawberry in CuteNews.ru 1.1.1 (aka Strawberry) allows remote attackers to execute arbitrary PHP code via the text parameter, which is inserted into an executable regular expression.</descript>
@@ -3399,7 +3852,11 @@
                 <vers num="1.1.1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:P/I:P/A:P)" CVSS_base_score="6.8" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="6.4" name="CVE-2008-4558" seq="2008-4558" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="6.8" modified="2008-10-15">
         <desc>
             <descript source="cve">Array index error in VLC media player 0.9.2 allows remote attackers to overwrite arbitrary memory and execute arbitrary code via an XSPF playlist file with a negative identifier tag, which passes a signed comparison.</descript>
@@ -3422,7 +3879,11 @@
                 <vers num="0.9.2" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:S/C:C/I:C/A:C)" CVSS_base_score="9.0" CVSS_exploit_subscore="8.0" CVSS_impact_subscore="10.0" name="CVE-2008-1446" seq="2008-1446" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="9.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Integer overflow in the Internet Printing Protocol (IPP) ISAPI extension in Microsoft Internet Information Services (IIS) 5.0 through 7.0 on Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP1 and SP2, and Server 2008 allows remote authenticated users to execute arbitrary code via an HTTP POST request that triggers an outbound IPP connection from a web server to a machine operated by the attacker, aka "Integer Overflow in IPP Service Vulnerability."</descript>
@@ -3467,7 +3928,11 @@
                 <vers edition="sp3" num="" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:L/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="7.2" CVSS_exploit_subscore="3.9" CVSS_impact_subscore="10.0" name="CVE-2008-2250" seq="2008-2250" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="7.2" modified="2008-10-15">
         <desc>
             <descript source="cve">The kernel in Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP1 and SP2, Vista Gold and SP1, and Server 2008 does not properly validate window properties sent from a parent window to a child window during creation of a new window, which allows local users to gain privileges via a crafted application, aka "Windows Kernel Window Creation Vulnerability."</descript>
@@ -3513,7 +3978,11 @@
                 <vers edition="x64" num="" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:L/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="7.2" CVSS_exploit_subscore="3.9" CVSS_impact_subscore="10.0" name="CVE-2008-2251" seq="2008-2251" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="7.2" modified="2008-10-15">
         <desc>
             <descript source="cve">Double free vulnerability in the kernel in Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP1 and SP2, Vista Gold and SP1, and Server 2008 allows local users to gain privileges via a crafted application that makes system calls within multiple threads, aka "Windows Kernel Unhandled Exception Vulnerability." NOTE: according to Microsoft, this is not a duplicate of CVE-2008-4510.</descript>
@@ -3553,7 +4022,11 @@
                 <vers edition="x64" num="" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:L/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="7.2" CVSS_exploit_subscore="3.9" CVSS_impact_subscore="10.0" name="CVE-2008-2252" seq="2008-2252" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="7.2" modified="2008-10-15">
         <desc>
             <descript source="cve">The kernel in Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP1 and SP2, Vista Gold and SP1, and Server 2008 does not properly validate parameters sent from user mode to the kernel, which allows local users to gain privileges via a crafted application, aka "Windows Kernel Memory Corruption Vulnerability."</descript>
@@ -3600,7 +4073,11 @@
                 <vers edition="x64" num="" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:L/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="7.2" CVSS_exploit_subscore="3.9" CVSS_impact_subscore="10.0" name="CVE-2008-3464" seq="2008-3464" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="7.2" modified="2008-10-15">
         <desc>
             <descript source="cve">afd.sys in the Ancillary Function Driver (AFD) component in Microsoft Windows XP SP2 and SP3 and Windows Server 2003 SP1 and SP2 does not properly validate input sent from user mode to the kernel, which allows local users to gain privileges via a crafted application, aka "AFD Kernel Overwrite Vulnerability."</descript>
@@ -3633,7 +4110,11 @@
                 <vers edition="sp3" num="" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="10.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="10.0" name="CVE-2008-3466" seq="2008-3466" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="10.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Microsoft Host Integration Server (HIS) 2000, 2004, and 2006 does not limit RPC access to administrative functions, which allows remote attackers to bypass authentication and execute arbitrary code via a crafted SNA RPC message, aka "HIS Command Execution Vulnerability."</descript>
@@ -3666,7 +4147,11 @@
                 <vers edition="x64" num="2006unknown" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="10.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="10.0" name="CVE-2008-3471" seq="2008-3471" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="10.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Microsoft Excel 2000 SP3, 2002 SP3, 2003 SP2 and SP3, and 2007 Gold and SP1; Office Excel Viewer 2003 SP3; Office Excel Viewer; Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats Gold and SP1; Office 2004 and 2008 for Mac; and Open XML File Format Converter for Mac do not properly allocate memory when loading Excel objects during parsing of the Excel spreadsheet file format, which allows remote attackers to execute arbitrary code via a crafted BIFF file, aka "File Format Parsing Vulnerability."</descript>
@@ -3711,7 +4196,11 @@
                 <vers edition="unknown:x64" num="2007" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:C/I:C/A:C)" CVSS_base_score="9.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="10.0" name="CVE-2008-3472" seq="2008-3472" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="9.3" modified="2008-10-15">
         <desc>
             <descript source="cve">Microsoft Internet Explorer 6 and 7 does not properly determine the domain or security zone of origin of web script, which allows remote attackers to bypass the intended cross-domain security policy, and execute arbitrary code or obtain sensitive information, via a crafted HTML document, aka "HTML Element Cross-Domain Vulnerability."</descript>
@@ -3735,7 +4224,11 @@
                 <vers num="7" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:C/I:C/A:C)" CVSS_base_score="9.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="10.0" name="CVE-2008-3473" seq="2008-3473" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="9.3" modified="2008-10-15">
         <desc>
             <descript source="cve">Microsoft Internet Explorer 6 and 7 does not properly determine the domain or security zone of origin of web script, which allows remote attackers to bypass the intended cross-domain security policy, and execute arbitrary code or obtain sensitive information, via a crafted HTML document, aka "Event Handling Cross-Domain Vulnerability."</descript>
@@ -3760,7 +4253,11 @@
                 <vers num="7" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:P/I:N/A:N)" CVSS_base_score="4.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="2.9" name="CVE-2008-3474" seq="2008-3474" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="4.3" modified="2008-10-15">
         <desc>
             <descript source="cve">Microsoft Internet Explorer 6 and 7 does not properly determine the domain or security zone of origin of web script, which allows remote attackers to bypass the intended cross-domain security policy and obtain sensitive information via a crafted HTML document, aka "Cross-Domain Information Disclosure Vulnerability."</descript>
@@ -3782,7 +4279,11 @@
                 <vers num="7" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:C/I:C/A:C)" CVSS_base_score="9.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="10.0" name="CVE-2008-3475" seq="2008-3475" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="9.3" modified="2008-10-15">
         <desc>
             <descript source="cve">Microsoft Internet Explorer 6 does not properly handle errors associated with access to an object that has been (1) incorrectly initialized or (2) deleted, which allows remote attackers to execute arbitrary code via a crafted HTML document, aka "Uninitialized Memory Corruption Vulnerability."</descript>
@@ -3807,7 +4308,11 @@
                 <vers num="7" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:C/I:C/A:C)" CVSS_base_score="9.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="10.0" name="CVE-2008-3476" seq="2008-3476" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="9.3" modified="2008-10-15">
         <desc>
             <descript source="cve">Microsoft Internet Explorer 5.01 SP4 and 6 does not properly handle errors associated with access to uninitialized memory, which allows remote attackers to execute arbitrary code via a crafted HTML document, aka "HTML Objects Memory Corruption Vulnerability."</descript>
@@ -3832,7 +4337,11 @@
                 <vers num="7" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:C/I:C/A:C)" CVSS_base_score="9.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="10.0" name="CVE-2008-3477" seq="2008-3477" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="9.3" modified="2008-10-15">
         <desc>
             <descript source="cve">Microsoft Excel 2000 SP3, 2002 SP3, and 2003 SP2 and SP3 does not properly validate data in the VBA Performance Cache, which allows remote attackers to execute arbitrary code via a crafted Excel file, aka "Calendar Object Validation Vulnerability."</descript>
@@ -3857,7 +4366,11 @@
                 <vers num="7" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="10.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="10.0" name="CVE-2008-3479" seq="2008-3479" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="10.0" modified="2008-10-15">
         <desc>
             <descript source="cve">The Microsoft Message Queuing (MSMQ) service in Microsoft Windows 2000 SP4 does not properly validate parameters to string APIs, which allows remote attackers to execute arbitrary code via a crafted RPC call that overflows a "heap request," aka "Message Queuing Service Remote Code Execution Vulnerability."</descript>
@@ -3879,7 +4392,11 @@
                 <vers edition="sp4" num="" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:C/I:C/A:C)" CVSS_base_score="9.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="10.0" name="CVE-2008-4019" seq="2008-4019" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="9.3" modified="2008-10-15">
         <desc>
             <descript source="cve">Integer overflow in the REPT function in Microsoft Excel 2000 SP3, 2002 SP3, 2003 SP2 and SP3, and 2007 Gold and SP1; Office Excel Viewer 2003 SP3; Office Excel Viewer; Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats Gold and SP1; Office SharePoint Server 2007 Gold and SP1; Office 2004 and 2008 for Mac; and Open XML File Format Converter for Mac allows remote attackers to execute arbitrary code via an Excel file containing a formula within a cell, aka "Formula Parsing Vulnerability."</descript>
@@ -3925,7 +4442,11 @@
                 <vers edition="unknown:x64" num="2007" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:N/I:P/A:N)" CVSS_base_score="4.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="2.9" name="CVE-2008-4020" seq="2008-4020" severity="Medium" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="4.3" modified="2008-10-15">
         <desc>
             <descript source="cve">Cross-site scripting (XSS) vulnerability in Microsoft Office XP SP3 allows remote attackers to inject arbitrary web script or HTML via a document that contains a "Content-Disposition: attachment" header and is accessed through a cdo: URL, which renders the content instead of raising a File Download dialog box, aka "Vulnerability in Content-Disposition Header Vulnerability."</descript>
@@ -3945,7 +4466,11 @@
                 <vers edition="sp3" num="xp" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="10.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="10.0" name="CVE-2008-4023" seq="2008-4023" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="10.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Active Directory in Microsoft Windows 2000 SP4 does not properly allocate memory for (1) LDAP and (2) LDAPS requests, which allows remote attackers to execute arbitrary code via a crafted request, aka "Active Directory Overflow Vulnerability."</descript>
@@ -3967,7 +4492,11 @@
                 <vers edition="sp4" num="" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:L/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="7.2" CVSS_exploit_subscore="3.9" CVSS_impact_subscore="10.0" name="CVE-2008-4036" seq="2008-4036" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="7.2" modified="2008-10-15">
         <desc>
             <descript source="cve">Integer overflow in Memory Manager in Microsoft Windows XP SP2 and SP3, Server 2003 SP1 and SP2, Vista Gold and SP1, and Server 2008 allows local users to gain privileges via a crafted application that triggers an erroneous decrement of a variable, related to validation of parameters for Virtual Address Descriptors (VADs) and a "memory allocation mapping error," aka "Virtual Address Descriptor Elevation of Privilege Vulnerability."</descript>
@@ -4010,7 +4539,11 @@
                 <vers edition="x64" num="" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="10.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="10.0" name="CVE-2008-4038" seq="2008-4038" severity="High" type="CVE" published="2008-10-14" CVSS_version="2.0" CVSS_score="10.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Buffer underflow in Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP1 and SP2, Vista Gold and SP1, and Server 2008 allows remote attackers to execute arbitrary code via a Server Message Block (SMB) request that contains a filename with a crafted length, aka "SMB Buffer Underflow Vulnerability."</descript>
@@ -4057,7 +4590,11 @@
                 <vers edition="x64" num="" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4569" seq="2008-4569" severity="High" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-16">
         <desc>
             <descript source="cve">SQL injection vulnerability in xlacomments.asp in XIGLA Software Absolute Poll Manager XE 4.1 allows remote attackers to execute arbitrary SQL commands via the p parameter.</descript>
@@ -4080,7 +4617,11 @@
                 <vers num="4.1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4570" seq="2008-4570" severity="High" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-16">
         <desc>
             <descript source="cve">SQL injection vulnerability in index.php in Real Estate Classifieds allows remote attackers to execute arbitrary SQL commands via the cat parameter.</descript>
@@ -4104,7 +4645,11 @@
                 <vers num="" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:N/I:P/A:N)" CVSS_base_score="4.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="2.9" name="CVE-2008-4571" seq="2008-4571" severity="Medium" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="4.3" modified="2008-10-16">
         <desc>
             <descript source="cve">Cross-site scripting (XSS) vulnerability in the LiveSearch module in Plone before 3.0.4 allows remote attackers to inject arbitrary web script or HTML via the Description field for search results, as demonstrated using the onerror Javascript even in an IMG tag.</descript>
@@ -4137,7 +4682,11 @@
                 <vers num="3.0.3" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="10.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="10.0" name="CVE-2008-4572" seq="2008-4572" severity="High" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="10.0" modified="2008-10-16">
         <desc>
             <descript source="cve">GuildFTPd 0.999.14, and possibly other versions, allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via long arguments to the CWD and LIST commands, which triggers heap corruption related to an improper free call, and possibly triggering a heap-based buffer overflow.</descript>
@@ -4162,7 +4711,11 @@
                 <vers num="0.999.14" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4573" seq="2008-4573" severity="High" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-16">
         <desc>
             <descript source="cve">SQL injection vulnerability in kategori.asp in MunzurSoft Wep Portal W3 allows remote attackers to execute arbitrary SQL commands via the kat parameter.</descript>
@@ -4186,7 +4739,11 @@
                 <vers num="" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4574" seq="2008-4574" severity="High" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-16">
         <desc>
             <descript source="cve">SQL injection vulnerability in default.asp in Ayco Okul Portali allows remote attackers to execute arbitrary SQL commands via the linkid parameter.</descript>
@@ -4211,7 +4768,11 @@
                 <vers num="" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:L/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="7.2" CVSS_exploit_subscore="3.9" CVSS_impact_subscore="10.0" name="CVE-2008-4553" seq="2008-4553" severity="High" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="7.2" modified="2008-10-16">
         <desc>
             <descript source="cve">qemu-make-debian-root in qemu 0.9.1-5 on Debian GNU/Linux allows local users to overwrite arbitrary files via a symlink attack on temporary files and directories.</descript>
@@ -4235,7 +4796,11 @@
                 <vers num="0.9.1-5" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:L/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="4.6" CVSS_exploit_subscore="3.9" CVSS_impact_subscore="6.4" name="CVE-2008-4554" seq="2008-4554" severity="Medium" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="4.6" modified="2008-10-16">
         <desc>
             <descript source="cve">The do_splice_from function in fs/splice.c in the Linux kernel before 2.6.27 does not reject file descriptors that have the O_APPEND flag set, which allows local users to bypass append mode and make arbitrary changes to other locations in the file.</descript>
@@ -4364,7 +4929,11 @@
                 <vers num="2.6.26.5" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:N/I:N/A:P)" CVSS_base_score="5.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="2.9" name="CVE-2008-4575" seq="2008-4575" severity="Medium" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="5.0" modified="2008-10-15">
         <desc>
             <descript source="cve">Buffer overflow in the DoCommand function in jhead before 2.84 might allow context-dependent attackers to cause a denial of service (crash) via (1) a long -cmd argument and (2) possibly other unspecified vectors.</descript>
@@ -4404,7 +4973,11 @@
                 <vers num="2.82" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:N/I:N/A:C)" CVSS_base_score="7.8" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.9" name="CVE-2008-4576" seq="2008-4576" severity="High" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="7.8" modified="2008-10-16">
         <desc>
             <descript source="cve">sctp in Linux kernel before 2.6.25.18 allows remote attackers to cause a denial of service (OOPS) via an INIT-ACK that states the peer does not support AUTH, which causes the sctp_process_init function to clean up active transports and triggers the OOPS when the T1-Init timer expires.</descript>
@@ -4523,7 +5096,11 @@
                 <vers edition=":x86_64" num="2.6.25.9" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:N)" CVSS_base_score="6.4" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="4.9" name="CVE-2008-4577" seq="2008-4577" severity="Medium" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="6.4" modified="2008-10-16">
         <desc>
             <descript source="cve">The ACL plugin in Dovecot before 1.1.4 treats negative access rights as if they are positive access rights, which allows attackers to bypass intended access restrictions.</descript>
@@ -4602,7 +5179,11 @@
                 <vers num="1.1.3" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:N/I:P/A:N)" CVSS_base_score="5.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="2.9" name="CVE-2008-4578" seq="2008-4578" severity="Medium" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="5.0" modified="2008-10-16">
         <desc>
             <descript source="cve">The ACL plugin in Dovecot before 1.1.4 allows attackers to bypass intended access restrictions by using the "k" right to create unauthorized "parent/child/child" mailboxes.</descript>
@@ -4680,7 +5261,11 @@
                 <vers num="1.1.3" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:L/AC:M/Au:N/C:N/I:P/A:N)" CVSS_base_score="1.9" CVSS_exploit_subscore="3.4" CVSS_impact_subscore="2.9" name="CVE-2008-4579" seq="2008-4579" severity="Low" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="1.9" modified="2008-10-16">
         <desc>
             <descript source="cve">The (1) fence_apc and (2) fence_apc_snmp programs, as used in (a) fence 2.02.00-r1 and possibly (b) cman, when running in verbose mode, allows local users to append to arbitrary files via a symlink attack on the apclog temporary file.</descript>
@@ -4703,7 +5288,11 @@
                 <vers edition="r1" num="2.02.00" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:L/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="7.2" CVSS_exploit_subscore="3.9" CVSS_impact_subscore="10.0" name="CVE-2008-4580" seq="2008-4580" severity="High" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="7.2" modified="2008-10-16">
         <desc>
             <descript source="cve">fence_manual in fence allows local users to modify arbitrary files via a symlink attack on the fence_manual.fifo temporary file.</descript>
@@ -4728,7 +5317,11 @@
                 <vers edition="r1" num="2.02.00" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:S/C:P/I:N/A:N)" CVSS_base_score="4.0" CVSS_exploit_subscore="8.0" CVSS_impact_subscore="2.9" name="CVE-2008-4581" seq="2008-4581" severity="Medium" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="4.0" modified="2008-10-16">
         <desc>
             <descript source="cve">The Editor in IBM ENOVIA SmarTeam 5 before release 18 SP5, and release 19 before SP01, allows remote authenticated users to bypass intended access restrictions and read Document objects via the Workflow Process (aka Flow Process) view.</descript>
@@ -4750,7 +5343,11 @@
                 <vers num="5" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:P/I:N/A:N)" CVSS_base_score="4.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="2.9" name="CVE-2008-4582" seq="2008-4582" severity="Medium" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="4.3" modified="2008-10-16">
         <desc>
             <descript source="cve">Mozilla Firefox 3.0.1 through 3.0.3 on Windows does not properly identify the context of Windows .url shortcut files, which allows user-assisted remote attackers to bypass the Same Origin Policy and obtain sensitive information via an HTML document that is directly accessible through a filesystem, as demonstrated by documents in (1) local folders, (2) Windows share folders, and (3) RAR archives, and as demonstrated by IFRAMEs referencing shortcuts that point to (a) about:cache?device=memory and (b) about:cache?device=disk, a variant of CVE-2008-2810.</descript>
@@ -4774,7 +5371,11 @@
                 <vers num="3.0.3" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4583" seq="2008-4583" severity="High" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-16">
         <desc>
             <descript source="cve">Insecure method vulnerability in the Chilkat FTP 2.0 ActiveX component (ChilkatCert.dll) allows remote attackers to overwrite arbitrary files via a full pathname in the SavePkcs8File method.</descript>
@@ -4797,7 +5398,11 @@
                 <vers num="2.0" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:P/I:P/A:P)" CVSS_base_score="6.8" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="6.4" name="CVE-2008-4584" seq="2008-4584" severity="Medium" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="6.8" modified="2008-10-16">
         <desc>
             <descript source="cve">Insecure method vulnerability in Chilkat Mail 7.8 ActiveX control (ChilkatCert.dll) allows remote attackers to overwrite arbitrary files via a full pathname to the SaveLastError method.</descript>
@@ -4822,7 +5427,11 @@
                 <vers num="7.8" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4585" seq="2008-4585" severity="High" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-16">
         <desc>
             <descript source="cve">Belong Software Site Builder 0.1 beta allows remote attackers to bypass intended access restrictions and perform administrative actions via a direct request to admin/home.php.</descript>
@@ -4846,7 +5455,11 @@
                 <vers edition="beta" num="0.1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:C/I:C/A:C)" CVSS_base_score="9.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="10.0" name="CVE-2008-4586" seq="2008-4586" severity="High" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="9.3" modified="2008-10-16">
         <desc>
             <descript source="cve">Insecure method vulnerability in the MVSNCLientWebAgent61.WebAgent.1 ActiveX control (isusweb.dll 6.1.100.61372) in Macrovision FLEXnet Connect 6.1 allows remote attackers to force the download and execution of arbitrary files via the DownloadAndExecute method.</descript>
@@ -4871,7 +5484,11 @@
                 <vers num="6.1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:C/I:C/A:C)" CVSS_base_score="9.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="10.0" name="CVE-2008-4587" seq="2008-4587" severity="High" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="9.3" modified="2008-10-16">
         <desc>
             <descript source="cve">Insecure method vulnerability in the MSVNClientDownloadManager61Lib.DownloadManager.1 ActiveX control (ISDM.exe 6.1.100.61372) in Macrovision FLEXnet Connect 6.1 allows remote attackers to force the download and execution of arbitrary files via the AddFile and RunScheduledJobs methods.  NOTE: this could be leveraged for code execution by uploading executable files to Startup folders.</descript>
@@ -4896,7 +5513,11 @@
                 <vers num="6.1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="10.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="10.0" name="CVE-2008-4588" seq="2008-4588" severity="High" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="10.0" modified="2008-10-16">
         <desc>
             <descript source="cve">Stack-based buffer overflow in the FTP server in Etype Eserv 3.x, possibly 3.26, allows remote attackers to cause a denial of service (daemon crash) and possibly execute arbitrary code via a long argument to the ABOR command.</descript>
@@ -4923,7 +5544,11 @@
                 <vers num="3.26" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:L/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="7.2" CVSS_exploit_subscore="3.9" CVSS_impact_subscore="10.0" name="CVE-2008-4589" seq="2008-4589" severity="High" type="CVE" published="2008-10-15" CVSS_version="2.0" CVSS_score="7.2" modified="2008-10-16">
         <desc>
             <descript source="cve">Heap-based buffer overflow in the tvtumin.sys kernel driver in Lenovo Rescue and Recovery 4.20, including 4.20.0511 and 4.20.0512, allows local users to execute arbitrary code via a long file name.</descript>
@@ -4954,7 +5579,11 @@
                 <vers num="4.20.0512" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:P/I:P/A:P)" CVSS_base_score="7.5" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="6.4" name="CVE-2008-4590" seq="2008-4590" severity="High" type="CVE" published="2008-10-16" CVSS_version="2.0" CVSS_score="7.5" modified="2008-10-16">
         <desc>
             <descript source="cve">Multiple SQL injection vulnerabilities in Stash 1.0.3 allow remote attackers to execute arbitrary SQL commands via (1) the username parameter to admin/login.php and (2) the post parameter to admin/news.php.</descript>
@@ -4978,7 +5607,11 @@
                 <vers num="1.0.3" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:M/Au:N/C:N/I:P/A:N)" CVSS_base_score="4.3" CVSS_exploit_subscore="8.6" CVSS_impact_subscore="2.9" name="CVE-2008-4591" seq="2008-4591" severity="Medium" type="CVE" published="2008-10-16" CVSS_version="2.0" CVSS_score="4.3" modified="2008-10-16">
         <desc>
             <descript source="cve">Multiple cross-site scripting (XSS) vulnerabilities in admin/include/isadmin.inc.php in PhpWebGallery 1.3.4 allow remote attackers to inject arbitrary web script or HTML via the (1) lang[access_forbiden] and (2) lang[ident_title] parameters.</descript>
@@ -4998,7 +5631,11 @@
                 <vers num="1.3.4" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:C/I:C/A:C)" CVSS_base_score="10.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="10.0" name="CVE-2008-4592" seq="2008-4592" severity="High" type="CVE" published="2008-10-16" CVSS_version="2.0" CVSS_score="10.0" modified="2008-10-16">
         <desc>
             <descript source="cve">Directory traversal vulnerability in index.php in Sports Clubs Web Panel 0.0.1 allows remote attackers to include and execute arbitrary local files via a .. (dot dot) in the p parameter.</descript>
@@ -5021,7 +5658,11 @@
                 <vers num="0.0.1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry CVSS_vector="(AV:N/AC:L/Au:N/C:N/I:P/A:N)" CVSS_base_score="5.0" CVSS_exploit_subscore="10.0" CVSS_impact_subscore="2.9" name="CVE-2008-4401" seq="2008-4401" severity="Medium" type="CVE" published="2008-10-17" CVSS_version="2.0" CVSS_score="5.0" modified="2008-10-17">
         <desc>
             <descript source="cve">ActionScript in Adobe Flash Player 9.0.124.0 and earlier does not require user interaction in conjunction with (1) the FileReference.browse operation in the FileReference upload API or (2) the FileReference.download operation in the FileReference download API, which allows remote attackers to create a browse dialog box, and possibly have unspecified other impact, via an SWF file.</descript>
@@ -5066,7 +5707,11 @@
                 <vers num="9.0.124.0" prev="1" />
             </prod>
         </vuln_soft>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry name="CVE-2008-4473" seq="2008-4473" type="CVE" published="2008-10-17" modified="2008-10-17">
         <desc>
             <descript source="cve">Multiple heap-based buffer overflows in Adobe Flash CS3 Professional on Windows and Flash MX 2004 allow remote attackers to execute arbitrary code via an SWF file containing long control parameters.</descript>
@@ -5081,7 +5726,11 @@
             <ref source="MISC" url="http://security-assessment.com/files/advisories/2008-10-16_Multiple_Flash_Authoring_Heap_Overflows.pdf">http://security-assessment.com/files/advisories/2008-10-16_Multiple_Flash_Authoring_Heap_Overflows.pdf</ref>
             <ref source="SECUNIA" url="http://secunia.com/advisories/32246">32246</ref>
         </refs>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry name="CVE-2008-4412" seq="2008-4412" type="CVE" published="2008-10-17" modified="2008-10-17">
         <desc>
             <descript source="cve">Unspecified vulnerability in HP Systems Insight Manager (SIM) before 5.2 Update 2 (C.05.02.02.00) allows remote attackers to obtain sensitive information via unspecified vectors.</descript>
@@ -5094,7 +5743,11 @@
             <ref source="HP" url="http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c01571962">SSRT080035</ref>
             <ref source="HP" url="http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c01571962">HPSBMA02378</ref>
         </refs>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry name="CVE-2008-4593" seq="2008-4593" type="CVE" published="2008-10-17" modified="2008-10-17">
         <desc>
             <descript source="cve">Apple iPhone 2.1 with firmware 5F136, when Require Passcode is enabled and Show SMS Preview is disabled, allows physically proximate attackers to obtain sensitive information by performing an Emergency Call tap and then reading SMS messages on the device screen, aka Apple bug number 6267416.</descript>
@@ -5103,7 +5756,11 @@
             <ref source="MISC" url="http://www.karlkraft.com/index.php/2008/10/03/yet-another-iphone-emergency-call-security-bug/">http://www.karlkraft.com/index.php/2008/10/03/yet-another-iphone-emergency-call-security-bug/</ref>
             <ref source="SECTRACK" url="http://securitytracker.com/id?1021021">1021021</ref>
         </refs>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry name="CVE-2008-4594" seq="2008-4594" type="CVE" published="2008-10-17" modified="2008-10-17">
         <desc>
             <descript source="cve">Unspecified vulnerability in the SNMPv3 component in Linksys WAP4400N firmware 1.2.14 on the Marvell Semiconductor 88W8361P-BEM1 chipset has unknown impact and attack vectors, probably remote.</descript>
@@ -5113,7 +5770,11 @@
             <ref source="FRSIRT" url="http://www.frsirt.com/english/advisories/2008/2805">ADV-2008-2805</ref>
             <ref source="SECUNIA" url="http://secunia.com/advisories/32259">32259</ref>
         </refs>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry name="CVE-2008-4595" seq="2008-4595" type="CVE" published="2008-10-17" modified="2008-10-17">
         <desc>
             <descript source="cve">Multiple unspecified vulnerabilities in Slaytanic Scripts Content Plus 2.1.1 have unknown impact and remote attack vectors.</descript>
@@ -5122,7 +5783,11 @@
             <ref source="CONFIRM" url="http://sourceforge.net/project/shownotes.php?release_id=632842">http://sourceforge.net/project/shownotes.php?release_id=632842</ref>
             <ref source="SECUNIA" url="http://secunia.com/advisories/32245">32245</ref>
         </refs>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry name="CVE-2008-4596" seq="2008-4596" type="CVE" published="2008-10-17" modified="2008-10-17">
         <desc>
             <descript source="cve">Cross-site scripting (XSS) vulnerability in Shindig-Integrator 5.x, a module for Drupal, allows remote authenticated users to inject arbitrary web script or HTML via unspecified vectors in generated pages.</descript>
@@ -5132,7 +5797,11 @@
             <ref source="SECUNIA" url="http://secunia.com/advisories/32285">32285</ref>
             <ref source="CONFIRM" url="http://drupal.org/node/321758">http://drupal.org/node/321758</ref>
         </refs>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry name="CVE-2008-4597" seq="2008-4597" type="CVE" published="2008-10-17" modified="2008-10-17">
         <desc>
             <descript source="cve">Shindig-Integrator 5.x, a module for Drupal, does not properly restrict generated page access, which allows remote attackers to gain privileges via unspecified vectors.</descript>
@@ -5141,7 +5810,11 @@
             <ref source="SECUNIA" url="http://secunia.com/advisories/32285">32285</ref>
             <ref source="CONFIRM" url="http://drupal.org/node/321758">http://drupal.org/node/321758</ref>
         </refs>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry name="CVE-2008-4598" seq="2008-4598" type="CVE" published="2008-10-17" modified="2008-10-17">
         <desc>
             <descript source="cve">Unspecified vulnerability in Shindig-Integrator 5.x, a module for Drupal, has unspecified impact and remote attack vectors related to "numerous flaws" that are not related to XSS or access control, a different vulnerability than CVE-2008-4596 and CVE-2008-4597.</descript>
@@ -5150,7 +5823,11 @@
             <ref source="SECUNIA" url="http://secunia.com/advisories/32285">32285</ref>
             <ref source="CONFIRM" url="http://drupal.org/node/321758">http://drupal.org/node/321758</ref>
         </refs>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry name="CVE-2008-4599" seq="2008-4599" type="CVE" published="2008-10-17" modified="2008-10-17">
         <desc>
             <descript source="cve">SQL injection vulnerability in category.php in Mosaic Commerce allows remote attackers to execute arbitrary SQL commands via the cid parameter.</descript>
@@ -5160,7 +5837,11 @@
             <ref source="BID" url="http://www.securityfocus.com/bid/31782">31782</ref>
             <ref source="MILW0RM" url="http://www.milw0rm.com/exploits/6763">6763</ref>
         </refs>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry name="CVE-2008-4600" seq="2008-4600" type="CVE" published="2008-10-17" modified="2008-10-17">
         <desc>
             <descript source="cve">configure.php in PokerMax Poker League Tournament Script 0.13 allows remote attackers to bypass authentication and gain administrative access by setting the ValidUserAdmin cookie.</descript>
@@ -5171,7 +5852,11 @@
             <ref source="MILW0RM" url="http://www.milw0rm.com/exploits/6766">6766</ref>
             <ref source="SECUNIA" url="http://secunia.com/advisories/32312">32312</ref>
         </refs>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry name="CVE-2008-4601" seq="2008-4601" type="CVE" published="2008-10-17" modified="2008-10-17">
         <desc>
             <descript source="cve">Cross-site scripting (XSS) vulnerability in the login feature in Habari CMS 0.5.1 allows remote attackers to inject arbitrary web script or HTML via the habari_username parameter.</descript>
@@ -5181,7 +5866,11 @@
             <ref source="SECUNIA" url="http://secunia.com/advisories/32311">32311</ref>
             <ref source="MISC" url="http://packetstorm.linuxsecurity.com/0810-exploits/habaricms-xss.txt">http://packetstorm.linuxsecurity.com/0810-exploits/habaricms-xss.txt</ref>
         </refs>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry name="CVE-2008-4602" seq="2008-4602" type="CVE" published="2008-10-17" modified="2008-10-17">
         <desc>
             <descript source="cve">Directory traversal vulnerability in index.php in Post Affiliate Pro 2.0 allows remote authenticated users to read and possibly execute arbitrary local files via a .. (dot dot) in the md parameter.</descript>
@@ -5190,7 +5879,11 @@
             <ref source="BID" url="http://www.securityfocus.com/bid/31796">31796</ref>
             <ref source="MILW0RM" url="http://www.milw0rm.com/exploits/6772">6772</ref>
         </refs>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry name="CVE-2008-4603" seq="2008-4603" type="CVE" published="2008-10-17" modified="2008-10-17">
         <desc>
             <descript source="cve">SQL injection vulnerability in search.php in iGaming CMS 2.0 Alpha 1 allows remote attackers to execute arbitrary SQL commands via the keywords parameter in a search_games action.</descript>
@@ -5199,7 +5892,11 @@
             <ref source="BID" url="http://www.securityfocus.com/bid/31793">31793</ref>
             <ref source="MILW0RM" url="http://www.milw0rm.com/exploits/6769">6769</ref>
         </refs>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry name="CVE-2008-4604" seq="2008-4604" type="CVE" published="2008-10-17" modified="2008-10-17">
         <desc>
             <descript source="cve">SQL injection vulnerability in index.php in Easy CafeEngine 1.1 allows remote attackers to execute arbitrary SQL commands via the itemid parameter.</descript>
@@ -5209,7 +5906,11 @@
             <ref source="MILW0RM" url="http://www.milw0rm.com/exploits/6762">6762</ref>
             <ref source="SECUNIA" url="http://secunia.com/advisories/32307">32307</ref>
         </refs>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry name="CVE-2008-4605" seq="2008-4605" type="CVE" published="2008-10-17" modified="2008-10-17">
         <desc>
             <descript source="cve">SQL injection vulnerability in CafeEngine allows remote attackers to execute arbitrary SQL commands via the id parameter to (1) dish.php and (2) menu.php.</descript>
@@ -5220,7 +5921,11 @@
             <ref source="MILW0RM" url="http://www.milw0rm.com/exploits/6762">6762</ref>
             <ref source="SECUNIA" url="http://secunia.com/advisories/32308">32308</ref>
         </refs>
+<<<<<<< HEAD
     </entry>
+=======
+    </entry>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
     <entry name="CVE-2008-4606" seq="2008-4606" type="CVE" published="2008-10-17" modified="2008-10-17">
         <desc>
             <descript source="cve">Multiple SQL injection vulnerabilities in IP Reg 0.4 and earlier allow remote attackers to execute arbitrary SQL commands via the (1) location_id parameter to locationdel.php and (2) vlan_id parameter to it.php.  NOTE: the vlanview.php and vlandel.php vectors are already covered by CVE-2007-6579.</descript>
@@ -5230,6 +5935,11 @@
             <ref source="BID" url="http://www.securityfocus.com/bid/31781">31781</ref>
             <ref source="MILW0RM" url="http://www.milw0rm.com/exploits/6765">6765</ref>
         </refs>
+<<<<<<< HEAD
     </entry>
 
+=======
+    </entry>
+
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
 </nvd>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 LIBRARY mediastreamer2
 
 EXPORTS
@@ -21,6 +22,31 @@ EXPORTS
 	ms_filter_new_from_name
 	ms_filter_set_notify_callback
 	
+=======
+LIBRARY mediastreamer2
+
+EXPORTS
+
+	ms_init
+	ms_exit
+
+	ms_filter_new
+	ms_filter_new_from_desc
+	ms_filter_destroy
+	ms_filter_create_encoder
+	ms_filter_create_decoder
+	ms_filter_call_method
+	ms_filter_call_method_noarg
+	ms_filter_link
+	ms_filter_unlink
+	ms_filter_preprocess
+	ms_filter_postprocess
+	ms_filter_codec_supported
+	ms_filter_register
+	ms_filter_new_from_name
+	ms_filter_set_notify_callback
+	
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
 	ms_snd_card_new
 	ms_snd_card_manager_destroy
 	ms_snd_card_manager_reload
@@ -43,7 +69,11 @@ EXPORTS
 	ms_snd_card_set_capture
 	ms_snd_card_set_control
 	ms_snd_card_get_control
+<<<<<<< HEAD
 	
+=======
+	
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
 	ms_ticker_new
 	ms_ticker_set_name
 	ms_ticker_destroy
@@ -51,6 +81,7 @@ EXPORTS
 	ms_ticker_detach
 	ms_ticker_set_time_func
 	ms_ticker_print_graphs
+<<<<<<< HEAD
 
 	ms_bufferizer_init
 	ms_bufferizer_uninit
@@ -65,6 +96,22 @@ EXPORTS
 
 	ms_load_plugins
 	
+=======
+
+	ms_bufferizer_init
+	ms_bufferizer_uninit
+	ms_bufferizer_read
+	ms_bufferizer_put
+	ms_bufferizer_put_from_queue
+	
+	audio_stream_start
+	audio_stream_stop
+	audio_stream_free
+	create_duplex_rtpsession
+
+	ms_load_plugins
+	
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
 	ms_is_ipv6
 	
 	ms_sleep

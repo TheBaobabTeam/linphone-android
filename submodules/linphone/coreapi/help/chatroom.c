@@ -64,8 +64,8 @@ int main(int argc, char *argv[]){
 	char* group_name = NULL;
 	const char* group_members[argc-3];	// there must be atleast one participant
 	int group_size = 0;
-	LinphoneChatRoom* chat_room;
-	//LinphoneChatMessage *msg;
+	LinphoneChatRoom* chat_room/*, *cr*/;
+	LinphoneChatMessage *msg;
 	int i;
 
 	time_t rawtime;
@@ -122,7 +122,7 @@ int main(int argc, char *argv[]){
 		printf("Member [%d]: [%s]\n", i, group_members[i]);
 	}
 	/*Next step is to create a chat root*/
-	chat_room = linphone_core_create_group_chat_room(lc, group_name, group_members, group_size, 0, 0);
+	chat_room = linphone_core_get_or_create_group_chat_room(lc, group_name, group_members, group_size, 0, 0);
 	
 	//linphone_chat_room_add_participant(chat_room, group_member);
 	
@@ -138,8 +138,14 @@ int main(int argc, char *argv[]){
 		strcpy(nako_ke, ke);
 		strcat(nako_ke, nako);
 		
-		//msg = linphone_group_chat_room_create_message(chat_room, nako_ke);
-		linphone_group_chat_room_send_message(chat_room, nako_ke); /*sending message*/
+		msg = linphone_group_chat_room_create_message(chat_room, nako_ke, 0);
+		//linphone_group_chat_room_send_message(chat_room, nako_ke); /*sending message*/
+		linphone_group_chat_room_send_chat_message(chat_room, msg); /* sending message*/
+		
+		/*cr = linphone_core_get_or_create_chat_room(lc, "sip:baobab@192.168.43.86:5060");
+		if (cr != NULL) {
+			printf("GroupName: [%s]", linphone_chat_room_get_group_name(cr));
+		}*/
 
 		/* main loop for receiving incoming messages and doing background linphone core work: */
 		while(running){

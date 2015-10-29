@@ -1,8 +1,13 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	targetNamespace="http://nvd.nist.gov/feeds/cve/1.2"
+<<<<<<< HEAD
 	xmlns:cve="http://nvd.nist.gov/feeds/cve/1.2"
 	elementFormDefault="qualified" attributeFormDefault="unqualified"
+=======
+	xmlns:cve="http://nvd.nist.gov/feeds/cve/1.2"
+	elementFormDefault="qualified" attributeFormDefault="unqualified"
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
 	version="1.2">
 	<xs:annotation>
 		<xs:documentation>This schema defines the structure of the National
@@ -39,7 +44,11 @@
 			</xs:attribute>
 		</xs:complexType>
 	</xs:element>
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
 	<xs:element name="entry" type="cve:entryType">
 		<xs:annotation>
 			<xs:documentation>A CVE entry.</xs:documentation>

@@ -4252,6 +4252,21 @@ LINPHONE_PUBLIC	int linphone_chat_room_get_group_size(LinphoneChatRoom *cr);
  */
 LINPHONE_PUBLIC	int linphone_chat_room_get_my_group_index(LinphoneChatRoom *cr);
 
+/**
+ * Return group name
+ */
+LINPHONE_PUBLIC	const char* linphone_chat_room_get_group_name(LinphoneChatRoom *cr);
+
+/**
+ * Return LinphoneChatMessage
+ */
+LINPHONE_PUBLIC	LinphoneChatMessage* linphone_group_chat_room_create_file_transfer_message(LinphoneChatRoom *cr, LinphoneContent* initial_content, int group_index);
+
+/**
+ * Return memebers array
+ */
+LINPHONE_PUBLIC	char** linphone_chat_room_get_members(LinphoneChatRoom *cr);
+
 #ifdef __cplusplus
 }
 #endif

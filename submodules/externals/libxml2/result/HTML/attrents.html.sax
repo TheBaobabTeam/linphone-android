@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 SAX.setDocumentLocator()
 SAX.startDocument()
 SAX.startElement(html)
@@ -19,3 +20,26 @@ SAX.endElement(html)
 SAX.ignorableWhitespace(
 , 2)
 SAX.endDocument()
+=======
+SAX.setDocumentLocator()
+SAX.startDocument()
+SAX.startElement(html)
+SAX.ignorableWhitespace(
+, 2)
+SAX.startElement(body, bgcolor='#FFFFFF')
+SAX.characters(
+                , 18)
+SAX.startElement(a, href='mailto:katherine@cbfanc.org,website@bis.doc.gov?subject=South San Francisco BIS Seminar - October 16th')
+SAX.endElement(a)
+SAX.startElement(br)
+SAX.endElement(br)
+SAX.characters(
+, 2)
+SAX.endElement(body)
+SAX.ignorableWhitespace(
+, 2)
+SAX.endElement(html)
+SAX.ignorableWhitespace(
+, 2)
+SAX.endDocument()
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52

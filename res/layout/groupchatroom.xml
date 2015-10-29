@@ -87,26 +87,35 @@
 
         <RelativeLayout
             android:layout_width="80dp"
-            android:layout_height="47dp" >
-
-            <ImageView
-                android:id="@+id/image_attach"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:clickable="true"
-                android:src="@drawable/ic_attach_file_black_18dp" />
+            android:layout_height="47dp"
+            android:layout_weight="0.17" >
 
             <ImageView
                 android:id="@+id/image_more"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_alignParentBottom="true"
+              
                 android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
                 android:layout_weight="4.5"
                 android:clickable="true"
                 android:src="@drawable/ic_more_vert_black_18dp" />
+
+            <LinearLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" >
+
+                <ImageView
+                    android:id="@+id/image_attach"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginLeft="13dp"
+                    android:clickable="true"
+                    android:src="@drawable/ic_attach_file_black_18dp" />
+            </LinearLayout>
 
         </RelativeLayout>
     </LinearLayout>
@@ -127,38 +136,25 @@
 
 	        <TextView
 	            android:id="@+id/groupsendMessage"
-	            android:layout_width="24dp"
-	            android:layout_height="24dp"
+	            android:layout_width="36dp"
+	            android:layout_height="36dp"
 	            android:layout_alignBottom="@+id/sendPicture"
 	            android:layout_alignParentRight="true"
-	            android:drawableTop="@drawable/group_chat_send_message"
+	            android:background="@drawable/group_chat_send_message"
 	            android:gravity="center"
+	            android:layout_marginTop="15dp"
 	            android:textColor="@drawable/text_color" 
 	             android:paddingLeft="10dp"
 	            android:paddingRight="10dp"
 	            android:layout_centerVertical="true"
 	            android:clickable="true"/>
 
-	        <EditText
-	            android:id="@+id/groupmessage"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignBottom="@+id/groupsendMessage"
-	            android:layout_centerHorizontal="true"
-	            android:background="@drawable/chat_field_background"
-	            android:ems="10"
-	            android:imeOptions="flagNoExtractUi"
-	            android:inputType="textMultiLine"
-	            android:maxLines="3"
-	            android:textColor="@android:color/black"
-	            android:textCursorDrawable="@null" />
-
 	        <TextView
 	            android:id="@+id/groupsendPicture"
-	            android:layout_width="wrap_content"
+	              android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
 	            android:layout_alignParentLeft="true"
-	            android:layout_alignTop="@+id/groupsendMessage"
+	            android:layout_marginTop="15dp"
 	            android:clickable="true"
 	            android:drawableTop="@drawable/chat_send_picture"
 	            android:gravity="center"
@@ -166,6 +162,25 @@
 	            android:paddingRight="10dp"
 	            android:text="@string/button_send_picture"
 	            android:textColor="@drawable/text_color" />
+
+	        <EditText
+	            android:id="@+id/groupmessage"
+	              android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentTop="true"
+	            android:layout_centerHorizontal="true"
+	            android:background="@drawable/chat_field_background"
+	             android:layout_toRightOf="@id/groupsendPicture"
+	            android:layout_toLeftOf="@id/groupsendMessage"
+	            android:ems="10"
+	            android:imeOptions="flagNoExtractUi"
+	            android:inputType="textMultiLine"
+	            android:maxLines="3"
+	            android:textColor="@android:color/black"
+	            android:textCursorDrawable="@null" >
+
+	            <requestFocus />
+	        </EditText>
 	        
 	    </RelativeLayout>
 	    

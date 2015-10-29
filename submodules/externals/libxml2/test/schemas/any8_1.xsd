@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <!--
   "element complexType: Schemas parser error : 
    local complex type: The content model is not determinist."
 
   This schema is OK with XSV and Xerces. 
+=======
+<?xml version="1.0"?>
+<!--
+  "element complexType: Schemas parser error : 
+   local complex type: The content model is not determinist."
+
+  This schema is OK with XSV and Xerces. 
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	targetNamespace="urn:test:foo"
@@ -12,9 +21,17 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="bar"/>
+<<<<<<< HEAD
 				<xs:any namespace="##other" processContents="lax" minOccurs="0"/>
+=======
+				<xs:any namespace="##other" processContents="lax" minOccurs="0"/>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
 				<xs:element name="bar"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
+<<<<<<< HEAD
 </xs:schema>
+=======
+</xs:schema>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52

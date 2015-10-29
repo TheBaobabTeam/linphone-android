@@ -29,11 +29,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class WelcomeFragment extends Fragment implements OnClickListener {
-	
 	private static WelcomeFragment instance;
+	
 	private TextView back;
 	private TextView next;
+	private TextView help;
 	private TextView about;
+	
+	public static boolean isInstanciated() {
+		return instance != null;
+	}
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -42,42 +48,51 @@ public class WelcomeFragment extends Fragment implements OnClickListener {
 		
 		// Retain the fragment across configuration changes
 		setRetainInstance(true);
+		
+		back = (TextView) view.findViewById(R.id.back_from_welcome);
+		if (back != null) {
+			back.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					getActivity().finish();
+				}
+			});
+		}
+		
 		next = (TextView) view.findViewById(R.id.textView1);
-		about = (TextView) view.findViewById(R.id.aboutLinphone);
 		next.setOnClickListener(this);
-		about.setOnClickListener(this);
+		
+		about = (TextView) view.findViewById(R.id.aboutLinphone);
+		if (about != null) {
+			about.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					LinphoneActivity.instance().aboutScreen();
+				}
+			});
+		}
+		
+		help = (TextView) view.findViewById(R.id.helpLinphone);
+		if (help != null) {
+			help.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					LinphoneActivity.instance().helpScreen();
+				}
+			});
+		}
+		
 		return view;
 	}
 	
-	public void onActivityCreated(Bundle savedInstanceState) {
-		  super.onActivityCreated(savedInstanceState);
-		  back = (TextView)getView().findViewById(R.id.back_from_welcome);
-		  if (back != null) {
-				back.setOnClickListener(new View.OnClickListener() {
-					@Override
-					public void onClick(View v) {
-						getActivity().finish();
-					}
-				});
-			}
-		  
-		  
-		  
-		//Generate list View from ArrayList
-		
+	public static WelcomeFragment instance() {
+		return instance;
 	}
-
+	
 	@Override
 	public void onClick(View v) {
-		// TODO Auto-generated method stub
-
-			
-			LinphoneActivity.instance().nextScreenAfterWelcome();
+		LinphoneActivity.instance().nextScreenAfterWelcome();
 		
-		
-		
-		
+		getActivity().finish();
 	}
-	
-	
 }

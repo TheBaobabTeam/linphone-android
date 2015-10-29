@@ -106,6 +106,8 @@ void linphone_chat_message_cbs_set_file_transfer_progress_indication(LinphoneCha
 
 static void _linphone_chat_room_send_message(LinphoneChatRoom *cr, LinphoneChatMessage* msg);
 
+static void _linphone_group_chat_room_send_message(LinphoneChatRoom *cr, LinphoneChatMessage* msg, int to_index);
+
 static void process_io_error_upload(void *data, const belle_sip_io_error_event_t *event){
 	LinphoneChatMessage* msg=(LinphoneChatMessage *)data;
 	msg->state = LinphoneChatMessageStateNotDelivered;
@@ -286,6 +288,11 @@ static void linphone_chat_message_process_response_from_post_file(void *data, co
 
 		if (code == 200 ) { /* file has been uplaoded correctly, get server reply and send it */
 			const char *body = belle_sip_message_get_body((belle_sip_message_t *)event->response);
+			
+			//added by me
+			int group_type = 0;
+			int to_index = -1;
+			
 			belle_sip_object_unref(msg->http_request);
 			msg->http_request = NULL;
 
@@ -350,7 +357,21 @@ static void linphone_chat_message_process_response_from_post_file(void *data, co
 			if (linphone_chat_message_cbs_get_msg_state_changed(msg->callbacks)) {
 				linphone_chat_message_cbs_get_msg_state_changed(msg->callbacks)(msg, msg->state);
 			}
-			_linphone_chat_room_send_message(msg->chat_room, msg);
+			
+			group_type = linphone_chat_room_get_type(msg->chat_room);
+			if (group_type == 1) {
+				to_index = msg->chat_room->to_index;
+				
+				if (to_index != -1) {
+					_linphone_group_chat_room_send_message(msg->chat_room, msg, to_index);
+				} else {
+					_linphone_group_chat_room_send_message(msg->chat_room, msg, msg->chat_room->my_group_index);
+				}
+				
+				msg->chat_room->to_index = -1;
+			} else {
+				_linphone_chat_room_send_message(msg->chat_room, msg);
+			}
 		}
 	}
 }
@@ -407,7 +428,7 @@ static LinphoneChatRoom * _linphone_core_create_chat_room(LinphoneCore *lc, Linp
 	return cr;
 }
 
-static LinphoneChatRoom * _linphone_core_create_group_chat_room(LinphoneCore *lc, LinphoneAddress *addr, LinphoneAddress *addresses[], int group_size, int group_index, int admin_index) {
+static LinphoneChatRoom * _linphone_core_create_group_chat_room(LinphoneCore *lc, const char* group_name, LinphoneAddress *addr, LinphoneAddress *addresses[], int group_size, int group_index, int admin_index) {
 	LinphoneChatRoom *cr = belle_sip_object_new(LinphoneChatRoom);
 	int i;
 	
@@ -419,15 +440,18 @@ static LinphoneChatRoom * _linphone_core_create_group_chat_room(LinphoneCore *lc
 	cr->num_of_members = group_size;
 	cr->peer = linphone_address_as_string_uri_only(addr);
 	cr->peer_url = addr;
-	cr->group_name = linphone_address_get_display_name(addr);
+	cr->group_name = group_name;
 	cr->group_admin_index = admin_index;
 	cr->my_group_index = group_index;
+	cr->to_index = -1;
 	for (i = 0; i < group_size && i < cr->CAPACITY; i++) {
 		cr->members[i] = linphone_address_as_string(addresses[i]);
 		cr->members_urls[i] = addresses[i];
 	}
 	
 	lc->chatrooms = ms_list_append(lc->chatrooms, (void *)cr);
+	
+	fflush(stdout);
 	
 	return cr;
 }
@@ -440,7 +464,7 @@ static LinphoneChatRoom * _linphone_core_create_chat_room_from_url(LinphoneCore 
 	return NULL;
 }
 
-static LinphoneChatRoom * _linphone_core_create_group_chat_room_from_url(LinphoneCore *lc, const char* group_name, const char* group_members[], int group_size, int group_index, int admin_index) {
+static LinphoneChatRoom * _linphone_core_create_group_chat_room_from_url(LinphoneCore *lc, const char* group_name, const char* group_address, const char* group_members[], int group_size, int group_index, int admin_index) {
 	LinphoneAddress *parsed_url = NULL, *parsed_members_urls[group_size+1];
 	int i;
 	
@@ -448,7 +472,7 @@ static LinphoneChatRoom * _linphone_core_create_group_chat_room_from_url(Linphon
 	
 	printf(" group_name [%s]\n", group_name);
 	
-	if ((parsed_url = linphone_core_interpret_url(lc, group_name)) != NULL) {
+	if ((parsed_url = linphone_core_interpret_url(lc, group_address)) != NULL) {
 		/*if ((parsed_members_urls[0] = linphone_core_interpret_url(lc, linphone_core_get_primary_contact(lc))) == NULL) {
 			ms_error("Something wrong with group_admin [%s]\n", linphone_core_get_primary_contact(lc));
 			//ms_free((void *)group_name);
@@ -464,12 +488,14 @@ static LinphoneChatRoom * _linphone_core_create_group_chat_room_from_url(Linphon
 		
 		//ms_free((void *)group_name);
 		
-		return _linphone_core_create_group_chat_room(lc, parsed_url, parsed_members_urls, group_size, group_index, admin_index);
+		return _linphone_core_create_group_chat_room(lc, group_name, parsed_url, parsed_members_urls, group_size, group_index, admin_index);
 	} else {
 		ms_error("Something wrong with group_name [%s]\n", group_name);
 	}
 	
 	//ms_free((void *)group_name);
+	
+	fflush(stdout);
 	
 	return NULL;
 }
@@ -487,10 +513,13 @@ LinphoneChatRoom * _linphone_core_get_chat_room(LinphoneCore *lc, const Linphone
 		}
 		cr = NULL;
 	}
+	
+	fflush(stdout);
+	
 	return cr;
 }
 
-static LinphoneChatRoom * _linphone_core_get_or_create_group_chat_room(LinphoneCore* lc, const char* group_name, const char* group_members[], int group_size, int group_index, int admin_index) {
+static LinphoneChatRoom * _linphone_core_get_or_create_group_chat_room(LinphoneCore* lc, const char* group_name, const char* group_address, const char* group_members[], int group_size, int group_index, int admin_index) {
 	const char* identity = linphone_core_get_primary_contact(lc);
 	LinphoneAddress *id_addr = linphone_core_interpret_url(lc, identity);
 	LinphoneAddress *to_addr = NULL;
@@ -500,9 +529,11 @@ static LinphoneChatRoom * _linphone_core_get_or_create_group_chat_room(LinphoneC
 	
 	printf("_linphone_core_get_or_create_group_chat_room(): running...\n");
 	
-	if ((parsed_url = linphone_core_interpret_url(lc, group_name)) != NULL) {
+	if (group_address != NULL && (parsed_url = linphone_core_create_address(lc, group_address)) != NULL) {
+		printf("group_name is address\n");
 		to_addr = parsed_url;
 	} else {
+		printf("group_name address is being created...\n");
 		to_addr = linphone_address_clone(id_addr);
 		linphone_address_set_display_name(to_addr, group_name);
 		linphone_address_set_username(to_addr, group_name);
@@ -520,10 +551,12 @@ static LinphoneChatRoom * _linphone_core_get_or_create_group_chat_room(LinphoneC
 	ret = _linphone_core_get_chat_room(lc, to_addr);
 	linphone_address_destroy(to_addr);
 	if (!ret){
-		ret = _linphone_core_create_group_chat_room_from_url(lc, tmp, group_members, group_size, group_index, admin_index);
+		ret = _linphone_core_create_group_chat_room_from_url(lc, group_name, tmp, group_members, group_size, group_index, admin_index);
 	}
 	
 	ms_free(tmp);
+	
+	fflush(stdout);
 	
 	return ret;
 }
@@ -531,7 +564,9 @@ static LinphoneChatRoom * _linphone_core_get_or_create_group_chat_room(LinphoneC
 static LinphoneChatRoom * _linphone_core_get_or_create_chat_room(LinphoneCore* lc, const char* to) {
 	LinphoneAddress *to_addr=linphone_core_interpret_url(lc,to);
 	LinphoneChatRoom *ret;
-
+	
+	printf("_linphone_core_get_or_create_chat_room(): running...\n");
+	
 	if (to_addr==NULL){
 		ms_error("linphone_core_get_or_create_chat_room(): Cannot make a valid address with %s",to);
 		return NULL;
@@ -545,11 +580,13 @@ static LinphoneChatRoom * _linphone_core_get_or_create_chat_room(LinphoneCore* l
 }
 
 LinphoneChatRoom* linphone_core_get_or_create_chat_room(LinphoneCore* lc, const char* to) {
+	printf("linphone_core_get_or_create_chat_room(): running...\n");
+	
 	return _linphone_core_get_or_create_chat_room(lc, to);
 }
 
 LinphoneChatRoom* linphone_core_get_or_create_group_chat_room(LinphoneCore* lc, const char* group_name, const char* group_members[], int group_size, int group_index, int admin_index) {
-	return _linphone_core_get_or_create_group_chat_room(lc, group_name, group_members, group_size, group_index, admin_index);
+	return _linphone_core_get_or_create_group_chat_room(lc, group_name, NULL, group_members, group_size, group_index, admin_index);
 }
 
 LinphoneChatRoom * linphone_core_create_chat_room(LinphoneCore *lc, const char *to) {
@@ -558,7 +595,10 @@ LinphoneChatRoom * linphone_core_create_chat_room(LinphoneCore *lc, const char *
 
 LinphoneChatRoom* linphone_core_create_group_chat_room(LinphoneCore* lc, const char* group_name, const char* group_members[], int group_size, int group_index, int admin_index) {
 	printf("linphone_core_create_group_chat_room(): running...\n");
-	return _linphone_core_get_or_create_group_chat_room(lc, group_name, group_members, group_size, group_index, admin_index);
+	
+	fflush(stdout);
+	
+	return _linphone_core_get_or_create_group_chat_room(lc, group_name, NULL, group_members, group_size, group_index, admin_index);
 }
 
 LinphoneChatRoom *linphone_core_get_chat_room(LinphoneCore *lc, const LinphoneAddress *addr){
@@ -786,11 +826,14 @@ void linphone_chat_room_message_received(LinphoneChatRoom *cr, LinphoneCore *lc,
 
 void linphone_core_message_received(LinphoneCore *lc, SalOp *op, const SalMessage *sal_msg){
 	LinphoneChatRoom *cr=NULL;
-	LinphoneAddress *addr;
+	LinphoneAddress *addr, *parsed_addr;
 	LinphoneChatMessage* msg;
 	const SalCustomHeader *ch;
 	int is_group = 0;
 	const char* group_name;
+	const char* group_address;
+	int group_index;
+	const char* _group_index;
 	
 	addr = linphone_address_new(sal_msg->from);
 	linphone_address_clean(addr);
@@ -799,23 +842,31 @@ void linphone_core_message_received(LinphoneCore *lc, SalOp *op, const SalMessag
 	ch = sal_op_get_recv_custom_header(op);
 	if (ch) {
 		group_name = sal_group_getCustomHeader(ch, "Group_Name");
+		group_address = sal_group_getCustomHeader(ch, "Group_Address");
 		
-		if (group_name != NULL)
+		if (group_address != NULL) {
 			is_group = 1;
+			
+			if (group_name == NULL && group_address != NULL) {
+				parsed_addr = linphone_address_new(group_address);
+				linphone_address_clean(parsed_addr);
+				
+				group_name = linphone_address_get_username(parsed_addr);
+			}
+		}
 		
 		printf("Custom Header Received\n");
 	} 
 	
 	if (is_group == 1) {
 		const char* _group_size = sal_group_getCustomHeader(ch, "Group_Size");
-		const char* _group_index = sal_group_getCustomHeader(ch, "My_Group_Index");
 		const char* _admin_index = sal_group_getCustomHeader(ch, "Group_Admin_Index");
 		const char* _group_members = sal_group_getCustomHeader(ch, "Group_Members");
-		const char* group_address = sal_group_getCustomHeader(ch, "Group_Address");
 		int group_size = (int) strtol(_group_size, (char **)NULL, 10);
-		int group_index = (int) strtol(_group_index, (char **)NULL, 10);
 		int admin_index = (int) strtol(_admin_index, (char **)NULL, 10);
 		const char** group_members;
+		_group_index = sal_group_getCustomHeader(ch, "My_Group_Index");
+		group_index = (int) strtol(_group_index, (char **)NULL, 10);
 		
 		printf("String Group Name Retrieved as [%s]\n", group_name);
 		printf("String Group Address Retrieved as [%s]\n", group_address);
@@ -828,7 +879,7 @@ void linphone_core_message_received(LinphoneCore *lc, SalOp *op, const SalMessag
 		
 		printf(" First Member is \n");
 		
-		cr = linphone_core_get_or_create_group_chat_room(lc, group_address, group_members, group_size, group_index, admin_index);
+		cr = _linphone_core_get_or_create_group_chat_room(lc, group_name, group_address, group_members, group_size, group_index, admin_index);
 		
 		free(group_members);
 		
@@ -842,7 +893,13 @@ void linphone_core_message_received(LinphoneCore *lc, SalOp *op, const SalMessag
 		xmlDocPtr xmlMessageBody;
 		xmlNodePtr cur;
 
-		msg = linphone_chat_room_create_message(cr, NULL); /* create a message with empty body */
+		//msg = linphone_chat_room_create_message(cr, NULL); /* create a message with empty body */
+		if (is_group == 1) {
+			msg = linphone_group_chat_room_create_message(cr, NULL, group_index);
+			msg->custom_headers = sal_custom_header_append(msg->custom_headers, "My_Group_Index", _group_index);
+		} else {
+			msg = linphone_chat_room_create_message(cr, NULL); /* create a message with empty body */
+		}
 		msg->content_type = ms_strdup(sal_msg->content_type); /* add the content_type "application/vnd.gsma.rcs-ft-http+xml" */
 		msg->file_transfer_information = linphone_content_new();
 
@@ -914,7 +971,12 @@ void linphone_core_message_received(LinphoneCore *lc, SalOp *op, const SalMessag
 		linphone_chat_message_set_external_body_url(msg, (const char *)file_url);
 		xmlFree(file_url);
 	} else { /* message is not rcs file transfer, create it with provided sal_msg->text as ->message */
-		msg = linphone_chat_room_create_message(cr, sal_msg->text);
+		//msg = linphone_chat_room_create_message(cr, sal_msg->text);
+		if (is_group == 1) {
+			msg = linphone_group_chat_room_create_message(cr, sal_msg->text, group_index);
+		} else {
+			msg = linphone_chat_room_create_message(cr, sal_msg->text);
+		}
 	}
 	linphone_chat_message_set_from(msg, cr->peer_url);
 
@@ -939,6 +1001,8 @@ void linphone_core_message_received(LinphoneCore *lc, SalOp *op, const SalMessag
 	msg->storage_id=linphone_chat_message_store(msg);
 	linphone_chat_room_message_received(cr,lc,msg);
 	linphone_chat_message_unref(msg);
+	
+	fflush(stdout);
 }
 
 static int linphone_chat_room_remote_refresh_composing_expired(void *data, unsigned int revents) {
@@ -1176,10 +1240,59 @@ static void linphone_chat_room_send_is_composing_notification(LinphoneChatRoom *
 	}
 }
 
+// added by me
+static void linphone_group_chat_room_send_is_composing_notification(LinphoneChatRoom *cr, int to_index) {
+	SalOp *op = NULL;
+	LinphoneCall *call;
+	const char *identity = NULL;
+	char *content = NULL;
+	
+	// shall remove this
+	if (identity != NULL) {};
+	
+	if (lp_config_get_int(cr->lc->config, "sip", "chat_use_call_dialogs", 0)) {
+		if ((call = linphone_core_get_call_by_remote_address(cr->lc, cr->peer)) != NULL) {
+			if (call->state == LinphoneCallConnected ||
+			call->state == LinphoneCallStreamsRunning ||
+			call->state == LinphoneCallPaused ||
+			call->state == LinphoneCallPausing ||
+			call->state == LinphoneCallPausedByRemote) {
+				ms_message("send SIP message through the existing call.");
+				op = call->op;
+				identity = linphone_core_find_best_identity(cr->lc, linphone_call_get_remote_address(call));
+			}
+		}
+	}
+	if (op == NULL) {
+		LinphoneProxyConfig *proxy = linphone_core_lookup_known_proxy(cr->lc, cr->members_urls[to_index]);
+		if (proxy)
+			identity = linphone_proxy_config_get_identity(proxy);
+		else
+			identity = linphone_core_get_primary_contact(cr->lc);
+		/*sending out of calls*/
+		op = sal_op_new(cr->lc->sal);
+		linphone_configure_op(cr->lc, op, cr->members_urls[to_index], NULL, lp_config_get_int(cr->lc->config, "sip", "chat_msg_with_contact", 0));
+	}
+	content = linphone_chat_room_create_is_composing_xml(cr);
+	if (content != NULL) {
+		sal_message_send(op, identity, cr->members[to_index], "application/im-iscomposing+xml", content, NULL);
+		ms_free(content);
+	}
+}
+
 static int linphone_chat_room_stop_composing(void *data, unsigned int revents) {
+	int i;
 	LinphoneChatRoom *cr = (LinphoneChatRoom *)data;
 	cr->is_composing = LinphoneIsComposingIdle;
-	linphone_chat_room_send_is_composing_notification(cr);
+	if (cr->type == 1) {
+		for (i = 0; i < cr->num_of_members; i++) {
+			if (i != cr->my_group_index) {
+				linphone_group_chat_room_send_is_composing_notification(cr, i);
+			}
+		}
+	} else {
+		linphone_chat_room_send_is_composing_notification(cr);
+	}
 	linphone_chat_room_delete_composing_refresh_timer(cr);
 	belle_sip_object_unref(cr->composing_idle_timer);
 	cr->composing_idle_timer = NULL;
@@ -1187,8 +1300,17 @@ static int linphone_chat_room_stop_composing(void *data, unsigned int revents) {
 }
 
 static int linphone_chat_room_refresh_composing(void *data, unsigned int revents) {
+	int i;
 	LinphoneChatRoom *cr = (LinphoneChatRoom *)data;
-	linphone_chat_room_send_is_composing_notification(cr);
+	if (cr->type == 1) {
+		for (i = 0; i < cr->num_of_members; i++) {
+			if (i != cr->my_group_index) {
+				linphone_group_chat_room_send_is_composing_notification(cr, i);
+			}
+		}
+	} else {
+		linphone_chat_room_send_is_composing_notification(cr);
+	}
 	return BELLE_SIP_CONTINUE;
 }
 
@@ -1196,8 +1318,19 @@ void linphone_chat_room_compose(LinphoneChatRoom *cr) {
 	int idle_timeout = lp_config_get_int(cr->lc->config, "sip", "composing_idle_timeout", COMPOSING_DEFAULT_IDLE_TIMEOUT);
 	int refresh_timeout = lp_config_get_int(cr->lc->config, "sip", "composing_refresh_timeout", COMPOSING_DEFAULT_REFRESH_TIMEOUT);
 	if (cr->is_composing == LinphoneIsComposingIdle) {
+		int i;
 		cr->is_composing = LinphoneIsComposingActive;
-		linphone_chat_room_send_is_composing_notification(cr);
+		
+		if (cr->type == 1) {
+			for (i = 0; i < cr->num_of_members; i++) {
+				if (i != cr->my_group_index) {
+					linphone_group_chat_room_send_is_composing_notification(cr, i);
+				}
+			}
+		} else {
+			linphone_chat_room_send_is_composing_notification(cr);
+		}
+		
 		if (!cr->composing_refresh_timer) {
 			cr->composing_refresh_timer = sal_create_timer(cr->lc->sal, linphone_chat_room_refresh_composing, cr, refresh_timeout * 1000, "composing refresh timeout");
 		} else {
@@ -1616,8 +1749,6 @@ LinphoneChatMessage* linphone_chat_room_create_file_transfer_message(LinphoneCha
  *				This shall be my playground, so behold folks					*
  *******************************************************************************************/
 
-static void _linphone_group_chat_room_send_message(LinphoneChatRoom *cr, LinphoneChatMessage* msg, int to_index);
-
 /**
  * Send a message to peer member of this chat room.
  * @deprecated linphone_chat_room_send_message2() gives more control on the message expedition.
@@ -1627,17 +1758,25 @@ static void _linphone_group_chat_room_send_message(LinphoneChatRoom *cr, Linphon
 void linphone_group_chat_room_send_message(LinphoneChatRoom *cr, const char *msg) {
 	int i;
 	LinphoneChatMessage *message = NULL;
+	char* _group_index = NULL;
 	
 	printf("linphone_group_chat_room_send_message()\n");
 	
+	linphone_chat_message_ref(message);
+	
 	for (i = 0; i < cr->num_of_members; i++) {
-		message = linphone_group_chat_room_create_message(cr, msg, i);
 		if (i != cr->my_group_index) {
+			_group_index = malloc(100);
+			sprintf(_group_index, "%d", i);
+			
+			message = linphone_group_chat_room_create_message(cr, msg, i);
+			message->custom_headers = sal_custom_header_append(message->custom_headers, "My_Group_Index", _group_index);
+			
 			_linphone_group_chat_room_send_message(cr, message, i);
+			
+			free(_group_index);	// release memory
 		}
 	}
-	
-	linphone_chat_message_ref(message);
 	
 	message->dir = LinphoneChatMessageOutgoing;
 	message->from = linphone_address_new(cr->peer);
@@ -1653,20 +1792,52 @@ void linphone_group_chat_room_send_message(LinphoneChatRoom *cr, const char *msg
 	linphone_chat_room_delete_composing_refresh_timer(cr);
 	
 	linphone_chat_message_unref(message);
+	
+	fflush(stdout);
 }
 
 void linphone_group_chat_room_send_chat_message(LinphoneChatRoom *cr, LinphoneChatMessage *msg) {
 	int i;
+	SalCustomHeader *tmp = sal_custom_header_clone(msg->custom_headers);
+	char* _group_index = NULL;
 	
 	printf("linphone_group_chat_room_send_chat_message()\n");
 	
 	msg->state = LinphoneChatMessageStateInProgress;
 	
+	linphone_chat_message_ref(msg);
+	
 	for (i = 0; i < cr->num_of_members; i++) {
 		if (i != cr->my_group_index) {
+			_group_index = malloc(100);
+			sprintf(_group_index, "%d", i);
+			
+			msg->custom_headers = sal_custom_header_append(tmp, "My_Group_Index", _group_index);
+			
 			_linphone_group_chat_room_send_message(cr, msg, i);
+			
+			free(_group_index);	// release memory
 		}
 	}
+	
+	msg->dir = LinphoneChatMessageOutgoing;
+	msg->from = linphone_address_new(cr->peer);
+	msg->storage_id = linphone_chat_message_store(msg);
+	
+	// add to transient list
+	cr->transient_messages = ms_list_append(cr->transient_messages, linphone_chat_message_ref(msg));
+
+	if (cr->is_composing == LinphoneIsComposingActive) {
+		cr->is_composing = LinphoneIsComposingIdle;
+	}
+	linphone_chat_room_delete_composing_idle_timer(cr);
+	linphone_chat_room_delete_composing_refresh_timer(cr);
+	
+	linphone_chat_message_unref(msg);
+	
+	sal_custom_header_free(tmp);
+	
+	//fflush(stdout);
 }
 
 LinphoneChatMessage* linphone_group_chat_room_create_message(LinphoneChatRoom *cr, const char* message, int group_index) {
@@ -1715,7 +1886,75 @@ LinphoneChatMessage* linphone_group_chat_room_create_message(LinphoneChatRoom *c
 	sprintf(_group_index, "%d", group_index);
 	
 	// set my group index
-	msg->custom_headers = sal_custom_header_append(msg->custom_headers, "My_Group_Index", _group_index);
+	//msg->custom_headers = sal_custom_header_append(msg->custom_headers, "My_Group_Index", _group_index);
+	
+	_admin_index = malloc(100);
+	sprintf(_admin_index, "%d", cr->group_admin_index);
+	
+	// set group admin
+	msg->custom_headers = sal_custom_header_append(msg->custom_headers, "Group_Admin_Index", _admin_index);
+	
+	free(group_size);
+	free(group_members);
+	free(_group_index);
+	free(_admin_index);
+	
+	//fflush(stdout);
+	
+	return msg;
+}
+
+LinphoneChatMessage* linphone_group_chat_room_create_file_transfer_message(LinphoneChatRoom *cr, LinphoneContent* initial_content, int group_index) {
+	LinphoneChatMessage* msg = belle_sip_object_new(LinphoneChatMessage);
+	
+	int i;
+	char* group_members = NULL;
+	char* group_size = NULL;
+	char* _group_index = NULL;
+	char* _admin_index = NULL;
+	
+	printf("linphone_group_chat_room_create_file_transfer_message()\n");
+	
+	msg->callbacks=linphone_chat_message_cbs_new();
+	msg->chat_room=(LinphoneChatRoom*)cr;
+	msg->message = NULL;
+	msg->is_read=TRUE;
+	msg->file_transfer_information = linphone_content_copy(initial_content);
+	msg->dir=LinphoneChatMessageOutgoing;
+	linphone_chat_message_set_to(msg, linphone_chat_room_get_peer_address(cr));
+	linphone_chat_message_set_from(msg, linphone_address_new(linphone_core_get_identity(cr->lc)));
+	msg->content_type=NULL; /* this will be set to application/vnd.gsma.rcs-ft-http+xml when we will transfer the xml reply from server to the peers */
+	msg->http_request=NULL; /* this will store the http request during file upload to the server */
+	
+	// set group name
+	msg->custom_headers = sal_custom_header_append(msg->custom_headers, "Group_Name", cr->group_name);
+	
+	// set group address
+	msg->custom_headers = sal_custom_header_append(msg->custom_headers, "Group_Address", cr->peer);
+	
+	group_size = malloc(100);
+	sprintf(group_size, "%d", cr->num_of_members);
+	
+	// set group size
+	msg->custom_headers = sal_custom_header_append(msg->custom_headers, "Group_Size", group_size);
+	
+	group_members = malloc(100 * cr->num_of_members + 1);
+	strcpy(group_members, "");
+	for (i = 0; i < cr->num_of_members; i++) {
+		strcat(group_members, cr->members[i]);
+		if (i < (cr->num_of_members - 1)) {
+			strcat(group_members, ",");
+		}
+	}
+	
+	// set group members
+	msg->custom_headers = sal_custom_header_append(msg->custom_headers, "Group_Members", group_members);
+	
+	_group_index = malloc(100);
+	sprintf(_group_index, "%d", group_index);
+	
+	// set my group index
+	//msg->custom_headers = sal_custom_header_append(msg->custom_headers, "My_Group_Index", _group_index);
 	
 	_admin_index = malloc(100);
 	sprintf(_admin_index, "%d", cr->group_admin_index);
@@ -1733,12 +1972,58 @@ LinphoneChatMessage* linphone_group_chat_room_create_message(LinphoneChatRoom *c
 
 static void _linphone_group_chat_room_send_message(LinphoneChatRoom *cr, LinphoneChatMessage* msg, int to_index){
 	SalOp *op = NULL;
+	LinphoneCall *call;
 	char* content_type;
 	const char *identity = NULL;
 	time_t t = time(NULL);
-	linphone_chat_message_ref(msg);
+	//linphone_chat_message_ref(msg);
 	
 	printf("_linphone_group_chat_room_send_message()\n");
+	
+	cr->to_index = to_index;
+	
+	/* Check if we shall upload a file to a server */
+	if (msg->file_transfer_information != NULL && msg->content_type == NULL) {
+		/* open a transaction with the server and send an empty request(RCS5.1 section 3.5.4.8.3.1) */
+		belle_http_request_listener_callbacks_t cbs={0};
+		belle_http_request_listener_t *l;
+		belle_generic_uri_t *uri;
+		const char *transfer_server = linphone_core_get_file_transfer_server(cr->lc);
+
+		if (transfer_server == NULL) {
+			ms_warning("Cannot send file transfer message: no file transfer server configured.");
+			return;
+		}
+		uri=belle_generic_uri_parse(transfer_server);
+
+		msg->http_request=belle_http_request_create("POST",
+				uri,
+				NULL,
+				NULL,
+				NULL);
+		belle_sip_object_ref(msg->http_request);	/* keep a reference on the request to be able to cancel it */
+		cbs.process_response=linphone_chat_message_process_response_from_post_file;
+		cbs.process_io_error=process_io_error_upload;
+		cbs.process_auth_requested=process_auth_requested_upload;
+		l=belle_http_request_listener_create_from_callbacks(&cbs,msg); /* give msg to listener to be able to start the actual file upload when server answer a 204 No content */
+		belle_http_provider_send_request(cr->lc->http_provider,msg->http_request,l);
+		//linphone_chat_message_unref(msg);
+		return;
+	}
+	
+	if (lp_config_get_int(cr->lc->config,"sip","chat_use_call_dialogs",0)){
+		if((call = linphone_core_get_call_by_remote_address(cr->lc,cr->peer))!=NULL){
+			if (call->state==LinphoneCallConnected ||
+			call->state==LinphoneCallStreamsRunning ||
+			call->state==LinphoneCallPaused ||
+			call->state==LinphoneCallPausing ||
+			call->state==LinphoneCallPausedByRemote){
+				ms_message("send SIP message through the existing call.");
+				op = call->op;
+				identity=linphone_core_find_best_identity(cr->lc,linphone_call_get_remote_address(call));
+			}
+		}
+	}
 	
 	// Set time of the message
 	msg->time=t;
@@ -1766,7 +2051,7 @@ static void _linphone_group_chat_room_send_message(LinphoneChatRoom *cr, Linphon
 		printf("There is external_body_url...\n");
 		
 		content_type = ms_strdup_printf("message/external-body; access-type=URL; URL=\"%s\"",msg->external_body_url);
-		sal_message_send(op, cr->peer, cr->members[to_index], content_type, NULL, NULL);
+		sal_message_send(op, identity, cr->members[to_index], content_type, NULL, NULL);
 		ms_free(content_type);
 	} else {
 		char *peer_uri = linphone_address_as_string_uri_only(cr->members_urls[to_index]);
@@ -1798,7 +2083,7 @@ static void _linphone_group_chat_room_send_message(LinphoneChatRoom *cr, Linphon
 			//for (i = 0; i < cr->num_of_members; i++) {
 			//	if (i == cr->my_group_index) {
 					printf("Sending Text [%s] from [%s] to [%s]\n", msg->message, cr->peer, cr->members[to_index]);
-					sal_text_send(op, cr->peer, cr->members[to_index], msg->message);
+					sal_text_send(op, identity, cr->members[to_index], msg->message);
 					printf("Text Message Sent\n");
 				//}
 			//}
@@ -1811,7 +2096,7 @@ static void _linphone_group_chat_room_send_message(LinphoneChatRoom *cr, Linphon
 			//for (i = 0; i < cr->num_of_members; i++) {
 			//	if (i == cr->my_group_index) {
 					printf("Sending Message [%s] from [%s] to [%s]\n", msg->message, cr->peer, cr->members[to_index]);
-					sal_message_send(op, cr->peer, cr->members[to_index], content_type, msg->message, NULL);
+					sal_message_send(op, identity, cr->members[to_index], content_type, msg->message, peer_uri);
 					printf("Message Sent\n");
 			//	}
 			//}
@@ -1824,14 +2109,16 @@ static void _linphone_group_chat_room_send_message(LinphoneChatRoom *cr, Linphon
 	msg->storage_id = linphone_chat_message_store(msg);*/
 
 	// add to transient list
-	cr->transient_messages = ms_list_append(cr->transient_messages, linphone_chat_message_ref(msg));
+	/*cr->transient_messages = ms_list_append(cr->transient_messages, linphone_chat_message_ref(msg));
 
-	/*if (cr->is_composing == LinphoneIsComposingActive) {
+	if(cr->is_composing == LinphoneIsComposingActive) {
 		cr->is_composing = LinphoneIsComposingIdle;
 	}
 	linphone_chat_room_delete_composing_idle_timer(cr);
-	linphone_chat_room_delete_composing_refresh_timer(cr);*/
+	linphone_chat_room_delete_composing_refresh_timer(cr);
 	linphone_chat_message_unref(msg);
+	
+	fflush(stdout);*/
 }
 
 void linphone_chat_room_print(LinphoneCore *lc, LinphoneChatRoom* room, LinphoneChatMessage *msg) {
@@ -1853,6 +2140,8 @@ void linphone_chat_room_print(LinphoneCore *lc, LinphoneChatRoom* room, Linphone
 		
 		printf("SIZE: [%d]\n", ms_list_size(linphone_chat_room_get_history(cr, 5)));
 	}
+	
+	fflush(stdout);
 }
 
 const char** str_split(const char* a_str, const char a_delim) {
@@ -1915,4 +2204,12 @@ int linphone_chat_room_get_group_size(LinphoneChatRoom *cr) {
 
 int linphone_chat_room_get_my_group_index(LinphoneChatRoom *cr) {
 	return cr->my_group_index;
+}
+
+const char* linphone_chat_room_get_group_name(LinphoneChatRoom *cr) {
+	return cr->group_name;
+}
+
+char** linphone_chat_room_get_members(LinphoneChatRoom *cr) {
+	return cr->members;
 }

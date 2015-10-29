@@ -3,15 +3,13 @@ package org.linphone.groupchat;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.linphone.ChatFragment;
 import org.linphone.Contact;
-import org.linphone.ContactsFragment;
-import org.linphone.ContactsManager;
-import org.linphone.LinphoneActivity;
 import org.linphone.R;
+import org.linphone.LinphoneManager;
+//import org.linphone.LinphoneUtils;
 
-
-
+import org.linphone.core.LinphoneCore;
+import org.linphone.core.LinphoneChatRoom;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -21,20 +19,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class GroupdetailsFragment extends Fragment implements OnClickListener {
 	
 	private static GroupdetailsFragment instance;
 	private TextView back;
-	private myArrayAdapter dataAdapter = null;
+	private MyAdapter dataAdapter = null;
+	
+	private LinphoneChatRoom chatRoom;
+	private String sipUri;
 	
 	//Check if its instantiated
 	   
@@ -43,6 +39,7 @@ public class GroupdetailsFragment extends Fragment implements OnClickListener {
 		}
 	
 	//Loads the list on the listView
+	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		instance = this;
@@ -50,16 +47,29 @@ public class GroupdetailsFragment extends Fragment implements OnClickListener {
 		
 		// Retain the fragment across configuration changes
 		setRetainInstance(true);
+		
+		//Retrieve parameter from intent
+		sipUri = getArguments().getString("SipUri");
+		
+		LinphoneCore lc = LinphoneManager.getLcIfManagerNotDestroyedOrNull();
+		if (lc != null) {
+			chatRoom = lc.getOrCreateChatRoom(sipUri);
+			
+			//String members = "";
+			
+			//String[] mem = chatRoom.getMembers();
+			
+			
+			//Only works if using liblinphone storage
+			chatRoom.markAsRead();
+		}
+		
 		return view;
 	}
-	
-	//Create a custom Adaapter
 
-	
-	
 	public void onActivityCreated(Bundle savedInstanceState) {
 		  super.onActivityCreated(savedInstanceState);
-		  back = (TextView)getView().findViewById(R.id.back_to_main);
+		  back = (TextView)getView().findViewById(R.id.back);
 		  if (back != null) {
 				back.setOnClickListener(new View.OnClickListener() {
 					@Override
@@ -69,38 +79,47 @@ public class GroupdetailsFragment extends Fragment implements OnClickListener {
 				});
 			}
 		//Generate list View from ArrayList
-		displayListFromArrayList();
+		  displayListView();
 	}
-	private class myArrayAdapter extends ArrayAdapter<String>
-	{
-		private List<String> contactsList;
-		
-		public myArrayAdapter(Context context, int textViewResourceId, List<String> contactsList){
-			super(context, textViewResourceId,contactsList);
-			this.contactsList = new ArrayList<String>();
-			this.contactsList.add("Martha");
-			this.contactsList.add("Potego");
-			this.contactsList.add("Nomzamo");
-			this.contactsList.add("Lerato");
+	
+	//Custom Adapter
+		private class MyAdapter extends ArrayAdapter<String>{
+			private List<String> contactsList;
+			
+			public MyAdapter(Context context, int textViewResourceId, List<String> contactsList){
+				super(context, textViewResourceId,contactsList);
+				this.contactsList = new ArrayList<String>();
+				this.contactsList.addAll(contactsList);
+				}
+			
+			private class ViewHolder{
+				TextView name;
+				}
+			
+			@Override
+			public View getView(int position, View v, ViewGroup parent){
+				ViewHolder holder = null;
+				
+				if(v == null){
+					LayoutInflater vi = (LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+					v = vi.inflate(R.layout.group_details_list_item, null);
+					
+					holder = new ViewHolder();
+					holder.name = (TextView)v.findViewById(R.id.name);
+					holder.name.setTextColor(Color.BLACK);
+					v.setTag(holder);
+					}
+				else{
+					holder = (ViewHolder)v.getTag();
+					}
+				
+				String contact = contactsList.get(position);
+				holder.name.setText(contact);
+				holder.name.setTag(contact);
+				
+				return v;
+				}
 			}
-		
-
-		
-		@Override
-		public View getView(int position, View v, ViewGroup parent)
-		{
-			LayoutInflater vi = null;
-			if(v == null){
-				vi = (LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			}
-			
-			
-				v = vi.inflate(R.layout.activity_group_details, null);
-			
-			return v;
-		}
-
-	}
 	
 	
 	@Override
@@ -108,14 +127,21 @@ public class GroupdetailsFragment extends Fragment implements OnClickListener {
 		// TODO Auto-generated method stub
 		
 	}
-	private void displayListFromArrayList() {
+	
+	public void displayListView() {
+		List<String> contactsList = new ArrayList<String>();
+		//contactsList = AddMembersFragment.instance().getListOfMembers();
 		
-		ArrayList<String> contactsList = new ArrayList<String>();
+		String[] mem = chatRoom.getMembers();
+		if (mem != null) {
+			for (int i = 0; i < mem.length; i++) {
+				contactsList.add(mem[i]);
+			}
+		}
 		
-		dataAdapter = new myArrayAdapter(getActivity(),R.layout.activity_group_details,contactsList);
+		dataAdapter = new MyAdapter(getActivity(),R.layout.group_details_list_item,contactsList);
 		ListView listview = (ListView)getActivity().findViewById(R.id.groupDetails);
 		listview.setAdapter(dataAdapter);
-		
-	}
 
+	}
 }

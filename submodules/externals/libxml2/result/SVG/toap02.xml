@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG April 1999//EN" "http://www.w3.org/Graphics/SVG/svg-19990412.dtd">
 <svg width="4in" height="3in">
@@ -25,3 +26,32 @@
     <use href="#Triangle2"/>
   </text>
 </svg>
+=======
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG April 1999//EN" "http://www.w3.org/Graphics/SVG/svg-19990412.dtd">
+<svg width="4in" height="3in">
+  <defs>
+    <symbol id="Triangle1" min-x="0" min-y="0" max-x="300" max-y="200">
+      <path d="M 50 0 L  50 200 L 250 0 z"/>
+    </symbol>
+    <symbol id="Triangle2" min-x="0" min-y="0" max-x="300" max-y="200">
+      <path d="M 50 0 L 250 200 L 250 0 z"/>
+    </symbol>
+  </defs>
+  <desc>General graphics on a path
+  </desc>
+  <text>
+    <textpath href="#MyPath"/>
+    <use href="#Triangle1"/>
+    <use href="#Triangle2"/>
+    <use href="#Triangle1"/>
+    <use href="#Triangle2"/>
+    <use href="#Triangle1"/>
+    <use href="#Triangle2"/>
+    <use href="#Triangle1"/>
+    <use href="#Triangle2"/>
+    <use href="#Triangle1"/>
+    <use href="#Triangle2"/>
+  </text>
+</svg>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52

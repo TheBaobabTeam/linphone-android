@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" standalone="yes"?>
 <svg xmlns="http://www.w3.org/Graphics/SVG/svg-19990412.dtd" width="4in" height="3in">
   <desc xmlns:mydoc="http://foo.org/mydoc">
@@ -9,3 +10,16 @@
 <!-- the picture goes here -->
   </g>
 </svg>
+=======
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/Graphics/SVG/svg-19990412.dtd" width="4in" height="3in">
+  <desc xmlns:mydoc="http://foo.org/mydoc">
+    <mydoc:title>This is an example SVG file</mydoc:title>
+    <mydoc:para>The global description uses markup from the 
+        <mydoc:emph>mydoc</mydoc:emph> namespace.</mydoc:para>
+  </desc>
+  <g>
+<!-- the picture goes here -->
+  </g>
+</svg>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52

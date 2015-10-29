@@ -84,6 +84,7 @@ namespace LibLinphoneTester_wp8
                     }
                 }
             });
+<<<<<<< HEAD
         }
     }
 
@@ -111,6 +112,35 @@ namespace LibLinphoneTester_wp8
             }, tup);
             await t;
             Running = false;
+=======
+        }
+    }
+
+    public class UnitTestSuite : OutputTraceListener
+    {
+        public UnitTestSuite(string SuiteName, string CaseName, bool Verbose, OutputDisplayDelegate OutputDisplay)
+        {
+            this.SuiteName = SuiteName;
+            this.CaseName = CaseName;
+            this.Verbose = Verbose;
+            this.Running = false;
+            this.OutputDisplay = OutputDisplay;
+        }
+
+        async public void run()
+        {
+            Running = true;
+            var tup = new Tuple<string, string, bool>(SuiteName, CaseName, Verbose);
+            var t = Task.Factory.StartNew((object parameters) =>
+            {
+                var tester = (Application.Current as App).tester;
+                tester.setOutputTraceListener(this);
+                var p = parameters as Tuple<string, string, bool>;
+                tester.run(p.Item1, p.Item2, p.Item3);
+            }, tup);
+            await t;
+            Running = false;
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
         }
 
         public void outputTrace(int level, String msg)
@@ -120,6 +150,7 @@ namespace LibLinphoneTester_wp8
                 OutputDisplay(level, msg);
             }
             System.Diagnostics.Debug.WriteLine(msg);
+<<<<<<< HEAD
         }
 
         public bool running {
@@ -133,4 +164,19 @@ namespace LibLinphoneTester_wp8
         private bool Running;
         private OutputDisplayDelegate OutputDisplay;
     }
+=======
+        }
+
+        public bool running {
+            get { return Running; }
+            protected set { Running = value; }
+        }
+
+        private string SuiteName;
+        private string CaseName;
+        private bool Verbose;
+        private bool Running;
+        private OutputDisplayDelegate OutputDisplay;
+    }
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
 }

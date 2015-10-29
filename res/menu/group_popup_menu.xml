@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     
-    <item 
+   <item 
         android:id="@+id/groupdetailsmenu"
         android:title="Group info" />
     
@@ -10,6 +10,5 @@
         android:id="@+id/clearChatmenu"
         android:title="Clear chat"
      />
-
     
 </menu>

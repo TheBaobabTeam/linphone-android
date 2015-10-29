@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG April 1999//EN" "http://www.w3.org/Graphics/SVG/svg-19990412.dtd">
 <svg width="4in" height="3in">
@@ -9,3 +10,16 @@
   </defs>
   <text class="TitleText">Here is my title</text>
 </svg>
+=======
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG April 1999//EN" "http://www.w3.org/Graphics/SVG/svg-19990412.dtd">
+<svg width="4in" height="3in">
+  <defs>
+    <style>
+<![CDATA[
+      .TitleText { font-size: 16; font-family: Helvetica } ]]>
+    </style>
+  </defs>
+  <text class="TitleText">Here is my title</text>
+</svg>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52

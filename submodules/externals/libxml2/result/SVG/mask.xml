@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG April 1999//EN" "http://www.w3.org/Graphics/SVG/svg-19990412.dtd">
 <svg width="4in" height="3in">
@@ -10,3 +11,17 @@
     <rect style="mask: url(#MyMask)" width="12.5" height="30"/>
   </g>
 </svg>
+=======
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG April 1999//EN" "http://www.w3.org/Graphics/SVG/svg-19990412.dtd">
+<svg width="4in" height="3in">
+  <desc>Example of using a mask
+  </desc>
+  <g>
+    <defs>
+      <image id="MyMask" href="transp.png"/>
+    </defs>
+    <rect style="mask: url(#MyMask)" width="12.5" height="30"/>
+  </g>
+</svg>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52

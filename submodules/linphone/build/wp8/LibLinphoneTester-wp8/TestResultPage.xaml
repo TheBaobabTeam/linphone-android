@@ -13,6 +13,7 @@
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
 
+<<<<<<< HEAD
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
         <Grid.RowDefinitions>
@@ -36,4 +37,29 @@
         </Grid>
     </Grid>
 
+=======
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Style="{StaticResource PhoneTextNormalStyle}">
+                <Run Text="LINPHONE TESTER"/>
+                <LineBreak/>
+                <Run/>
+            </TextBlock>
+            <TextBlock Text="Test Results" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="2" Margin="12,0,12,0">
+            <phone:WebBrowser x:Name="Browser" IsScriptEnabled="True" LoadCompleted="Browser_LoadCompleted" Background="{StaticResource PhoneBackgroundBrush}"/>
+        </Grid>
+    </Grid>
+
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
 </phone:PhoneApplicationPage>

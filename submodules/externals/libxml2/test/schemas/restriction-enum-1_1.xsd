@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+=======
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
   <xs:simpleType name="fooType">
     <xs:restriction base="xs:string">
       <xs:enumeration value="a"/>
@@ -15,5 +20,10 @@
       <xs:enumeration value="d"/>  
     </xs:restriction>
   </xs:simpleType>
+<<<<<<< HEAD
   <xs:element name="foo" type="barType" />
 </xs:schema>
+=======
+  <xs:element name="foo" type="barType" />
+</xs:schema>
+>>>>>>> ab86e714f7d938a4998acf8a331331a1c9a8dd52
