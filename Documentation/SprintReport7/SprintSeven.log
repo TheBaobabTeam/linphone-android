@@ -1,7 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.27)  15 OCT 2015 14:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.27)  29 OCT 2015 12:20
 entering extended mode
-**BurnDown.tex
-(C:\Users\Eppy\Desktop\Documentation\BurnDown\BurnDown.tex
+**SprintSeven.tex
+
+(C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\SprintReport7\Sp
+rintSeven.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -185,45 +187,25 @@ Package: bookmark 2011/12/02 v1.24 PDF bookmarks (HO)
 File: bkm-pdftex.def 2011/12/02 v1.24 bookmark driver for pdfTeX (HO)
 \BKM@id=\count98
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
-Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen109
-\lightrulewidth=\dimen110
-\cmidrulewidth=\dimen111
-\belowrulesep=\dimen112
-\belowbottomsep=\dimen113
-\aboverulesep=\dimen114
-\abovetopsep=\dimen115
-\cmidrulesep=\dimen116
-\cmidrulekern=\dimen117
-\defaultaddspace=\dimen118
-\@cmidla=\count99
-\@cmidlb=\count100
-\@aboverulesep=\dimen119
-\@belowrulesep=\dimen120
-\@thisruleclass=\count101
-\@lastruleclass=\count102
-\@thisrulewidth=\dimen121
-)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count103
-\Gm@cntv=\count104
-\c@Gm@tempcnt=\count105
-\Gm@bindingoffset=\dimen122
-\Gm@wd@mp=\dimen123
-\Gm@odd@mp=\dimen124
-\Gm@even@mp=\dimen125
-\Gm@layoutwidth=\dimen126
-\Gm@layoutheight=\dimen127
-\Gm@layouthoffset=\dimen128
-\Gm@layoutvoffset=\dimen129
+\Gm@cnth=\count99
+\Gm@cntv=\count100
+\c@Gm@tempcnt=\count101
+\Gm@bindingoffset=\dimen109
+\Gm@wd@mp=\dimen110
+\Gm@odd@mp=\dimen111
+\Gm@even@mp=\dimen112
+\Gm@layoutwidth=\dimen113
+\Gm@layoutheight=\dimen114
+\Gm@layouthoffset=\dimen115
+\Gm@layoutvoffset=\dimen116
 \Gm@dimlist=\toks15
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count106
+\c@float@type=\count102
 \float@exts=\toks16
 \float@box=\box26
 \@float@everytoks=\toks17
@@ -235,15 +217,15 @@ Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen130
-\captionmargin@=\dimen131
-\captionwidth=\dimen132
-\caption@tempdima=\dimen133
-\caption@indent=\dimen134
-\caption@parindent=\dimen135
-\caption@hangindent=\dimen136
+\captionmargin=\dimen117
+\captionmargin@=\dimen118
+\captionwidth=\dimen119
+\caption@tempdima=\dimen120
+\caption@indent=\dimen121
+\caption@parindent=\dimen122
+\caption@hangindent=\dimen123
 )
-\c@ContinuedFloat=\count107
+\c@ContinuedFloat=\count103
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
@@ -261,8 +243,8 @@ Language: english 2005/03/30 v3.3o English support from the babel system
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2008/07/08 v3.8m Babel common definitions
-\babel@savecnt=\count108
-\U@D=\dimen137
+\babel@savecnt=\count104
+\U@D=\dimen124
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
@@ -273,8 +255,8 @@ Package: dcolumn 2001/05/28 v1.06 decimal alignment package (DPC)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen138
-\extrarowheight=\dimen139
+\col@sep=\dimen125
+\extrarowheight=\dimen126
 \NC@list=\toks18
 \extratabsurround=\skip44
 \backup@length=\skip45
@@ -292,7 +274,7 @@ Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 \everycr=\toks19
 \minrowclearance=\skip46
 )
-\rownum=\count109
+\rownum=\count105
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
 Package xcolor Info: Model `RGB' extended on input line 1353.
@@ -303,55 +285,49 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-(C:\Users\Eppy\Desktop\Documentation\BurnDown\BurnDown.aux
-
-LaTeX Warning: Label `tab:template' multiply defined.
-
-
-LaTeX Warning: Label `tab:template' multiply defined.
-
-)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+(C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\SprintReport7\Sp
+rintSeven.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
  ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count110
-\scratchdimen=\dimen140
+\scratchcounter=\count106
+\scratchdimen=\dimen127
 \scratchbox=\box28
-\nofMPsegments=\count111
-\nofMParguments=\count112
+\nofMPsegments=\count107
+\nofMParguments=\count108
 \everyMPshowfont=\toks20
-\MPscratchCnt=\count113
-\MPscratchDim=\dimen141
-\MPnumerator=\count114
-\makeMPintoPDFobject=\count115
+\MPscratchCnt=\count109
+\MPscratchDim=\dimen128
+\MPnumerator=\count110
+\makeMPintoPDFobject=\count111
 \everyMPtoPDFconversion=\toks21
 )
 \AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring OFF on input line 19.
+Package hyperref Info: Link coloring OFF on input line 18.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count116
+\c@section@level=\count112
 )
-LaTeX Info: Redefining \ref on input line 19.
-LaTeX Info: Redefining \pageref on input line 19.
-LaTeX Info: Redefining \nameref on input line 19.
+LaTeX Info: Redefining \ref on input line 18.
+LaTeX Info: Redefining \pageref on input line 18.
+LaTeX Info: Redefining \nameref on input line 18.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -389,10 +365,12 @@ LaTeX Info: Redefining \nameref on input line 19.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-(C:\Users\Eppy\Desktop\Documentation\BurnDown\titlePage.tex
-<pictures/logo.jpg, id=3, 877.02657pt x 325.215pt>
+
+(C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\SprintReport7\ti
+tlePage.tex <pictures/logo.jpg, id=3, 877.02657pt x 325.215pt>
 File: pictures/logo.jpg Graphic file (type jpg)
- <use pictures/logo.jpg>
+
+<use pictures/logo.jpg>
 Package pdftex.def Info: pictures/logo.jpg used on input line 5.
 (pdftex.def)             Requested size: 401.50146pt x 148.88612pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -402,428 +380,217 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 8.
 
+Overfull \hbox (24.54762pt too wide) in paragraph at lines 8--21
+ []
+ []
+
 <pictures/Team.jpg, id=4, 975.645pt x 549.05125pt>
 File: pictures/Team.jpg Graphic file (type jpg)
  <use pictures/Team.jpg>
-Package pdftex.def Info: pictures/Team.jpg used on input line 18.
+Package pdftex.def Info: pictures/Team.jpg used on input line 23.
 (pdftex.def)             Requested size: 351.31378pt x 197.70018pt.
 
 [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Eppy/Desktop/Doc
-umentation/BurnDown/pictures/logo.jpg> <C:/Users/Eppy/Desktop/Documentation/Bur
-nDown/pictures/Team.jpg>])
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 36.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 36.
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Eppy/Documents/G
+itHub/linphone-android/Documentation/SprintReport7/pictures/logo.jpg> <C:/Users
+/Eppy/Documents/GitHub/linphone-android/Documentation/SprintReport7/pictures/Te
+am.jpg>]) <./pictures/backlog.jpg, id=13, 955.31906pt x 478.78876pt>
+File: ./pictures/backlog.jpg Graphic file (type jpg)
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
-[]|\OT1/cmr/m/n/10 Linphone Group
+<use ./pictures/backlog.jpg>
+Package pdftex.def Info: ./pictures/backlog.jpg used on input line 27.
+(pdftex.def)             Requested size: 424.06033pt x 212.53065pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
  []
 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 41.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 41.
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--45
+Underfull \hbox (badness 10000) in paragraph at lines 48--48
 []|\OT1/cmr/m/n/10 Client rep-re-sen-ta-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--47
+Underfull \hbox (badness 10000) in paragraph at lines 50--50
 []|\OT1/cmr/m/n/10 Ephiphania Mu-
  []
 
 
-Underfull \hbox (badness 5548) in paragraph at lines 47--47
+Underfull \hbox (badness 5548) in paragraph at lines 50--50
 \OT1/cmr/m/n/10 nava and Potego
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--66
+[]|\OT1/cmr/m/n/10 Environment
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[]|\OT1/cmr/m/n/10 User In-ter-face
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+\OT1/cmr/m/n/10 and Cre-ate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+[]|\OT1/cmr/m/n/10 Message In-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--76
+\OT1/cmr/m/n/10 ter-ac-tions and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
+[]|\OT1/cmr/m/n/10 13 Septem-ber
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--78
+[]|\OT1/cmr/m/n/10 13 Septem-ber
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
+[]|\OT1/cmr/m/n/10 27 Septem-ber
  []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.53 
-      [1]
-Underfull \hbox (badness 10000) in paragraph at lines 61--61
-[]|\OT1/cmr/m/n/10 Task
+l.82 \subsection
+                {Software Architecture} [1 <C:/Users/Eppy/Documents/GitHub/linp
+hone-android/Documentation/SprintReport7/pictures/backlog.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--61
-\OT1/cmr/m/n/10 Num-
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+
  []
 
 
-Overfull \hbox (16.18625pt too wide) in paragraph at lines 61--61
-[]|\OT1/cmr/m/n/10 Estimated
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+[]|\OT1/cmr/m/n/10 Implemented
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--61
-\OT1/cmr/m/n/10 Ef-fort
+Underfull \hbox (badness 10000) in paragraph at lines 96--96
+\OT1/cmr/m/n/10 in pro-duc-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--61
-\OT1/cmr/m/n/10 (in
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+[]|\OT1/cmr/m/n/10 Product Back-
  []
 
 
-Overfull \hbox (1.35287pt too wide) in paragraph at lines 61--61
-\OT1/cmr/m/n/10 Hours)| 
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+[]|[]\OT1/cmr/m/n/10 Click-able link
  []
 
 
-Overfull \hbox (0.71399pt too wide) in paragraph at lines 61--61
-[]|\OT1/cmr/m/n/10 Actual
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 to Prod-uct
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--61
-\OT1/cmr/m/n/10 Ef-fort
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+\OT1/cmr/m/n/10 Back-log on
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--61
-\OT1/cmr/m/n/10 (in
+Underfull \hbox (badness 10000) in paragraph at lines 99--99
+[]|\OT1/cmr/m/n/10 Environment
  []
 
 
-Overfull \hbox (1.35287pt too wide) in paragraph at lines 61--61
-\OT1/cmr/m/n/10 Hours)| 
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+[]|[]\OT1/cmr/m/n/10 Click-able link
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
-[]|\OT1/cmr/m/n/10 Effort
+Underfull \hbox (badness 10000) in paragraph at lines 101--101
+[]|\OT1/cmr/m/n/10 User In-ter-face
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
-\OT1/cmr/m/n/10 Re-
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
+[]|[]\OT1/cmr/m/n/10 Click-able link
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
-\OT1/cmr/m/n/10 main-
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+[]|[]\OT1/cmr/m/n/10 Click-able link
  []
 
 
-Overfull \hbox (1.35287pt too wide) in paragraph at lines 61--62
-\OT1/cmr/m/n/10 Hours)| 
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
+[]|\OT1/cmr/m/n/10 Message In-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--76
-[]|\OT1/cmr/m/n/10 Clone Lin-phone
+Underfull \hbox (badness 10000) in paragraph at lines 105--105
+\OT1/cmr/m/n/10 ter-ac-tions and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--89
-[]|\OT1/cmr/m/n/10 Activity for Each
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
+[]|[]\OT1/cmr/m/n/10 Click-able link
  []
 
 
-Overfull \hbox (71.14629pt too wide) in paragraph at lines 57--94
+Overfull \hbox (75.13481pt too wide) in paragraph at lines 92--109
 [][] 
  []
 
-[2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
-[]|\OT1/cmr/m/n/10 Task
+[2]
+Underfull \hbox (badness 6188) in paragraph at lines 131--131
+[]|\OT1/cmr/m/n/10 I can get in-for-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
-\OT1/cmr/m/n/10 Num-
- []
-
-
-Overfull \hbox (16.18625pt too wide) in paragraph at lines 106--106
-[]|\OT1/cmr/m/n/10 Estimated
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
-\OT1/cmr/m/n/10 Ef-fort
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
-\OT1/cmr/m/n/10 (in
- []
-
-
-Overfull \hbox (1.35287pt too wide) in paragraph at lines 106--106
-\OT1/cmr/m/n/10 Hours)| 
- []
-
-
-Overfull \hbox (0.71399pt too wide) in paragraph at lines 106--106
-[]|\OT1/cmr/m/n/10 Actual
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
-\OT1/cmr/m/n/10 Ef-fort
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
-\OT1/cmr/m/n/10 (in
- []
-
-
-Overfull \hbox (1.35287pt too wide) in paragraph at lines 106--106
-\OT1/cmr/m/n/10 Hours)| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
-[]|\OT1/cmr/m/n/10 Effort
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
-\OT1/cmr/m/n/10 Re-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
-\OT1/cmr/m/n/10 main-
- []
-
-
-Overfull \hbox (1.35287pt too wide) in paragraph at lines 106--107
-\OT1/cmr/m/n/10 Hours)| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 109--109
-[]|\OT1/cmr/m/n/10 List Mem-ber User-
- []
-
-
-Underfull \hbox (badness 2573) in paragraph at lines 123--123
-[]|\OT1/cmr/m/n/10 Select Group De-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 142--142
-[]|\OT1/cmr/m/n/10 In
- []
-
-
-Overfull \hbox (7.26953pt too wide) in paragraph at lines 142--142
-\OT1/cmr/m/n/10 progress| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 145--145
-[]|\OT1/cmr/m/n/10 Receive Record
- []
-
-
-Overfull \hbox (71.14629pt too wide) in paragraph at lines 102--148
+Overfull \hbox (35.48582pt too wide) in paragraph at lines 123--140
 [][] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
-[]|\OT1/cmr/m/n/10 Task
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
-\OT1/cmr/m/n/10 Num-
- []
-
-
-Overfull \hbox (16.18625pt too wide) in paragraph at lines 160--160
-[]|\OT1/cmr/m/n/10 Estimated
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
-\OT1/cmr/m/n/10 Ef-fort
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
-\OT1/cmr/m/n/10 (in
- []
-
-
-Overfull \hbox (1.35287pt too wide) in paragraph at lines 160--160
-\OT1/cmr/m/n/10 Hours)| 
- []
-
-
-Overfull \hbox (0.71399pt too wide) in paragraph at lines 160--160
-[]|\OT1/cmr/m/n/10 Actual
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
-\OT1/cmr/m/n/10 Ef-fort
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
-\OT1/cmr/m/n/10 (in
- []
-
-
-Overfull \hbox (1.35287pt too wide) in paragraph at lines 160--160
-\OT1/cmr/m/n/10 Hours)| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
-[]|\OT1/cmr/m/n/10 Effort
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
-\OT1/cmr/m/n/10 Re-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
-\OT1/cmr/m/n/10 main-
- []
-
-
-Overfull \hbox (1.35287pt too wide) in paragraph at lines 160--161
-\OT1/cmr/m/n/10 Hours)| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 163--163
-[]|\OT1/cmr/m/n/10 Send En-crypted
- []
-
-
-Underfull \hbox (badness 1057) in paragraph at lines 166--166
-[]|\OT1/cmr/m/n/10 Receive En-crypted
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 166--166
-[]|\OT1/cmr/m/n/10 Receive En-crypted
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 166--166
-[]|\OT1/cmr/m/n/10 In
- []
-
-
-Overfull \hbox (7.26953pt too wide) in paragraph at lines 166--166
-\OT1/cmr/m/n/10 progress| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 170--170
-[]|\OT1/cmr/m/n/10 Send En-crypted
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 170--170
-[]|\OT1/cmr/m/n/10 In
- []
-
-
-Overfull \hbox (7.26953pt too wide) in paragraph at lines 170--170
-\OT1/cmr/m/n/10 progress| 
- []
-
-
-Underfull \hbox (badness 1057) in paragraph at lines 173--173
-[]|\OT1/cmr/m/n/10 Receive En-crypted
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
-[]|\OT1/cmr/m/n/10 Receive En-crypted
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
-[]|\OT1/cmr/m/n/10 In
- []
-
-
-Overfull \hbox (7.26953pt too wide) in paragraph at lines 173--173
-\OT1/cmr/m/n/10 progress| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
-[]|\OT1/cmr/m/n/10 Send En-crypted
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--177
-[]|\OT1/cmr/m/n/10 In
- []
-
-
-Overfull \hbox (7.26953pt too wide) in paragraph at lines 177--177
-\OT1/cmr/m/n/10 progress| 
- []
-
-
-Underfull \hbox (badness 1057) in paragraph at lines 180--180
-[]|\OT1/cmr/m/n/10 Receive En-crypted
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 180--180
-[]|\OT1/cmr/m/n/10 Receive En-crypted
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 180--180
-[]|\OT1/cmr/m/n/10 In
- []
-
-
-Overfull \hbox (7.26953pt too wide) in paragraph at lines 180--180
-\OT1/cmr/m/n/10 progress| 
- []
-
-
-Overfull \hbox (71.14629pt too wide) in paragraph at lines 156--183
-[][] 
- []
-
-[4] [5] [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 193.
- [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 193.
- (C:\Users\Eppy\Desktop\Documentation\BurnDown\BurnDown.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 193.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 193.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 193.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 141.
+[3] [4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 141.
+
+(C:\Users\Eppy\Documents\GitHub\linphone-android\Documentation\SprintReport7\Sp
+rintSeven.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 141.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 141.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
  ) 
 Here is how much of TeX's memory you used:
- 7601 strings out of 493921
- 113716 string characters out of 3147285
- 225992 words of memory out of 3000000
- 10820 multiletter control sequences out of 15000+200000
- 7587 words of font info for 27 fonts, out of 3000000 for 9000
+ 7563 strings out of 493921
+ 113539 string characters out of 3147285
+ 214204 words of memory out of 3000000
+ 10780 multiletter control sequences out of 15000+200000
+ 8202 words of font info for 29 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 41i,11n,38p,257b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on BurnDown.pdf (8 pages, 235797 bytes).
+ 41i,9n,38p,260b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on SprintSeven.pdf (5 pages, 305031 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 16 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 105 PDF objects out of 1000 (max. 8388607)
+ 19 named destinations out of 1000 (max. 500000)
+ 80 words of extra memory for PDF output out of 10000 (max. 10000000)
 
