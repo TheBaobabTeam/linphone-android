@@ -236,7 +236,7 @@ public class GroupChatRoomFragment extends Fragment implements OnClickListener, 
 		sendMessage = (TextView) view.findViewById(R.id.groupsendMessage);
 		sendMessage.setOnClickListener(this);
 
-		remoteComposing = (TextView) view.findViewById(R.id.groupremoteComposing);
+	//	remoteComposing = (TextView) view.findViewById(R.id.groupremoteComposing);
 		remoteComposing.setVisibility(View.GONE);
 
 		uploadLayout = (RelativeLayout) view.findViewById(R.id.groupuploadLayout);

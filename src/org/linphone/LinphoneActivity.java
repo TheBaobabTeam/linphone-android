@@ -51,8 +51,9 @@ import org.linphone.groupchat.FragmentsAvailable;
 import org.linphone.groupchat.GroupChatRoomActivity;
 import org.linphone.groupchat.NewGroupActivity;
 import org.linphone.groupchat.GroupDetailsActivity;
-import org.linphone.groupchat.aboutActivity;
-import org.linphone.groupchat.helpActivity;
+import org.linphone.groupchat.WelcomeActivity;
+import org.linphone.groupchat.AboutActivity;
+import org.linphone.groupchat.HelpActivity;
 
 import org.linphone.mediastream.Log;
 import org.linphone.setup.RemoteProvisioningLoginActivity;
@@ -692,7 +693,7 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 	 * added by me, newGroup button
 	 */
 	public void newGroup() {
-		Intent intent = new Intent(this, NewGroupActivity.class);
+		Intent intent = new Intent(this, WelcomeActivity.class);
 		
 		startOrientationSensor();
 		startActivityForResult(intent, CHAT_ACTIVITY);
@@ -713,93 +714,90 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 	}
 	
 	//opens new group screen
-	/*public void nextScreenAfterWelcome(){
+	public void nextScreenAfterWelcome() {
 		Intent intent = new Intent(this,NewGroupActivity.class);
-		startOrientationSensor();
-		startActivityForResult(intent, CHAT_ACTIVITY);
-	}*/
-	
-	//help button
-		public void helpScreen(){
-			Intent intent = new Intent(this,helpActivity.class);
-			startOrientationSensor();
-			startActivityForResult(intent, CHAT_ACTIVITY);
-		}
-	
-	//info button
-	public void aboutScreen(){
-		Intent intent = new Intent(this,aboutActivity.class);
+		
 		startOrientationSensor();
 		startActivityForResult(intent, CHAT_ACTIVITY);
 	}
 	
-	/*public void testGroupDetails(){
-		Intent intent = new Intent(this,GroupDetailsActivity.class);
+	//help button
+	public void helpScreen(){
+		Intent intent = new Intent(this,HelpActivity.class);
 		startOrientationSensor();
 		startActivityForResult(intent, CHAT_ACTIVITY);
-	}*/
+	}
+	
+	//info button
+	public void aboutScreen(){
+		Intent intent = new Intent(this,AboutActivity.class);
+		startOrientationSensor();
+		startActivityForResult(intent, CHAT_ACTIVITY);
+	}
 
 	//Added by me
-		public void createGroupChat(String groupName, String [] groupMembers, int groupSize){
-			//Intent intent = new Intent(this, ChatActivity.class);
-			//intent.putExtra("GroupName", groupName);
-			//intent.putExtra("GroupMembers", groupMembers);
-			//intent.putExtra("GroupSize", groupSize);
-			//intent.putExtra("ChatType", 1);
+	public void createGroupChat(String groupName, String [] groupMembers, int groupSize){
+		//Intent intent = new Intent(this, ChatActivity.class);
+		//intent.putExtra("GroupName", groupName);
+		//intent.putExtra("GroupMembers", groupMembers);
+		//intent.putExtra("GroupSize", groupSize);
+		//intent.putExtra("ChatType", 1);
+		
+		LinphoneCore lc = LinphoneManager.getLcIfManagerNotDestroyedOrNull();
+		if (lc != null) {
+			LinphoneChatRoom chatRoom = null;
+			chatRoom = lc.getOrCreateGroupChatRoom(groupName, groupMembers, groupSize, 0, 0);
 			
-			LinphoneCore lc = LinphoneManager.getLcIfManagerNotDestroyedOrNull();
-			if (lc != null) {
-				LinphoneChatRoom chatRoom = null;
-				chatRoom = lc.getOrCreateGroupChatRoom(groupName, groupMembers, groupSize, 0, 0);
+			if (chatRoom != null) {
+				LinphoneAddress la = chatRoom.getPeerAddress();
 				
-				if (chatRoom != null) {
-					LinphoneAddress la = chatRoom.getPeerAddress();
-					
-					String sipUri = la.asStringUriOnly();
-					String displayName = la.getDisplayName();
-					String addrStr = la.asString();
-					
-					//intent.putExtra("SipUri", sipUri);
-					//intent.putExtra("DisplayName", displayName);
-					
-					LinphoneProxyConfig pc = lc.getDefaultProxyConfig();
-					String identity = pc.getIdentity();
-					
-					String id = "";
-					try {
-						la = LinphoneCoreFactory.instance().createLinphoneAddress(identity);
-						id = la.getUserName();
-					} catch (LinphoneCoreException e) {
-						Log.e("Cannot display chat",e);
-						//return;
-					}
-					
-					String message = id + " created group " + groupName;
-					chatRoom.sendGroupMessage(message);
-					
-					onMessageSent(sipUri, message);
-					
-					goToChatList();
-					
-					/*String toDisplay = "Display Name: " + displayName;
-					toDisplay += "\nSIP URI: " + sipUri;
-					toDisplay += "\nGroup Name: " + chatRoom.getGroupName();
-					toDisplay += "\nGroup Address: " + addrStr;
-					displayCustomToast(toDisplay, Toast.LENGTH_SHORT);*/
+				String sipUri = la.asStringUriOnly();
+				String displayName = la.getDisplayName();
+				String addrStr = la.asString();
+				
+				//intent.putExtra("SipUri", sipUri);
+				//intent.putExtra("DisplayName", displayName);
+				
+				LinphoneProxyConfig pc = lc.getDefaultProxyConfig();
+				String identity = pc.getIdentity();
+				
+				String id = "";
+				try {
+					la = LinphoneCoreFactory.instance().createLinphoneAddress(identity);
+					id = la.getUserName();
+				} catch (LinphoneCoreException e) {
+					Log.e("Cannot display chat",e);
+					//return;
 				}
 				
-				//LinphoneProxyConfig pc = lc.getDefaultProxyConfig();
-				//String identity = pc.getIdentity();
-				//displayCustomToast("I am: " + identity, Toast.LENGTH_SHORT);
+				String message = id + " created group " + groupName;
+				LinphoneChatMessage msg = chatRoom.createLinphoneGroupChatMessage(message);
+				chatRoom.sendGroupChatMessage(msg);
+				//chatRoom.sendGroupMessage(message);
+				
+				onMessageSent(sipUri, message);
+				
+				goToChatList();
+				
+				/*String toDisplay = "Display Name: " + displayName;
+				toDisplay += "\nSIP URI: " + sipUri;
+				toDisplay += "\nGroup Name: " + chatRoom.getGroupName();
+				toDisplay += "\nGroup Address: " + addrStr;
+				displayCustomToast(toDisplay, Toast.LENGTH_SHORT);*/
 			}
 			
-			/*startOrientationSensor();
-			startActivityForResult(intent, CHAT_ACTIVITY);
-			
-			LinphoneService.instance().resetMessageNotifCount();
-			LinphoneService.instance().removeMessageNotification();
-			displayMissedChats(getChatStorage().getUnreadMessageCount());*/
+			//LinphoneProxyConfig pc = lc.getDefaultProxyConfig();
+			//String identity = pc.getIdentity();
+			//displayCustomToast("I am: " + identity, Toast.LENGTH_SHORT);
 		}
+		
+		/*startOrientationSensor();
+		startActivityForResult(intent, CHAT_ACTIVITY);
+		
+		LinphoneService.instance().resetMessageNotifCount();
+		LinphoneService.instance().removeMessageNotification();
+		displayMissedChats(getChatStorage().getUnreadMessageCount());*/
+	}
 		
 	@Override
 	public void onClick(View v) {

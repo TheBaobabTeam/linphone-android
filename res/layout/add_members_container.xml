@@ -18,34 +18,22 @@
             android:id="@+id/backToGroupName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
 	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentStart="true"
 	        android:layout_alignParentTop="true"
-	        android:layout_alignParentBottom="true"
-	        android:background="@drawable/group_chat_back"/>
-        
-        <TextView
-	           android:id="@+id/newGroup"
-	           android:layout_width="wrap_content"
-	           android:layout_height="wrap_content"
-	           android:layout_centerHorizontal="true"
-	           android:layout_centerVertical="true"
-	           android:gravity="center"
-	           android:text="@string/newGroup"
-	           android:textColor="@color/text_switch_selected"
-	           android:textSize="20sp"
-	           android:textStyle="normal|bold" />
-       
+            android:background="@drawable/group_chat_back"/>
 
         <TextView
             android:id="@+id/create"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/group_chat_ok"
-            android:layout_alignParentEnd="true"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentEnd="true"
 	        android:layout_alignParentRight="true"
 	        android:layout_alignParentTop="true"
-	        android:layout_alignParentBottom="true"/>
+	        android:layout_alignParentBottom="true"
+            android:background="@drawable/group_chat_ok"
+            android:enabled="true"/>
     </RelativeLayout>
 
     <ListView
@@ -62,10 +50,6 @@
         android:id="@+id/findSelected"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/contactsSelected"
-        android:textColor="#fff" 
-        android:background="@drawable/background_top_bar"
-	    android:textSize="20sp"
-	    android:textStyle="normal|bold"/>
+        android:text="Selected contacts" />
 
 </LinearLayout>

@@ -45,7 +45,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:background="@drawable/background_top_bar"
-        android:text="@string/Add_participates"
+        android:text="@string/Add_participants"
         android:textColor="#fff"
         android:textSize="20sp"
         android:textStyle="normal" />

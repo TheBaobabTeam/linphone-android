@@ -6304,3 +6304,51 @@ extern "C" jstring Java_org_linphone_core_LinphoneChatRoomImpl_getGroupName(
 	const char * group_name = linphone_chat_room_get_group_name((LinphoneChatRoom*)ptr);
 	return group_name ? env->NewStringUTF(group_name) : NULL;
 }
+
+extern "C" jlong Java_org_linphone_core_LinphoneChatRoomImpl_createGroupFileTransferMessage(
+	JNIEnv* env, 
+	jobject thiz, 
+	jlong ptr, 
+	jstring jname, 
+	jstring jtype, 
+	jstring jsubtype, 
+	jint data_size, 
+	jint my_group_index
+) {
+	LinphoneContentPrivate content = {0};
+	LinphoneChatMessage *message = NULL;
+
+	content.type = (char*)env->GetStringUTFChars(jtype, NULL);
+	content.subtype = (char*)env->GetStringUTFChars(jsubtype, NULL);
+	content.name = (char*)env->GetStringUTFChars(jname, NULL);
+	content.size = data_size;
+	message = linphone_group_chat_room_create_file_transfer_message((LinphoneChatRoom *)ptr, LINPHONE_CONTENT(&content), (int)my_group_index);
+	env->ReleaseStringUTFChars(jtype, content.type);
+	env->ReleaseStringUTFChars(jsubtype, content.subtype);
+	env->ReleaseStringUTFChars(jname, content.name);
+
+	return (jlong) message;
+}
+
+extern "C" jobjectArray Java_org_linphone_core_LinphoneChatRoomImpl_getMembers(
+	JNIEnv* env, 
+	jobject  thiz, 
+	jlong ptr
+) {
+	char** members = linphone_chat_room_get_members((LinphoneChatRoom*)ptr);
+	int groupSize = linphone_chat_room_get_group_size((LinphoneChatRoom*)ptr);
+	jobjectArray result;
+	int i;
+	
+	jclass stringCls = env->FindClass("java/lang/String");
+	if (stringCls == NULL) return NULL;
+	
+	result = (jobjectArray)env->NewObjectArray((jint)groupSize, stringCls, env->NewStringUTF(""));
+	if (result == NULL) return NULL; 
+	
+	for (i = 0; i < groupSize; i++) {
+		env->SetObjectArrayElement(result, i, env->NewStringUTF(members[i]));
+	}
+	
+	return result;
+}

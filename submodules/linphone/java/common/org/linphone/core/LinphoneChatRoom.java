@@ -151,6 +151,13 @@ public interface LinphoneChatRoom {
 	 *******************************************************************************************/
 	
 	/**
+	 * Create a message attached to a dedicated chat room with a particular content.
+	 * @param content LinphoneContent initial content.
+	 * @return a new LinphoneChatMessage
+	 */
+	LinphoneChatMessage createGroupFileTransferMessage(LinphoneContent content);
+	
+	/**
 	 * send a message to peer member of this chat room.
 	 * @param  	message to be sent
 	 */
@@ -162,7 +169,7 @@ public interface LinphoneChatRoom {
 	 * @param message message to send
 	 * @return LinphoneChatMessage object
 	 */
-	LinphoneChatMessage createLinphoneGroupChatMessage(String message, int group_index);
+	LinphoneChatMessage createLinphoneGroupChatMessage(String message);
 	
 	/**
 	 * send a message to all members of this chat room.
@@ -193,4 +200,10 @@ public interface LinphoneChatRoom {
 	 * @return String
 	 */
 	String getGroupName();
+	
+	/**
+	 * get the members of the group
+	 * @return String array
+	 */
+	String[] getMembers();
 }

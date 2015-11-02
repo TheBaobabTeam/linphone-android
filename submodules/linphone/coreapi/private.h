@@ -563,6 +563,8 @@ struct _LinphoneChatRoom{
 	int group_admin_index; // as the name suggests, this is the admin
 	int my_group_index; // this is where I reside
 	
+	int to_index;	// i had no choice
+	
 	LinphoneAddress *peer_url;
 	MSList *messages_hist;
 	MSList *transient_messages;

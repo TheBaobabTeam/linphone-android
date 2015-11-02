@@ -9,5 +9,11 @@
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
     </style>
+    
+     <style name="Animations" />
+		<style name="Animations.GrowFromTop">
+		    <item name="@android:windowEnterAnimation">@anim/grow_from_top</item>
+		    <item name="@android:windowExitAnimation">@anim/shrink_from_bottom</item>
+	</style>
 
 </resources>
