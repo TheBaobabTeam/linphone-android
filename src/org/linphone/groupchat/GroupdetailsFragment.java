@@ -6,7 +6,7 @@ import java.util.List;
 import org.linphone.Contact;
 import org.linphone.R;
 import org.linphone.LinphoneManager;
-//import org.linphone.LinphoneUtils;
+import org.linphone.LinphoneUtils;
 
 import org.linphone.core.LinphoneCore;
 import org.linphone.core.LinphoneChatRoom;
@@ -27,10 +27,12 @@ public class GroupdetailsFragment extends Fragment implements OnClickListener {
 	
 	private static GroupdetailsFragment instance;
 	private TextView back;
+	private TextView groupNameView;
 	private MyAdapter dataAdapter = null;
 	
 	private LinphoneChatRoom chatRoom;
 	private String sipUri;
+	private String displayName;
 	
 	//Check if its instantiated
 	   
@@ -50,6 +52,16 @@ public class GroupdetailsFragment extends Fragment implements OnClickListener {
 		
 		//Retrieve parameter from intent
 		sipUri = getArguments().getString("SipUri");
+		displayName = getArguments().getString("DisplayName");
+		
+		groupNameView = (TextView) view.findViewById(R.id.groupdetailsname);
+		if (displayName == null && getResources().getBoolean(R.bool.only_display_username_if_unknown) && LinphoneUtils.isSipAddress(sipUri)) {
+			groupNameView.setText(LinphoneUtils.getUsernameFromAddress(sipUri));
+		} else if (displayName == null) {
+			groupNameView.setText(sipUri);
+		} else {
+			groupNameView.setText(displayName);
+		}
 		
 		LinphoneCore lc = LinphoneManager.getLcIfManagerNotDestroyedOrNull();
 		if (lc != null) {
@@ -135,7 +147,7 @@ public class GroupdetailsFragment extends Fragment implements OnClickListener {
 		String[] mem = chatRoom.getMembers();
 		if (mem != null) {
 			for (int i = 0; i < mem.length; i++) {
-				contactsList.add(mem[i]);
+				contactsList.add(LinphoneUtils.getUsernameFromAddress(mem[i]));
 			}
 		}
 		

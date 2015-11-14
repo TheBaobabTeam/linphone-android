@@ -325,14 +325,28 @@
 		</activity>
 		<activity
 			android:name=".groupchat.AboutActivity"
-			android:theme="@style/NoTitle" >
+			android:theme="@style/NoTitle.CustomTheme" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".groupchat.AboutFragment"
+			android:theme="@style/NoTitle.CustomTheme" >
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 			</intent-filter>
 		</activity>
 		<activity
 			android:name=".groupchat.HelpActivity"
-			android:theme="@style/NoTitle" >
+			android:theme="@style/NoTitle.CustomTheme" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+			</intent-filter>
+		</activity>
+		<activity
+			android:name=".groupchat.HelpFragment"
+			android:theme="@style/NoTitle.CustomTheme" >
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 			</intent-filter>

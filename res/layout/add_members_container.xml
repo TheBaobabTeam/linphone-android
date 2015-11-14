@@ -41,10 +41,10 @@
         android:fastScrollAlwaysVisible="true"
         android:fastScrollEnabled="true"/>
     
-    <Button
+    <!--Button
         android:id="@+id/findSelected"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Contacts that were selected..." />
+        android:text="Contacts that were selected..." /-->
 
 </LinearLayout>

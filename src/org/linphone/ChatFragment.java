@@ -29,6 +29,7 @@ import java.util.List;
 import org.linphone.groupchat.AddMembersFragment;
 import org.linphone.groupchat.GroupDetailsActivity;
 import org.linphone.groupchat.VoiceRecordActivity;
+import org.linphone.groupchat.PopupHelper;
 
 import org.linphone.compatibility.Compatibility;
 import org.linphone.core.LinphoneAddress;
@@ -114,8 +115,11 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 	private RelativeLayout uploadLayout, textLayout;
 	private ListView messagesList;
 	
-	private ImageView attach;
-	private ImageView moreOptions;
+	private LinearLayout attach;
+	private LinearLayout moreOptions;
+	private LinearLayout footer;
+	private ImageView gallery;
+	private ImageView camera;
 
 	private ProgressBar progressBar;
 	private Uri imageToUploadUri;
@@ -189,37 +193,47 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 			}
 		});
 		
-		attach = (ImageView) view.findViewById(R.id.image_attach);
+		attach = (LinearLayout) view.findViewById(R.id.image_attach);
 		attach.setOnClickListener(new OnClickListener(){
-			@Override
+		@Override
 			public void onClick(View v){
-				PopupMenu pop = new PopupMenu(getActivity(), attach);
-				pop.getMenuInflater().inflate(R.menu.popup_menu_attach, pop.getMenu());
 				
-				pop.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-					
-					@Override
-					public boolean onMenuItemClick(MenuItem item) {
-						switch(item.getItemId()){
+				   PopupWindow showPopup = PopupHelper
+				            .newBasicPopupWindow(getActivity());
+				    LayoutInflater inflater = (LayoutInflater)getActivity().getSystemService(getActivity().LAYOUT_INFLATER_SERVICE);
+				    View popupView = inflater.inflate(R.layout.custom_layout, null);
+				    showPopup.setContentView(popupView);
+
+				    showPopup.setWidth(WindowManager.LayoutParams.MATCH_PARENT);
+				    showPopup.setHeight(WindowManager.LayoutParams.WRAP_CONTENT);
+				    showPopup.setAnimationStyle(R.style.Animations_GrowFromTop);
+				    showPopup.showAsDropDown(v);
+				    
+					gallery = (ImageView)popupView.findViewById(R.id.image1);
+					gallery.setOnClickListener(new OnClickListener(){
 						
-						case R.id.attachPic :
-							pickImage();
-							return true;
-						case R.id.attachAudio :
-							Intent intent = new Intent(getActivity(),VoiceRecordActivity.class);
-							getActivity().startActivity(intent);
-							return true;
-						default : return false;
+						@Override
+						public void onClick(View v){
+							pickFromGallery();
+							
 						}
+					});
 					
-					}
-				});
-				
-				pop.show();
+					camera = (ImageView)popupView.findViewById(R.id.image2);
+					camera.setOnClickListener(new OnClickListener(){
+						
+						@Override
+						public void onClick(View v){
+							takePhoto();
+							
+						}
+					});
+					
+					
 			}
 		});
 		
-		moreOptions = (ImageView) view.findViewById(R.id.image_more);
+		moreOptions = (LinearLayout) view.findViewById(R.id.image_more);
 		moreOptions.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View v){
@@ -275,14 +289,14 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 			sendImage.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					pickImage();
+					takePhoto();
 				}
 			});
 		} else {
 			sendImage.setEnabled(false);
 		}
 
-		/*back = (TextView) view.findViewById(R.id.back);
+		back = (TextView) view.findViewById(R.id.back);
 		if (back != null) {
 			back.setOnClickListener(new View.OnClickListener() {
 				@Override
@@ -292,7 +306,7 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 			});
 		}
 
-		cancelUpload = (ImageView) view.findViewById(R.id.cancelUpload);
+		cancelUpload = (ImageView) view.findViewById(R.id.groupcancelUpload);
 		cancelUpload.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -304,7 +318,7 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 					currentMessageInFileTransferUploadState = null;
 				}
 			}
-		});*/
+		});
 
 		LinphoneCore lc = LinphoneManager.getLcIfManagerNotDestroyedOrNull();
 		if (lc != null) {
@@ -961,5 +975,27 @@ public class ChatFragment extends Fragment implements OnClickListener, LinphoneC
 	@Override
 	public void onLinphoneChatMessageFileTransferProgressChanged(LinphoneChatMessage msg, LinphoneContent content, int offset, int total) {
 		progressBar.setProgress(offset * 100 / total);
+	}
+	
+	private void takePhoto(){
+		List<Intent> cameraIntents = new ArrayList<Intent>();
+		Intent captureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+		File file = new File(Environment.getExternalStorageDirectory(), getString(R.string.temp_photo_name_with_date).replace("%s", String.valueOf(System.currentTimeMillis())));
+		imageToUploadUri = Uri.fromFile(file);
+		captureIntent.putExtra(MediaStore.EXTRA_OUTPUT, imageToUploadUri);
+		cameraIntents.add(captureIntent);
+		startActivityForResult(captureIntent, ADD_PHOTO);
+		
+	}
+	
+	private void pickFromGallery(){
+
+		Intent galleryIntent = new Intent();
+		galleryIntent.setType("image/*");
+		galleryIntent.setAction(Intent.ACTION_PICK);
+		
+		Intent chooserIntent = Intent.createChooser(galleryIntent, getString(R.string.image_picker_title));
+		
+		startActivityForResult(chooserIntent, ADD_PHOTO);
 	}
 }

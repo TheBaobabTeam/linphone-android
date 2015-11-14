@@ -216,7 +216,17 @@ public class ChatListFragment extends Fragment implements OnClickListener, OnIte
 	public void onClick(View v) {
 		int id = v.getId();
 		
-		if (id == R.id.clearFastChatField) {
+		if(id == R.id.search){
+			if(clearFastChat.getVisibility() == View.VISIBLE){
+				clearFastChat.setVisibility(View.GONE);
+				fastNewChat.setVisibility(View.GONE);
+			}
+			else if(clearFastChat.getVisibility() != View.VISIBLE){
+				clearFastChat.setVisibility(View.VISIBLE);
+				fastNewChat.setVisibility(View.VISIBLE);
+			}
+		}
+		else if (id == R.id.clearFastChatField) {
 			fastNewChat.setText("");
 		}
 		else if (id == R.id.ok) {

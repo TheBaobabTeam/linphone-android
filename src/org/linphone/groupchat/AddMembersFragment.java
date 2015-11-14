@@ -90,10 +90,10 @@ public class AddMembersFragment extends Fragment implements OnClickListener {
 		}
 		
 		//Checks which checkbox was selected
-		myBtn = (Button) view.findViewById(R.id.findSelected);
+		/*myBtn = (Button) view.findViewById(R.id.findSelected);
 		if (myBtn != null) {
 			checkButtonClick();
-		}
+		}*/
 		
 		return view;
 	}

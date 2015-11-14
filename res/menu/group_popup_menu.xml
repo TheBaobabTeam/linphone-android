@@ -6,9 +6,6 @@
         android:id="@+id/groupdetailsmenu"
         android:title="Group info" />
     
-    <item
-        android:id="@+id/clearChatmenu"
-        android:title="Clear chat"
-     />
+   
     
 </menu>

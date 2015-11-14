@@ -39,7 +39,7 @@ public class NewGroupFragment extends Fragment implements OnClickListener {
 	
 	private static final int REQUEST_CAMERA = 2;
 	private static final int SELECT_FILE = 1;
-	private TextView back, next;
+	private TextView back, next, info, help;
 	private TextWatcher textWatcher;
 	private EditText group_name;
 	private ImageView im;
@@ -93,6 +93,22 @@ public class NewGroupFragment extends Fragment implements OnClickListener {
 			@Override
 			public void onClick(View view) {
 				selectImage();
+			}
+		});
+		
+		info = (TextView) view.findViewById(R.id.aboutLinphone);
+		info.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				LinphoneActivity.instance().aboutScreen();
+			}
+		});
+		
+		help = (TextView) view.findViewById(R.id.helpLinphone);
+		help.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				LinphoneActivity.instance().helpScreen();
 			}
 		});
 		

@@ -437,7 +437,10 @@
 		to Linphones IM capabilities and user interface. Brought to you by Baobab Team</string>
     <string name="title_activity_voice_record">VoiceRecordActivity</string>
     <string name="title_activity_voice_main">VoiceMainActivity</string>
-    <string name="Add_participates">Add Participates</string>
+    <string name="Add_participants">Add Participates</string>
     <string name="Exit_Group">Exit Group</string>
+    <string name="newGroup">New Group</string>
+    <string name="selectMembers">Select Members</string>
+    
 
 </resources>

@@ -51,7 +51,6 @@ import org.linphone.groupchat.FragmentsAvailable;
 import org.linphone.groupchat.GroupChatRoomActivity;
 import org.linphone.groupchat.NewGroupActivity;
 import org.linphone.groupchat.GroupDetailsActivity;
-import org.linphone.groupchat.WelcomeActivity;
 import org.linphone.groupchat.AboutActivity;
 import org.linphone.groupchat.HelpActivity;
 
@@ -693,7 +692,7 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 	 * added by me, newGroup button
 	 */
 	public void newGroup() {
-		Intent intent = new Intent(this, WelcomeActivity.class);
+		Intent intent = new Intent(this, NewGroupActivity.class);
 		
 		startOrientationSensor();
 		startActivityForResult(intent, CHAT_ACTIVITY);
@@ -711,14 +710,6 @@ public class LinphoneActivity extends FragmentActivity implements OnClickListene
 	public void goToChatList() {
 		changeCurrentFragment(FragmentsAvailable.CHATLIST, null);
 		chat.setSelected(true);
-	}
-	
-	//opens new group screen
-	public void nextScreenAfterWelcome() {
-		Intent intent = new Intent(this,NewGroupActivity.class);
-		
-		startOrientationSensor();
-		startActivityForResult(intent, CHAT_ACTIVITY);
 	}
 	
 	//help button
